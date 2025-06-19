@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Level_0/00_MainMenu.unity
+    guid: 709ab0c6f19e686429ae2d514dc7588f
+  - enabled: 1
+    path: Assets/Scenes/Level_0/01_Test.unity
+    guid: 7f8bccd8f2997d340bc91a60a38361e9
+  - enabled: 1
+    path: Assets/Scenes/Level_0/02_death.unity
+    guid: b9c1c5928ef3d2e45b5efcec1ef3803b
+  - enabled: 1
+    path: Assets/Scenes/Level_0/03_Cutscene_01.unity
+    guid: a3dc53ae670de91479a02eae83b5e412
+  - enabled: 1
+    path: Assets/Scenes/Level_0/04_Chase.unity
+    guid: 8ff77121fc6b942488b4096b78df24c3
+  - enabled: 1
+    path: Assets/Scenes/Level_0/05_cave.unity
+    guid: d58a5cf0781f9ad448440502acf17d8e
+  - enabled: 1
+    path: Assets/Scenes/Level_0/06_MINIGAME.unity
+    guid: 8ab159ed1e81a494ea28e5bb7b541f3d
+  - enabled: 1
+    path: Assets/Scenes/Level_0/07_arduino.unity
+    guid: f1c075f4ca3d9334f81d13813fe2bcc6
+  - enabled: 1
+    path: Assets/Scenes/Level_0/08_cave_afterminigame.unity
+    guid: 7d752fbaf9f6dc041a67a07f62394d9c
+  - enabled: 1
+    path: Assets/Scenes/Level_0/09_Credits.unity
+    guid: 103a7f64e458c2c44a2fd9c14cfae46f
+  - enabled: 0
+    path: Assets/Scenes/Level_1_City/1.0.Test Level 1.unity
+    guid: dae5e3c3b42be1b4983358e0946c6bf1
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ee04d4b4b94aa364ea15ab4e3eaee9b7, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 06d65be184014fd418cb64948ea882b9, type: 2}
+  m_UseUCBPForAssetBundles: 0
