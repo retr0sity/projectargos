@@ -31,6 +31,12 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("IsJumping", true); // Trigger jumping animation
             }
         }
+
+        // Disable movement in arduino scene
+        if (SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            horizontalMove = 0f; // Stop horizontal movement
+        }
     }
 
     // Called when the player lands on the ground
