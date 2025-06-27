@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Disable movement in arduino scene
-        if (SceneManager.GetActiveScene().name == "07_arduino")
+        if (SceneManager.GetActiveScene().buildIndex == 7)
         {
             horizontalMove = 0f; // Stop horizontal movement
         }
