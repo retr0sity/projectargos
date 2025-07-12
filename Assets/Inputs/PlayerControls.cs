@@ -444,6 +444,34 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Minigame_Arduino"",
+            ""id"": ""f6e094ea-11b3-441a-8db9-eec75c19d812"",
+            ""actions"": [
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""04911626-c536-4f75-ad1a-1d4eb054a2a7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e21909aa-3d4f-416e-bb01-cf1aa6f2ae58"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -475,6 +503,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
         m_UI_Scroll = m_UI.FindAction("Scroll", throwIfNotFound: true);
         m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        // Minigame_Arduino
+        m_Minigame_Arduino = asset.FindActionMap("Minigame_Arduino", throwIfNotFound: true);
+        m_Minigame_Arduino_Jump = m_Minigame_Arduino.FindAction("Jump", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -482,6 +513,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_Global.enabled, "This will cause a leak and performance issues, PlayerControls.Global.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Gameplay.enabled, "This will cause a leak and performance issues, PlayerControls.Gameplay.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PlayerControls.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Minigame_Arduino.enabled, "This will cause a leak and performance issues, PlayerControls.Minigame_Arduino.Disable() has not been called.");
     }
 
     /// <summary>
@@ -907,6 +939,102 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="UIActions" /> instance referencing this action map.
     /// </summary>
     public UIActions @UI => new UIActions(this);
+
+    // Minigame_Arduino
+    private readonly InputActionMap m_Minigame_Arduino;
+    private List<IMinigame_ArduinoActions> m_Minigame_ArduinoActionsCallbackInterfaces = new List<IMinigame_ArduinoActions>();
+    private readonly InputAction m_Minigame_Arduino_Jump;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Minigame_Arduino".
+    /// </summary>
+    public struct Minigame_ArduinoActions
+    {
+        private @PlayerControls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Minigame_ArduinoActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Minigame_Arduino/Jump".
+        /// </summary>
+        public InputAction @Jump => m_Wrapper.m_Minigame_Arduino_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Minigame_Arduino; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Minigame_ArduinoActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Minigame_ArduinoActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Minigame_ArduinoActions" />
+        public void AddCallbacks(IMinigame_ArduinoActions instance)
+        {
+            if (instance == null || m_Wrapper.m_Minigame_ArduinoActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Minigame_ArduinoActionsCallbackInterfaces.Add(instance);
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Minigame_ArduinoActions" />
+        private void UnregisterCallbacks(IMinigame_ArduinoActions instance)
+        {
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Minigame_ArduinoActions.UnregisterCallbacks(IMinigame_ArduinoActions)" />.
+        /// </summary>
+        /// <seealso cref="Minigame_ArduinoActions.UnregisterCallbacks(IMinigame_ArduinoActions)" />
+        public void RemoveCallbacks(IMinigame_ArduinoActions instance)
+        {
+            if (m_Wrapper.m_Minigame_ArduinoActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Minigame_ArduinoActions.AddCallbacks(IMinigame_ArduinoActions)" />
+        /// <seealso cref="Minigame_ArduinoActions.RemoveCallbacks(IMinigame_ArduinoActions)" />
+        /// <seealso cref="Minigame_ArduinoActions.UnregisterCallbacks(IMinigame_ArduinoActions)" />
+        public void SetCallbacks(IMinigame_ArduinoActions instance)
+        {
+            foreach (var item in m_Wrapper.m_Minigame_ArduinoActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Minigame_ArduinoActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Minigame_ArduinoActions" /> instance referencing this action map.
+    /// </summary>
+    public Minigame_ArduinoActions @Minigame_Arduino => new Minigame_ArduinoActions(this);
     private int m_KeyboardSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -1006,5 +1134,20 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPoint(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Minigame_Arduino" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Minigame_ArduinoActions.AddCallbacks(IMinigame_ArduinoActions)" />
+    /// <seealso cref="Minigame_ArduinoActions.RemoveCallbacks(IMinigame_ArduinoActions)" />
+    public interface IMinigame_ArduinoActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnJump(InputAction.CallbackContext context);
     }
 }
