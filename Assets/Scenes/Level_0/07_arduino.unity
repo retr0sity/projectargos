@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -122,38 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &125098611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3181858913676702523, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-  m_PrefabInstance: {fileID: 2119588692}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &125098613 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6380271517867418730, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-  m_PrefabInstance: {fileID: 2119588692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &125098621
-MonoBehaviour:
+--- !u!1001 &50365636
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125098611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937d1d186d1692a438c87f7f8e10b780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  currentHealth: 1
-  playerAnimator: {fileID: 125098613}
-  textMeshPro: {fileID: 161125255}
-  texts:
-  - And while you were stumbling around. In the purple. The green ones. Tears were
-    falling from your pockets. You wanted a pause to kick the roots with your feet.
-    Like ivy. So you wouldn't disturb a thing under the leaves. And your skin would
-    save the stimulus. Blisters gnaw at
-  typingSpeed: 0.05
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4231096117292020914, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_Name
+      value: PlayerArduino
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783712155672146809, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eef1dacf86137e6c4bd280af375055f8, type: 3}
 --- !u!1 &161125252
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,15 +276,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -301,7 +325,7 @@ PrefabInstance:
       value: GridArduinoVariant
       objectReference: {fileID: 0}
     - target: {fileID: 4389626906546087813, guid: f876316e313be1b42b588f86ce0dce42, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 6445264108003113317, guid: f876316e313be1b42b588f86ce0dce42, type: 3}
@@ -3509,6 +3533,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667408691}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -3532,7 +3557,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3543,7 +3569,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &667408693
@@ -3595,6 +3620,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3791,15 +3819,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4139,95 +4169,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2119588692
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3181858913676702523, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Name
-      value: arduino player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6240176455699495003, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 625abddb4cd25df44a2593b519fd8899, type: 2}
-    - target: {fileID: 6380271517867418730, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f3658ec41d59bc14ca17bd6003c2abc9, type: 2}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.7000103
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834559047846851824, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7725517681029152716, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3181858913676702523, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 125098621}
-  m_SourcePrefab: {fileID: 100100000, guid: a738ee4ea8b0b914e91294b82fdce46e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4235,9 +4176,9 @@ SceneRoots:
   - {fileID: 1815085044}
   - {fileID: 1738848554}
   - {fileID: 524006349}
-  - {fileID: 2119588692}
   - {fileID: 782577586}
   - {fileID: 986767579}
   - {fileID: 667408693}
   - {fileID: 626708296}
   - {fileID: 2093302865}
+  - {fileID: 50365636}
