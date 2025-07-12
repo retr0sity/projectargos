@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 113148394}
   - component: {fileID: 113148397}
   - component: {fileID: 113148396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3941,7 +3941,7 @@ GameObject:
   - component: {fileID: 176900070}
   - component: {fileID: 176900072}
   - component: {fileID: 176900071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Black Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4703,7 +4703,7 @@ GameObject:
   - component: {fileID: 266810723}
   - component: {fileID: 266810725}
   - component: {fileID: 266810724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'ToneTile Background '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10378,6 +10378,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1669117293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &577188327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 552433865334814941, guid: 943688d0d75d6bd46b794728018d3afc, type: 3}
+  m_PrefabInstance: {fileID: 2301034646712007839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &604917557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10737,7 +10742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803885776}
   - component: {fileID: 803885775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11282,7 +11287,7 @@ GameObject:
   - component: {fileID: 1230346644}
   - component: {fileID: 1230346646}
   - component: {fileID: 1230346645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Void Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11787,7 +11792,7 @@ GameObject:
   - component: {fileID: 1313846875}
   - component: {fileID: 1313846878}
   - component: {fileID: 1313846877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57898,7 +57903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1406879027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Creative Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57936,7 +57941,7 @@ GameObject:
   - component: {fileID: 1430695791}
   - component: {fileID: 1430695793}
   - component: {fileID: 1430695792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DarkerToneTile Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90281,7 +90286,7 @@ GameObject:
   - component: {fileID: 1749286253}
   - component: {fileID: 1749286256}
   - component: {fileID: 1749286255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93816,7 +93821,7 @@ GameObject:
   - component: {fileID: 1944813707}
   - component: {fileID: 1944813706}
   - component: {fileID: 1944813708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97400,7 +97405,7 @@ GameObject:
   - component: {fileID: 2116870930}
   - component: {fileID: 2116870932}
   - component: {fileID: 2116870931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dark ReddishBrown Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120137,7 +120142,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  jumpForce: 20
+  jumpForce: 15
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  groundCheck: {fileID: 577188327}
+  groundCheckRadius: 0.1
 --- !u!1001 &4176040803439663721
 PrefabInstance:
   m_ObjectHideFlags: 0
