@@ -358,34 +358,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Minigame_Arduino",
-            "id": "f6e094ea-11b3-441a-8db9-eec75c19d812",
-            "actions": [
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "04911626-c536-4f75-ad1a-1d4eb054a2a7",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "e21909aa-3d4f-416e-bb01-cf1aa6f2ae58",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
