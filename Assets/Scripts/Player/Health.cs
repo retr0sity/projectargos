@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using Core.Managers;
 
 public class Health : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth; // initialize health
         spriteRenderer = GetComponent<SpriteRenderer>(); // get sprite renderer
         mainCameraAudioSource = Camera.main.GetComponent<AudioSource>(); // get main camera audio source
+        InputManager.Instance.SetControlLock(false); // unlock controls at start
     }
 
     public void TakeDamage(int amount)
@@ -33,6 +35,7 @@ public class Health : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("death_sfx"); // play death sound effect
             playerAnimator.enabled = false; // kokkaloma paixth
             Time.timeScale = 0; // kokkaloma pistas
+            InputManager.Instance.SetControlLock(true); // lock controls to prevent further input
             transition.updateMode = AnimatorUpdateMode.UnscaledTime; // allows transition to run even when game is frozen
             StartCoroutine(DeathEffectCoroutine());
         }
