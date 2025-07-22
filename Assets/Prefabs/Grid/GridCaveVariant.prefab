@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4281604301006941825, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_Name
-      value: Grid
+      value: GridCaveVariant
       objectReference: {fileID: 0}
     - target: {fileID: 5805662791839014829, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 5805662791839014829, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964382641990849975, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

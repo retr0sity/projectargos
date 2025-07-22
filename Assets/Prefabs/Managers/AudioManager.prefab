@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3557759538525230676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6844142996221340041}
+  - component: {fileID: 6757867749655647858}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6844142996221340041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557759538525230676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.352215, y: -7.31034, z: 0.02948632}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6757867749655647858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557759538525230676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf11b10c31d3ecc4497321517e7a863f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: player_jump
+    clip: {fileID: 8300000, guid: 65872a253e76d4a4285414f7dab70f56, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: death_sfx
+    clip: {fileID: 8300000, guid: 0da3d58598822ee4d934f04d4a228407, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: dying_sfx
+    clip: {fileID: 8300000, guid: b435ef544cc639343bbd252fd5bc6ff8, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: bedsheet_spread
+    clip: {fileID: 8300000, guid: e1018c3bb0cab154d984944e7aaef9f7, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}

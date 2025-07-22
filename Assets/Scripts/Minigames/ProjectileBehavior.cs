@@ -21,6 +21,9 @@ public class ProjectileBehavior : MonoBehaviour
         {
             ScoreManager.instance.AddScore(); // Increase the score
             Destroy(gameObject); // Destroy the projectile
+        } else {
+            // If the projectile hits the player, trigger the TakeDamage method
+            collision.gameObject.GetComponent<ArduinoBehavior>().TakeDamage(1);
         }
     }
 }
