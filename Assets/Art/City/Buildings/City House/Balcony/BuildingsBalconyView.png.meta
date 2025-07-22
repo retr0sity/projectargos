@@ -1,0 +1,5239 @@
+fileFormatVersion: 2
+guid: 753fe29bbe226fe46a55812d5e0fdebe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -361268802799354968
+    second: BuildingsBalconyView_0
+  - first:
+      213: 3913775369245056386
+    second: BuildingsBalconyView_1
+  - first:
+      213: 610457500437855031
+    second: BuildingsBalconyView_2
+  - first:
+      213: -6491227391929792782
+    second: BuildingsBalconyView_3
+  - first:
+      213: -1466924045829313897
+    second: BuildingsBalconyView_4
+  - first:
+      213: 3724197920918988347
+    second: BuildingsBalconyView_5
+  - first:
+      213: -1767779177805242372
+    second: BuildingsBalconyView_6
+  - first:
+      213: -2585950231419172013
+    second: BuildingsBalconyView_7
+  - first:
+      213: -9176686526547178421
+    second: BuildingsBalconyView_8
+  - first:
+      213: 3574461610384588232
+    second: BuildingsBalconyView_9
+  - first:
+      213: 3546715888562842583
+    second: BuildingsBalconyView_10
+  - first:
+      213: 7556140397813046074
+    second: BuildingsBalconyView_11
+  - first:
+      213: 1634429723309668035
+    second: BuildingsBalconyView_12
+  - first:
+      213: -840054233028162801
+    second: BuildingsBalconyView_13
+  - first:
+      213: 2210134667738729810
+    second: BuildingsBalconyView_14
+  - first:
+      213: 2655420676423595244
+    second: BuildingsBalconyView_15
+  - first:
+      213: -7445382589863847319
+    second: BuildingsBalconyView_16
+  - first:
+      213: -3253934205186458595
+    second: BuildingsBalconyView_17
+  - first:
+      213: 136537832860693992
+    second: BuildingsBalconyView_18
+  - first:
+      213: -5919444644558560267
+    second: BuildingsBalconyView_19
+  - first:
+      213: -5686802419994733281
+    second: BuildingsBalconyView_20
+  - first:
+      213: 7408459652813741771
+    second: BuildingsBalconyView_21
+  - first:
+      213: -2645384114001041979
+    second: BuildingsBalconyView_22
+  - first:
+      213: -5597038703730393745
+    second: BuildingsBalconyView_23
+  - first:
+      213: -4195543298094227717
+    second: BuildingsBalconyView_24
+  - first:
+      213: -2475334996010097353
+    second: BuildingsBalconyView_25
+  - first:
+      213: -5268371569015219504
+    second: BuildingsBalconyView_26
+  - first:
+      213: 472391309302859895
+    second: BuildingsBalconyView_27
+  - first:
+      213: -2562355792923083195
+    second: BuildingsBalconyView_28
+  - first:
+      213: 7371382948099845207
+    second: BuildingsBalconyView_29
+  - first:
+      213: -1282572705391675181
+    second: BuildingsBalconyView_30
+  - first:
+      213: -2162616001919412750
+    second: BuildingsBalconyView_31
+  - first:
+      213: 6061218565333538314
+    second: BuildingsBalconyView_32
+  - first:
+      213: -4729916184638365397
+    second: BuildingsBalconyView_33
+  - first:
+      213: -229567491366513711
+    second: BuildingsBalconyView_34
+  - first:
+      213: -8958620596463799008
+    second: BuildingsBalconyView_35
+  - first:
+      213: -7197433445191174637
+    second: BuildingsBalconyView_36
+  - first:
+      213: 2945584171114038565
+    second: BuildingsBalconyView_37
+  - first:
+      213: -5026756984590660194
+    second: BuildingsBalconyView_38
+  - first:
+      213: -7305385385816868459
+    second: BuildingsBalconyView_39
+  - first:
+      213: 5779175652258934625
+    second: BuildingsBalconyView_40
+  - first:
+      213: 5502197009088778644
+    second: BuildingsBalconyView_41
+  - first:
+      213: 5700027189803797108
+    second: BuildingsBalconyView_42
+  - first:
+      213: -6279746888810111156
+    second: BuildingsBalconyView_43
+  - first:
+      213: 2839685960805527539
+    second: BuildingsBalconyView_44
+  - first:
+      213: 2966921789690958112
+    second: BuildingsBalconyView_45
+  - first:
+      213: 6152690625070351905
+    second: BuildingsBalconyView_46
+  - first:
+      213: -2776381811772151280
+    second: BuildingsBalconyView_47
+  - first:
+      213: -4623928915523983145
+    second: BuildingsBalconyView_48
+  - first:
+      213: 8714474587533334741
+    second: BuildingsBalconyView_49
+  - first:
+      213: 3935831453894963749
+    second: BuildingsBalconyView_50
+  - first:
+      213: 1132080386392479206
+    second: BuildingsBalconyView_51
+  - first:
+      213: 1625547270293127028
+    second: BuildingsBalconyView_52
+  - first:
+      213: 9173247556637168048
+    second: BuildingsBalconyView_53
+  - first:
+      213: 4311842787094894187
+    second: BuildingsBalconyView_54
+  - first:
+      213: -8238890596887626913
+    second: BuildingsBalconyView_55
+  - first:
+      213: -6397599477732052668
+    second: BuildingsBalconyView_56
+  - first:
+      213: 4516344707185042751
+    second: BuildingsBalconyView_57
+  - first:
+      213: -3839212216568059229
+    second: BuildingsBalconyView_58
+  - first:
+      213: -2679205356770102521
+    second: BuildingsBalconyView_59
+  - first:
+      213: 8343329520170360362
+    second: BuildingsBalconyView_60
+  - first:
+      213: -8107176873118958497
+    second: BuildingsBalconyView_61
+  - first:
+      213: -8852671247533575296
+    second: BuildingsBalconyView_62
+  - first:
+      213: 3726093861730188032
+    second: BuildingsBalconyView_63
+  - first:
+      213: 2489666643728186038
+    second: BuildingsBalconyView_64
+  - first:
+      213: -2050107391866372912
+    second: BuildingsBalconyView_65
+  - first:
+      213: 2113749307663747419
+    second: BuildingsBalconyView_66
+  - first:
+      213: -7947924747176119889
+    second: BuildingsBalconyView_67
+  - first:
+      213: 6731417391672266857
+    second: BuildingsBalconyView_68
+  - first:
+      213: 1653488385345412313
+    second: BuildingsBalconyView_69
+  - first:
+      213: 1279978833521159534
+    second: BuildingsBalconyView_70
+  - first:
+      213: 4000141139000189085
+    second: BuildingsBalconyView_71
+  - first:
+      213: 2101631311734348304
+    second: BuildingsBalconyView_72
+  - first:
+      213: 5127166025332448390
+    second: BuildingsBalconyView_73
+  - first:
+      213: -6359780493770480716
+    second: BuildingsBalconyView_74
+  - first:
+      213: -3585157929594705970
+    second: BuildingsBalconyView_75
+  - first:
+      213: 6618329154260810720
+    second: BuildingsBalconyView_76
+  - first:
+      213: -8435276505616755356
+    second: BuildingsBalconyView_77
+  - first:
+      213: 3256934737426504733
+    second: BuildingsBalconyView_78
+  - first:
+      213: -5308897414809274156
+    second: BuildingsBalconyView_79
+  - first:
+      213: -1957620115243179682
+    second: BuildingsBalconyView_80
+  - first:
+      213: 919963477111244246
+    second: BuildingsBalconyView_81
+  - first:
+      213: -7528969940978436563
+    second: BuildingsBalconyView_82
+  - first:
+      213: 4492117981198586844
+    second: BuildingsBalconyView_83
+  - first:
+      213: -3827349136332092302
+    second: BuildingsBalconyView_84
+  - first:
+      213: 4990630328110812850
+    second: BuildingsBalconyView_85
+  - first:
+      213: 4271455951557468734
+    second: BuildingsBalconyView_86
+  - first:
+      213: 5764088824089756092
+    second: BuildingsBalconyView_87
+  - first:
+      213: 3712752113668910576
+    second: BuildingsBalconyView_88
+  - first:
+      213: 17920484863518600
+    second: BuildingsBalconyView_89
+  - first:
+      213: 713664475176364559
+    second: BuildingsBalconyView_90
+  - first:
+      213: -3729642688475143454
+    second: BuildingsBalconyView_91
+  - first:
+      213: 7742142155852146564
+    second: BuildingsBalconyView_92
+  - first:
+      213: -8883762217030673483
+    second: BuildingsBalconyView_93
+  - first:
+      213: -1989984376484225347
+    second: BuildingsBalconyView_94
+  - first:
+      213: 7805459189992649661
+    second: BuildingsBalconyView_95
+  - first:
+      213: 2199575927297688008
+    second: BuildingsBalconyView_96
+  - first:
+      213: -4637676529251971007
+    second: BuildingsBalconyView_97
+  - first:
+      213: 5852542337175102946
+    second: BuildingsBalconyView_98
+  - first:
+      213: 5223861465055095493
+    second: BuildingsBalconyView_99
+  - first:
+      213: -1306660971491087944
+    second: BuildingsBalconyView_100
+  - first:
+      213: -3024707153031136457
+    second: BuildingsBalconyView_101
+  - first:
+      213: -7350449139819801147
+    second: BuildingsBalconyView_102
+  - first:
+      213: -7011606012793219845
+    second: BuildingsBalconyView_103
+  - first:
+      213: 8526473507128089827
+    second: BuildingsBalconyView_104
+  - first:
+      213: 3279678695701217284
+    second: BuildingsBalconyView_105
+  - first:
+      213: -7370246085674731718
+    second: BuildingsBalconyView_106
+  - first:
+      213: -8149330172597365034
+    second: BuildingsBalconyView_107
+  - first:
+      213: -4580445782728968002
+    second: BuildingsBalconyView_108
+  - first:
+      213: 3770032520432500603
+    second: BuildingsBalconyView_109
+  - first:
+      213: 7598461358186267765
+    second: BuildingsBalconyView_110
+  - first:
+      213: 1695171988412912726
+    second: BuildingsBalconyView_111
+  - first:
+      213: 714237747230490696
+    second: BuildingsBalconyView_112
+  - first:
+      213: -784272364675581430
+    second: BuildingsBalconyView_113
+  - first:
+      213: -7185608991446161369
+    second: BuildingsBalconyView_114
+  - first:
+      213: 3072059545186121165
+    second: BuildingsBalconyView_115
+  - first:
+      213: 5018685190617748986
+    second: BuildingsBalconyView_116
+  - first:
+      213: 3462429758227529732
+    second: BuildingsBalconyView_117
+  - first:
+      213: 8139474261634632048
+    second: BuildingsBalconyView_118
+  - first:
+      213: 3071761431889582154
+    second: BuildingsBalconyView_119
+  - first:
+      213: 4118968289945381181
+    second: BuildingsBalconyView_120
+  - first:
+      213: -1769113267983295061
+    second: BuildingsBalconyView_121
+  - first:
+      213: 5671046252978306145
+    second: BuildingsBalconyView_122
+  - first:
+      213: -1277291136350652518
+    second: BuildingsBalconyView_123
+  - first:
+      213: -4066298905767239256
+    second: BuildingsBalconyView_124
+  - first:
+      213: 6559891253505329915
+    second: BuildingsBalconyView_125
+  - first:
+      213: -3604925874184194708
+    second: BuildingsBalconyView_126
+  - first:
+      213: -7260621669510443695
+    second: BuildingsBalconyView_127
+  - first:
+      213: -3599344273505757536
+    second: BuildingsBalconyView_128
+  - first:
+      213: -8562948845561272196
+    second: BuildingsBalconyView_129
+  - first:
+      213: 7646122289875394396
+    second: BuildingsBalconyView_130
+  - first:
+      213: -138910882221901933
+    second: BuildingsBalconyView_131
+  - first:
+      213: -6670214077529818764
+    second: BuildingsBalconyView_132
+  - first:
+      213: 1819310486048774054
+    second: BuildingsBalconyView_133
+  - first:
+      213: 1204687818819579327
+    second: BuildingsBalconyView_134
+  - first:
+      213: -8861052647488043505
+    second: BuildingsBalconyView_135
+  - first:
+      213: -8389055029589950399
+    second: BuildingsBalconyView_136
+  - first:
+      213: 5197368521803624452
+    second: BuildingsBalconyView_137
+  - first:
+      213: 1037485157412443366
+    second: BuildingsBalconyView_138
+  - first:
+      213: 7142409761574481800
+    second: BuildingsBalconyView_139
+  - first:
+      213: -255028088763463396
+    second: BuildingsBalconyView_140
+  - first:
+      213: 8770983736689132917
+    second: BuildingsBalconyView_141
+  - first:
+      213: -6061074761164528444
+    second: BuildingsBalconyView_142
+  - first:
+      213: -6221630208472601460
+    second: BuildingsBalconyView_143
+  - first:
+      213: 5740634094233932303
+    second: BuildingsBalconyView_144
+  - first:
+      213: 5139062745953177812
+    second: BuildingsBalconyView_145
+  - first:
+      213: -4128967253146002907
+    second: BuildingsBalconyView_146
+  - first:
+      213: -5559383159342196955
+    second: BuildingsBalconyView_147
+  - first:
+      213: 5346188834889726881
+    second: BuildingsBalconyView_148
+  - first:
+      213: -3000825229896648438
+    second: BuildingsBalconyView_149
+  - first:
+      213: 834698589807051453
+    second: BuildingsBalconyView_150
+  - first:
+      213: -5905487901668084852
+    second: BuildingsBalconyView_151
+  - first:
+      213: 819957420097027686
+    second: BuildingsBalconyView_152
+  - first:
+      213: -3007377188500187005
+    second: BuildingsBalconyView_153
+  - first:
+      213: 8477628810166615613
+    second: BuildingsBalconyView_154
+  - first:
+      213: 1089437893548235674
+    second: BuildingsBalconyView_155
+  - first:
+      213: -1465416612351066307
+    second: BuildingsBalconyView_156
+  - first:
+      213: 8224706379925506330
+    second: BuildingsBalconyView_157
+  - first:
+      213: 4823887660074353122
+    second: BuildingsBalconyView_158
+  - first:
+      213: -4462363521031755925
+    second: BuildingsBalconyView_159
+  - first:
+      213: 4907631225969006417
+    second: BuildingsBalconyView_160
+  - first:
+      213: -147531290611487168
+    second: BuildingsBalconyView_161
+  - first:
+      213: 738965471474432341
+    second: BuildingsBalconyView_162
+  - first:
+      213: -3414759126996595124
+    second: BuildingsBalconyView_163
+  - first:
+      213: 5971648428582776120
+    second: BuildingsBalconyView_164
+  - first:
+      213: 5228001118396433832
+    second: BuildingsBalconyView_165
+  - first:
+      213: 1365316024952254179
+    second: BuildingsBalconyView_166
+  - first:
+      213: 2801753763491592470
+    second: BuildingsBalconyView_167
+  - first:
+      213: -6232008847333297059
+    second: BuildingsBalconyView_168
+  - first:
+      213: 8125251496325299902
+    second: BuildingsBalconyView_169
+  - first:
+      213: -8018030426096561002
+    second: BuildingsBalconyView_170
+  - first:
+      213: 1062545861885628816
+    second: BuildingsBalconyView_171
+  - first:
+      213: 2975557838199307479
+    second: BuildingsBalconyView_172
+  - first:
+      213: 5839376761830276222
+    second: BuildingsBalconyView_173
+  - first:
+      213: -128792105957811461
+    second: BuildingsBalconyView_174
+  - first:
+      213: -7191501102628496122
+    second: BuildingsBalconyView_175
+  - first:
+      213: -7245454816178549746
+    second: BuildingsBalconyView_176
+  - first:
+      213: -6481062447872290699
+    second: BuildingsBalconyView_177
+  - first:
+      213: 2112762229886479502
+    second: BuildingsBalconyView_178
+  - first:
+      213: -8901177124908967715
+    second: BuildingsBalconyView_179
+  - first:
+      213: 605341744479543223
+    second: BuildingsBalconyView_180
+  - first:
+      213: -362840976697139622
+    second: BuildingsBalconyView_181
+  - first:
+      213: 5216476516169563815
+    second: BuildingsBalconyView_182
+  - first:
+      213: 2429480064506987208
+    second: BuildingsBalconyView_183
+  - first:
+      213: -3065740386676746229
+    second: BuildingsBalconyView_184
+  - first:
+      213: -70537553911598843
+    second: BuildingsBalconyView_185
+  - first:
+      213: 9198918001025786427
+    second: BuildingsBalconyView_186
+  - first:
+      213: -1372448106002587895
+    second: BuildingsBalconyView_187
+  - first:
+      213: 160187960105371348
+    second: BuildingsBalconyView_188
+  - first:
+      213: -182038182311428684
+    second: BuildingsBalconyView_189
+  - first:
+      213: 9050651659686962918
+    second: BuildingsBalconyView_190
+  - first:
+      213: 6630078467170355367
+    second: BuildingsBalconyView_191
+  - first:
+      213: 2624875216641892501
+    second: BuildingsBalconyView_192
+  - first:
+      213: 3378706214276809998
+    second: BuildingsBalconyView_193
+  - first:
+      213: -3991259564481320958
+    second: BuildingsBalconyView_194
+  - first:
+      213: 4724066256817478037
+    second: BuildingsBalconyView_195
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BuildingsBalconyView_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 1640
+        height: 2255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8abb6bc10f38cfaf0800000000000000
+      internalID: -361268802799354968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2354
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d568656f5805630800000000000000
+      internalID: 3913775369245056386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2348
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b3210ccd7c87800800000000000000
+      internalID: 610457500437855031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_3
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 2347
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f64dbb34178ae5a0800000000000000
+      internalID: -6491227391929792782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_4
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2353
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a6dd73a5074abe0800000000000000
+      internalID: -1466924045829313897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_5
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 2347
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36ef9507420fa330800000000000000
+      internalID: 3724197920918988347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_6
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2349
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff169134369777e0800000000000000
+      internalID: -1767779177805242372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2344
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bcb6927fbdc1cd0800000000000000
+      internalID: -2585950231419172013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2339
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cca0a693cd5a080800000000000000
+      internalID: -9176686526547178421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 2340
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd7e3675e90b9130800000000000000
+      internalID: 3574461610384588232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_10
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 2345
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dba5013f47783130800000000000000
+      internalID: 3546715888562842583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_11
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 2343
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b10ac58adccd860800000000000000
+      internalID: 7556140397813046074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_12
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 2337
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6763c7c29aea610800000000000000
+      internalID: 1634429723309668035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_13
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2338
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b0b4830278754f0800000000000000
+      internalID: -840054233028162801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_14
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2332
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25dc75045c9fbae10800000000000000
+      internalID: 2210134667738729810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_15
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 271
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4b4734903f9d420800000000000000
+      internalID: 2655420676423595244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_16
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 269
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a994a5bffaca890800000000000000
+      internalID: -7445382589863847319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_17
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 274
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c3e599414b7d2d0800000000000000
+      internalID: -3253934205186458595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_18
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 271
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e530128f6415e100800000000000000
+      internalID: 136537832860693992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_19
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 273
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3af755578e9dda0800000000000000
+      internalID: -5919444644558560267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_20
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 274
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15d168345b6411b0800000000000000
+      internalID: -5686802419994733281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_21
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 271
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bced6c27dc220d660800000000000000
+      internalID: 7408459652813741771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_22
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 261
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5a1860a25b94bd0800000000000000
+      internalID: -2645384114001041979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_23
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 265
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d790e04f25352b0800000000000000
+      internalID: -5597038703730393745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_24
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 258
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe925d699f66c5c0800000000000000
+      internalID: -4195543298094227717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_25
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 251
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735a9be9fe7d5add0800000000000000
+      internalID: -2475334996010097353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_26
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 256
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da941498fbf2e6b0800000000000000
+      internalID: -5268371569015219504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_27
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 248
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7788af994654e8600800000000000000
+      internalID: 472391309302859895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_28
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 248
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eb7a67bfea07cd0800000000000000
+      internalID: -2562355792923083195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_29
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 248
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cecdc6cb96c4660800000000000000
+      internalID: 7371382948099845207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_30
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d874887be2633ee0800000000000000
+      internalID: -1282572705391675181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_31
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 240
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5940c4438dcf1e0800000000000000
+      internalID: -2162616001919412750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_32
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 240
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0655b4eb26cd1450800000000000000
+      internalID: 6061218565333538314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_33
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 240
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21624d4a46fb5eb0800000000000000
+      internalID: -4729916184638365397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_34
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 238
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d31f19359960dcf0800000000000000
+      internalID: -229567491366513711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_35
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 246
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025f64648069ca380800000000000000
+      internalID: -8958620596463799008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 243
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3163ddc4a649d1c90800000000000000
+      internalID: -7197433445191174637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_37
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 234
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525044f7231d0e820800000000000000
+      internalID: 2945584171114038565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_38
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 241
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d8249c72f5d3ab0800000000000000
+      internalID: -5026756984590660194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_39
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 244
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5993e0b72be0e9a90800000000000000
+      internalID: -7305385385816868459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_40
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 235
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16fea77e2a1c33050800000000000000
+      internalID: 5779175652258934625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_41
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 240
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49114f2270bbb5c40800000000000000
+      internalID: 5502197009088778644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_42
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 244
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ac25277809a1f40800000000000000
+      internalID: 5700027189803797108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_43
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 240
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fdb15e97bd9d8a0800000000000000
+      internalID: -6279746888810111156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_44
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 243
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff2a770657986720800000000000000
+      internalID: 2839685960805527539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_45
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02155e6f5af9c2920800000000000000
+      internalID: 2966921789690958112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_46
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 240
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126c130768fb26550800000000000000
+      internalID: 6152690625070351905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_47
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 243
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a277cb37f4879d0800000000000000
+      internalID: -2776381811772151280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_48
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 244
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d82983662184dfb0800000000000000
+      internalID: -4623928915523983145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_49
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 239
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8d712577800f870800000000000000
+      internalID: 8714474587533334741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 234
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522f739bad1ee9630800000000000000
+      internalID: 3935831453894963749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_51
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 232
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e55c180d15f5bf00800000000000000
+      internalID: 1132080386392479206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_52
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 231
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f7d6b31aa1f8610800000000000000
+      internalID: 1625547270293127028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_53
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 232
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b114120d0ced4f70800000000000000
+      internalID: 9173247556637168048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_54
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 232
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b661f147b2eb6db30800000000000000
+      internalID: 4311842787094894187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_55
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 236
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bf43557a499ad80800000000000000
+      internalID: -8238890596887626913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_56
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 228
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4417e82cb292737a0800000000000000
+      internalID: -6397599477732052668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_57
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 231
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35eaf225974dae30800000000000000
+      internalID: 4516344707185042751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_58
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 229
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aaee1e74d068bac0800000000000000
+      internalID: -3839212216568059229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_59
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 232
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703f46d4cec81dad0800000000000000
+      internalID: -2679205356770102521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_60
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 231
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ed8c56ef579c370800000000000000
+      internalID: 8343329520170360362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_61
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 238
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c7b7a66958d7f80800000000000000
+      internalID: -8107176873118958497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_62
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 236
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0837271676ef42580800000000000000
+      internalID: -8852671247533575296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_63
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 232
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bf03420aeb5b330800000000000000
+      internalID: 3726093861730188032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_64
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 231
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6babe842f921d8220800000000000000
+      internalID: 2489666643728186038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_65
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 225
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcf664603e8c83e0800000000000000
+      internalID: -2050107391866372912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_66
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 222
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b598683dbcb855d10800000000000000
+      internalID: 2113749307663747419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_67
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 223
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1f7076d8c43b190800000000000000
+      internalID: -7947924747176119889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_68
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 229
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9601381047cca6d50800000000000000
+      internalID: 6731417391672266857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_69
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 219
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc5fb80dee52f610800000000000000
+      internalID: 1653488385345412313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_70
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 226
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d2c0ca7f563c110800000000000000
+      internalID: 1279978833521159534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_71
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9068891c2b538730800000000000000
+      internalID: 4000141139000189085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_72
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 223
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a93c80b8e7a2d10800000000000000
+      internalID: 2101631311734348304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_73
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 225
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c546cc55a572740800000000000000
+      internalID: 5127166025332448390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_74
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 229
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b32a5326558db7a0800000000000000
+      internalID: -6359780493770480716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_75
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 224
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec725d6abd5fe3ec0800000000000000
+      internalID: -3585157929594705970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_76
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 209
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebb356ec4709db50800000000000000
+      internalID: 6618329154260810720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_77
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465d38cc5b0efea80800000000000000
+      internalID: -8435276505616755356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_78
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 229
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cdfe043e4f23d20800000000000000
+      internalID: 3256934737426504733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_79
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 225
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8bd41dde10356b0800000000000000
+      internalID: -5308897414809274156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_80
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 224
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5165c980e225d4e0800000000000000
+      internalID: -1957620115243179682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_81
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 221
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d58c8388ed54cc00800000000000000
+      internalID: 919963477111244246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_82
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 210
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26f2679ab9b38790800000000000000
+      internalID: -7528969940978436563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_83
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 225
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd39c7ee085375e30800000000000000
+      internalID: 4492117981198586844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_84
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 200
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c07891d3682eac0800000000000000
+      internalID: -3827349136332092302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_85
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 216
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be065887d7424540800000000000000
+      internalID: 4990630328110812850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_86
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 223
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32af4a8e82474b30800000000000000
+      internalID: 4271455951557468734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_87
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 222
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb14badfe382eff40800000000000000
+      internalID: 5764088824089756092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_88
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 213
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fde05a5068568330800000000000000
+      internalID: 3712752113668910576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_89
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 216
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8872e76069aaf3000800000000000000
+      internalID: 17920484863518600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_90
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 219
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ae3bb1f0277e900800000000000000
+      internalID: 713664475176364559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_91
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 211
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e26e4e3cb5ad3cc0800000000000000
+      internalID: -3729642688475143454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_92
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 215
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487e428654d917b60800000000000000
+      internalID: 7742142155852146564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_93
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 217
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb99d0f45986b480800000000000000
+      internalID: -8883762217030673483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_94
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 210
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe9413c0c72264e0800000000000000
+      internalID: -1989984376484225347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_95
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 215
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3f15837cf825c60800000000000000
+      internalID: 7805459189992649661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_96
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 213
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1441be6a6768e10800000000000000
+      internalID: 2199575927297688008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_97
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 210
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14015c2a4c9a3afb0800000000000000
+      internalID: -4637676529251971007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_98
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 210
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5a1406f38683150800000000000000
+      internalID: 5852542337175102946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_99
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 206
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cae5744352ee7840800000000000000
+      internalID: 5223861465055095493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_100
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 207
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b92868f4cecddde0800000000000000
+      internalID: -1306660971491087944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_101
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 211
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bfef1bed41606d0800000000000000
+      internalID: -3024707153031136457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_102
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 208
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c51771a375fdf990800000000000000
+      internalID: -7350449139819801147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_103
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 206
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4977efa75c1be90800000000000000
+      internalID: -7011606012793219845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_104
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec1623ca7e145670800000000000000
+      internalID: 8526473507128089827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_105
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 199
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40000b2b562c38d20800000000000000
+      internalID: 3279678695701217284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_106
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 204
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37f42cfb30a7b990800000000000000
+      internalID: -7370246085674731718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_107
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 200
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d616f09263c7ee80800000000000000
+      internalID: -8149330172597365034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_108
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 196
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8f08f24dcfe60c0800000000000000
+      internalID: -4580445782728968002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_109
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 202
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fbc045a98d15430800000000000000
+      internalID: 3770032520432500603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_110
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 200
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574893ec858237960800000000000000
+      internalID: 7598461358186267765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_111
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 148
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6545b8a21f5768710800000000000000
+      internalID: 1695171988412912726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_112
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 198
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84049d8627b79e900800000000000000
+      internalID: 714237747230490696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_113
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 186
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a3b588074bd15f0800000000000000
+      internalID: -784272364675581430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_114
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 194
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728aff971b6974c90800000000000000
+      internalID: -7185608991446161369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_115
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 196
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5baaf31e522aa20800000000000000
+      internalID: 3072059545186121165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_116
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 196
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5d84a3793f5a540800000000000000
+      internalID: 5018685190617748986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_117
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 196
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400c4e635850d0030800000000000000
+      internalID: 3462429758227529732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_118
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 105
+        width: 63
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079ca2757b835f070800000000000000
+      internalID: 8139474261634632048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_119
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 192
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4816865fb611aa20800000000000000
+      internalID: 3071761431889582154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_120
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 198
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39ea4326d3892930800000000000000
+      internalID: 4118968289945381181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_121
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 180
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baddc6e1bd8d277e0800000000000000
+      internalID: -1769113267983295061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_122
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 188
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cf495458a93be40800000000000000
+      internalID: 5671046252978306145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_123
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 192
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9770179a76264ee0800000000000000
+      internalID: -1277291136350652518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_124
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 193
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a12f2b70ba9197c0800000000000000
+      internalID: -4066298905767239256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_125
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 188
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa806ad65a690b50800000000000000
+      internalID: 6559891253505329915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_126
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 188
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65f2a3640bb8fdc0800000000000000
+      internalID: -3604925874184194708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_127
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 184
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d835c5f071d3b90800000000000000
+      internalID: -7260621669510443695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_128
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 184
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a65a51147f8c0ec0800000000000000
+      internalID: -3599344273505757536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_129
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 190
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78aa76b46b4a2980800000000000000
+      internalID: -8562948845561272196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_130
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 190
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f183536bb7c1a60800000000000000
+      internalID: 7646122289875394396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_131
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 105
+        width: 104
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3973ab1e94d721ef0800000000000000
+      internalID: -138910882221901933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_132
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 184
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479760503a3ae63a0800000000000000
+      internalID: -6670214077529818764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_133
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 188
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a794197f3d7f3910800000000000000
+      internalID: 1819310486048774054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_134
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 153
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd2bf14039e7b010800000000000000
+      internalID: 1204687818819579327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_135
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 166
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06c072a097370580800000000000000
+      internalID: -8861052647488043505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_136
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 105
+        width: 110
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1404610d5e6149b80800000000000000
+      internalID: -8389055029589950399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_137
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 182
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400f6ec3223c02840800000000000000
+      internalID: 5197368521803624452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_138
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 182
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e41f4bf043e56e00800000000000000
+      internalID: 1037485157412443366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_139
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 105
+        width: 97
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fede606dfee1360800000000000000
+      internalID: 7142409761574481800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_140
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 186
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19c181fd45f57cf0800000000000000
+      internalID: -255028088763463396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_141
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 175
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5758514ec3bc8b970800000000000000
+      internalID: 8770983736689132917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_142
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 167
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4e3bf1e9cb2eba0800000000000000
+      internalID: -6061074761164528444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_143
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 163
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ca62cf94458a9a0800000000000000
+      internalID: -6221630208472601460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_144
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 158
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f025f442b44daaf40800000000000000
+      internalID: 5740634094233932303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_145
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 176
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d09bfae65e915740800000000000000
+      internalID: 5139062745953177812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_146
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 163
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a1303d826f2b6c0800000000000000
+      internalID: -4128967253146002907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_147
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 171
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5279e11b87a19d2b0800000000000000
+      internalID: -5559383159342196955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_148
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 155
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abf2c58b6a713a40800000000000000
+      internalID: 5346188834889726881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_149
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09fafa3a5dea56d0800000000000000
+      internalID: -3000825229896648438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_150
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 153
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db208fbe1f1759b00800000000000000
+      internalID: 834698589807051453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_151
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 166
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83f4b3ca0e7b0ea0800000000000000
+      internalID: -5905487901668084852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_152
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 152
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e34d3ede2116b00800000000000000
+      internalID: 819957420097027686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_153
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 159
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38855dd7166a346d0800000000000000
+      internalID: -3007377188500187005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_154
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 165
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e39978c7696a570800000000000000
+      internalID: 8477628810166615613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_155
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 161
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bdac9fdf57e1f00800000000000000
+      internalID: 1089437893548235674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_156
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 161
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fbbdcea5bc9abe0800000000000000
+      internalID: -1465416612351066307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_157
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 163
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19495d40e6042270800000000000000
+      internalID: 8224706379925506330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_158
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 145
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e14f1fc444e1f240800000000000000
+      internalID: 4823887660074353122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_159
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 163
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67ad3e25008212c0800000000000000
+      internalID: -4462363521031755925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_160
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 146
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1575f7829986b1440800000000000000
+      internalID: 4907631225969006417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_161
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 153
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ee8d5a21dd3fdf0800000000000000
+      internalID: -147531290611487168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_162
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 149
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559338c5e25514a00800000000000000
+      internalID: 738965471474432341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_163
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 157
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e48d98aa65c90d0800000000000000
+      internalID: -3414759126996595124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_164
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 145
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d223d4b9e8fd250800000000000000
+      internalID: 5971648428582776120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_165
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 152
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a54d5b61579d8840800000000000000
+      internalID: 5228001118396433832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_166
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 150
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee6d61e0b392f210800000000000000
+      internalID: 1365316024952254179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_167
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 155
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619b70d1434d1e620800000000000000
+      internalID: 2801753763491592470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_168
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 142
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d547b91d8f47389a0800000000000000
+      internalID: -6232008847333297059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_169
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 130
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe3e2dbf21b2c070800000000000000
+      internalID: 8125251496325299902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_170
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 143
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6949d3e0fcb3ab090800000000000000
+      internalID: -8018030426096561002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_171
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 139
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091114fe4dbeebe00800000000000000
+      internalID: 1062545861885628816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_172
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 129
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dcbf72b61e4b4920800000000000000
+      internalID: 2975557838199307479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_173
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 134
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c709ef932a90150800000000000000
+      internalID: 5839376761830276222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_174
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 131
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa92821340763ef0800000000000000
+      internalID: -128792105957811461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_175
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 123
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d9fff69d7a23c90800000000000000
+      internalID: -7191501102628496122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_176
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 121
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0cc8859b39f27b90800000000000000
+      internalID: -7245454816178549746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_177
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 129
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570d273ba04ae06a0800000000000000
+      internalID: -6481062447872290699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_178
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 134
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8cee3fdd0a025d10800000000000000
+      internalID: 2112762229886479502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_179
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 129
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8d7fab09aa87480800000000000000
+      internalID: -8901177124908967715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_180
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 105
+        width: 58
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf1b6ffb1b966800800000000000000
+      internalID: 605341744479543223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_181
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 118
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ed20add0ee6faf0800000000000000
+      internalID: -362840976697139622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_182
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 123
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae347dd0c5a46840800000000000000
+      internalID: 5216476516169563815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_183
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 114
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c205d92f3f37b120800000000000000
+      internalID: 2429480064506987208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_184
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 117
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08509e7c5d4475d0800000000000000
+      internalID: -3065740386676746229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_185
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 123
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50136cbe776650ff0800000000000000
+      internalID: -70537553911598843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_186
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 105
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32a6191f2f19af70800000000000000
+      internalID: 9198918001025786427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_187
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 111
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fde0918b514fce0800000000000000
+      internalID: -1372448106002587895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_188
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 109
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6006bd91a193200800000000000000
+      internalID: 160187960105371348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_189
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 105
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdf4c7dc35497df0800000000000000
+      internalID: -182038182311428684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_190
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 105
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6e0796bbf5a9d70800000000000000
+      internalID: 9050651659686962918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_191
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 111
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8c7acfc35c20c50800000000000000
+      internalID: 6630078467170355367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_192
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 105
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590aaa33a1e6d6420800000000000000
+      internalID: 2624875216641892501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_193
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 105
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05cf56966393ee20800000000000000
+      internalID: 3378706214276809998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_194
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 105
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208e5bc92923c98c0800000000000000
+      internalID: -3991259564481320958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuildingsBalconyView_195
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 105
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599d30d3b314f8140800000000000000
+      internalID: 4724066256817478037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BuildingsBalconyView_0: -361268802799354968
+      BuildingsBalconyView_1: 3913775369245056386
+      BuildingsBalconyView_10: 3546715888562842583
+      BuildingsBalconyView_100: -1306660971491087944
+      BuildingsBalconyView_101: -3024707153031136457
+      BuildingsBalconyView_102: -7350449139819801147
+      BuildingsBalconyView_103: -7011606012793219845
+      BuildingsBalconyView_104: 8526473507128089827
+      BuildingsBalconyView_105: 3279678695701217284
+      BuildingsBalconyView_106: -7370246085674731718
+      BuildingsBalconyView_107: -8149330172597365034
+      BuildingsBalconyView_108: -4580445782728968002
+      BuildingsBalconyView_109: 3770032520432500603
+      BuildingsBalconyView_11: 7556140397813046074
+      BuildingsBalconyView_110: 7598461358186267765
+      BuildingsBalconyView_111: 1695171988412912726
+      BuildingsBalconyView_112: 714237747230490696
+      BuildingsBalconyView_113: -784272364675581430
+      BuildingsBalconyView_114: -7185608991446161369
+      BuildingsBalconyView_115: 3072059545186121165
+      BuildingsBalconyView_116: 5018685190617748986
+      BuildingsBalconyView_117: 3462429758227529732
+      BuildingsBalconyView_118: 8139474261634632048
+      BuildingsBalconyView_119: 3071761431889582154
+      BuildingsBalconyView_12: 1634429723309668035
+      BuildingsBalconyView_120: 4118968289945381181
+      BuildingsBalconyView_121: -1769113267983295061
+      BuildingsBalconyView_122: 5671046252978306145
+      BuildingsBalconyView_123: -1277291136350652518
+      BuildingsBalconyView_124: -4066298905767239256
+      BuildingsBalconyView_125: 6559891253505329915
+      BuildingsBalconyView_126: -3604925874184194708
+      BuildingsBalconyView_127: -7260621669510443695
+      BuildingsBalconyView_128: -3599344273505757536
+      BuildingsBalconyView_129: -8562948845561272196
+      BuildingsBalconyView_13: -840054233028162801
+      BuildingsBalconyView_130: 7646122289875394396
+      BuildingsBalconyView_131: -138910882221901933
+      BuildingsBalconyView_132: -6670214077529818764
+      BuildingsBalconyView_133: 1819310486048774054
+      BuildingsBalconyView_134: 1204687818819579327
+      BuildingsBalconyView_135: -8861052647488043505
+      BuildingsBalconyView_136: -8389055029589950399
+      BuildingsBalconyView_137: 5197368521803624452
+      BuildingsBalconyView_138: 1037485157412443366
+      BuildingsBalconyView_139: 7142409761574481800
+      BuildingsBalconyView_14: 2210134667738729810
+      BuildingsBalconyView_140: -255028088763463396
+      BuildingsBalconyView_141: 8770983736689132917
+      BuildingsBalconyView_142: -6061074761164528444
+      BuildingsBalconyView_143: -6221630208472601460
+      BuildingsBalconyView_144: 5740634094233932303
+      BuildingsBalconyView_145: 5139062745953177812
+      BuildingsBalconyView_146: -4128967253146002907
+      BuildingsBalconyView_147: -5559383159342196955
+      BuildingsBalconyView_148: 5346188834889726881
+      BuildingsBalconyView_149: -3000825229896648438
+      BuildingsBalconyView_15: 2655420676423595244
+      BuildingsBalconyView_150: 834698589807051453
+      BuildingsBalconyView_151: -5905487901668084852
+      BuildingsBalconyView_152: 819957420097027686
+      BuildingsBalconyView_153: -3007377188500187005
+      BuildingsBalconyView_154: 8477628810166615613
+      BuildingsBalconyView_155: 1089437893548235674
+      BuildingsBalconyView_156: -1465416612351066307
+      BuildingsBalconyView_157: 8224706379925506330
+      BuildingsBalconyView_158: 4823887660074353122
+      BuildingsBalconyView_159: -4462363521031755925
+      BuildingsBalconyView_16: -7445382589863847319
+      BuildingsBalconyView_160: 4907631225969006417
+      BuildingsBalconyView_161: -147531290611487168
+      BuildingsBalconyView_162: 738965471474432341
+      BuildingsBalconyView_163: -3414759126996595124
+      BuildingsBalconyView_164: 5971648428582776120
+      BuildingsBalconyView_165: 5228001118396433832
+      BuildingsBalconyView_166: 1365316024952254179
+      BuildingsBalconyView_167: 2801753763491592470
+      BuildingsBalconyView_168: -6232008847333297059
+      BuildingsBalconyView_169: 8125251496325299902
+      BuildingsBalconyView_17: -3253934205186458595
+      BuildingsBalconyView_170: -8018030426096561002
+      BuildingsBalconyView_171: 1062545861885628816
+      BuildingsBalconyView_172: 2975557838199307479
+      BuildingsBalconyView_173: 5839376761830276222
+      BuildingsBalconyView_174: -128792105957811461
+      BuildingsBalconyView_175: -7191501102628496122
+      BuildingsBalconyView_176: -7245454816178549746
+      BuildingsBalconyView_177: -6481062447872290699
+      BuildingsBalconyView_178: 2112762229886479502
+      BuildingsBalconyView_179: -8901177124908967715
+      BuildingsBalconyView_18: 136537832860693992
+      BuildingsBalconyView_180: 605341744479543223
+      BuildingsBalconyView_181: -362840976697139622
+      BuildingsBalconyView_182: 5216476516169563815
+      BuildingsBalconyView_183: 2429480064506987208
+      BuildingsBalconyView_184: -3065740386676746229
+      BuildingsBalconyView_185: -70537553911598843
+      BuildingsBalconyView_186: 9198918001025786427
+      BuildingsBalconyView_187: -1372448106002587895
+      BuildingsBalconyView_188: 160187960105371348
+      BuildingsBalconyView_189: -182038182311428684
+      BuildingsBalconyView_19: -5919444644558560267
+      BuildingsBalconyView_190: 9050651659686962918
+      BuildingsBalconyView_191: 6630078467170355367
+      BuildingsBalconyView_192: 2624875216641892501
+      BuildingsBalconyView_193: 3378706214276809998
+      BuildingsBalconyView_194: -3991259564481320958
+      BuildingsBalconyView_195: 4724066256817478037
+      BuildingsBalconyView_2: 610457500437855031
+      BuildingsBalconyView_20: -5686802419994733281
+      BuildingsBalconyView_21: 7408459652813741771
+      BuildingsBalconyView_22: -2645384114001041979
+      BuildingsBalconyView_23: -5597038703730393745
+      BuildingsBalconyView_24: -4195543298094227717
+      BuildingsBalconyView_25: -2475334996010097353
+      BuildingsBalconyView_26: -5268371569015219504
+      BuildingsBalconyView_27: 472391309302859895
+      BuildingsBalconyView_28: -2562355792923083195
+      BuildingsBalconyView_29: 7371382948099845207
+      BuildingsBalconyView_3: -6491227391929792782
+      BuildingsBalconyView_30: -1282572705391675181
+      BuildingsBalconyView_31: -2162616001919412750
+      BuildingsBalconyView_32: 6061218565333538314
+      BuildingsBalconyView_33: -4729916184638365397
+      BuildingsBalconyView_34: -229567491366513711
+      BuildingsBalconyView_35: -8958620596463799008
+      BuildingsBalconyView_36: -7197433445191174637
+      BuildingsBalconyView_37: 2945584171114038565
+      BuildingsBalconyView_38: -5026756984590660194
+      BuildingsBalconyView_39: -7305385385816868459
+      BuildingsBalconyView_4: -1466924045829313897
+      BuildingsBalconyView_40: 5779175652258934625
+      BuildingsBalconyView_41: 5502197009088778644
+      BuildingsBalconyView_42: 5700027189803797108
+      BuildingsBalconyView_43: -6279746888810111156
+      BuildingsBalconyView_44: 2839685960805527539
+      BuildingsBalconyView_45: 2966921789690958112
+      BuildingsBalconyView_46: 6152690625070351905
+      BuildingsBalconyView_47: -2776381811772151280
+      BuildingsBalconyView_48: -4623928915523983145
+      BuildingsBalconyView_49: 8714474587533334741
+      BuildingsBalconyView_5: 3724197920918988347
+      BuildingsBalconyView_50: 3935831453894963749
+      BuildingsBalconyView_51: 1132080386392479206
+      BuildingsBalconyView_52: 1625547270293127028
+      BuildingsBalconyView_53: 9173247556637168048
+      BuildingsBalconyView_54: 4311842787094894187
+      BuildingsBalconyView_55: -8238890596887626913
+      BuildingsBalconyView_56: -6397599477732052668
+      BuildingsBalconyView_57: 4516344707185042751
+      BuildingsBalconyView_58: -3839212216568059229
+      BuildingsBalconyView_59: -2679205356770102521
+      BuildingsBalconyView_6: -1767779177805242372
+      BuildingsBalconyView_60: 8343329520170360362
+      BuildingsBalconyView_61: -8107176873118958497
+      BuildingsBalconyView_62: -8852671247533575296
+      BuildingsBalconyView_63: 3726093861730188032
+      BuildingsBalconyView_64: 2489666643728186038
+      BuildingsBalconyView_65: -2050107391866372912
+      BuildingsBalconyView_66: 2113749307663747419
+      BuildingsBalconyView_67: -7947924747176119889
+      BuildingsBalconyView_68: 6731417391672266857
+      BuildingsBalconyView_69: 1653488385345412313
+      BuildingsBalconyView_7: -2585950231419172013
+      BuildingsBalconyView_70: 1279978833521159534
+      BuildingsBalconyView_71: 4000141139000189085
+      BuildingsBalconyView_72: 2101631311734348304
+      BuildingsBalconyView_73: 5127166025332448390
+      BuildingsBalconyView_74: -6359780493770480716
+      BuildingsBalconyView_75: -3585157929594705970
+      BuildingsBalconyView_76: 6618329154260810720
+      BuildingsBalconyView_77: -8435276505616755356
+      BuildingsBalconyView_78: 3256934737426504733
+      BuildingsBalconyView_79: -5308897414809274156
+      BuildingsBalconyView_8: -9176686526547178421
+      BuildingsBalconyView_80: -1957620115243179682
+      BuildingsBalconyView_81: 919963477111244246
+      BuildingsBalconyView_82: -7528969940978436563
+      BuildingsBalconyView_83: 4492117981198586844
+      BuildingsBalconyView_84: -3827349136332092302
+      BuildingsBalconyView_85: 4990630328110812850
+      BuildingsBalconyView_86: 4271455951557468734
+      BuildingsBalconyView_87: 5764088824089756092
+      BuildingsBalconyView_88: 3712752113668910576
+      BuildingsBalconyView_89: 17920484863518600
+      BuildingsBalconyView_9: 3574461610384588232
+      BuildingsBalconyView_90: 713664475176364559
+      BuildingsBalconyView_91: -3729642688475143454
+      BuildingsBalconyView_92: 7742142155852146564
+      BuildingsBalconyView_93: -8883762217030673483
+      BuildingsBalconyView_94: -1989984376484225347
+      BuildingsBalconyView_95: 7805459189992649661
+      BuildingsBalconyView_96: 2199575927297688008
+      BuildingsBalconyView_97: -4637676529251971007
+      BuildingsBalconyView_98: 5852542337175102946
+      BuildingsBalconyView_99: 5223861465055095493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
