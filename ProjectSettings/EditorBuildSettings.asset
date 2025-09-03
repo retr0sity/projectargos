@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_0/09_Credits.unity
     guid: 103a7f64e458c2c44a2fd9c14cfae46f
   - enabled: 0
-    path: Assets/Scenes/Level_1_City/1.0.Test Level 1.unity
+    path: Assets/Scenes/Personal Scenes/Maria/Level_1_City/1.0.Test Level 1.unity
     guid: dae5e3c3b42be1b4983358e0946c6bf1
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ee04d4b4b94aa364ea15ab4e3eaee9b7, type: 2}
