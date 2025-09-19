@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - DamagingObject
+  - Interactable
   layers:
   - Default
   - TransparentFX
