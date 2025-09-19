@@ -1,44 +1,40 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class RigidbodyShadowEnemy : MonoBehaviour
+public class EnemyChase : MonoBehaviour
 {
-    public Transform player;
-    public float followDelay = 1.0f;      // seconds behind the player
-    public float recordInterval = 0.02f;  // how often to record positions
-    public float moveSpeed = 10f;         // how fast enemy catches up
+    public Transform player;        
+    public float moveSpeed = 5f;    
+    public float jumpForce = 8f;    
 
-    private Queue<Vector2> playerPositions = new Queue<Vector2>();
-    private float timer;
     private Rigidbody2D rb;
+    private bool shouldJump = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true; // keep upright
     }
 
     void Update()
     {
-        // Record player positions
-        timer += Time.deltaTime;
-        if (timer >= recordInterval)
+        if (player == null) return;
+
+        // Move toward player on X-axis only
+        float direction = Mathf.Sign(player.position.x - transform.position.x);
+        rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
+
+        // Jump if triggered
+        if (shouldJump && Mathf.Abs(rb.linearVelocity.y) < 0.01f) // only if grounded
         {
-            playerPositions.Enqueue(player.position);
-            timer = 0f;
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            shouldJump = false;
         }
     }
 
-    void FixedUpdate()
+    // Called from jump triggers
+    public void TriggerJump()
     {
-        // Only move if enough history has built up
-        if (playerPositions.Count * recordInterval > followDelay)
-        {
-            Vector2 targetPos = playerPositions.Dequeue();
-
-            // Use Rigidbody movement (respects gravity, collisions, etc.)
-            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPos, moveSpeed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
-        }
+        shouldJump = true;
     }
 }
