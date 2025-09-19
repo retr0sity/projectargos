@@ -15,8 +15,15 @@ public class ImageInteraction : MonoBehaviour
     
     void Start()
     {
+        // Make absolutely sure the image popup is hidden at start
         if (imagePopup != null)
+        {
             imagePopup.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("ImagePopup not assigned in " + gameObject.name);
+        }
             
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)

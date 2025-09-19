@@ -75,9 +75,15 @@ public class InteractionDetector : MonoBehaviour
     
     void OnInteractPressed()
     {
-        if (currentInteractable != null && !DialogueManager.Instance.IsDialogueActive())
+        if (currentInteractable != null)
         {
-            currentInteractable.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
+            // Check if DialogueManager exists and if dialogue is active
+            bool dialogueActive = DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive();
+            
+            if (!dialogueActive)
+            {
+                currentInteractable.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
+            }
         }
     }
     

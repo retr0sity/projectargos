@@ -32,16 +32,23 @@ public class DialogueManager : MonoBehaviour
     
     void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+        
         Instance = this;
         DontDestroyOnLoad(gameObject);
         
         sentences = new Queue<string>();
-        dialoguePanel.SetActive(false);
+    }
+    
+    void OnEnable()
+    {
+        // Hide panels when script is enabled
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
         if (choicePanel != null)
             choicePanel.SetActive(false);
     }

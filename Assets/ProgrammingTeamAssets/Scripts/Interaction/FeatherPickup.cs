@@ -20,7 +20,18 @@ public class FeatherPickup : MonoBehaviour
     void OnInteract()
     {
         if (hasBeenInteracted) return;
-        if (GameStateManager.Instance == null) return;
+        
+        if (GameStateManager.Instance == null)
+        {
+            Debug.LogError("GameStateManager not found!");
+            return;
+        }
+        
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogError("DialogueManager not found!");
+            return;
+        }
         
         hasBeenInteracted = true;
         

@@ -12,12 +12,15 @@ public class SimpleNPCDialogue : MonoBehaviour
     {
         if (hasBeenTalkedTo) return;
         
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogError("DialogueManager not found!");
+            return;
+        }
+        
         hasBeenTalkedTo = true;
         
-        if (DialogueManager.Instance != null)
-        {
-            DialogueManager.Instance.StartDialogue(dialogueLines, npcName, OnDialogueComplete);
-        }
+        DialogueManager.Instance.StartDialogue(dialogueLines, npcName, OnDialogueComplete);
     }
     
     void OnDialogueComplete()
