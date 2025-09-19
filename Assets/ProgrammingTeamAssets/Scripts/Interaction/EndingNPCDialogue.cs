@@ -4,23 +4,41 @@ using UnityEngine.SceneManagement;
 public class EndingNPCDialogue : MonoBehaviour
 {
     [Header("NPC Settings")]
-    [SerializeField] private string npcName = "Pelargos";
+    [SerializeField] private string storkName = "Stork";
     
-    [Header("Dialogue - Intro")]
-    [SerializeField] private string[] introDialogueWithFeathers;
-    [SerializeField] private string[] introDialogueNoFeathers;
+    [Header("Sky/Sand Text References")]
+    [SerializeField] private SkyText skyTextDisplay; // For sky messages
+    [SerializeField] private SkyText sandTextDisplay; // For sand messages
     
-    [Header("Ending Dialogues")]
-    [SerializeField] private string[] ending1Dialogue; // Make bouquet
-    [SerializeField] private string[] ending2Dialogue; // Bury in sand
-    [SerializeField] private string[] ending3DialogueChosen; // Pierce ears (chosen)
-    [SerializeField] private string[] ending3DialogueAutomatic; // Pierce ears (automatic/refused)
+    [Header("Dialogue - No Feathers Path")]
+    [TextArea(3,5)]
+    [SerializeField] private string[] automaticEndingDialogue; // "One day you will learn how to use it."
+    
+    [Header("Choice Texts")]
+    [SerializeField] private string choice1Text = "Make a bouquet and give them";
+    [SerializeField] private string choice2Text = "Bury them in the sand";
+    [SerializeField] private string choice3Text = "Pierce your ears with them";
+    
+    [Header("Ending 1 - Bouquet")]
+    [TextArea(3,5)]
+    [SerializeField] private string[] ending1StorkDialogue; // "You're kind. But you need them more than I do."
+    
+    [Header("Ending 2 - Sand")]
+    [TextArea(3,5)]
+    [SerializeField] private string sandMessage = "The sea will bring them back when you need them.";
+    
+    [Header("Ending 3 - Pierce Ears")]
+    [TextArea(3,5)]
+    [SerializeField] private string[] ending3StorkDialogue; // "You will get them back when you know how to use them."
     
     [Header("Animations")]
-    [SerializeField] private Animator npcAnimator; // Optional for later
-    [SerializeField] private string ending1AnimationTrigger = "Ending1";
-    [SerializeField] private string ending2AnimationTrigger = "Ending2";
-    [SerializeField] private string ending3AnimationTrigger = "Ending3";
+    [SerializeField] private Animator storkAnimator;
+    [SerializeField] private string ending1Animation = "GiveBouquet";
+    [SerializeField] private string ending2Animation = "BuryFeathers";
+    [SerializeField] private string ending3Animation = "PierceEars";
+    
+    [Header("Settings")]
+    [SerializeField] private float delayBeforeCredits = 3f;
     
     private bool hasBeenInteracted = false;
     
@@ -32,63 +50,47 @@ public class EndingNPCDialogue : MonoBehaviour
         // Check if player has visited the other scene
         if (!GameStateManager.Instance.hasVisitedOtherScene)
         {
-            Debug.Log("Player hasn't visited the other scene yet");
+            Debug.Log("Player hasn't completed the mini-game yet");
             return;
         }
         
         hasBeenInteracted = true;
         
-        // Check if player refused feathers
+        // Check if player has any feathers
         if (GameStateManager.Instance.refusedFeathers || GameStateManager.Instance.feathersCollected == 0)
         {
-            // Automatic ending 3
-            ShowAutomaticEnding3();
+            // Automatic ending - no choices
+            ShowNoFeathersEnding();
         }
         else
         {
-            // Show intro then choices
-            ShowIntroWithChoices();
+            // Player has feathers - show choices
+            ShowFeatherChoices();
         }
     }
     
-    void ShowAutomaticEnding3()
+    void ShowNoFeathersEnding()
     {
-        GameStateManager.Instance.endingChosen = 3;
+        GameStateManager.Instance.endingChosen = 3; // Mark as ending 3
         
-        // Show the automatic ending 3 dialogue
+        // Stork takes the feather back and speaks
         DialogueManager.Instance.StartDialogue(
-            ending3DialogueAutomatic, 
-            npcName, 
+            automaticEndingDialogue, 
+            storkName,
             () => {
-                // Play animation if available
-                if (npcAnimator != null)
-                    npcAnimator.SetTrigger(ending3AnimationTrigger);
-                    
-                // Wait a bit then load credits
-                Invoke("LoadCredits", 2f);
+                PlayAnimation(ending3Animation);
+                Invoke("LoadCredits", delayBeforeCredits);
             }
         );
     }
     
-    void ShowIntroWithChoices()
+    void ShowFeatherChoices()
     {
-        // Show intro dialogue first
-        DialogueManager.Instance.StartDialogue(
-            introDialogueWithFeathers,
-            npcName,
-            () => {
-                // After intro, show the 3 choices
-                ShowEndingChoices();
-            }
-        );
-    }
-    
-    void ShowEndingChoices()
-    {
+        // Go straight to choices (no intro dialogue needed)
         string[] choices = new string[] {
-            "Make a bouquet and give them",
-            "Bury them in the sand",
-            "Pierce your ears with the feathers"
+            choice1Text,
+            choice2Text,
+            choice3Text
         };
         
         DialogueManager.Instance.ShowChoices(choices, OnEndingChosen);
@@ -98,38 +100,73 @@ public class EndingNPCDialogue : MonoBehaviour
     {
         GameStateManager.Instance.endingChosen = choiceIndex + 1;
         
-        string[] selectedDialogue = null;
-        string animationTrigger = "";
-        
         switch (choiceIndex)
         {
-            case 0: // Ending 1 - Bouquet
-                selectedDialogue = ending1Dialogue;
-                animationTrigger = ending1AnimationTrigger;
+            case 0: // Ending 1 - Give Bouquet
+                HandleBouquetEnding();
                 break;
-            case 1: // Ending 2 - Bury
-                selectedDialogue = ending2Dialogue;
-                animationTrigger = ending2AnimationTrigger;
+            case 1: // Ending 2 - Bury in Sand
+                HandleSandEnding();
                 break;
-            case 2: // Ending 3 - Pierce ears
-                selectedDialogue = ending3DialogueChosen;
-                animationTrigger = ending3AnimationTrigger;
+            case 2: // Ending 3 - Pierce Ears
+                HandlePierceEarsEnding();
                 break;
         }
-        
-        // Show ending dialogue
+    }
+    
+    void HandleBouquetEnding()
+    {
+        // Stork speaks
         DialogueManager.Instance.StartDialogue(
-            selectedDialogue,
-            npcName,
+            ending1StorkDialogue,
+            storkName,
             () => {
-                // Play animation if available
-                if (npcAnimator != null && !string.IsNullOrEmpty(animationTrigger))
-                    npcAnimator.SetTrigger(animationTrigger);
-                    
-                // Wait then load credits
-                Invoke("LoadCredits", 2f);
+                PlayAnimation(ending1Animation);
+                Invoke("LoadCredits", delayBeforeCredits);
             }
         );
+    }
+    
+    void HandleSandEnding()
+    {
+        // Show text on sand (not in dialogue box)
+        if (sandTextDisplay != null)
+        {
+            sandTextDisplay.ShowText(sandMessage);
+        }
+        else
+        {
+            Debug.LogWarning("Sand text display not assigned - showing in dialogue instead");
+            DialogueManager.Instance.StartDialogue(
+                new string[] { sandMessage },
+                "Sand",
+                () => { }
+            );
+        }
+        
+        PlayAnimation(ending2Animation);
+        Invoke("LoadCredits", delayBeforeCredits);
+    }
+    
+    void HandlePierceEarsEnding()
+    {
+        // Stork speaks (same as automatic ending)
+        DialogueManager.Instance.StartDialogue(
+            ending3StorkDialogue,
+            storkName,
+            () => {
+                PlayAnimation(ending3Animation);
+                Invoke("LoadCredits", delayBeforeCredits);
+            }
+        );
+    }
+    
+    void PlayAnimation(string triggerName)
+    {
+        if (storkAnimator != null && !string.IsNullOrEmpty(triggerName))
+        {
+            storkAnimator.SetTrigger(triggerName);
+        }
     }
     
     void LoadCredits()

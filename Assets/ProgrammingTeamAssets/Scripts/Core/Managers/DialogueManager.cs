@@ -42,15 +42,9 @@ public class DialogueManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         
         sentences = new Queue<string>();
-    }
-    
-    void OnEnable()
-    {
-        // Hide panels when script is enabled
-        if (dialoguePanel != null)
-            dialoguePanel.SetActive(false);
-        if (choicePanel != null)
-            choicePanel.SetActive(false);
+        
+        // Panels should be DISABLED in hierarchy - we'll enable them when needed
+        // Don't try to disable them here
     }
     
     void Start()
@@ -84,8 +78,14 @@ public class DialogueManager : MonoBehaviour
         {
             speakerNameText.text = speakerName;
         }
+        else if (speakerNameText != null)
+        {
+            speakerNameText.text = ""; // Clear if no name
+        }
         
-        dialoguePanel.SetActive(true);
+        // ENABLE the panel (it should be disabled in hierarchy)
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(true);
         
         // Pause player movement
         if (playerController != null)
@@ -128,7 +128,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (choices == null || choices.Length == 0) return;
         
-        choicePanel.SetActive(true);
+        // ENABLE the choice panel (it should be disabled in hierarchy)
+        if (choicePanel != null)
+            choicePanel.SetActive(true);
         
         // Setup each button
         for (int i = 0; i < choiceButtons.Length; i++)
@@ -154,7 +156,10 @@ public class DialogueManager : MonoBehaviour
     
     void OnChoiceSelected(int choiceIndex, Action<int> callback)
     {
-        choicePanel.SetActive(false);
+        // DISABLE the choice panel
+        if (choicePanel != null)
+            choicePanel.SetActive(false);
+            
         callback?.Invoke(choiceIndex);
     }
     
@@ -179,7 +184,9 @@ public class DialogueManager : MonoBehaviour
     
     void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
+        // DISABLE the panels
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
         if (choicePanel != null)
             choicePanel.SetActive(false);
         
@@ -192,7 +199,7 @@ public class DialogueManager : MonoBehaviour
     
     public bool IsDialogueActive()
     {
-        return dialoguePanel.activeSelf;
+        return dialoguePanel != null && dialoguePanel.activeSelf;
     }
     
     void OnDestroy()

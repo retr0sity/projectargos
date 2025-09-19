@@ -38,6 +38,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Personal Scenes/Maria/Level_1_City/1.0.Test Level 1.unity
     guid: dae5e3c3b42be1b4983358e0946c6bf1
+  - enabled: 1
+    path: Assets/Scenes/Personal Scenes/Panos/DialogueSystem.unity
+    guid: 5208bc6b2363ef2fca22c2d1e4c51be4
+  - enabled: 1
+    path: Assets/Scenes/Personal Scenes/Panos/DialogueGameScene.unity
+    guid: 15e9cb2696b14cc809df7504faf44a49
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ee04d4b4b94aa364ea15ab4e3eaee9b7, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 06d65be184014fd418cb64948ea882b9, type: 2}
