@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RoadTestSprite_specular_0: -2665339727643390779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
