@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3578506770286215244, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578506770286215244, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.403
+      objectReference: {fileID: 0}
     - target: {fileID: 5435258952439406442, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -870,7 +878,7 @@ GameObject:
   - component: {fileID: 1221841176}
   - component: {fileID: 1221841175}
   - component: {fileID: 1221841177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630197597}
   - component: {fileID: 1630197596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,7 +1610,7 @@ GameObject:
   - component: {fileID: 1849747630}
   - component: {fileID: 1849747632}
   - component: {fileID: 1849747631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +1908,7 @@ GameObject:
   - component: {fileID: 1902265635}
   - component: {fileID: 1902265637}
   - component: {fileID: 1902265636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2116,7 +2124,7 @@ GameObject:
   - component: {fileID: 2146714048}
   - component: {fileID: 2146714050}
   - component: {fileID: 2146714049}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}

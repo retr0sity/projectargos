@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2140aebf5051549ee9d9a925bc37354f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: DialogueGameScene
+  targetSceneName: 07_arduino
   oneTimeUse: 1
 --- !u!61 &634792298
 BoxCollider2D:
