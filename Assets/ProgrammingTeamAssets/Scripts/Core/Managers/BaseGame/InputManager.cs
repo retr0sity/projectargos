@@ -23,6 +23,10 @@ namespace Core.Managers
         public event Action InteractEvent;
         public event Action InventoryEvent;
         public event Action PauseEvent;
+        // Notifies listeners when gameplay controls are locked/unlocked
+        public event Action<bool> ControlLockChanged;
+		private bool _movementLocked;
+		public event Action<bool> MovementLockChanged;
 
         public event Action<Vector2> NavigateEvent;
         public event Action SubmitEvent;
@@ -54,10 +58,43 @@ namespace Core.Managers
 
         void OnDestroy()
         {
-            _controls.Global.RemoveCallbacks(this);
-            _controls.Gameplay.RemoveCallbacks(this);
-            _controls.UI.RemoveCallbacks(this);
-            _controls.Dispose();
+            // Be defensive: during domain reload or when duplicates are destroyed some members
+            // may be null or partially initialized. Wrap cleanup to avoid NullReferenceExceptions.
+            try
+            {
+                if (_controls != null)
+                {
+                    // Try to disable all maps before removing callbacks / disposing
+                    try { _controls.Disable(); } catch { }
+
+                    try
+                    {
+                        // PlayerControls.*Actions types are structs produced by the Input System.
+                        // Comparing them to null is invalid. Call RemoveCallbacks directly and
+                        // swallow exceptions if the underlying maps are not available.
+                        try { _controls.Global.RemoveCallbacks(this); } catch { }
+                        try { _controls.Gameplay.RemoveCallbacks(this); } catch { }
+                        try { _controls.UI.RemoveCallbacks(this); } catch { }
+                    }
+                    catch (Exception)
+                    {
+                        // Ignore - safe cleanup
+                    }
+
+                    try { _controls.Dispose(); } catch { }
+                    _controls = null;
+                }
+            }
+            catch (Exception)
+            {
+                // Swallow any unexpected exceptions during teardown to avoid breaking Editor play/stop flow
+            }
+            finally
+            {
+                // Clear singleton reference if this instance is being destroyed
+                if (Instance == this)
+                    Instance = null;
+            }
         }
 
         /// <summary>
@@ -70,7 +107,27 @@ namespace Core.Managers
                 _controls.Gameplay.Disable();
             else
                 _controls.Gameplay.Enable();
+
+            // Notify any listeners (e.g. PlayerController) so they can cancel momentum
+            try { ControlLockChanged?.Invoke(locked); } catch { }
         }
+
+		/// <summary>
+		/// Lock ONLY movement, but keep interact working (for dialogue)
+		/// </summary>
+		public void SetMovementLock(bool locked)
+		{
+   		 	_movementLocked = locked;
+    		MovementLockChanged?.Invoke(locked);
+		}
+
+	/// <summary>
+	/// Check if movement is locked (for PlayerController to check)
+	/// </summary>
+	public bool IsMovementLocked()
+	{
+    	return _controlsLocked || _movementLocked;
+	}
 
         // IGlobalActions
         void PlayerControls.IGlobalActions.OnPause(InputAction.CallbackContext context)
@@ -81,11 +138,11 @@ namespace Core.Managers
 
         // IGameplayActions
         void PlayerControls.IGameplayActions.OnMove(InputAction.CallbackContext context)
-        {
-            if (_controlsLocked) return;
-            if (context.performed || context.canceled)
-                MoveEvent?.Invoke(context.ReadValue<Vector2>());
-        }
+		{
+    		if (_controlsLocked || _movementLocked) return; // Check both locks
+    		if (context.performed || context.canceled)
+        	MoveEvent?.Invoke(context.ReadValue<Vector2>());
+		}
 
         void PlayerControls.IGameplayActions.OnJump(InputAction.CallbackContext context)
         {

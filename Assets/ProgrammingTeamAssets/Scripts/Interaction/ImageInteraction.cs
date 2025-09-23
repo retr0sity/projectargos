@@ -1,75 +1,42 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Shows a sprite image when player interacts with this object.
+/// Image displays for 4 seconds OR until player presses interact to dismiss.
+/// Can be reopened multiple times (fully reusable).
+/// Requires "Interactable" tag and DialogueManager in scene.
+/// </summary>
 public class ImageInteraction : MonoBehaviour
 {
     [Header("Image Settings")]
-    [SerializeField] private GameObject imagePopup; // The popup panel
-    [SerializeField] private Image displayImage; // The Image component
-    [SerializeField] private Sprite imageToShow; // The sprite to display
-    [SerializeField] private float displayTime = 3f; // How long to show (0 = press to close)
+    [SerializeField] private Sprite imageToShow;
+    [SerializeField] private float displayDuration = 4f;
     
-    private bool hasBeenViewed = false;
-    private PlayerController playerController;
-    
-    void Start()
+    void Awake()
     {
-        // Make absolutely sure the image popup is hidden at start
-        if (imagePopup != null)
-        {
-            imagePopup.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("ImagePopup not assigned in " + gameObject.name);
-        }
-            
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-            playerController = player.GetComponent<PlayerController>();
+        // Ensure this is interactable
+        if (gameObject.tag == "Untagged")
+            gameObject.tag = "Interactable";
     }
-    
-    void OnInteract()
+
+    /// <summary>
+    /// Called by InteractionDetector when player presses interact
+    /// </summary>
+    public void OnInteract()
     {
-        if (hasBeenViewed) return;
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogError("DialogueManager not found in scene!");
+            return;
+        }
         
-        hasBeenViewed = true;
-        StartCoroutine(ShowImage());
-    }
-    
-    IEnumerator ShowImage()
-    {
-        // Show the image
-        if (imagePopup != null && displayImage != null && imageToShow != null)
+        if (imageToShow == null)
         {
-            imagePopup.SetActive(true);
-            displayImage.sprite = imageToShow;
-            
-            // Pause player
-            if (playerController != null)
-                playerController.enabled = false;
-            
-            if (displayTime > 0)
-            {
-                // Auto close after time
-                yield return new WaitForSeconds(displayTime);
-            }
-            else
-            {
-                // Wait for any key press to close
-                yield return new WaitForSeconds(0.5f); // Small delay
-                yield return new WaitUntil(() => Input.anyKeyDown);
-            }
-            
-            // Hide image and resume
-            imagePopup.SetActive(false);
-            
-            if (playerController != null)
-                playerController.enabled = true;
-                
-            // Remove from interactables
-            gameObject.tag = "Untagged";
+            Debug.LogWarning($"No sprite assigned to {gameObject.name}");
+            return;
         }
+        
+        // Show image (player frozen, auto-close after 4 seconds OR manual dismiss with interact)
+        DialogueManager.Instance.ShowImage(imageToShow, displayDuration);
     }
 }

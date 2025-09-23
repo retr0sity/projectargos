@@ -1,100 +1,145 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using Core.Managers;
 
+/// <summary>
+/// Detects nearby interactable objects and triggers their interaction when player presses interact.
+/// Attach to Player GameObject. Objects must be tagged "Interactable" and have OnInteract() method.
+/// </summary>
 public class InteractionDetector : MonoBehaviour
 {
-    [Header("Detection Settings")]
+    [Header("Settings")]
     [SerializeField] private float interactionRange = 2f;
-    [SerializeField] private GameObject interactionPrompt; // The "Press E" UI element
     
     private GameObject currentInteractable;
-    private GameObject[] interactables;
-    
+    private bool inputSubscribed = false;
+
+    // ============================================
+    // LIFECYCLE
+    // ============================================
+
+    void OnEnable()
+    {
+        TrySubscribeToInput();
+    }
+
+    void OnDisable()
+    {
+        UnsubscribeFromInput();
+    }
+
     void Start()
     {
-        // Subscribe to input
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.InteractEvent += OnInteractPressed;
-        }
-        
-        if (interactionPrompt != null)
-            interactionPrompt.SetActive(false);
-            
-        // Cache all interactables at start
-        RefreshInteractables();
+        TrySubscribeToInput();
     }
     
     void Update()
     {
-        CheckForInteractables();
+        // Ensure we're subscribed (in case InputManager wasn't ready at Start)
+        TrySubscribeToInput();
+        
+        // Detect closest interactable in range
+        DetectNearbyInteractables();
     }
     
-    public void RefreshInteractables()
+    void OnDestroy()
     {
-        interactables = GameObject.FindGameObjectsWithTag("Interactable");
+        UnsubscribeFromInput();
     }
-    
-    void CheckForInteractables()
+
+    // ============================================
+    // INPUT SUBSCRIPTION
+    // ============================================
+
+    void TrySubscribeToInput()
     {
+        if (!inputSubscribed && InputManager.Instance != null)
+        {
+            InputManager.Instance.InteractEvent += OnInteractPressed;
+            inputSubscribed = true;
+        }
+    }
+
+    void UnsubscribeFromInput()
+    {
+        if (inputSubscribed && InputManager.Instance != null)
+        {
+            InputManager.Instance.InteractEvent -= OnInteractPressed;
+            inputSubscribed = false;
+        }
+    }
+
+    // ============================================
+    // DETECTION
+    // ============================================
+
+    /// <summary>
+    /// Find the closest interactable object within range
+    /// </summary>
+    void DetectNearbyInteractables()
+    {
+        GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
+        
         GameObject closest = null;
         float closestDistance = float.MaxValue;
         
+        // Find closest interactable in range
         foreach (GameObject obj in interactables)
         {
-            if (obj == null || !obj.activeInHierarchy) continue;
+            if (obj == null) continue;
             
             float distance = Vector2.Distance(transform.position, obj.transform.position);
-            if (distance < interactionRange && distance < closestDistance)
+            
+            if (distance <= interactionRange && distance < closestDistance)
             {
                 closest = obj;
                 closestDistance = distance;
             }
         }
         
+        // Update current interactable and prompt
         if (closest != currentInteractable)
         {
             currentInteractable = closest;
-            UpdatePrompt();
+            UpdateInteractionPrompt();
         }
     }
-    
-    void UpdatePrompt()
+
+    /// <summary>
+    /// Show or hide the interaction prompt based on whether an interactable is in range
+    /// </summary>
+    void UpdateInteractionPrompt()
     {
-        if (currentInteractable != null && interactionPrompt != null)
+        if (DialogueManager.Instance != null)
         {
-            interactionPrompt.SetActive(true);
-        }
-        else if (interactionPrompt != null)
-        {
-            interactionPrompt.SetActive(false);
+            DialogueManager.Instance.ShowInteractionPrompt(currentInteractable != null);
         }
     }
-    
+
+    // ============================================
+    // INTERACTION
+    // ============================================
+
+    /// <summary>
+    /// Called when player presses the interact button
+    /// </summary>
     void OnInteractPressed()
     {
+        // Don't start new interactions if UI is already active
+        // (DialogueManager handles advancing its own UI through its own subscription)
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsAnyUIActive())
+            return;
+            
+        // Trigger interaction on the current interactable object
         if (currentInteractable != null)
         {
-            // Check if DialogueManager exists and if dialogue is active
-            bool dialogueActive = DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive();
-            
-            if (!dialogueActive)
-            {
-                currentInteractable.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
-            }
+            currentInteractable.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
         }
     }
-    
-    void OnDestroy()
-    {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.InteractEvent -= OnInteractPressed;
-        }
-    }
-    
+
+    // ============================================
+    // DEBUG
+    // ============================================
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

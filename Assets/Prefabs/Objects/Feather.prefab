@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6639004221529598432}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b12f5c687eb6cdacbb53aaa477799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featherName: Mysterious Feather
+  featherNumber: 1
   isFirstFeather: 0
+  skyTextObject: {fileID: 0}
+  skyMessage: Take care of it.
+  pickupQuestion: You found a feather. Will you pick it up?
 --- !u!1 &5104176418010701947
 GameObject:
   m_ObjectHideFlags: 0

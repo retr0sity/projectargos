@@ -1,183 +1,146 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
+/// <summary>
+/// Final interaction that shows different endings based on feather collection.
+/// Requires "Interactable" tag, DialogueManager, and GameStateManager in scene.
+/// </summary>
 public class EndingNPCDialogue : MonoBehaviour
 {
-    [Header("NPC Settings")]
-    [SerializeField] private string storkName = "Stork";
-    
-    [Header("Sky/Sand Text References")]
-    [SerializeField] private SkyText skyTextDisplay; // For sky messages
-    [SerializeField] private SkyText sandTextDisplay; // For sand messages
-    
-    [Header("Dialogue - No Feathers Path")]
+    [Header("Dialogue - No Feathers")]
     [TextArea(3,5)]
-    [SerializeField] private string[] automaticEndingDialogue; // "One day you will learn how to use it."
+    [SerializeField] private string[] automaticEndingDialogue = {
+        "One day you will learn how to use them."
+    };
     
-    [Header("Choice Texts")]
-    [SerializeField] private string choice1Text = "Make a bouquet and give them";
-    [SerializeField] private string choice2Text = "Bury them in the sand";
-    [SerializeField] private string choice3Text = "Pierce your ears with them";
-    
-    [Header("Ending 1 - Bouquet")]
+    [Header("Dialogue - Endings")]
     [TextArea(3,5)]
-    [SerializeField] private string[] ending1StorkDialogue; // "You're kind. But you need them more than I do."
+    [SerializeField] private string[] ending1Dialogue = {
+        "You're kind.",
+        "But you need them more than I do."
+    };
     
-    [Header("Ending 2 - Sand")]
     [TextArea(3,5)]
-    [SerializeField] private string sandMessage = "The sea will bring them back when you need them.";
+    [SerializeField] private string[] ending3Dialogue = {
+        "You will get them back when you know how to use them."
+    };
     
-    [Header("Ending 3 - Pierce Ears")]
-    [TextArea(3,5)]
-    [SerializeField] private string[] ending3StorkDialogue; // "You will get them back when you know how to use them."
-    
-    [Header("Animations")]
-    [SerializeField] private Animator storkAnimator;
-    [SerializeField] private string ending1Animation = "GiveBouquet";
-    [SerializeField] private string ending2Animation = "BuryFeathers";
-    [SerializeField] private string ending3Animation = "PierceEars";
-    
+    [Header("Sky Text")]
+	[SerializeField] private GameObject skyTextObject;
+	[SerializeField] private string skyMessage = "The sea will bring them back when you need them.";
+
+	[Header("Sand Burial Camera")]
+	[SerializeField] private DelayedCameraEvent sandBurialCamera;
     [Header("Settings")]
     [SerializeField] private float delayBeforeCredits = 3f;
     
     private bool hasBeenInteracted = false;
     
-    void OnInteract()
+    /// <summary>
+    /// Called by InteractionDetector when player presses interact
+    /// </summary>
+    public void OnInteract()
     {
         if (hasBeenInteracted) return;
-        if (GameStateManager.Instance == null) return;
         
-        // Check if player has visited the other scene
+        if (GameStateManager.Instance == null || DialogueManager.Instance == null)
+        {
+            Debug.LogError("Missing required managers!");
+            return;
+        }
+        
+        // Check if visited mini-game scene first
         if (!GameStateManager.Instance.hasVisitedOtherScene)
         {
-            Debug.Log("Player hasn't completed the mini-game yet");
+            DialogueManager.Instance.ShowMonologue("You should explore the console first.");
             return;
         }
         
         hasBeenInteracted = true;
         
-        // Check if player has any feathers
-        if (GameStateManager.Instance.refusedFeathers || GameStateManager.Instance.feathersCollected == 0)
+        // Check feather status
+        if (GameStateManager.Instance.refusedFeathers || 
+            GameStateManager.Instance.feathersCollected == 0)
         {
-            // Automatic ending - no choices
-            ShowNoFeathersEnding();
+            // No feathers collected - automatic ending
+            ShowNoFeatherEnding();
         }
         else
         {
-            // Player has feathers - show choices
-            ShowFeatherChoices();
+            // Has at least 1 feather - show choices
+            ShowEndingChoices();
         }
     }
     
-    void ShowNoFeathersEnding()
+    void ShowNoFeatherEnding()
     {
-        GameStateManager.Instance.endingChosen = 3; // Mark as ending 3
+        GameStateManager.Instance.endingChosen = 3;
         
-        // Stork takes the feather back and speaks
         DialogueManager.Instance.StartDialogue(
             automaticEndingDialogue, 
-            storkName,
+            "Stork",
             () => {
-                PlayAnimation(ending3Animation);
                 Invoke("LoadCredits", delayBeforeCredits);
             }
         );
     }
     
-    void ShowFeatherChoices()
+    void ShowEndingChoices()
     {
-        // Go straight to choices (no intro dialogue needed)
-        string[] choices = new string[] {
-            choice1Text,
-            choice2Text,
-            choice3Text
+        string[] choices = {
+            "Make a bouquet and give them",
+            "Bury them in the sand", 
+            "Pierce your ears with them"
         };
         
-        DialogueManager.Instance.ShowChoices(choices, OnEndingChosen);
+        DialogueManager.Instance.ShowChoices(choices, OnEndingChoice);
     }
     
-    void OnEndingChosen(int choiceIndex)
-    {
-        GameStateManager.Instance.endingChosen = choiceIndex + 1;
-        
-        switch (choiceIndex)
-        {
-            case 0: // Ending 1 - Give Bouquet
-                HandleBouquetEnding();
-                break;
-            case 1: // Ending 2 - Bury in Sand
-                HandleSandEnding();
-                break;
-            case 2: // Ending 3 - Pierce Ears
-                HandlePierceEarsEnding();
-                break;
-        }
-    }
+    void OnEndingChoice(int choice)
+{
+    GameStateManager.Instance.endingChosen = choice;
     
-    void HandleBouquetEnding()
+    switch (choice)
     {
-        // Stork speaks
-        DialogueManager.Instance.StartDialogue(
-            ending1StorkDialogue,
-            storkName,
-            () => {
-                PlayAnimation(ending1Animation);
-                Invoke("LoadCredits", delayBeforeCredits);
-            }
-        );
-    }
-    
-    void HandleSandEnding()
-    {
-        // Show text on sand (not in dialogue box)
-        if (sandTextDisplay != null)
-        {
-            sandTextDisplay.ShowText(sandMessage);
-        }
-        else
-        {
-            Debug.LogWarning("Sand text display not assigned - showing in dialogue instead");
+        case 0: // Bouquet (ending 0)
             DialogueManager.Instance.StartDialogue(
-                new string[] { sandMessage },
-                "Sand",
-                () => { }
+                ending1Dialogue, 
+                "Stork",
+                () => Invoke("LoadCredits", delayBeforeCredits)
             );
-        }
-        
-        PlayAnimation(ending2Animation);
-        Invoke("LoadCredits", delayBeforeCredits);
-    }
-    
-    void HandlePierceEarsEnding()
-    {
-        // Stork speaks (same as automatic ending)
-        DialogueManager.Instance.StartDialogue(
-            ending3StorkDialogue,
-            storkName,
-            () => {
-                PlayAnimation(ending3Animation);
-                Invoke("LoadCredits", delayBeforeCredits);
+            break;
+            
+        case 1: // Sand (ending 1)
+            // NEW: Trigger camera zoom/pan before showing text
+            if (sandBurialCamera != null)
+            {
+                sandBurialCamera.TriggerSequence();
             }
-        );
+            else
+            {
+                // Fallback to old method
+                if (skyTextObject != null)
+                {
+                    var skyText = skyTextObject.GetComponent<SkyText>();
+                    if (skyText) skyText.ShowText(skyMessage);
+                }
+            }
+            
+            Invoke("LoadCredits", delayBeforeCredits);
+            break;
+            
+        case 2: // Pierce ears (ending 2)
+            DialogueManager.Instance.StartDialogue(
+                ending3Dialogue, 
+                "Stork",
+                () => Invoke("LoadCredits", delayBeforeCredits)
+            );
+            break;
     }
-    
-    void PlayAnimation(string triggerName)
-    {
-        if (storkAnimator != null && !string.IsNullOrEmpty(triggerName))
-        {
-            storkAnimator.SetTrigger(triggerName);
-        }
-    }
+}
     
     void LoadCredits()
     {
-        if (GameStateManager.Instance != null)
-        {
-            GameStateManager.Instance.LoadCredits();
-        }
-        else
-        {
-            SceneManager.LoadScene("09_Credits");
-        }
+        GameStateManager.Instance.LoadCredits();
     }
 }

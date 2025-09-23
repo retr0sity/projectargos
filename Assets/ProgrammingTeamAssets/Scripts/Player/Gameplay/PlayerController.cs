@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool _jumpRequested;
     private bool _facingRight = true;
     private bool _isGrounded;
+    private bool _controlsLocked = false;
 
     private void Awake()
     {
@@ -45,6 +46,11 @@ public class PlayerController : MonoBehaviour
 
         input.MoveEvent += HandleMove;
         input.JumpEvent += HandleJump;
+        input.ControlLockChanged += OnControlLockChanged;
+        
+        // Reset movement when enabled
+        _moveInput = Vector2.zero;
+        _controlsLocked = false;
     }
 
     private void OnDisable()
@@ -54,11 +60,42 @@ public class PlayerController : MonoBehaviour
         {
             input.MoveEvent -= HandleMove;
             input.JumpEvent -= HandleJump;
+            input.ControlLockChanged -= OnControlLockChanged;
+        }
+        
+        // Stop all movement when disabled
+        StopMovement();
+    }
+    
+    private void OnControlLockChanged(bool isLocked)
+    {
+        _controlsLocked = isLocked;
+        
+        // When controls are locked, stop movement immediately
+        if (isLocked)
+        {
+            StopMovement();
+        }
+    }
+    
+    private void StopMovement()
+    {
+        _moveInput = Vector2.zero;
+        if (_rb != null)
+        {
+            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+        }
+        if (_animator != null)
+        {
+            _animator.SetFloat("Speed", 0f);
         }
     }
 
     private void HandleMove(Vector2 movement)
     {
+        // Don't process movement if controls are locked
+        if (_controlsLocked) return;
+        
         // Store horizontal input
         _moveInput = new Vector2(movement.x * runSpeed, _rb.linearVelocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(movement.x));
@@ -70,6 +107,9 @@ public class PlayerController : MonoBehaviour
 
     private void HandleJump()
     {
+        // Don't process jump if controls are locked
+        if (_controlsLocked) return;
+        
         if (!_isGrounded || SceneManager.GetActiveScene().name == "death") return;
 
         _jumpRequested = true;
@@ -77,6 +117,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Don't apply any movement if controls are locked
+        if (_controlsLocked)
+        {
+            // Make sure we're stopped
+            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+            return;
+        }
+        
         // Apply horizontal movement
         Vector2 velocity = new Vector2(_moveInput.x, _rb.linearVelocity.y);
 

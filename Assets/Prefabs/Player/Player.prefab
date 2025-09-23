@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 4719090206579530145}
   - component: {fileID: 1372648947895505215}
   - component: {fileID: 2408355851128887551}
-  - component: {fileID: 87958548882763044}
   - component: {fileID: 5595270942956281516}
+  - component: {fileID: 87958548882763044}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -262,6 +262,22 @@ MonoBehaviour:
     m_Bits: 64
   groundCheck: {fileID: 5479608620530094097}
   groundCheckRadius: 0.1
+--- !u!114 &5595270942956281516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030821540553608145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7ba7e5dc985d839abafdd7df0f47c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 2
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!82 &87958548882763044
 AudioSource:
   m_ObjectHideFlags: 0
@@ -359,20 +375,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5595270942956281516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3030821540553608145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e7ba7e5dc985d839abafdd7df0f47c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRange: 2
-  interactionPrompt: {fileID: 0}
 --- !u!1 &5939508706822171735
 GameObject:
   m_ObjectHideFlags: 0
