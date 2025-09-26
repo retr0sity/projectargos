@@ -45,6 +45,8 @@ public class MenuController : MonoBehaviour {
     [SerializeField]
     public GameObject[] activeBackground;
 
+    
+
     //Arrow Animators
     [SerializeField, HideInInspector]
     public Animator ArrowR;
@@ -67,15 +69,16 @@ public class MenuController : MonoBehaviour {
     private AudioSource Audio;
 
     //Events
-    [SerializeField, HideInInspector]
-    public UnityEvent[] Events;
+    [SerializeField]
+    public List<UnityEvent> Events = new List<UnityEvent>();
+
 
     //Exit Menu
-    [SerializeField, HideInInspector]
+    [SerializeField]
     public GameObject exitMenu;
 
     //Options menu
-    [SerializeField, HideInInspector]
+    [SerializeField]
     public GameObject OptionsMenu;
 
 

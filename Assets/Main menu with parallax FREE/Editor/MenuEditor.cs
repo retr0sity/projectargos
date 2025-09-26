@@ -25,6 +25,7 @@ public class MenuEditor : Editor {
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("mainBackground"), true);
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("backgrounds"),true);
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("options"), true);
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("Events"), true);
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("Select"), true);
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("SceneSelect"), true);
                 EditorGUILayout.HelpBox("The audio that will be played in the menu.", MessageType.Info);
