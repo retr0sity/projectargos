@@ -19,17 +19,17 @@ public class SettingsController : MonoBehaviour {
     {
         gameSettings = new Settings();
         fullscreenToggle.onValueChanged.AddListener(delegate { FullscreenToggle(); });
-        resolutionDrop.onValueChanged.AddListener(delegate { ResolutionChange(); });
-        textQualityDrop.onValueChanged.AddListener(delegate { TextQChange(); });
-        antialiasingDrop.onValueChanged.AddListener(delegate { AntialiasingChange(); });
-        vSyncDrop.onValueChanged.AddListener(delegate { VsyncChange(); });
+        //resolutionDrop.onValueChanged.AddListener(delegate { ResolutionChange(); });
+        //textQualityDrop.onValueChanged.AddListener(delegate { TextQChange(); });
+        //antialiasingDrop.onValueChanged.AddListener(delegate { AntialiasingChange(); });
+        //vSyncDrop.onValueChanged.AddListener(delegate { VsyncChange(); });
         volume.onValueChanged.AddListener(delegate { VolumeChange(); });
         saveButton.onClick.AddListener(delegate { saveSettings(); });
 
         resolutions = Screen.resolutions;
         foreach(Resolution resolution in resolutions)
         {
-            resolutionDrop.options.Add(new Dropdown.OptionData(resolution.ToString()));
+            //resolutionDrop.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
 
         loadSettings();
@@ -77,11 +77,11 @@ public class SettingsController : MonoBehaviour {
     {
         gameSettings = JsonUtility.FromJson<Settings>(File.ReadAllText( Application.persistentDataPath + "/gamesettings.json"));
         fullscreenToggle.isOn = gameSettings.fullscreen;
-        resolutionDrop.value = gameSettings.resolutionIndex;
+        /*resolutionDrop.value = gameSettings.resolutionIndex;
         antialiasingDrop.value = gameSettings.antialiasing;
         vSyncDrop.value = gameSettings.vSync;
-        textQualityDrop.value = gameSettings.textureQuality;
+        textQualityDrop.value = gameSettings.textureQuality;*/
         volume.value = gameSettings.volume;
-        resolutionDrop.RefreshShownValue();
+        //resolutionDrop.RefreshShownValue();
     }
 }

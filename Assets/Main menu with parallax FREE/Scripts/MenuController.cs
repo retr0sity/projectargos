@@ -173,7 +173,7 @@ public class MenuController : MonoBehaviour {
             var rect = Bck.GetComponent<RectTransform>();
             rect.offsetMax = new Vector2(0, 0);
             rect.offsetMin = new Vector2(0, 0);
-            activeBackground[0] = Bck;
+            //activeBackground[0] = Bck;
         }
         else
         {
@@ -190,7 +190,7 @@ public class MenuController : MonoBehaviour {
             rect.transform.localPosition = new Vector3(0, 0, 0);
             rect.offsetMax = new Vector2(0, 0);
             rect.offsetMin = new Vector2(0, 0);
-            activeBackground[0] = Bck;
+            //activeBackground[0] = Bck;
         }
     }
 
