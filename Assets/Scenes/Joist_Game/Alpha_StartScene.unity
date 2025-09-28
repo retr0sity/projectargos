@@ -18336,9 +18336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2061211793}
-  rightMovementOffset: {x: -1.2, y: 0}
-  leftMovementOffset: {x: 0, y: 0}
-  baseCenterOffset: {x: 0, y: -0.77}
+  rightMovementOffset: {x: 0.8, y: 0}
+  leftMovementOffset: {x: -1, y: 0}
+  baseCenterOffset: {x: -0.4, y: -0.77}
   followSpeed: 9
   transitionSpeed: 8
   directionThreshold: 0.1
