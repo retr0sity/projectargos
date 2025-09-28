@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour
     private bool imageWaitingForDismiss = false;
     
     // Player reference for emergency stop (safety measure for momentum bugs)
-    private PlayerController playerController;
+    private RigPlayerController playerController;
     private Rigidbody2D playerRigidbody;
 
     void Awake()
@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            playerController = player.GetComponent<PlayerController>();
+            playerController = player.GetComponent<RigPlayerController>();
             playerRigidbody = player.GetComponent<Rigidbody2D>();
         }
     }
