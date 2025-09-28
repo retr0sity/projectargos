@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Monologue UI")]
     [SerializeField] private GameObject monologuePanel;
     [SerializeField] private TextMeshProUGUI monologueText;
+	[SerializeField] private float timeWhaitMonologue = 2f;
 
     [Header("Choice UI")]
     [SerializeField] private GameObject choicePanel;
@@ -335,7 +336,7 @@ public class DialogueManager : MonoBehaviour
     }
     
     // NEW: Wait 4 seconds, then auto-advance
-    yield return new WaitForSeconds(4f);
+    yield return new WaitForSeconds(timeWhaitMonologue);
     
     // Auto-advance to next line after timeout
     if (isMonologueActive)

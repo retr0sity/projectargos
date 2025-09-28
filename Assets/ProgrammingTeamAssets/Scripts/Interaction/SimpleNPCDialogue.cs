@@ -2,12 +2,16 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Simple linear NPC dialogue interaction.
-/// Player presses interact to start dialogue and advance through lines.
-/// Requires "Interactable" tag and DialogueManager in scene.
+/// NPC dialogue that can be triggered either by player interaction OR by entering a trigger zone.
+/// Choose between interaction mode (requires "Interactable" tag) or trigger mode (auto-starts).
+/// Refactor Needed - this is a mess
 /// </summary>
+[RequireComponent(typeof(Collider2D))]
 public class SimpleNPCDialogue : MonoBehaviour
 {
+    [Header("Activation Mode")]
+    [SerializeField] private bool useTriggerMode = false; // False = interact mode, True = trigger mode
+    
     [Header("Dialogue")]
     [SerializeField] private string speakerName = "NPC";
     [TextArea(3, 5)]
@@ -19,10 +23,52 @@ public class SimpleNPCDialogue : MonoBehaviour
     
     private bool hasBeenTalkedTo = false;
     
+    void Awake()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            if (useTriggerMode)
+            {
+                // Trigger mode: Set as trigger, no "Interactable" tag
+                col.isTrigger = true;
+                if (gameObject.tag == "Interactable")
+                    gameObject.tag = "Untagged";
+            }
+            else
+            {
+                // Interact mode: Not a trigger, needs "Interactable" tag
+                col.isTrigger = false;
+                if (gameObject.tag == "Untagged")
+                    gameObject.tag = "Interactable";
+            }
+        }
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Only process triggers if in trigger mode
+        if (!useTriggerMode) return;
+        if (!other.CompareTag("Player")) return;
+        
+        StartDialogue();
+    }
+    
     /// <summary>
-    /// Called by InteractionDetector when player presses interact near this NPC
+    /// Called by InteractionDetector when player presses interact (interact mode only)
     /// </summary>
     public void OnInteract()
+    {
+        // Only process interactions if in interact mode
+        if (useTriggerMode) return;
+        
+        StartDialogue();
+    }
+    
+    /// <summary>
+    /// Starts the dialogue sequence (called by either trigger or interact)
+    /// </summary>
+    void StartDialogue()
     {
         // Check if already talked to (if one-time only)
         if (oneTimeOnly && hasBeenTalkedTo) return;
@@ -54,9 +100,20 @@ public class SimpleNPCDialogue : MonoBehaviour
     {
         onDialogueComplete?.Invoke();
         
-        // Remove interactable tag so player can't re-interact
+        // Handle one-time usage
         if (oneTimeOnly)
-            gameObject.tag = "Untagged";
+        {
+            if (useTriggerMode)
+            {
+                // Trigger mode: Disable the entire GameObject
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                // Interact mode: Remove interactable tag
+                gameObject.tag = "Untagged";
+            }
+        }
     }
     
     // ============================================
@@ -69,6 +126,38 @@ public class SimpleNPCDialogue : MonoBehaviour
     public void ResetDialogue()
     {
         hasBeenTalkedTo = false;
-        gameObject.tag = "Interactable";
+        
+        if (useTriggerMode)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.tag = "Interactable";
+        }
+    }
+    
+    /// <summary>
+    /// Switch between trigger and interact modes (for testing)
+    /// </summary>
+    public void SetTriggerMode(bool enableTrigger)
+    {
+        useTriggerMode = enableTrigger;
+        
+        // Update collider and tag settings
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.isTrigger = useTriggerMode;
+            
+            if (useTriggerMode)
+            {
+                gameObject.tag = "Untagged";
+            }
+            else
+            {
+                gameObject.tag = "Interactable";
+            }
+        }
     }
 }
