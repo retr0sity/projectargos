@@ -32,9 +32,25 @@ public class RigPlayerController : MonoBehaviour
 
     private void Update()
     {
-        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        _animator.SetBool("IsJumping", !_isGrounded);
 
+        // Always check if grounded
+        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (_isGrounded)
+        {
+            _animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            if (_rb.linearVelocity.y > 0.1f)
+            {
+                _animator.SetBool("IsJumping", true);
+            }
+            else if (_rb.linearVelocity.y < -0.1f)
+            {
+                _animator.SetBool("IsJumping", false);
+            }
+        }
         // Walk by default, run if Shift is held
         _isWalking = !Input.GetKey(KeyCode.LeftShift);
 
