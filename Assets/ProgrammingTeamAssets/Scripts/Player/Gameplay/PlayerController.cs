@@ -21,15 +21,19 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     private bool _controlsLocked = false;
 
+    private bool _isArduinoScene = false; // 👈 flag for "07_arduino" scene
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+
+        // Check if we are in "07_arduino"
+        _isArduinoScene = SceneManager.GetActiveScene().name == "07_arduino";
     }
 
     private void Update()
     {
-        // Ground checking each frame
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         _animator.SetBool("IsJumping", !_isGrounded);
     }
@@ -47,8 +51,7 @@ public class PlayerController : MonoBehaviour
         input.MoveEvent += HandleMove;
         input.JumpEvent += HandleJump;
         input.ControlLockChanged += OnControlLockChanged;
-        
-        // Reset movement when enabled
+
         _moveInput = Vector2.zero;
         _controlsLocked = false;
     }
@@ -62,22 +65,20 @@ public class PlayerController : MonoBehaviour
             input.JumpEvent -= HandleJump;
             input.ControlLockChanged -= OnControlLockChanged;
         }
-        
-        // Stop all movement when disabled
+
         StopMovement();
     }
-    
+
     private void OnControlLockChanged(bool isLocked)
     {
         _controlsLocked = isLocked;
-        
-        // When controls are locked, stop movement immediately
+
         if (isLocked)
         {
             StopMovement();
         }
     }
-    
+
     private void StopMovement()
     {
         _moveInput = Vector2.zero;
@@ -95,21 +96,26 @@ public class PlayerController : MonoBehaviour
     {
         // Don't process movement if controls are locked
         if (_controlsLocked) return;
-        
-        // Store horizontal input
+
+        // In "07_arduino", ignore horizontal movement (only vertical/jump allowed)
+        if (_isArduinoScene)
+        {
+            _animator.SetFloat("Speed", 0f);
+            return;
+        }
+
+        // Normal movement
         _moveInput = new Vector2(movement.x * runSpeed, _rb.linearVelocity.y);
         _animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
-        // Flip character if needed
         if (movement.x > 0 && !_facingRight) Flip();
         else if (movement.x < 0 && _facingRight) Flip();
     }
 
     private void HandleJump()
     {
-        // Don't process jump if controls are locked
         if (_controlsLocked) return;
-        
+
         if (!_isGrounded || SceneManager.GetActiveScene().name == "death") return;
 
         _jumpRequested = true;
@@ -117,15 +123,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Don't apply any movement if controls are locked
         if (_controlsLocked)
         {
-            // Make sure we're stopped
             _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
             return;
         }
-        
-        // Apply horizontal movement
+
         Vector2 velocity = new Vector2(_moveInput.x, _rb.linearVelocity.y);
 
         if (_jumpRequested)
@@ -137,9 +140,6 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = velocity;
     }
 
-    /// <summary>
-    /// Flips the player's sprite horizontally
-    /// </summary>
     private void Flip()
     {
         _facingRight = !_facingRight;

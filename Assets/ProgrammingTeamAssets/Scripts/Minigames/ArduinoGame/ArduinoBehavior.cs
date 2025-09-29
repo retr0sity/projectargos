@@ -37,6 +37,8 @@ public class ArduinoBehavior : MonoBehaviour
         _audioManager = FindObjectOfType<AudioManager>();
         if (_audioManager == null)
             Debug.LogWarning("No AudioManager found in scene.");
+        
+        _audioManager?.Play("arduino");
     }
 
     private void OnEnable()
@@ -110,6 +112,7 @@ public class ArduinoBehavior : MonoBehaviour
 
         // Small pause, then reload
         yield return new WaitForSecondsRealtime(4f);
+        _audioManager?.Play("death_sfx");
         Time.timeScale = 1f;
         SceneManager.LoadScene("08_cave_afterminigame");
     }
