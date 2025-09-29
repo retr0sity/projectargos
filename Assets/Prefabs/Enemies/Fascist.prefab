@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4648007436897978758}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.12229289, w: 0.9924941}
+  m_LocalRotation: {x: 0, y: 0, z: 0.12186709, w: 0.9925465}
   m_LocalPosition: {x: 1.8918122, y: -0.0000007343045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 5033658260340823833}
   - component: {fileID: 6309797236521437517}
   - component: {fileID: 8931173795183500487}
+  - component: {fileID: 1750986247935400117}
   m_Layer: 3
   m_Name: Fascist
   m_TagString: Enemy
@@ -587,7 +588,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -814,6 +815,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0.15831101, y: 0.59971905}
   m_Size: {x: 2.8136318, y: 10.81072}
   m_Direction: 0
+--- !u!114 &1750986247935400117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4828732138784240842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08752196a53f7c640bef7abeae2daa82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  jumpForce: 6
+  facingRight: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  groundCheck: {fileID: 4761009494686821064}
+  groundCheckRadius: 0.1
 --- !u!1 &5057122861070505641
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5457969902348575343}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.999877, w: -0.0156863}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9998808, w: -0.015442416}
   m_LocalPosition: {x: 0.3152228, y: 0.18313777, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1032,7 +1053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8535071468217813598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.10992714, w: -0.9939397}
+  m_LocalRotation: {x: 0, y: 0, z: -0.10992673, w: -0.99393976}
   m_LocalPosition: {x: 1.9300269, y: -0.013969958, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
