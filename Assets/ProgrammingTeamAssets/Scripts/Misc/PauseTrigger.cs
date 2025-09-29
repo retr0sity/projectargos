@@ -1,16 +1,39 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemyPauseTrigger : MonoBehaviour
 {
-    public float pauseDuration = 2f; // set in Inspector
+    public float pauseDuration = 2f;
+    public float spacing = 1.5f;
+
+    private List<Fascist> queue = new List<Fascist>();
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"{name} triggered by {other.name}");
-        Fascist enemy = other.GetComponentInParent<Fascist>(); // 👈 works even if collider is a child
+        Fascist enemy = other.GetComponentInParent<Fascist>();
+        if (enemy != null && !queue.Contains(enemy))
+        {
+            // Add to queue
+            queue.Add(enemy);
+
+            // First enemy should get the *leftmost* slot.
+            // So we invert: the slot index is based on "how many are in queue"
+            int index = queue.Count - 1;
+
+            Vector3 stopPos = transform.position;
+            stopPos.x += index * spacing; // 👈 shift to the RIGHT for later enemies
+
+            enemy.TriggerPause(pauseDuration, stopPos);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Fascist enemy = other.GetComponentInParent<Fascist>();
         if (enemy != null)
         {
-            enemy.TriggerPause(pauseDuration);
+            queue.Remove(enemy);
         }
     }
 }
+
