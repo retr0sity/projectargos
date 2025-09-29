@@ -394,8 +394,12 @@ MonoBehaviour:
   groundCheckRadius: 0.1
   playerAnimator: {fileID: 512896096}
   textMeshPro: {fileID: 161125255}
-  texts: []
-  typingSpeed: 0.1
+  texts:
+  - And while you were stumbling around. In the purple. The green ones. Tears were
+    falling from your pockets. You wanted a pause to kick the roots with your feet.
+    Like ivy. So you wouldn't disturb a thing under the leaves. And your skin would
+    save the stimulus. Blisters gnaw at
+  typingSpeed: 0.05
 --- !u!1001 &524006349
 PrefabInstance:
   m_ObjectHideFlags: 0
