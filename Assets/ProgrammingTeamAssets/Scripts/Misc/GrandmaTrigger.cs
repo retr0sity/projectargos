@@ -7,11 +7,14 @@ public class GrandmaTrigger : MonoBehaviour
     public GameObject pot;   // assign in Inspector
     public Transform potSpawnPoint;       // assign where you want it to appear
 
+    private bool hasTriggered = false;
+
     // Unity Example
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasTriggered)
         {
+            hasTriggered = true;
             StartCoroutine(PlayAnimationAndSpawnPot());
         }
     }

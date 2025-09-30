@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BalconyGrandma_0: 4763254012232496280
+      BalconyGrandma_1: -5437677172897874083
+      BalconyGrandma_2: 771397981990095329
+      BalconyGrandma_3: 9099682734505273705
+      BalconyGrandma_4: 5373097491427249354
+      BalconyGrandma_5: 7246646226622521479
+      BalconyGrandma_6: -4077186424924981102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

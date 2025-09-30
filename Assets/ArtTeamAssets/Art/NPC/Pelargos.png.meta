@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pelargos_0: 3436391005921285039
+      Pelargos_1: 2166842888411122353
+      Pelargos_10: -3423213961584011041
+      Pelargos_11: -2868849702592462289
+      Pelargos_12: -1199074423127108776
+      Pelargos_13: 546807046427810407
+      Pelargos_14: -3923329181382907769
+      Pelargos_2: 6963094671445040452
+      Pelargos_3: 5613691718015678681
+      Pelargos_4: 7024857619231971325
+      Pelargos_5: -6848689644434695175
+      Pelargos_6: -1718983404060046358
+      Pelargos_7: 8299849985832168883
+      Pelargos_8: 419037288148428226
+      Pelargos_9: -1584115257319272958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
