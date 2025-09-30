@@ -13,6 +13,7 @@ public class RigPlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.1f;
+    [SerializeField] private bool canRun = false; // Locked by default
 
     private Rigidbody2D _rb;
     private Animator _animator;
@@ -52,7 +53,7 @@ public class RigPlayerController : MonoBehaviour
         }
         
         // Walk by default, run if Shift is held
-        _isWalking = !Input.GetKey(KeyCode.LeftShift);
+        _isWalking = !Input.GetKey(KeyCode.LeftShift) || !canRun;
 
         // Update animator speed even if input hasn't changed
         float currentSpeed = _isWalking ? walkSpeed : runSpeed;
@@ -97,6 +98,18 @@ public class RigPlayerController : MonoBehaviour
     {
         _isWalking = isWalking;
     }
+
+    public void UnlockRun()
+    {
+        canRun = true;
+    }
+
+    public void LockRun()
+    {
+        canRun = false;
+    }
+
+
     
     private void OnControlLockChanged(bool isLocked)
     {
