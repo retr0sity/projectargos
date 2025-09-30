@@ -20866,7 +20866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5033269316511631928, guid: f63ce953e9ddf3dcba24697d26a467c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.658
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 5033269316511631928, guid: f63ce953e9ddf3dcba24697d26a467c4, type: 3}
       propertyPath: m_LocalPosition.z
