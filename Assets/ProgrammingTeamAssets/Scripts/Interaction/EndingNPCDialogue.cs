@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
+
 /// <summary>
 /// Final interaction that shows different endings based on feather collection.
 /// Requires "Interactable" tag, DialogueManager, and GameStateManager in scene.
 /// </summary>
 public class EndingNPCDialogue : MonoBehaviour
 {
+    [SerializeField] private Animator pelargosAnimator;
+    [SerializeField] private string interactBool = "IsInteracting";
+    [SerializeField] private string flightBool = "IsFlying";
+    [SerializeField] private Flight flightScript;
+
+
     [Header("Dialogue - No Feathers")]
     [TextArea(3,5)]
     [SerializeField] private string[] automaticEndingDialogue = {
@@ -48,11 +55,19 @@ public class EndingNPCDialogue : MonoBehaviour
             Debug.LogError("Missing required managers!");
             return;
         }
+
+        // Play interaction animation
+        if (pelargosAnimator != null)
+        {
+            pelargosAnimator.SetBool(interactBool, true);
+        }
+
         
         // Check if visited mini-game scene first
         if (!GameStateManager.Instance.hasVisitedOtherScene)
         {
             DialogueManager.Instance.ShowMonologue("You should explore the console first.");
+            StartCoroutine(ResetInteraction());
             return;
         }
         
@@ -72,17 +87,36 @@ public class EndingNPCDialogue : MonoBehaviour
         }
     }
     
+    System.Collections.IEnumerator ResetInteraction()
+    {
+        yield return new WaitForSeconds(5f);
+        if (pelargosAnimator != null)
+        {
+            pelargosAnimator.SetBool(interactBool, false);
+        }
+    }
     void ShowNoFeatherEnding()
     {
         GameStateManager.Instance.endingChosen = 3;
-        
+
         DialogueManager.Instance.StartDialogue(
-            automaticEndingDialogue, 
+            automaticEndingDialogue,
             "Stork",
-            () => {
+            () =>
+            {
                 Invoke("LoadCredits", delayBeforeCredits);
             }
         );
+
+        // Trigger flight animation and movement
+        if (pelargosAnimator != null)
+        {
+            pelargosAnimator.SetBool(flightBool, true);
+        }
+        if (flightScript != null)
+        {
+            flightScript.StartFlying();
+        }
     }
     
     void ShowEndingChoices()
@@ -95,48 +129,58 @@ public class EndingNPCDialogue : MonoBehaviour
         
         DialogueManager.Instance.ShowChoices(choices, OnEndingChoice);
     }
-    
+
     void OnEndingChoice(int choice)
-{
-    GameStateManager.Instance.endingChosen = choice;
-    
-    switch (choice)
     {
-        case 0: // Bouquet (ending 0)
-            DialogueManager.Instance.StartDialogue(
-                ending1Dialogue, 
-                "Stork",
-                () => Invoke("LoadCredits", delayBeforeCredits)
-            );
-            break;
-            
-        case 1: // Sand (ending 1)
-            // NEW: Trigger camera zoom/pan before showing text
-            if (sandBurialCamera != null)
-            {
-                sandBurialCamera.TriggerSequence();
-            }
-            else
-            {
-                // Fallback to old method
-                if (skyTextObject != null)
+        GameStateManager.Instance.endingChosen = choice;
+
+        switch (choice)
+        {
+            case 0: // Bouquet (ending 0)
+                DialogueManager.Instance.StartDialogue(
+                    ending1Dialogue,
+                    "Stork",
+                    () => Invoke("LoadCredits", delayBeforeCredits)
+                );
+                break;
+
+            case 1: // Sand (ending 1)
+                    // NEW: Trigger camera zoom/pan before showing text
+                if (sandBurialCamera != null)
                 {
-                    var skyText = skyTextObject.GetComponent<SkyText>();
-                    if (skyText) skyText.ShowText(skyMessage);
+                    sandBurialCamera.TriggerSequence();
                 }
-            }
-            
-            Invoke("LoadCredits", delayBeforeCredits);
-            break;
-            
-        case 2: // Pierce ears (ending 2)
-            DialogueManager.Instance.StartDialogue(
-                ending3Dialogue, 
-                "Stork",
-                () => Invoke("LoadCredits", delayBeforeCredits)
-            );
-            break;
-    }
+                else
+                {
+                    // Fallback to old method
+                    if (skyTextObject != null)
+                    {
+                        var skyText = skyTextObject.GetComponent<SkyText>();
+                        if (skyText) skyText.ShowText(skyMessage);
+                    }
+                }
+
+                Invoke("LoadCredits", delayBeforeCredits);
+                break;
+
+            case 2: // Pierce ears (ending 2)
+                DialogueManager.Instance.StartDialogue(
+                    ending3Dialogue,
+                    "Stork",
+                    () => Invoke("LoadCredits", delayBeforeCredits)
+                );
+                break;
+        }
+    
+        // Trigger flight animation and movement
+        if (pelargosAnimator != null)
+        {
+            pelargosAnimator.SetBool(flightBool, true);
+        }
+        if (flightScript != null)
+        {
+            flightScript.StartFlying();
+        }
 }
     
     void LoadCredits()
