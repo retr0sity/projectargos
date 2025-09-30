@@ -36,7 +36,18 @@ public class InteractionDetector : MonoBehaviour
     void Update()
     {
         TrySubscribeToInput();
+        
+        // FIX: Check if current interactable was destroyed
+        if (currentInteractable != null && currentInteractable.Equals(null))
+        {
+            currentInteractable = null;
+            UpdateInteractionPrompt();
+        }
+        
         DetectNearbyInteractables();
+        
+        // FIX: Continuously update prompt state based on UI activity
+        UpdateInteractionPrompt();
     }
     
     void OnDestroy()
@@ -102,12 +113,15 @@ public class InteractionDetector : MonoBehaviour
 
     /// <summary>
     /// Show or hide the interaction prompt based on whether an interactable is in range
+    /// FIX: Also check if UI is active before showing prompt
     /// </summary>
     void UpdateInteractionPrompt()
     {
         if (DialogueManager.Instance != null)
         {
-            DialogueManager.Instance.ShowInteractionPrompt(currentInteractable != null);
+            // Only show prompt if there's an interactable AND no UI is active
+            bool shouldShow = currentInteractable != null && !DialogueManager.Instance.IsAnyUIActive();
+            DialogueManager.Instance.ShowInteractionPrompt(shouldShow);
         }
     }
 
@@ -141,7 +155,6 @@ public class InteractionDetector : MonoBehaviour
     // DEBUG
     // ============================================
 
-    
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
