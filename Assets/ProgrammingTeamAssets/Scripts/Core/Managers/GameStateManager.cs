@@ -4,12 +4,14 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance { get; private set; }
+    
     [Header("Game State - Debug View")]
 	public int feathersCollected = 0;
 	public bool refusedFeathers = false;
 	public bool hasVisitedOtherScene = false;
 	public int endingChosen = 0;
 	public bool hasUsedPortal = false; // NEW: Track single portal usage
+	public bool fogActive = true; // NEW: Track fog state across scenes
 
 	// For scene returns
 	public string returnSceneName;

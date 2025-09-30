@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Simple linear NPC dialogue interaction.
-/// Player presses interact to start dialogue and advance through lines.
-/// Requires "Interactable" tag and DialogueManager in scene.
+/// NPC dialogue that can be triggered either by player interaction OR by entering a trigger zone.
+/// FIXED: Better protection against rapid re-triggering
 /// </summary>
+[RequireComponent(typeof(Collider2D))]
 public class SimpleNPCDialogue : MonoBehaviour
 {
+    [Header("Activation Mode")]
+    [SerializeField] private bool useTriggerMode = false;
+    
     [Header("Dialogue")]
     [SerializeField] private string speakerName = "NPC";
     [TextArea(3, 5)]
@@ -18,16 +21,62 @@ public class SimpleNPCDialogue : MonoBehaviour
     [SerializeField] private UnityEvent onDialogueComplete;
     
     private bool hasBeenTalkedTo = false;
+    private bool isCurrentlyInDialogue = false; // FIX: Prevent re-entry during dialogue
     
-    /// <summary>
-    /// Called by InteractionDetector when player presses interact near this NPC
-    /// </summary>
+    void Awake()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            if (useTriggerMode)
+            {
+                col.isTrigger = true;
+                if (gameObject.tag == "Interactable")
+                    gameObject.tag = "Untagged";
+            }
+            else
+            {
+                col.isTrigger = false;
+                if (gameObject.tag == "Untagged")
+                    gameObject.tag = "Interactable";
+            }
+        }
+        else
+        {
+            Debug.LogError($"SimpleNPCDialogue on {gameObject.name} is missing a Collider2D component!");
+        }
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!useTriggerMode) return;
+        if (!other.CompareTag("Player")) return;
+        
+        StartDialogue();
+    }
+    
     public void OnInteract()
     {
-        // Check if already talked to (if one-time only)
-        if (oneTimeOnly && hasBeenTalkedTo) return;
+        if (useTriggerMode) return;
         
-        // Validate dependencies
+        StartDialogue();
+    }
+    
+    void StartDialogue()
+    {
+        // FIX: Don't allow re-triggering while already in dialogue
+        if (isCurrentlyInDialogue)
+        {
+            Debug.Log($"{gameObject.name}: Already in dialogue, ignoring trigger");
+            return;
+        }
+        
+        if (oneTimeOnly && hasBeenTalkedTo)
+        {
+            Debug.Log($"{gameObject.name}: Already talked to, ignoring");
+            return;
+        }
+        
         if (DialogueManager.Instance == null)
         {
             Debug.LogError("DialogueManager not found in scene!");
@@ -40,35 +89,68 @@ public class SimpleNPCDialogue : MonoBehaviour
             return;
         }
         
-        // Mark as talked to BEFORE starting dialogue (prevents double-trigger)
+        // FIX: Set both flags to prevent re-entry
         hasBeenTalkedTo = true;
+        isCurrentlyInDialogue = true;
         
-        // Start dialogue (DialogueManager handles control locking)
+        Debug.Log($"{gameObject.name}: Starting dialogue");
+        
         DialogueManager.Instance.StartDialogue(dialogueLines, speakerName, OnDialogueFinished);
     }
     
-    /// <summary>
-    /// Called when dialogue sequence completes
-    /// </summary>
     void OnDialogueFinished()
     {
+        Debug.Log($"{gameObject.name}: Dialogue finished");
+        
+        isCurrentlyInDialogue = false; // FIX: Reset dialogue state
+        
         onDialogueComplete?.Invoke();
         
-        // Remove interactable tag so player can't re-interact
         if (oneTimeOnly)
-            gameObject.tag = "Untagged";
+        {
+            if (useTriggerMode)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                gameObject.tag = "Untagged";
+            }
+        }
     }
     
-    // ============================================
-    // PUBLIC METHODS (for testing/external control)
-    // ============================================
-    
-    /// <summary>
-    /// Reset the dialogue to allow it to be triggered again
-    /// </summary>
     public void ResetDialogue()
     {
         hasBeenTalkedTo = false;
-        gameObject.tag = "Interactable";
+        isCurrentlyInDialogue = false; // FIX: Also reset dialogue state
+        
+        if (useTriggerMode)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.tag = "Interactable";
+        }
+    }
+    
+    public void SetTriggerMode(bool enableTrigger)
+    {
+        useTriggerMode = enableTrigger;
+        
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.isTrigger = useTriggerMode;
+            
+            if (useTriggerMode)
+            {
+                gameObject.tag = "Untagged";
+            }
+            else
+            {
+                gameObject.tag = "Interactable";
+            }
+        }
     }
 }

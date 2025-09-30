@@ -4,6 +4,7 @@ using Core.Managers;
 /// <summary>
 /// Detects nearby interactable objects and triggers their interaction when player presses interact.
 /// Attach to Player GameObject. Objects must be tagged "Interactable" and have OnInteract() method.
+/// FIXED: Better handling of interaction events to prevent conflicts with DialogueManager
 /// </summary>
 public class InteractionDetector : MonoBehaviour
 {
@@ -34,11 +35,19 @@ public class InteractionDetector : MonoBehaviour
     
     void Update()
     {
-        // Ensure we're subscribed (in case InputManager wasn't ready at Start)
         TrySubscribeToInput();
         
-        // Detect closest interactable in range
+        // FIX: Check if current interactable was destroyed
+        if (currentInteractable != null && currentInteractable.Equals(null))
+        {
+            currentInteractable = null;
+            UpdateInteractionPrompt();
+        }
+        
         DetectNearbyInteractables();
+        
+        // FIX: Continuously update prompt state based on UI activity
+        UpdateInteractionPrompt();
     }
     
     void OnDestroy()
@@ -82,7 +91,6 @@ public class InteractionDetector : MonoBehaviour
         GameObject closest = null;
         float closestDistance = float.MaxValue;
         
-        // Find closest interactable in range
         foreach (GameObject obj in interactables)
         {
             if (obj == null) continue;
@@ -96,7 +104,6 @@ public class InteractionDetector : MonoBehaviour
             }
         }
         
-        // Update current interactable and prompt
         if (closest != currentInteractable)
         {
             currentInteractable = closest;
@@ -106,12 +113,15 @@ public class InteractionDetector : MonoBehaviour
 
     /// <summary>
     /// Show or hide the interaction prompt based on whether an interactable is in range
+    /// FIX: Also check if UI is active before showing prompt
     /// </summary>
     void UpdateInteractionPrompt()
     {
         if (DialogueManager.Instance != null)
         {
-            DialogueManager.Instance.ShowInteractionPrompt(currentInteractable != null);
+            // Only show prompt if there's an interactable AND no UI is active
+            bool shouldShow = currentInteractable != null && !DialogueManager.Instance.IsAnyUIActive();
+            DialogueManager.Instance.ShowInteractionPrompt(shouldShow);
         }
     }
 
@@ -121,17 +131,22 @@ public class InteractionDetector : MonoBehaviour
 
     /// <summary>
     /// Called when player presses the interact button
+    /// FIX: Only processes new interactions, not ongoing UI
     /// </summary>
     void OnInteractPressed()
     {
-        // Don't start new interactions if UI is already active
-        // (DialogueManager handles advancing its own UI through its own subscription)
+        // FIX: Don't start new interactions if ANY UI is active
+        // DialogueManager handles its own advancement through its own subscription
         if (DialogueManager.Instance != null && DialogueManager.Instance.IsAnyUIActive())
+        {
+            // Let DialogueManager handle the interact event
             return;
+        }
             
         // Trigger interaction on the current interactable object
         if (currentInteractable != null)
         {
+            // Send the message to trigger OnInteract()
             currentInteractable.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
         }
     }
