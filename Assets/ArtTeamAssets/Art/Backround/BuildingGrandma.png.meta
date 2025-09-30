@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BuildingGrandma_0: -814559673763796095
+      BuildingGrandma_1: -4828543465000055700
+      BuildingGrandma_2: -6292575675898104886
+      BuildingGrandma_3: -7219883933167955727
+      BuildingGrandma_4: 2468679458722985922
+      BuildingGrandma_5: -8880194723545250245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

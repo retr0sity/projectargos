@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e27de3dcdbd606f20ae05ec34702b92c
+guid: 98355c800ef5a5849bb89bc88f032ca0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5510473381279179124
-    second: OilBlock_0
+      213: -4368322862165430076
+    second: Train_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OilBlock_0
+      name: Train_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 45
-        width: 1568
-        height: 2258
+        x: 0
+        y: 0
+        width: 1750
+        height: 2100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8edb9cc7add683b0800000000000000
-      internalID: -5510473381279179124
+      spriteID: 4c0796050899063c0800000000000000
+      internalID: -4368322862165430076
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      OilBlock_0: -5510473381279179124
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
