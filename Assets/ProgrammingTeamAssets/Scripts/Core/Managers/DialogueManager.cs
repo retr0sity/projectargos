@@ -164,6 +164,9 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(startCooldownCoroutine);
         startCooldownCoroutine = StartCoroutine(StartDialogueCooldown());
         
+        // FIX: Explicitly hide interaction prompt when dialogue starts
+        ShowInteractionPrompt(false);
+        
         // Stop any active monologue
         isMonologueActive = false;
         monologueWaitingForInput = false;
@@ -280,7 +283,8 @@ public class DialogueManager : MonoBehaviour
         }
         finally
         {
-            UnlockPlayerMovement();
+            // FIX: Use coroutine to unlock with delay
+            StartCoroutine(UnlockPlayerWithDelay());
         }
     }
 
@@ -551,6 +555,63 @@ public class DialogueManager : MonoBehaviour
         if (InputManager.Instance != null)
             InputManager.Instance.SetMovementLock(false);
 
+        if (playerController != null)
+            playerController.enabled = true;
+    }
+
+    /// <summary>
+    /// FIX: Wait for player to actually release movement keys before unlocking
+    /// </summary>
+    IEnumerator UnlockPlayerWithDelay()
+    {
+        // Clear velocity
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = Vector2.zero;
+            playerRigidbody.angularVelocity = 0f;
+        }
+
+        // Unlock input manager FIRST
+        if (InputManager.Instance != null)
+            InputManager.Instance.SetMovementLock(false);
+
+        // Wait until movement keys are actually released (or timeout after 2 seconds)
+        float timeWaited = 0f;
+        float timeout = 2f;
+        
+        while (timeWaited < timeout)
+        {
+            // Check if Move action is reading zero (keys released)
+            if (InputManager.Instance != null)
+            {
+                // Try to read current move value from the Input System
+                // If it's zero, keys are released
+                var moveAction = InputManager.Instance.GetMoveAction();
+                if (moveAction != null)
+                {
+                    Vector2 currentInput = moveAction.ReadValue<Vector2>();
+                    if (currentInput.magnitude < 0.1f) // Keys released
+                    {
+                        break;
+                    }
+                }
+            }
+            
+            timeWaited += Time.deltaTime;
+            yield return null;
+        }
+
+        // Wait one more frame to be safe
+        yield return null;
+
+        // Clear velocity right before enabling
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.linearVelocity = Vector2.zero;
+            playerRigidbody.angularVelocity = 0f;
+        }
+
+        // Now safe to re-enable controller
         if (playerController != null)
             playerController.enabled = true;
     }

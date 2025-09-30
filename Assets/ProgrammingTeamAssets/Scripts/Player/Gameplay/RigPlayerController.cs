@@ -22,7 +22,7 @@ public class RigPlayerController : MonoBehaviour
     private bool _isGrounded;
     private bool _controlsLocked = false;
     private bool _isWalking;
-
+    private float _inputX; // store raw horizontal input
 
     private void Awake()
     {
@@ -32,7 +32,6 @@ public class RigPlayerController : MonoBehaviour
 
     private void Update()
     {
-
         // Always check if grounded
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -51,6 +50,7 @@ public class RigPlayerController : MonoBehaviour
                 _animator.SetBool("IsJumping", false);
             }
         }
+        
         // Walk by default, run if Shift is held
         _isWalking = !Input.GetKey(KeyCode.LeftShift);
 
@@ -58,7 +58,6 @@ public class RigPlayerController : MonoBehaviour
         float currentSpeed = _isWalking ? walkSpeed : runSpeed;
         _animator.SetFloat("Speed", Mathf.Abs(_inputX) * (currentSpeed / runSpeed));
     }
-
 
     private void OnEnable()
     {
@@ -74,8 +73,9 @@ public class RigPlayerController : MonoBehaviour
         input.JumpEvent += HandleJump;
         input.ControlLockChanged += OnControlLockChanged;
         
-        // Reset movement when enabled
+        // FIX: Reset ALL movement state when enabled
         _moveInput = Vector2.zero;
+        _inputX = 0f; // ← CRITICAL FIX: Clear input state
         _controlsLocked = false;
     }
 
@@ -97,6 +97,7 @@ public class RigPlayerController : MonoBehaviour
     {
         _isWalking = isWalking;
     }
+    
     private void OnControlLockChanged(bool isLocked)
     {
         _controlsLocked = isLocked;
@@ -111,6 +112,8 @@ public class RigPlayerController : MonoBehaviour
     private void StopMovement()
     {
         _moveInput = Vector2.zero;
+        _inputX = 0f; // FIX: Clear input state
+        
         if (_rb != null)
         {
             _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
@@ -120,7 +123,6 @@ public class RigPlayerController : MonoBehaviour
             _animator.SetFloat("Speed", 0f);
         }
     }
-    private float _inputX; // store raw horizontal input
 
     private void HandleMove(Vector2 movement)
     {
@@ -132,11 +134,10 @@ public class RigPlayerController : MonoBehaviour
         if (_inputX > 0.01f && !_facingRight) Flip();
         else if (_inputX < -0.01f && _facingRight) Flip();
 
-        // ✅ Set animator speed relative to movement speed
+        // Set animator speed relative to movement speed
         float currentSpeed = _isWalking ? walkSpeed : runSpeed;
         _animator.SetFloat("Speed", Mathf.Abs(_inputX) * (currentSpeed / runSpeed));
     }
-
 
     private void HandleJump()
     {
@@ -156,7 +157,7 @@ public class RigPlayerController : MonoBehaviour
             return;
         }
 
-        // ✅ Walk by default, run if Shift is pressed
+        // Walk by default, run if Shift is pressed
         float currentSpeed = _isWalking ? walkSpeed : runSpeed;
 
         Vector2 velocity = new Vector2(_inputX * currentSpeed, _rb.linearVelocity.y);
@@ -169,7 +170,6 @@ public class RigPlayerController : MonoBehaviour
 
         _rb.linearVelocity = velocity;
     }
-
 
     /// <summary>
     /// Flips the player's sprite horizontally
