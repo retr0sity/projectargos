@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 /// <summary>
 /// Final interaction that shows different endings based on feather collection.
 /// Requires "Interactable" tag, DialogueManager, and GameStateManager in scene.
+/// FIXED: Better state management to prevent double-interaction
 /// </summary>
 public class EndingNPCDialogue : MonoBehaviour
 {
@@ -26,22 +27,26 @@ public class EndingNPCDialogue : MonoBehaviour
     };
     
     [Header("Sky Text")]
-	[SerializeField] private GameObject skyTextObject;
-	[SerializeField] private string skyMessage = "The sea will bring them back when you need them.";
+    [SerializeField] private GameObject skyTextObject;
+    [SerializeField] private string skyMessage = "The sea will bring them back when you need them.";
 
-	[Header("Sand Burial Camera")]
-	[SerializeField] private DelayedCameraEvent sandBurialCamera;
+    [Header("Sand Burial Camera")]
+    [SerializeField] private DelayedCameraEvent sandBurialCamera;
+    
     [Header("Settings")]
     [SerializeField] private float delayBeforeCredits = 3f;
     
     private bool hasBeenInteracted = false;
+    private bool isProcessingEnding = false; // FIX: Prevent double-interaction
     
     /// <summary>
     /// Called by InteractionDetector when player presses interact
+    /// FIX: Added check to prevent double-interaction
     /// </summary>
     public void OnInteract()
     {
-        if (hasBeenInteracted) return;
+        // FIX: Prevent double-interaction
+        if (hasBeenInteracted || isProcessingEnding) return;
         
         if (GameStateManager.Instance == null || DialogueManager.Instance == null)
         {
@@ -57,6 +62,7 @@ public class EndingNPCDialogue : MonoBehaviour
         }
         
         hasBeenInteracted = true;
+        isProcessingEnding = true;
         
         // Check feather status
         if (GameStateManager.Instance.refusedFeathers || 
@@ -97,47 +103,47 @@ public class EndingNPCDialogue : MonoBehaviour
     }
     
     void OnEndingChoice(int choice)
-{
-    GameStateManager.Instance.endingChosen = choice;
-    
-    switch (choice)
     {
-        case 0: // Bouquet (ending 0)
-            DialogueManager.Instance.StartDialogue(
-                ending1Dialogue, 
-                "Stork",
-                () => Invoke("LoadCredits", delayBeforeCredits)
-            );
-            break;
-            
-        case 1: // Sand (ending 1)
-            // NEW: Trigger camera zoom/pan before showing text
-            if (sandBurialCamera != null)
-            {
-                sandBurialCamera.TriggerSequence();
-            }
-            else
-            {
-                // Fallback to old method
-                if (skyTextObject != null)
+        GameStateManager.Instance.endingChosen = choice;
+        
+        switch (choice)
+        {
+            case 0: // Bouquet (ending 0)
+                DialogueManager.Instance.StartDialogue(
+                    ending1Dialogue, 
+                    "Stork",
+                    () => Invoke("LoadCredits", delayBeforeCredits)
+                );
+                break;
+                
+            case 1: // Sand (ending 1)
+                // Trigger camera zoom/pan before showing text
+                if (sandBurialCamera != null)
                 {
-                    var skyText = skyTextObject.GetComponent<SkyText>();
-                    if (skyText) skyText.ShowText(skyMessage);
+                    sandBurialCamera.TriggerSequence();
                 }
-            }
-            
-            Invoke("LoadCredits", delayBeforeCredits);
-            break;
-            
-        case 2: // Pierce ears (ending 2)
-            DialogueManager.Instance.StartDialogue(
-                ending3Dialogue, 
-                "Stork",
-                () => Invoke("LoadCredits", delayBeforeCredits)
-            );
-            break;
+                else
+                {
+                    // Fallback to sky text
+                    if (skyTextObject != null)
+                    {
+                        var skyText = skyTextObject.GetComponent<SkyText>();
+                        if (skyText) skyText.ShowText(skyMessage);
+                    }
+                }
+                
+                Invoke("LoadCredits", delayBeforeCredits);
+                break;
+                
+            case 2: // Pierce ears (ending 2)
+                DialogueManager.Instance.StartDialogue(
+                    ending3Dialogue, 
+                    "Stork",
+                    () => Invoke("LoadCredits", delayBeforeCredits)
+                );
+                break;
+        }
     }
-}
     
     void LoadCredits()
     {

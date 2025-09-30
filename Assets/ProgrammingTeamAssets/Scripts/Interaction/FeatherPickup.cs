@@ -3,11 +3,12 @@ using UnityEngine;
 /// <summary>
 /// Collectible feather that player can choose to pick up or refuse.
 /// First feather refusal destroys all other feathers.
+/// FIXED: Better state management to prevent double-interaction
 /// </summary>
 public class FeatherPickup : MonoBehaviour
 {
     [Header("Feather Settings")]
-    [SerializeField] private int featherNumber = 1; // For display purposes (1, 2, or 3)
+    [SerializeField] private int featherNumber = 1;
     [SerializeField] private bool isFirstFeather = false;
     
     [Header("Sky Text")]
@@ -15,10 +16,10 @@ public class FeatherPickup : MonoBehaviour
     [SerializeField] private string skyMessage = "Take care of it.";
     
     private bool hasBeenInteracted = false;
+    private bool isShowingChoice = false; // FIX: Prevent double-interaction
     
     void Awake()
     {
-        // Ensure interactable
         if (gameObject.tag == "Untagged")
             gameObject.tag = "Interactable";
     }
@@ -34,10 +35,12 @@ public class FeatherPickup : MonoBehaviour
     
     /// <summary>
     /// Called by InteractionDetector when player presses interact
+    /// FIX: Added check to prevent double-interaction
     /// </summary>
     public void OnInteract()
     {
-        if (hasBeenInteracted) return;
+        // FIX: Prevent double-interaction
+        if (hasBeenInteracted || isShowingChoice) return;
         
         if (DialogueManager.Instance == null || GameStateManager.Instance == null)
         {
@@ -46,6 +49,7 @@ public class FeatherPickup : MonoBehaviour
         }
         
         hasBeenInteracted = true;
+        isShowingChoice = true;
         
         // Show sky text if configured
         if (skyTextObject != null)
@@ -54,7 +58,7 @@ public class FeatherPickup : MonoBehaviour
             if (skyText != null) skyText.ShowText(skyMessage);
         }
         
-        // Show choice directly (no dialogue step)
+        // Show choice directly
         ShowChoices();
     }
     
@@ -70,6 +74,8 @@ public class FeatherPickup : MonoBehaviour
     
     void OnChoice(int choice)
     {
+        isShowingChoice = false; // FIX: Reset choice state
+        
         if (choice == 0) // Pick up
         {
             GameStateManager.Instance.CollectFeather();
