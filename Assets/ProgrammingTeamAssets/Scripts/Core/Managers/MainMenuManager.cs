@@ -3,17 +3,19 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] private Image oImage;  // Reference to the image that updates
+    [SerializeField] private Image previewImage;
 
     public void ChangeImage(Sprite newSprite)
     {
-        if (oImage != null)
-            oImage.sprite = newSprite;
+        if (previewImage != null && newSprite != null)
+        {
+            previewImage.overrideSprite = newSprite;  // force UI redraw
+        }
     }
 
     public void ClearImage()
     {
-        if (oImage != null)
-            oImage.sprite = null;
+        if (previewImage != null)
+            previewImage.overrideSprite = null;
     }
 }
