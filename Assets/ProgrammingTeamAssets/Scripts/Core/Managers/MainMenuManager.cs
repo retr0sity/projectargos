@@ -4,18 +4,33 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Image previewImage;
+    [SerializeField] private GameObject buttonsGroup;
+    [SerializeField] private Animator mainMenuAnimator;
 
-    public void ChangeImage(Sprite newSprite)
+    private static readonly int HoverIndex = Animator.StringToHash("HoverIndex");
+
+    public void Start()
     {
-        if (previewImage != null && newSprite != null)
-        {
-            previewImage.overrideSprite = newSprite;  // force UI redraw
-        }
+        buttonsGroup.SetActive(false);
     }
 
+    public void OnGameButtonPressed()
+    {
+        ClearImage();
+        mainMenuAnimator.SetTrigger("GameButtonPressed");
+    }
+
+    // Called when hovering a button
+    public void ChangeImage(int buttonIndex)
+    {
+        if (mainMenuAnimator != null)
+            mainMenuAnimator.SetInteger(HoverIndex, buttonIndex);
+    }
+
+    // Called when exiting a button
     public void ClearImage()
     {
-        if (previewImage != null)
-            previewImage.overrideSprite = null;
+        if (mainMenuAnimator != null)
+            mainMenuAnimator.SetInteger(HoverIndex, 0);
     }
 }

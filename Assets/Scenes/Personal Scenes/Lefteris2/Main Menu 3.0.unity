@@ -338,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 464989848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473656112}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: OnGameButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464989848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dfcc0121cf09d40aa3441ae0579e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 5186973998634317076, guid: 3eb4cf64d8a5e3e48ba123fd564f3512, type: 3}
+  buttonIndex: 2
   mainMenuManager: {fileID: 1473656112}
 --- !u!1 &479976725
 GameObject:
@@ -636,6 +648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewImage: {fileID: 803359911}
+  buttonsGroup: {fileID: 1992245359}
+  mainMenuAnimator: {fileID: 803359910}
 --- !u!4 &1473656113
 Transform:
   m_ObjectHideFlags: 0
@@ -784,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dfcc0121cf09d40aa3441ae0579e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: 6572198830805654644, guid: 8352b18a30b841c4c8f55aca85e8f522, type: 3}
+  buttonIndex: 1
   mainMenuManager: {fileID: 1473656112}
 --- !u!1 &1710138951
 GameObject:
@@ -919,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dfcc0121cf09d40aa3441ae0579e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSprite: {fileID: -4245660669544561882, guid: 2cca6b38cacf66a479f5300f1a498b7d, type: 3}
+  buttonIndex: 3
   mainMenuManager: {fileID: 1473656112}
 --- !u!1 &1868835501
 GameObject:
