@@ -20,6 +20,12 @@ public class MainMenuManager : MonoBehaviour
         mainMenuAnimator.SetTrigger("GameButtonPressed");
     }
 
+    public void OnOptionsButtonPressed()
+    {
+        ClearImage();
+        mainMenuAnimator.SetTrigger("OptionsButtonPressed");
+    }
+
     // Called when hovering a button
     public void ChangeImage(int buttonIndex)
     {
