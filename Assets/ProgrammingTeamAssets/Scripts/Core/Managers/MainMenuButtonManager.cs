@@ -4,6 +4,7 @@ public class MainMenuButtonManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainButtonsGroup;
     [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject optionsButtonsGroup;
 
     // Called by animation event
     public void ShowMainButtonsGroup()
@@ -20,4 +21,15 @@ public class MainMenuButtonManager : MonoBehaviour
     {
         playButton.SetActive(true);
     }
+
+    public void ShowOptionsButtonsGroup()
+    {
+        optionsButtonsGroup.SetActive(true);
+    }
+
+    public void HideOptionsButtonsGroup()
+    {
+        optionsButtonsGroup.SetActive(false);
+    }
+
 }
