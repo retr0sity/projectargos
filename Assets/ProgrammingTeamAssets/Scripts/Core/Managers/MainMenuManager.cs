@@ -4,14 +4,16 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Image previewImage;
-    [SerializeField] private GameObject buttonsGroup;
+    [SerializeField] private GameObject mainButtonsGroup;
+    [SerializeField] private GameObject playButton;
     [SerializeField] private Animator mainMenuAnimator;
 
     private static readonly int HoverIndex = Animator.StringToHash("HoverIndex");
 
     public void Start()
     {
-        buttonsGroup.SetActive(false);
+        mainButtonsGroup.SetActive(false);
+        playButton.SetActive(false);
     }
 
     public void OnGameButtonPressed()
