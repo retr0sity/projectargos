@@ -588,7 +588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5464135033397800243, guid: 9eddecd94eaf2e64a82a0e33bd3f1a5b, type: 3}
+  m_Sprite: {fileID: -680004647767003904, guid: ea31644454d81464fa6d2b6a58ae499c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -618,7 +618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7dcb164042f9bb4298b27827a19f8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonsGroup: {fileID: 1992245359}
+  mainButtonsGroup: {fileID: 1992245359}
+  playButton: {fileID: 894823058}
 --- !u!1 &894823058
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +716,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 894823062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473656111}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &894823062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewImage: {fileID: 803359911}
-  buttonsGroup: {fileID: 1992245359}
+  mainButtonsGroup: {fileID: 1992245359}
+  playButton: {fileID: 894823058}
   mainMenuAnimator: {fileID: 803359910}
 --- !u!4 &1473656113
 Transform:
@@ -1172,7 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992245360}
   m_Layer: 5
-  m_Name: ButtonsGroup
+  m_Name: MainButtonsGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

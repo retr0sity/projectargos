@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -26,6 +27,13 @@ public class MainMenuManager : MonoBehaviour
     {
         ClearImage();
         mainMenuAnimator.SetTrigger("OptionsButtonPressed");
+    }
+
+    public void OnPlayButtonPressed()
+    {
+        ClearImage();
+        mainMenuAnimator.SetTrigger("PlayButtonPressed");
+        SceneManager.LoadScene(1);
     }
 
     // Called when hovering a button
