@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo_Game/07_arduino.unity
     guid: f1c075f4ca3d9334f81d13813fe2bcc6
   - enabled: 1
+    path: Assets/Scenes/Personal Scenes/Lefteris2/Main Menu 3.0.unity
+    guid: 87b4939f401a8bc429fbcaa02113203b
+  - enabled: 1
     path: Assets/Scenes/Joist_Game/Alpha_StartScene.unity
     guid: 6e5df6e57f1b9bfb5b9af4c9657f0c51
   - enabled: 1
