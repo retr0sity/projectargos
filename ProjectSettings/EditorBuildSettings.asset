@@ -8,25 +8,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demo_Game/00_MainMenu.unity
     guid: 709ab0c6f19e686429ae2d514dc7588f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/01_Test.unity
     guid: 7f8bccd8f2997d340bc91a60a38361e9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/02_death.unity
     guid: b9c1c5928ef3d2e45b5efcec1ef3803b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/03_Cutscene_01.unity
     guid: a3dc53ae670de91479a02eae83b5e412
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/04_Chase.unity
     guid: 8ff77121fc6b942488b4096b78df24c3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/05_cave.unity
     guid: d58a5cf0781f9ad448440502acf17d8e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/06_MINIGAME.unity
     guid: 8ab159ed1e81a494ea28e5bb7b541f3d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Demo_Game/07_arduino.unity
     guid: f1c075f4ca3d9334f81d13813fe2bcc6
   - enabled: 1
