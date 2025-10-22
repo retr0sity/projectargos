@@ -10583,8 +10583,6 @@ MonoBehaviour:
   playerCamera: {fileID: 1708428205}
   cutsceneCamera: {fileID: 604917558}
   playableDirector: {fileID: 1392898899}
-  jumpMovementScript: {fileID: 0}
-  horizontalMovementScript: {fileID: 0}
   playerAnimator: {fileID: 0}
   playerRigidbody: {fileID: 0}
   mainCameraAudioSource: {fileID: 933026768}

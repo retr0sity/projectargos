@@ -705,7 +705,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3030821540553608145, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1331435885}
   m_SourcePrefab: {fileID: 100100000, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
 --- !u!1 &992557094
 GameObject:
@@ -745,6 +748,8 @@ PlayableDirector:
     value: {fileID: 291525551}
   - key: {fileID: -7939477406047524872, guid: d6aee98fd5fce6647913af8840bb7d52, type: 2}
     value: {fileID: 218670985}
+  - key: {fileID: -915996571769976848, guid: d6aee98fd5fce6647913af8840bb7d52, type: 2}
+    value: {fileID: 1331435885}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &992557096
@@ -819,6 +824,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
+--- !u!1 &1331435874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3030821540553608145, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
+  m_PrefabInstance: {fileID: 869692696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1331435885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331435874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 0}
+    - {fileID: 11400000, guid: cfa26ff8e412b3f44a26e5322ab4167b, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls: []
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1331435874}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1376100761
 GameObject:
   m_ObjectHideFlags: 0
