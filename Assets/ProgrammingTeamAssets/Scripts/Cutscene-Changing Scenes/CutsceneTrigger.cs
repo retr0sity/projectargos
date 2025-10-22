@@ -9,8 +9,6 @@ public class CutsceneTrigger : MonoBehaviour
     public CinemachineVirtualCamera playerCamera;
     public CinemachineVirtualCamera cutsceneCamera;
     public PlayableDirector playableDirector;
-    public MonoBehaviour jumpMovementScript;
-    public MonoBehaviour horizontalMovementScript;
     public Animator playerAnimator;          // Reference to the Animator
     public Rigidbody2D playerRigidbody;      // Reference to the player's Rigidbody2D
     public AudioSource mainCameraAudioSource; // Reference to the AudioSource on the main camera
@@ -39,30 +37,27 @@ public class CutsceneTrigger : MonoBehaviour
 
     private void DisablePlayerMovement()
     {
-        if (horizontalMovementScript != null)
+        // Find the PlayerController on the player object
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
         {
-            horizontalMovementScript.enabled = false;  // Disable horizontal movement
+            player.LockPlayer(); // Call your existing lock method
         }
 
-        if (jumpMovementScript != null)
-        {
-            jumpMovementScript.enabled = false;  // Disable jump movement
-        }
-
-        // Freeze the Rigidbody2D (stop any movement or physics)
+        // Optional: stop any remaining motion immediately
         if (playerRigidbody != null)
         {
+            playerRigidbody.linearVelocity = Vector2.zero;
             playerRigidbody.linearDamping = 5f;
-            //playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0);
-            //playerRigidbody.velocity = Vector2.zero; // Stop any existing movement
         }
 
-        // Set the animator to a "cutscene" state or stop falling animation
+        // Make sure animation isn’t stuck in jumping state
         if (playerAnimator != null)
         {
-            playerAnimator.SetBool("IsJumping", false); // Assuming IsJumping controls jumping animation
+            playerAnimator.SetBool("IsJumping", false);
         }
     }
+
 
     private void LowerMainCameraAudio()
     {

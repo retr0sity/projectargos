@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
         StopMovement();
     }
 
+
+
     private void OnControlLockChanged(bool isLocked)
     {
         _controlsLocked = isLocked;
@@ -78,6 +80,14 @@ public class PlayerController : MonoBehaviour
             StopMovement();
         }
     }
+
+    public void LockPlayer()
+    {
+        _controlsLocked = true;
+        StopMovement();
+        Debug.Log("LockPlayer called. _controlsLocked = " + _controlsLocked);
+    }
+
 
     private void StopMovement()
     {

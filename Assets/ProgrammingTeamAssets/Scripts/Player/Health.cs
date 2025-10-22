@@ -12,12 +12,14 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Animator transition;
     private AudioSource mainCameraAudioSource;
+    private PlayerController playerController;
 
     void Start()
     {
         currentHealth = maxHealth; // initialize health
         spriteRenderer = GetComponent<SpriteRenderer>(); // get sprite renderer
         mainCameraAudioSource = Camera.main.GetComponent<AudioSource>(); // get main camera audio source
+        playerController = GetComponent<PlayerController>(); // get player controller
     }
 
     public void TakeDamage(int amount)
@@ -26,6 +28,12 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            // Lock controls
+            if (playerController != null)
+            {
+                playerController.LockPlayer();
+            }
+
             if (mainCameraAudioSource != null)
             {
                 mainCameraAudioSource.Stop(); // stop background music
