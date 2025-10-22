@@ -66035,6 +66035,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3578506770286215244, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
   m_PrefabInstance: {fileID: 1472115791}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1472115797 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4719090206579530145, guid: b67a8a2801cd5004ba5a4218c1c69bf7, type: 3}
+  m_PrefabInstance: {fileID: 1472115791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1677334354
 GameObject:
   m_ObjectHideFlags: 0
@@ -74492,9 +74497,9 @@ PlayableDirector:
   - key: {fileID: 6058694176701039681, guid: 2d74aae4055814c449cc115721ed39ea, type: 2}
     value: {fileID: 2105358205}
   - key: {fileID: -723326217748828191, guid: 2d74aae4055814c449cc115721ed39ea, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1472115797}
   - key: {fileID: 6715109021458884262, guid: 2d74aae4055814c449cc115721ed39ea, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1472115797}
   - key: {fileID: -4163939668316655569, guid: 2d74aae4055814c449cc115721ed39ea, type: 2}
     value: {fileID: 2087792992}
   m_ExposedReferences:
@@ -74531,7 +74536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2087792992
 MonoBehaviour:
   m_ObjectHideFlags: 0
