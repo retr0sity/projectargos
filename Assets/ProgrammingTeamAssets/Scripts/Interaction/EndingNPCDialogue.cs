@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-
 /// <summary>
 /// Final interaction that shows different endings based on feather collection.
 /// Requires "Interactable" tag, DialogueManager, and GameStateManager in scene.
@@ -13,88 +12,116 @@ public class EndingNPCDialogue : MonoBehaviour
     [SerializeField] private string flightBool = "IsFlying";
     [SerializeField] private Flight flightScript;
 
-
     [Header("Dialogue - No Feathers")]
     [TextArea(3,5)]
     [SerializeField] private string[] automaticEndingDialogue = {
         "One day you will learn how to use them."
     };
-    
+
     [Header("Dialogue - Endings")]
     [TextArea(3,5)]
     [SerializeField] private string[] ending1Dialogue = {
         "You're kind.",
         "But you need them more than I do."
     };
-    
+
     [TextArea(3,5)]
     [SerializeField] private string[] ending3Dialogue = {
         "You will get them back when you know how to use them."
     };
-    
-    [Header("Sky Text")]
-	[SerializeField] private GameObject skyTextObject;
-	[SerializeField] private string skyMessage = "The sea will bring them back when you need them.";
 
-	[Header("Sand Burial Camera")]
-	[SerializeField] private DelayedCameraEvent sandBurialCamera;
+    [Header("Sky Text")]
+    [SerializeField] private GameObject skyTextObject;
+    [SerializeField] private string skyMessage = "The sea will bring them back when you need them.";
+
+    [Header("Sand Burial Camera")]
+    [SerializeField] private DelayedCameraEvent sandBurialCamera;
+
     [Header("Settings")]
     [SerializeField] private float delayBeforeCredits = 3f;
-    
+
     private bool hasBeenInteracted = false;
-    
+    private bool isCurrentlyInDialogue = false; // prevent re-trigger
+
     /// <summary>
     /// Called by InteractionDetector when player presses interact
     /// </summary>
     public void OnInteract()
     {
-        if (hasBeenInteracted) return;
-        
+        // ✅ safety checks
         if (GameStateManager.Instance == null || DialogueManager.Instance == null)
         {
             Debug.LogError("Missing required managers!");
             return;
         }
 
-        // Play interaction animation
-        if (pelargosAnimator != null)
+        // ✅ block new interactions while any dialogue or UI is active
+        if (DialogueManager.Instance.IsAnyUIActive())
         {
-            pelargosAnimator.SetBool(interactBool, true);
-        }
-
-        
-        // Check if visited mini-game scene first
-        if (!GameStateManager.Instance.hasVisitedOtherScene)
-        {
-            DialogueManager.Instance.ShowMonologue("You should explore the console first.");
-            StartCoroutine(ResetInteraction());
+            Debug.Log("Dialogue or other UI active — ignoring new interaction.");
             return;
         }
-        
+
+        // ✅ block repeat presses mid-dialogue
+        if (isCurrentlyInDialogue)
+        {
+            Debug.Log("Already in dialogue, ignoring interaction.");
+            return;
+        }
+
+        // ✅ optional: prevent repeat after one complete run
+        if (hasBeenInteracted)
+        {
+            Debug.Log("Already interacted — ignoring repeat press.");
+            return;
+        }
+
+        // ✅ play animation
+        if (pelargosAnimator != null)
+            pelargosAnimator.SetBool(interactBool, true);
+
+        if (!GameStateManager.Instance.hasVisitedOtherScene)
+        {
+            isCurrentlyInDialogue = true; // lock until dialogue ends
+
+            DialogueManager.Instance.StartDialogue(
+                new string[] { "You should explore the console first." },
+                "Stork",
+                () =>
+                {
+                    StartCoroutine(UnlockAfterDelay(2f)); // wait 2 seconds before allowing re-interact
+                    if (pelargosAnimator != null)
+                        pelargosAnimator.SetBool(interactBool, false);
+                }
+            );
+            return;
+        }
+
+
+
+
         hasBeenInteracted = true;
-        
-        // Check feather status
-        if (GameStateManager.Instance.refusedFeathers || 
+        isCurrentlyInDialogue = true;
+
+        // ✅ trigger appropriate ending
+        if (GameStateManager.Instance.refusedFeathers ||
             GameStateManager.Instance.feathersCollected == 0)
         {
-            // No feathers collected - automatic ending
             ShowNoFeatherEnding();
         }
         else
         {
-            // Has at least 1 feather - show choices
             ShowEndingChoices();
         }
     }
     
-    System.Collections.IEnumerator ResetInteraction()
+    private System.Collections.IEnumerator UnlockAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(5f);
-        if (pelargosAnimator != null)
-        {
-            pelargosAnimator.SetBool(interactBool, false);
-        }
+        yield return new WaitForSeconds(delay);
+        isCurrentlyInDialogue = false;
     }
+
+
     void ShowNoFeatherEnding()
     {
         GameStateManager.Instance.endingChosen = 3;
@@ -102,23 +129,12 @@ public class EndingNPCDialogue : MonoBehaviour
         DialogueManager.Instance.StartDialogue(
             automaticEndingDialogue,
             "Stork",
-            () =>
-            {
-                Invoke("LoadCredits", delayBeforeCredits);
-            }
+            OnDialogueFinished // will reset state after complete
         );
 
-        // Trigger flight animation and movement
-        if (pelargosAnimator != null)
-        {
-            pelargosAnimator.SetBool(flightBool, true);
-        }
-        if (flightScript != null)
-        {
-            flightScript.StartFlying();
-        }
+        TriggerFlight();
     }
-    
+
     void ShowEndingChoices()
     {
         string[] choices = {
@@ -126,7 +142,7 @@ public class EndingNPCDialogue : MonoBehaviour
             "Bury them in the sand", 
             "Pierce your ears with them"
         };
-        
+
         DialogueManager.Instance.ShowChoices(choices, OnEndingChoice);
     }
 
@@ -136,53 +152,56 @@ public class EndingNPCDialogue : MonoBehaviour
 
         switch (choice)
         {
-            case 0: // Bouquet (ending 0)
+            case 0: // Bouquet
                 DialogueManager.Instance.StartDialogue(
                     ending1Dialogue,
                     "Stork",
-                    () => Invoke("LoadCredits", delayBeforeCredits)
+                    OnDialogueFinished
                 );
                 break;
 
-            case 1: // Sand (ending 1)
-                    // NEW: Trigger camera zoom/pan before showing text
+            case 1: // Sand
                 if (sandBurialCamera != null)
                 {
                     sandBurialCamera.TriggerSequence();
                 }
-                else
+                else if (skyTextObject != null)
                 {
-                    // Fallback to old method
-                    if (skyTextObject != null)
-                    {
-                        var skyText = skyTextObject.GetComponent<SkyText>();
-                        if (skyText) skyText.ShowText(skyMessage);
-                    }
+                    var skyText = skyTextObject.GetComponent<SkyText>();
+                    if (skyText) skyText.ShowText(skyMessage);
                 }
 
-                Invoke("LoadCredits", delayBeforeCredits);
+                Invoke(nameof(OnDialogueFinished), delayBeforeCredits);
                 break;
 
-            case 2: // Pierce ears (ending 2)
+            case 2: // Pierce ears
                 DialogueManager.Instance.StartDialogue(
                     ending3Dialogue,
                     "Stork",
-                    () => Invoke("LoadCredits", delayBeforeCredits)
+                    OnDialogueFinished
                 );
                 break;
         }
-    
-        // Trigger flight animation and movement
+
+        TriggerFlight();
+    }
+
+    void TriggerFlight()
+    {
         if (pelargosAnimator != null)
-        {
             pelargosAnimator.SetBool(flightBool, true);
-        }
+
         if (flightScript != null)
-        {
             flightScript.StartFlying();
-        }
-}
-    
+    }
+
+    void OnDialogueFinished()
+    {
+        Debug.Log("EndingNPCDialogue: Dialogue finished.");
+        isCurrentlyInDialogue = false; // ✅ unlock
+        Invoke(nameof(LoadCredits), delayBeforeCredits);
+    }
+
     void LoadCredits()
     {
         GameStateManager.Instance.LoadCredits();
