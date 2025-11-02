@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Personal Scenes/Panos/DialogueGameScene.unity
     guid: 15e9cb2696b14cc809df7504faf44a49
+  - enabled: 1
+    path: Assets/Scenes/Joist_Game/Alpha_DarkRoom.unity
+    guid: 412db83a6b2ab66ffafa4821c2dee043
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ee04d4b4b94aa364ea15ab4e3eaee9b7, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 06d65be184014fd418cb64948ea882b9, type: 2}

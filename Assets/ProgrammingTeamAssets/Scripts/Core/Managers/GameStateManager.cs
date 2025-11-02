@@ -50,11 +50,18 @@ public class GameStateManager : MonoBehaviour
     }
     
     public void SetReturnPoint(string sceneName, Vector3 position)
+{
+    returnSceneName = sceneName;
+    returnPosition = position;
+    hasVisitedOtherScene = true;
+
+    // --- Override return position for Alpha_StartScene ---
+    if (sceneName == "Alpha_StartScene")
     {
-        returnSceneName = sceneName;
-        returnPosition = position;
-        hasVisitedOtherScene = true;
+        returnPosition = new Vector3(-251.82f, -1.72f, 0f);
     }
+}
+
     
     public void ReturnToSavedPosition()
     {
