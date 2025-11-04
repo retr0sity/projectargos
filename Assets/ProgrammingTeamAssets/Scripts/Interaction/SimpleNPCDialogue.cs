@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 /// <summary>
 /// NPC dialogue that can be triggered either by player interaction OR by entering a trigger zone.
-/// FIXED: Better protection against rapid re-triggering
+/// Freezes enemies during dialogue to prevent player death while talking
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class SimpleNPCDialogue : MonoBehaviour
@@ -17,11 +17,16 @@ public class SimpleNPCDialogue : MonoBehaviour
     [SerializeField] private string[] dialogueLines;
     [SerializeField] private bool oneTimeOnly = true;
     
+    [Header("Enemy Freeze")]
+    [SerializeField] private bool freezeEnemies = true;
+    [SerializeField] private string enemyTag = "Enemy";
+    
     [Header("Events")]
     [SerializeField] private UnityEvent onDialogueComplete;
     
     private bool hasBeenTalkedTo = false;
-    private bool isCurrentlyInDialogue = false; // FIX: Prevent re-entry during dialogue
+    private bool isCurrentlyInDialogue = false;
+    private Fascist[] frozenEnemies;
     
     void Awake()
     {
@@ -64,7 +69,6 @@ public class SimpleNPCDialogue : MonoBehaviour
     
     void StartDialogue()
     {
-        // FIX: Don't allow re-triggering while already in dialogue
         if (isCurrentlyInDialogue)
         {
             Debug.Log($"{gameObject.name}: Already in dialogue, ignoring trigger");
@@ -89,9 +93,25 @@ public class SimpleNPCDialogue : MonoBehaviour
             return;
         }
         
-        // FIX: Set both flags to prevent re-entry
         hasBeenTalkedTo = true;
         isCurrentlyInDialogue = true;
+        
+        // Freeze enemies at their current positions
+        if (freezeEnemies)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+            frozenEnemies = new Fascist[enemies.Length];
+            
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                Fascist enemy = enemies[i].GetComponent<Fascist>();
+                if (enemy != null)
+                {
+                    frozenEnemies[i] = enemy;
+                    enemy.TriggerStop(enemy.transform.position);
+                }
+            }
+        }
         
         Debug.Log($"{gameObject.name}: Starting dialogue");
         
@@ -102,7 +122,20 @@ public class SimpleNPCDialogue : MonoBehaviour
     {
         Debug.Log($"{gameObject.name}: Dialogue finished");
         
-        isCurrentlyInDialogue = false; // FIX: Reset dialogue state
+        isCurrentlyInDialogue = false;
+        
+        // Unfreeze enemies
+        if (freezeEnemies && frozenEnemies != null)
+        {
+            foreach (Fascist enemy in frozenEnemies)
+            {
+                if (enemy != null)
+                {
+                    enemy.Resume();
+                }
+            }
+            frozenEnemies = null;
+        }
         
         onDialogueComplete?.Invoke();
         
@@ -122,7 +155,7 @@ public class SimpleNPCDialogue : MonoBehaviour
     public void ResetDialogue()
     {
         hasBeenTalkedTo = false;
-        isCurrentlyInDialogue = false; // FIX: Also reset dialogue state
+        isCurrentlyInDialogue = false;
         
         if (useTriggerMode)
         {
