@@ -45,8 +45,14 @@ public class AutoReturnTrigger : MonoBehaviour
         
         // Automatically return player to saved position in main scene
         GameStateManager.Instance.ReturnToSavedPosition();
+    
     }
     
+    public void CutsceneReturn()
+    {
+        GameStateManager.Instance.ReturnToSavedPosition();
+    }
+
     /// <summary>
     /// Reset trigger for testing
     /// </summary>

@@ -1,27 +1,36 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 /// <summary>
 /// Forward portal that transports player to another scene (like mini-game).
 /// Saves player's current position so they can return later.
 /// Requires "Interactable" tag and GameStateManager in scene.
+/// Each portal tracks its own usage independently.
 /// </summary>
 public class ScenePortal : MonoBehaviour
 {
     [Header("Portal Settings")]
-    [SerializeField] private string targetSceneName = "MiniGame";
+    [SerializeField] private string targetSceneName = "";
     [SerializeField] private bool oneTimeUse = true;
+    [SerializeField] private string portalID = ""; // Unique ID for this portal
     
     void Awake()
     {
         if (gameObject.tag == "Untagged")
             gameObject.tag = "Interactable";
+        
+        // Auto-generate portal ID if not set
+        if (string.IsNullOrEmpty(portalID))
+        {
+            portalID = $"{SceneManager.GetActiveScene().name}_{gameObject.name}";
+        }
     }
     
     void Start()
     {
-        // Check if portal was already used
-        if (oneTimeUse && GameStateManager.Instance != null && GameStateManager.Instance.hasUsedPortal)
+        // Check if THIS specific portal was already used
+        if (oneTimeUse && GameStateManager.Instance != null && GameStateManager.Instance.HasPortalBeenUsed(portalID))
         {
             gameObject.SetActive(false);
         }
@@ -29,7 +38,7 @@ public class ScenePortal : MonoBehaviour
     
     public void OnInteract()
     {
-        if (oneTimeUse && GameStateManager.Instance.hasUsedPortal) 
+        if (oneTimeUse && GameStateManager.Instance.HasPortalBeenUsed(portalID)) 
             return;
         
         if (GameStateManager.Instance == null)
@@ -39,7 +48,6 @@ public class ScenePortal : MonoBehaviour
         }
         
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        
         if (player == null)
         {
             Debug.LogError("Player not found! Cannot save return position.");
@@ -52,9 +60,9 @@ public class ScenePortal : MonoBehaviour
             return;
         }
         
-        // Mark portal as used in persistent state
+        // Mark THIS portal as used
         if (oneTimeUse)
-            GameStateManager.Instance.hasUsedPortal = true;
+            GameStateManager.Instance.MarkPortalAsUsed(portalID);
         
         // Save return point
         GameStateManager.Instance.SetReturnPoint(
@@ -62,14 +70,15 @@ public class ScenePortal : MonoBehaviour
             player.transform.position
         );
         
-        // Load mini-game
+        // Load target scene
         SceneManager.LoadScene(targetSceneName);
     }
     
     public void ResetPortal()
     {
         if (GameStateManager.Instance != null)
-            GameStateManager.Instance.hasUsedPortal = false;
+            GameStateManager.Instance.ResetPortal(portalID);
+        
         gameObject.SetActive(true);
     }
 }
