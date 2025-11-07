@@ -76,8 +76,8 @@ public class Fascist : MonoBehaviour
                 }
                 else
                 {
-                    // Pause for a duration
-                    StartCoroutine(PauseAtSlot());
+                    // Pause until trigger resumes
+                    HandlePauseAtSlot();
                 }
             }
             return;
@@ -103,25 +103,31 @@ public class Fascist : MonoBehaviour
         shouldJump = true;
     }
 
-    // Pause slot: enemy walks to slot, then pauses for duration
-    public void TriggerPause(float duration, Vector3 stopPosition)
+    // Pause slot: enemy walks to slot, then pauses until resumed
+    public void TriggerPause(Vector3 stopPosition)
     {
         targetSlot = stopPosition;
-        pauseDuration = duration;
         hasSlot = true;
         isStopping = false;
+        isPausing = false;
     }
 
-    private IEnumerator PauseAtSlot()
+    // Instead of a coroutine, we directly mark as paused when reaching the slot
+    private void HandlePauseAtSlot()
     {
         isPausing = true;
         rb.linearVelocity = Vector2.zero;
         animator.SetFloat("Speed", 0f);
-
-        yield return new WaitForSeconds(pauseDuration);
-
-        isPausing = false; // resume walking
     }
+    
+    public void ResumePause()
+    {
+        if (isPausing)
+        {
+            isPausing = false;
+        }
+    }
+
 
     // Stop slot: enemy walks to slot, then freezes permanently
     public void TriggerStop(Vector3 stopPosition)
