@@ -47,6 +47,9 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping = false;
     private string currentFullLine = "";
     private bool waitingForInput = false;
+    private bool isMonologueTyping = false;
+    private string currentMonologueFullLine = "";
+
     
     // FIX: Use coroutine-based cooldown instead of flag
     private Coroutine startCooldownCoroutine;
@@ -116,9 +119,19 @@ public class DialogueManager : MonoBehaviour
         
         if (isMonologueActive && monologueWaitingForInput)
         {
+            // If monologue is still typing, finish it first
+            if (isMonologueTyping)
+            {
+                isMonologueTyping = false;
+                monologueText.text = currentMonologueFullLine;
+                return;
+            }
+
+            // Otherwise go to next line
             DisplayNextMonologueLine();
             return;
         }
+
 
         // FIX: Check waitingForInput first, then handle dialogue state
         if (waitingForInput)
@@ -354,6 +367,8 @@ public class DialogueManager : MonoBehaviour
 
         isMonologueActive = true;
         monologueWaitingForInput = false;
+        isMonologueTyping = false;
+        currentMonologueFullLine = "";
         DisplayNextMonologueLine();
     }
 
@@ -385,38 +400,40 @@ public class DialogueManager : MonoBehaviour
         if (panel == dialoguePanel && speakerNameText != null)
             speakerNameText.text = "";
 
-        string fullLine = line;
+        currentMonologueFullLine = line;
         textComponent.text = "";
         
         yield return null;
         monologueWaitingForInput = true;
-        
+        isMonologueTyping = true;
+
         foreach (char letter in line)
         {
-            if (!isMonologueActive || currentMonologue == null)
+            // If player pressed interact while typing, finish instantly
+            if (!isMonologueActive || !isMonologueTyping)
             {
-                textComponent.text = fullLine;
+                textComponent.text = currentMonologueFullLine;
+                isMonologueTyping = false;
                 yield break;
             }
-            
+
             textComponent.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
-        
+
+        // Done typing
+        isMonologueTyping = false;
+
+        // Now wait for input OR timeout — whichever comes first
         float elapsed = 0f;
-        while (elapsed < timeWhaitMonologue)
+        while (elapsed < timeWhaitMonologue && monologueWaitingForInput && isMonologueActive)
         {
-            if (!isMonologueActive || currentMonologue == null)
-                yield break;
-                
             elapsed += Time.deltaTime;
             yield return null;
         }
-        
+
         if (isMonologueActive)
-        {
             DisplayNextMonologueLine();
-        }
     }
 
     void EndMonologue()
