@@ -23,7 +23,7 @@ public class EnemyPauseTrigger : MonoBehaviour
             Vector3 stopPos = transform.position;
             stopPos.x += index * spacing; // 👈 shift to the RIGHT for later enemies
 
-            enemy.TriggerPause(pauseDuration, stopPos);
+            enemy.TriggerPause(stopPos);
         }
     }
 
