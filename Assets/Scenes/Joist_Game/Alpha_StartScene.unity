@@ -4052,6 +4052,7 @@ MonoBehaviour:
   targetSceneName: 01_Test
   oneTimeUse: 1
   portalID: consolePortal
+  customReturnPoint: {fileID: 0}
 --- !u!1 &301946174
 GameObject:
   m_ObjectHideFlags: 0
@@ -34183,6 +34184,7 @@ MonoBehaviour:
   targetSceneName: Alpha_DarkRoom
   oneTimeUse: 1
   portalID: darkRoom
+  customReturnPoint: {fileID: 1526888626}
 --- !u!1 &1897731338
 GameObject:
   m_ObjectHideFlags: 0

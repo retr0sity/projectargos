@@ -15,6 +15,10 @@ public class ScenePortal : MonoBehaviour
     [SerializeField] private bool oneTimeUse = true;
     [SerializeField] private string portalID = ""; // Unique ID for this portal
     
+    [Header("Return Position")]
+    [Tooltip("Assign a Transform (like an empty GameObject) to specify an exact return spot. If left empty, the portal's own position will be used as the return point.")]
+    [SerializeField] private Transform customReturnPoint; // <-- NEW VARIABLE
+    
     void Awake()
     {
         if (gameObject.tag == "Untagged")
@@ -47,6 +51,7 @@ public class ScenePortal : MonoBehaviour
             return;
         }
         
+        // We still check for the player just to make sure they exist
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
@@ -64,11 +69,26 @@ public class ScenePortal : MonoBehaviour
         if (oneTimeUse)
             GameStateManager.Instance.MarkPortalAsUsed(portalID);
         
-        // Save return point
+        // --- UPDATED LOGIC ---
+        // Determine the return position
+        Vector3 returnPos;
+        if (customReturnPoint != null)
+        {
+            // Use the specific position from the Transform you assigned
+            returnPos = customReturnPoint.position;
+        }
+        else
+        {
+            // Default to the portal's own position
+            returnPos = transform.position; 
+        }
+        
+        // Save the chosen return point
         GameStateManager.Instance.SetReturnPoint(
             SceneManager.GetActiveScene().name,
-            player.transform.position
+            returnPos
         );
+        // --- END OF UPDATED LOGIC ---
         
         // Load target scene
         SceneManager.LoadScene(targetSceneName);
