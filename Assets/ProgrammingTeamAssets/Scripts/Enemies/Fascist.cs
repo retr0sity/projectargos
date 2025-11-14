@@ -25,6 +25,7 @@ public class Fascist : MonoBehaviour
 
     private bool isStopping = false;        // true if this slot is a permanent stop
     private bool isStopped = false;         // frozen permanently
+    private bool canResumeAfterPause = false;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class Fascist : MonoBehaviour
             return;
         }
 
-        // 2️⃣ Currently pausing at slot
+        // 2️⃣ Paused at slot
         if (isPausing)
         {
             rb.linearVelocity = Vector2.zero;
@@ -51,41 +52,39 @@ public class Fascist : MonoBehaviour
             return;
         }
 
-        // 3️⃣ Moving toward a slot (pause or stop)
+        // 3️⃣ Moving toward a slot
         if (hasSlot)
         {
+            float dir = Mathf.Sign(targetSlot.x - transform.position.x); // move toward slot
             float dist = Mathf.Abs(transform.position.x - targetSlot.x);
+
             if (dist > 0.05f)
             {
-                // Walk left toward slot
-                rb.linearVelocity = new Vector2(-Mathf.Abs(moveSpeed), rb.linearVelocity.y);
+                rb.linearVelocity = new Vector2(dir * moveSpeed, rb.linearVelocity.y);
                 animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
             }
             else
             {
-                // Arrived at slot
                 rb.linearVelocity = Vector2.zero;
                 animator.SetFloat("Speed", 0f);
                 hasSlot = false;
 
                 if (isStopping)
                 {
-                    // Lock permanently
                     isStopped = true;
                     isStopping = false;
                 }
                 else
                 {
-                    // Pause for a duration
-                    StartCoroutine(PauseAtSlot());
+                    HandlePauseAtSlot();
                 }
             }
             return;
         }
 
         // 4️⃣ Normal movement
-        float dir = facingRight ? 1f : -1f;
-        rb.linearVelocity = new Vector2(dir * moveSpeed, rb.linearVelocity.y);
+        float moveDir = facingRight ? 1f : -1f;
+        rb.linearVelocity = new Vector2(moveDir * moveSpeed, rb.linearVelocity.y);
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
 
         // Jump logic
@@ -96,6 +95,7 @@ public class Fascist : MonoBehaviour
         }
     }
 
+
     // === Trigger methods ===
 
     public void TriggerJump()
@@ -103,25 +103,38 @@ public class Fascist : MonoBehaviour
         shouldJump = true;
     }
 
-    // Pause slot: enemy walks to slot, then pauses for duration
-    public void TriggerPause(float duration, Vector3 stopPosition)
+    // Pause slot: enemy walks to slot, then pauses until resumed
+    public void TriggerPause(Vector3 stopPosition)
     {
         targetSlot = stopPosition;
-        pauseDuration = duration;
         hasSlot = true;
         isStopping = false;
+        isPausing = false;
     }
 
-    private IEnumerator PauseAtSlot()
+    // Instead of a coroutine, we directly mark as paused when reaching the slot
+    private void HandlePauseAtSlot()
     {
         isPausing = true;
         rb.linearVelocity = Vector2.zero;
         animator.SetFloat("Speed", 0f);
-
-        yield return new WaitForSeconds(pauseDuration);
-
-        isPausing = false; // resume walking
+        canResumeAfterPause = true; // allow resuming later
     }
+
+    public void ResumePause()
+    {
+        if (isPausing && canResumeAfterPause)
+        {
+            isPausing = false;
+            hasSlot = false;
+            canResumeAfterPause = false;
+
+            float dir = facingRight ? 1f : -1f;
+            rb.linearVelocity = new Vector2(dir * moveSpeed, rb.linearVelocity.y);
+            animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+        }
+    }
+
 
     // Stop slot: enemy walks to slot, then freezes permanently
     public void TriggerStop(Vector3 stopPosition)

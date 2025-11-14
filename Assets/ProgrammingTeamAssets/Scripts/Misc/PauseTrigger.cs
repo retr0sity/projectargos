@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class EnemyPauseTrigger : MonoBehaviour
 {
     public float pauseDuration = 2f;
     public float spacing = 1.5f;
+    private int enemyCount = 0;
 
     private List<Fascist> queue = new List<Fascist>();
 
@@ -23,7 +25,15 @@ public class EnemyPauseTrigger : MonoBehaviour
             Vector3 stopPos = transform.position;
             stopPos.x += index * spacing; // 👈 shift to the RIGHT for later enemies
 
-            enemy.TriggerPause(pauseDuration, stopPos);
+            enemy.TriggerPause(stopPos);
+
+            enemyCount++;
+
+            // Disable trigger if at max capacity
+            if (enemyCount >= 2)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 

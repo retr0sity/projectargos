@@ -55,14 +55,18 @@ public class GameStateManager : MonoBehaviour
     public void SetReturnPoint(string sceneName, Vector3 position)
     {
         returnSceneName = sceneName;
-        returnPosition = position;
+        returnPosition = position; // <-- This position is now always used
         hasVisitedOtherScene = true;
         
-        // Override return position for Alpha_StartScene ONLY the first time
+        // --- UPDATED SECTION ---
+        // This 'if' block, which caused the override, has been removed/commented out.
+        /* // Override return position for Alpha_StartScene ONLY the first time
         if (sceneName == "Alpha_StartScene" && !hasReturnedToAlphaStartOnce)
         {
             returnPosition = new Vector3(-251.82f, -1.72f, 0f);
         }
+        */
+        // --- END OF UPDATE ---
     }
     
     public void ReturnToSavedPosition()
