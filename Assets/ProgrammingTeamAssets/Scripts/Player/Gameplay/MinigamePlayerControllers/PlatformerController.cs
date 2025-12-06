@@ -15,8 +15,8 @@ public class PlatformerController : BasePlayerController
     [SerializeField] private float groundCheckRadius = 0.1f;
 
     private bool _isGrounded;
-    private bool _facingRight = true; // Assumes sprite faces right by default
-
+    private bool _facingRight = false; // Assumes sprite faces right by default. CAREFULLY CHANGE THIS IF YOU CHANGE THE SPRITE!
+    
     protected override void HandleMovement(Vector2 input)
     {
         // Determine Speed

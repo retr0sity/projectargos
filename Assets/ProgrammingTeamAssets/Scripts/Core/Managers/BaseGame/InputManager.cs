@@ -21,7 +21,7 @@ namespace Core.Managers
         public event Action InventoryEvent;
         public event Action PauseEvent;
         
-        // Locking Events
+        // Locking Events 
         public event Action<bool> ControlLockChanged;
         private bool _movementLocked;
         public event Action<bool> MovementLockChanged;
