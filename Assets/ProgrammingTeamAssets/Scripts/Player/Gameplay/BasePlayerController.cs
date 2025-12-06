@@ -5,13 +5,16 @@ using Core.Managers;
 public abstract class BasePlayerController : MonoBehaviour
 {
     [Header("Base Settings")]
-    [SerializeField] protected float speed = 5f;
+    [SerializeField] protected float baseSpeed = 5f;
     [SerializeField] protected bool lockAxisX = false;
     [SerializeField] protected bool lockAxisY = false;
 
     protected Rigidbody2D _rb;
     protected Animator _animator;
+    
+    // State
     protected Vector2 _currentInput;
+    protected bool _isRunningInput;
     protected bool _controlsLocked = false;
     protected bool _isMovementLocked = false;
 
@@ -28,6 +31,7 @@ public abstract class BasePlayerController : MonoBehaviour
         {
             input.MoveEvent += OnMoveInput;
             input.JumpEvent += OnJumpInput;
+            input.RunEvent += OnRunInput; // Subscribe to Run
             input.ControlLockChanged += OnControlLockChanged;
             input.MovementLockChanged += OnMovementLockChanged;
         }
@@ -40,6 +44,7 @@ public abstract class BasePlayerController : MonoBehaviour
         {
             input.MoveEvent -= OnMoveInput;
             input.JumpEvent -= OnJumpInput;
+            input.RunEvent -= OnRunInput;
             input.ControlLockChanged -= OnControlLockChanged;
             input.MovementLockChanged -= OnMovementLockChanged;
         }
@@ -64,6 +69,11 @@ public abstract class BasePlayerController : MonoBehaviour
         HandleJump();
     }
 
+    private void OnRunInput(bool isRunning)
+    {
+        _isRunningInput = isRunning;
+    }
+
     // --- Locking Logic ---
 
     protected virtual void OnControlLockChanged(bool isLocked)
@@ -81,9 +91,12 @@ public abstract class BasePlayerController : MonoBehaviour
     protected virtual void StopMovement()
     {
         _currentInput = Vector2.zero;
+        _isRunningInput = false;
         if(_rb != null) _rb.linearVelocity = Vector2.zero;
         if(_animator != null) _animator.SetFloat("Speed", 0f);
     }
+
+    public void ForceStop() => StopMovement();
 
     // --- Physics Loop ---
 
@@ -99,12 +112,15 @@ public abstract class BasePlayerController : MonoBehaviour
         HandleMovement(processedInput);
     }
 
-    // --- Abstract Methods (Children MUST implement these) ---
-    
+    // --- Abstract Methods ---
+    // Children MUST implement these
     protected abstract void HandleMovement(Vector2 input);
     protected abstract void HandleJump();
     
-    // --- Public Helper for DialogueManager ---
-    // This ensures DialogueManager can find us regardless of the specific controller type
-    public void ForceStop() => StopMovement();
+    // Helper to allow external scripts to lock specific axes
+    public void SetAxisLock(bool x, bool y)
+    {
+        lockAxisX = x;
+        lockAxisY = y;
+    }
 }
