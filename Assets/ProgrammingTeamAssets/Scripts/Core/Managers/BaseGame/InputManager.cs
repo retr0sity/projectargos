@@ -4,30 +4,29 @@ using UnityEngine.InputSystem;
 
 namespace Core.Managers
 {
-    /// <summary>
-    /// Centralized Input Manager using Unity's new Input System and generated PlayerControls.
-    /// Emits high-level input events without handling gameplay logic directly.
-    /// FIXED: Properly clears movement input when unlocking
-    /// </summary>
     [DefaultExecutionOrder(-100)]
     public class InputManager : MonoBehaviour,
         PlayerControls.IGlobalActions,
-        PlayerControls.IGameplayActions,
+        PlayerControls.IGameplayActions, // This now requires OnRun to be implemented
         PlayerControls.IUIActions
     {
         public static InputManager Instance { get; private set; }
 
-        // Public events for external systems to subscribe
+        // --- Events ---
         public event Action<Vector2> MoveEvent;
         public event Action JumpEvent;
+        public event Action<bool> RunEvent; // <--- NEW RUN EVENT
         public event Action LandingEvent;
         public event Action InteractEvent;
         public event Action InventoryEvent;
         public event Action PauseEvent;
+        
+        // Locking Events
         public event Action<bool> ControlLockChanged;
         private bool _movementLocked;
         public event Action<bool> MovementLockChanged;
 
+        // UI Events
         public event Action<Vector2> NavigateEvent;
         public event Action SubmitEvent;
         public event Action<Vector2> ScrollEvent;
@@ -58,88 +57,32 @@ namespace Core.Managers
 
         void OnDestroy()
         {
-            try
-            {
-                if (_controls != null)
-                {
-                    try { _controls.Disable(); } catch { }
-
-                    try
-                    {
-                        try { _controls.Global.RemoveCallbacks(this); } catch { }
-                        try { _controls.Gameplay.RemoveCallbacks(this); } catch { }
-                        try { _controls.UI.RemoveCallbacks(this); } catch { }
-                    }
-                    catch (Exception)
-                    {
-                    }
-
-                    try { _controls.Dispose(); } catch { }
-                    _controls = null;
-                }
-            }
-            catch (Exception)
-            {
-            }
-            finally
-            {
-                if (Instance == this)
-                    Instance = null;
-            }
+            if (_controls != null) { _controls.Disable(); _controls.Dispose(); }
         }
 
-        /// <summary>
-        /// Enable or disable input handling (e.g. during cutscenes).
-        /// </summary>
         public void SetControlLock(bool locked)
         {
             _controlsLocked = locked;
-            if (locked)
-                _controls.Gameplay.Disable();
-            else
-                _controls.Gameplay.Enable();
+            if (locked) _controls.Gameplay.Disable();
+            else _controls.Gameplay.Enable();
 
-            try { ControlLockChanged?.Invoke(locked); } catch { }
+            ControlLockChanged?.Invoke(locked);
             
-            // FIX: Clear movement when unlocking
-            if (!locked && !_movementLocked)
-            {
-                MoveEvent?.Invoke(Vector2.zero);
-            }
+            if (!locked && !_movementLocked) MoveEvent?.Invoke(Vector2.zero);
         }
 
-        /// <summary>
-        /// Lock ONLY movement, but keep interact working (for dialogue)
-        /// FIX: Now clears movement input when unlocking
-        /// </summary>
         public void SetMovementLock(bool locked)
         {
             _movementLocked = locked;
             MovementLockChanged?.Invoke(locked);
             
-            // FIX: When unlocking, send zero vector to clear any held input
-            if (!locked && !_controlsLocked)
-            {
-                MoveEvent?.Invoke(Vector2.zero);
-            }
+            if (!locked && !_controlsLocked) MoveEvent?.Invoke(Vector2.zero);
         }
 
-        /// <summary>
-        /// Check if movement is locked (for PlayerController to check)
-        /// </summary>
-        public bool IsMovementLocked()
-        {
-            return _controlsLocked || _movementLocked;
-        }
+        public bool IsMovementLocked() => _controlsLocked || _movementLocked;
 
-        // IGlobalActions
-        void PlayerControls.IGlobalActions.OnPause(InputAction.CallbackContext context)
-        {
-            if (context.performed)
-                PauseEvent?.Invoke();
-        }
+        // --- Gameplay Actions ---
 
-        // IGameplayActions
         void PlayerControls.IGameplayActions.OnMove(InputAction.CallbackContext context)
         {
             if (_controlsLocked || _movementLocked) return;
@@ -150,60 +93,40 @@ namespace Core.Managers
         void PlayerControls.IGameplayActions.OnJump(InputAction.CallbackContext context)
         {
             if (_controlsLocked) return;
+            if (context.performed) JumpEvent?.Invoke();
+        }
+
+        // <--- NEW: RUN IMPLEMENTATION --->
+        void PlayerControls.IGameplayActions.OnRun(InputAction.CallbackContext context)
+        {
+            if (_controlsLocked) return;
+
             if (context.performed)
-                JumpEvent?.Invoke();
+                RunEvent?.Invoke(true); // Key Pressed
+            else if (context.canceled)
+                RunEvent?.Invoke(false); // Key Released
         }
 
         void PlayerControls.IGameplayActions.OnInteract(InputAction.CallbackContext context)
         {
             if (_controlsLocked) return;
-            if (context.performed)
-                InteractEvent?.Invoke();
+            if (context.performed) InteractEvent?.Invoke();
         }
 
         void PlayerControls.IGameplayActions.OnInventory(InputAction.CallbackContext context)
         {
             if (_controlsLocked) return;
-            if (context.performed)
-                InventoryEvent?.Invoke();
+            if (context.performed) InventoryEvent?.Invoke();
         }
 
-        // IUIActions
-        void PlayerControls.IUIActions.OnNavigation(InputAction.CallbackContext context)
-        {
-            if (context.performed || context.canceled)
-                NavigateEvent?.Invoke(context.ReadValue<Vector2>());
-        }
+        // --- UI & Global Actions (Standard Implementation) ---
+        void PlayerControls.IGlobalActions.OnPause(InputAction.CallbackContext context) { if (context.performed) PauseEvent?.Invoke(); }
+        void PlayerControls.IUIActions.OnNavigation(InputAction.CallbackContext context) { if (context.performed || context.canceled) NavigateEvent?.Invoke(context.ReadValue<Vector2>()); }
+        void PlayerControls.IUIActions.OnSubmit(InputAction.CallbackContext context) { if (context.performed) SubmitEvent?.Invoke(); }
+        void PlayerControls.IUIActions.OnScroll(InputAction.CallbackContext context) { if (context.performed) ScrollEvent?.Invoke(context.ReadValue<Vector2>()); }
+        void PlayerControls.IUIActions.OnPoint(InputAction.CallbackContext context) { if (context.performed) PointEvent?.Invoke(context.ReadValue<Vector2>()); }
 
-        void PlayerControls.IUIActions.OnSubmit(InputAction.CallbackContext context)
-        {
-            if (context.performed)
-                SubmitEvent?.Invoke();
-        }
-
-        void PlayerControls.IUIActions.OnScroll(InputAction.CallbackContext context)
-        {
-            if (context.performed)
-                ScrollEvent?.Invoke(context.ReadValue<Vector2>());
-        }
-
-        void PlayerControls.IUIActions.OnPoint(InputAction.CallbackContext context)
-        {
-            if (context.performed)
-                PointEvent?.Invoke(context.ReadValue<Vector2>());
-        }
-
-        /// <summary>
-        /// Should be called by gameplay systems when player lands to reset jump state.
-        /// </summary>
         public void TriggerLanding() => LandingEvent?.Invoke();
-
-        /// <summary>
-        /// FIX: Expose Move action so DialogueManager can check if keys are released
-        /// </summary>
-        public InputAction GetMoveAction()
-        {
-            return _controls?.Gameplay.Move;
-        }
+        public InputAction GetMoveAction() => _controls?.Gameplay.Move;
     }
 }
