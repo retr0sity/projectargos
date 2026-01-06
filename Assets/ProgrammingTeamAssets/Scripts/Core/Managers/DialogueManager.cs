@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
     private bool imageWaitingForDismiss = false;
     
     // Player reference
-    private RigPlayerController playerController;
+    private BasePlayerController playerController;
     private Rigidbody2D playerRigidbody;
 
     void Awake()
@@ -83,7 +83,7 @@ public class DialogueManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            playerController = player.GetComponent<RigPlayerController>();
+            playerController = player.GetComponent<BasePlayerController>();
             playerRigidbody = player.GetComponent<Rigidbody2D>();
         }
     }

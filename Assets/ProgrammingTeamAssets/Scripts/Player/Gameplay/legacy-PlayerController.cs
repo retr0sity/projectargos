@@ -108,6 +108,8 @@ public class PlayerController : MonoBehaviour
         if (_controlsLocked) return;
 
         // In "07_arduino", ignore horizontal movement (only vertical/jump allowed)
+        
+        //TODO: This is not clean code remove this.
         if (_isArduinoScene)
         {
             _animator.SetFloat("Speed", 0f);
