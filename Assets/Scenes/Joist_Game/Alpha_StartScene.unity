@@ -1965,7 +1965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8064481523516001441, guid: e4bbd3648b9037c4f9e26b65aa8933e9, type: 3}
       propertyPath: m_Lens.ModeOverride
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34531,7 +34531,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3379991825161047690, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3379991825161047690, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: field of view

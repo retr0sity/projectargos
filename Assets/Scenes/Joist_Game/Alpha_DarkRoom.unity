@@ -1698,7 +1698,7 @@ GameObject:
   - component: {fileID: 913330609}
   - component: {fileID: 913330608}
   m_Layer: 6
-  m_Name: Ground (6)
+  m_Name: Ground (6)s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,7 +1793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 0
   m_Sprite: {fileID: -8207666771981168996, guid: 4694d322fff6a9b6fb5352a97e467eb2, type: 3}
   m_Color: {r: 0.381132, g: 0.381132, b: 0.381132, a: 1}
   m_FlipX: 0
@@ -1963,7 +1963,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3379991825161047690, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3379991825161047690, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: field of view

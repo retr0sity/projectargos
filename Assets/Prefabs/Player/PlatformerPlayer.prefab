@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5595270942956281516}
   - component: {fileID: 87958548882763044}
   m_Layer: 3
-  m_Name: Player
+  m_Name: PlatformerPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,16 +255,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805fd52ca89e6f767b37e43aede1fae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 5
+  lockAxisX: 0
+  lockAxisY: 0
   walkSpeed: 5
   runSpeed: 5
   jumpForce: 11
   canRun: 0
+  startFacingRight: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 5479608620530094097}
   groundCheckRadius: 0.1
-  startFacingRight: 1
 --- !u!114 &5595270942956281516
 MonoBehaviour:
   m_ObjectHideFlags: 0
