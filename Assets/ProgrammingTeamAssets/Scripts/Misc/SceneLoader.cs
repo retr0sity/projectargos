@@ -6,26 +6,48 @@ public class SceneLoader : MonoBehaviour
 {
     public string sceneName;
     public Animator transition;
+    private bool isLoading;
 
 
     private IEnumerator SceneFadeOut()
     {
-        transition.SetTrigger("Start");
-        yield return new WaitForSecondsRealtime(1); // dramatic efe
+        if (isLoading) yield break;
+        if (string.IsNullOrWhiteSpace(sceneName))
+        {
+            Debug.LogError($"SceneLoader on '{gameObject.name}' has no sceneName configured.");
+            yield break;
+        }
+
+        isLoading = true;
+
+        if (transition != null)
+        {
+            transition.updateMode = AnimatorUpdateMode.UnscaledTime;
+            transition.SetTrigger("Start");
+            yield return new WaitForSecondsRealtime(1); // dramatic efe
+            transition.updateMode = AnimatorUpdateMode.Normal;
+        }
+        else
+        {
+            yield return null;
+        }
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     public void TriggerSceneLoad() //care to put a fucking comment sto pou
     //to kaleis mhn sou gamhsw ton antixristo
     {
-        StartCoroutine(SceneFadeOut());
+        if (!isLoading)
+            StartCoroutine(SceneFadeOut());
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(SceneFadeOut());
+            if (!isLoading)
+                StartCoroutine(SceneFadeOut());
         }
     }
 }
