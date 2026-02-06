@@ -80,12 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerController = player.GetComponent<BasePlayerController>();
-            playerRigidbody = player.GetComponent<Rigidbody2D>();
-        }
+        CachePlayerReferencesIfNeeded();
     }
 
     void OnEnable()
@@ -530,6 +525,8 @@ public class DialogueManager : MonoBehaviour
 
     void LockPlayerControls()
     {
+        CachePlayerReferencesIfNeeded();
+
         if (InputManager.Instance != null)
             InputManager.Instance.SetControlLock(true);
 
@@ -545,6 +542,8 @@ public class DialogueManager : MonoBehaviour
 
     void UnlockPlayerControls()
     {
+        CachePlayerReferencesIfNeeded();
+
         if (InputManager.Instance != null)
             InputManager.Instance.SetControlLock(false);
 
@@ -554,6 +553,8 @@ public class DialogueManager : MonoBehaviour
 
     void LockPlayerMovement()
     {
+        CachePlayerReferencesIfNeeded();
+
         if (InputManager.Instance != null)
             InputManager.Instance.SetMovementLock(true);
 
@@ -569,6 +570,8 @@ public class DialogueManager : MonoBehaviour
 
     void UnlockPlayerMovement()
     {
+        CachePlayerReferencesIfNeeded();
+
         if (InputManager.Instance != null)
             InputManager.Instance.SetMovementLock(false);
 
@@ -581,6 +584,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     IEnumerator UnlockPlayerWithDelay()
     {
+        CachePlayerReferencesIfNeeded();
+
         // Clear velocity
         if (playerRigidbody != null)
         {
@@ -631,6 +636,20 @@ public class DialogueManager : MonoBehaviour
         // Now safe to re-enable controller
         if (playerController != null)
             playerController.enabled = true;
+    }
+
+    void CachePlayerReferencesIfNeeded()
+    {
+        if (playerController != null && playerRigidbody != null) return;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return;
+
+        if (playerController == null)
+            playerController = player.GetComponent<BasePlayerController>();
+
+        if (playerRigidbody == null)
+            playerRigidbody = player.GetComponent<Rigidbody2D>();
     }
 
     // ============================================

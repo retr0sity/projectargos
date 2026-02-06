@@ -252,16 +252,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3030821540553608145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5206fe623bde9b04fae35218bf561f34, type: 3}
+  m_Script: {fileID: 11500000, guid: 805fd52ca89e6f767b37e43aede1fae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 5
   runSpeed: 5
   jumpForce: 11
+  canRun: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 5479608620530094097}
   groundCheckRadius: 0.1
+  startFacingRight: 1
 --- !u!114 &5595270942956281516
 MonoBehaviour:
   m_ObjectHideFlags: 0

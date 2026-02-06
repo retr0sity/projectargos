@@ -67,6 +67,7 @@ namespace Core.Managers
             else _controls.Gameplay.Enable();
 
             ControlLockChanged?.Invoke(locked);
+            if (locked) RunEvent?.Invoke(false);
             
             if (!locked && !_movementLocked) MoveEvent?.Invoke(Vector2.zero);
         }
@@ -75,10 +76,13 @@ namespace Core.Managers
         {
             _movementLocked = locked;
             MovementLockChanged?.Invoke(locked);
+            if (locked) RunEvent?.Invoke(false);
             
             if (!locked && !_controlsLocked) MoveEvent?.Invoke(Vector2.zero);
         }
 
+        public bool IsControlLocked() => _controlsLocked;
+        public bool IsMovementOnlyLocked() => _movementLocked;
         public bool IsMovementLocked() => _controlsLocked || _movementLocked;
 
         // --- Gameplay Actions ---
@@ -92,14 +96,14 @@ namespace Core.Managers
 
         void PlayerControls.IGameplayActions.OnJump(InputAction.CallbackContext context)
         {
-            if (_controlsLocked) return;
+            if (_controlsLocked || _movementLocked) return;
             if (context.performed) JumpEvent?.Invoke();
         }
 
         // <--- NEW: RUN IMPLEMENTATION --->
         void PlayerControls.IGameplayActions.OnRun(InputAction.CallbackContext context)
         {
-            if (_controlsLocked) return;
+            if (_controlsLocked || _movementLocked) return;
 
             if (context.performed)
                 RunEvent?.Invoke(true); // Key Pressed
