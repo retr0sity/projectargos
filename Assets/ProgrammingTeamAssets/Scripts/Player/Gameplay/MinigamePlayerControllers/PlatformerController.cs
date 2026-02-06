@@ -8,6 +8,7 @@ public class PlatformerController : BasePlayerController
     [SerializeField] private float runSpeed = 8f;
     [SerializeField] private float jumpForce = 12f;
     [SerializeField] private bool canRun = true;
+    [SerializeField] private bool startFacingRight = true;
 
     [Header("Checks")]
     [SerializeField] private LayerMask groundLayer;
@@ -15,7 +16,13 @@ public class PlatformerController : BasePlayerController
     [SerializeField] private float groundCheckRadius = 0.1f;
 
     private bool _isGrounded;
-    private bool _facingRight = false; // Assumes sprite faces right by default. CAREFULLY CHANGE THIS IF YOU CHANGE THE SPRITE!
+    private bool _facingRight;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _facingRight = startFacingRight;
+    }
     
     protected override void HandleMovement(Vector2 input)
     {
@@ -28,7 +35,8 @@ public class PlatformerController : BasePlayerController
 
         // Animation
         // Normalize speed for blend tree so animations look correct regardless of speed
-        float animSpeed = Mathf.Abs(input.x) * (targetSpeed / runSpeed);
+        float normalizedRunSpeed = runSpeed > 0.01f ? targetSpeed / runSpeed : 1f;
+        float animSpeed = Mathf.Abs(input.x) * normalizedRunSpeed;
         _animator.SetFloat("Speed", animSpeed);
 
         // Flip Logic

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.Playables;
+using Core.Managers;
 
 public class CutsceneTrigger : MonoBehaviour
 {
@@ -37,12 +38,11 @@ public class CutsceneTrigger : MonoBehaviour
 
     private void DisablePlayerMovement()
     {
-        // Find the PlayerController on the player object
-        PlayerController player = FindObjectOfType<PlayerController>();
-        if (player != null)
-        {
-            player.LockPlayer(); // Call your existing lock method
-        }
+        if (InputManager.Instance != null)
+            InputManager.Instance.SetControlLock(true);
+
+        BasePlayerController player = FindObjectOfType<BasePlayerController>();
+        player?.ForceStop();
 
         // Optional: stop any remaining motion immediately
         if (playerRigidbody != null)

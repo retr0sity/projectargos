@@ -34,6 +34,11 @@ public abstract class BasePlayerController : MonoBehaviour
             input.RunEvent += OnRunInput; // Subscribe to Run
             input.ControlLockChanged += OnControlLockChanged;
             input.MovementLockChanged += OnMovementLockChanged;
+
+            // Pick up current lock state in case the controller is enabled while UI is already active.
+            _controlsLocked = input.IsControlLocked();
+            _isMovementLocked = input.IsMovementOnlyLocked();
+            if (_controlsLocked || _isMovementLocked) StopMovement();
         }
     }
 
@@ -65,12 +70,17 @@ public abstract class BasePlayerController : MonoBehaviour
 
     private void OnJumpInput()
     {
-        if (_controlsLocked) return;
+        if (_controlsLocked || _isMovementLocked) return;
         HandleJump();
     }
 
     private void OnRunInput(bool isRunning)
     {
+        if (_controlsLocked || _isMovementLocked)
+        {
+            _isRunningInput = false;
+            return;
+        }
         _isRunningInput = isRunning;
     }
 
@@ -102,7 +112,7 @@ public abstract class BasePlayerController : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (_controlsLocked) return;
+        if (_controlsLocked || _isMovementLocked) return;
 
         // Apply Axis Locking
         Vector2 processedInput = _currentInput;

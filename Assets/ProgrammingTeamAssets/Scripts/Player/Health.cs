@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using Core.Managers;
 
 public class Health : MonoBehaviour
 {
@@ -12,27 +13,32 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Animator transition;
     private AudioSource mainCameraAudioSource;
-    private PlayerController playerController;
+    private BasePlayerController playerController;
+    private bool isDead;
 
     void Start()
     {
         currentHealth = maxHealth; // initialize health
         spriteRenderer = GetComponent<SpriteRenderer>(); // get sprite renderer
-        mainCameraAudioSource = Camera.main.GetComponent<AudioSource>(); // get main camera audio source
-        playerController = GetComponent<PlayerController>(); // get player controller
+        mainCameraAudioSource = Camera.main != null ? Camera.main.GetComponent<AudioSource>() : null; // get main camera audio source
+        playerController = GetComponent<BasePlayerController>(); // get player controller
     }
 
     public void TakeDamage(int amount)
     {
+        if (isDead) return;
+
         currentHealth -= amount;
 
         if (currentHealth <= 0)
         {
+            isDead = true;
+
             // Lock controls
-            if (playerController != null)
-            {
-                playerController.LockPlayer();
-            }
+            if (InputManager.Instance != null)
+                InputManager.Instance.SetControlLock(true);
+
+            playerController?.ForceStop();
 
             if (mainCameraAudioSource != null)
             {
@@ -70,6 +76,8 @@ public class Health : MonoBehaviour
         playerAnimator.enabled = true; // restore player animation state
         Time.timeScale = 1; // restore normal game speed
         transition.updateMode = AnimatorUpdateMode.Normal; // reset transition mode
+        if (InputManager.Instance != null)
+            InputManager.Instance.SetControlLock(false);
     }
 
     private void SetSceneGrayscale(float amount)
@@ -105,5 +113,4 @@ public class Health : MonoBehaviour
         }
     }
 }
-
 
