@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core.Managers;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -36,6 +37,12 @@ public class SceneLoader : MonoBehaviour
 
         if (sceneName == MainMenuSceneName)
             GameStateManager.Instance?.ResetAllState();
+
+        if (InputManager.Instance != null)
+        {
+            InputManager.Instance.SetControlLock(false);
+            InputManager.Instance.SetMovementLock(false);
+        }
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }

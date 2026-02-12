@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Core.Managers
 {
@@ -53,11 +54,30 @@ namespace Core.Managers
             _controls.Global.Enable();
             _controls.Gameplay.Enable();
             _controls.UI.Enable();
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         void OnDestroy()
         {
+            if (Instance == this)
+            {
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+                Instance = null;
+            }
+
             if (_controls != null) { _controls.Disable(); _controls.Dispose(); }
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            // Scene transitions can happen while a cutscene/dialogue still has input locked.
+            // Make sure the next scene starts from an unlocked baseline.
+            if (!_controlsLocked && !_movementLocked)
+                return;
+
+            SetControlLock(false);
+            SetMovementLock(false);
         }
 
         public void SetControlLock(bool locked)

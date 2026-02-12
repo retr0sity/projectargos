@@ -14,6 +14,25 @@ public class CutsceneTrigger : MonoBehaviour
     public Rigidbody2D playerRigidbody;      // Reference to the player's Rigidbody2D
     public AudioSource mainCameraAudioSource; // Reference to the AudioSource on the main camera
     private bool hasTriggered = false;
+    private bool controlsLockedByCutscene = false;
+    private float originalLinearDamping = 0f;
+    private bool hasCachedDamping = false;
+
+    private void OnEnable()
+    {
+        if (playableDirector != null)
+            playableDirector.stopped += OnCutsceneFinished;
+    }
+
+    private void OnDisable()
+    {
+        if (playableDirector != null)
+            playableDirector.stopped -= OnCutsceneFinished;
+
+        // Safety: if this trigger is disabled/destroyed during a scene change,
+        // make sure controls are not left locked for the next scene.
+        RestorePlayerMovement();
+    }
 
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.CompareTag("Player") && !hasTriggered) {
@@ -39,7 +58,10 @@ public class CutsceneTrigger : MonoBehaviour
     private void DisablePlayerMovement()
     {
         if (InputManager.Instance != null)
+        {
             InputManager.Instance.SetControlLock(true);
+            controlsLockedByCutscene = true;
+        }
 
         BasePlayerController player = FindObjectOfType<BasePlayerController>();
         player?.ForceStop();
@@ -47,6 +69,12 @@ public class CutsceneTrigger : MonoBehaviour
         // Optional: stop any remaining motion immediately
         if (playerRigidbody != null)
         {
+            if (!hasCachedDamping)
+            {
+                originalLinearDamping = playerRigidbody.linearDamping;
+                hasCachedDamping = true;
+            }
+
             playerRigidbody.linearVelocity = Vector2.zero;
             playerRigidbody.linearDamping = 5f;
         }
@@ -73,5 +101,26 @@ public class CutsceneTrigger : MonoBehaviour
         {
             playableDirector.Play();  // Play the assigned timeline
         }
+        else
+        {
+            // No timeline assigned: don't leave player locked.
+            RestorePlayerMovement();
+        }
+    }
+
+    private void OnCutsceneFinished(PlayableDirector director)
+    {
+        RestorePlayerMovement();
+    }
+
+    private void RestorePlayerMovement()
+    {
+        if (controlsLockedByCutscene && InputManager.Instance != null)
+            InputManager.Instance.SetControlLock(false);
+
+        controlsLockedByCutscene = false;
+
+        if (playerRigidbody != null && hasCachedDamping)
+            playerRigidbody.linearDamping = originalLinearDamping;
     }
 }
