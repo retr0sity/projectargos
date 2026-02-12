@@ -66,6 +66,9 @@ public class DialogueManager : MonoBehaviour
     private BasePlayerController playerController;
     private Rigidbody2D playerRigidbody;
 
+    // Keep track of which InputManager instance we are subscribed to.
+    private InputManager subscribedInputManager;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -81,18 +84,54 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         CachePlayerReferencesIfNeeded();
+        EnsureInputSubscription();
     }
 
     void OnEnable()
     {
-        if (InputManager.Instance != null)
-            InputManager.Instance.InteractEvent += OnInteractPressed;
+        EnsureInputSubscription();
     }
 
     void OnDisable()
     {
-        if (InputManager.Instance != null)
-            InputManager.Instance.InteractEvent -= OnInteractPressed;
+        RemoveInputSubscription();
+    }
+
+    void OnDestroy()
+    {
+        RemoveInputSubscription();
+    }
+
+    void Update()
+    {
+        EnsureInputSubscription();
+    }
+
+    void EnsureInputSubscription()
+    {
+        InputManager input = InputManager.Instance;
+
+        if (input == null)
+            return;
+
+        if (subscribedInputManager == input)
+            return;
+
+        // If InputManager instance changed, clean up old subscription first.
+        if (subscribedInputManager != null)
+            subscribedInputManager.InteractEvent -= OnInteractPressed;
+
+        input.InteractEvent += OnInteractPressed;
+        subscribedInputManager = input;
+    }
+
+    void RemoveInputSubscription()
+    {
+        if (subscribedInputManager == null)
+            return;
+
+        subscribedInputManager.InteractEvent -= OnInteractPressed;
+        subscribedInputManager = null;
     }
 
     void OnInteractPressed()
