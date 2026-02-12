@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    private const string MainMenuSceneName = "00_Main Menu 3.0";
+
     public string sceneName;
     public Animator transition;
     private bool isLoading;
@@ -31,6 +33,9 @@ public class SceneLoader : MonoBehaviour
         {
             yield return null;
         }
+
+        if (sceneName == MainMenuSceneName)
+            GameStateManager.Instance?.ResetAllState();
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }

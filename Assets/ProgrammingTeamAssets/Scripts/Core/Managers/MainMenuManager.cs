@@ -35,6 +35,7 @@ public class MainMenuManager : MonoBehaviour
     {
         ClearImage();
         mainMenuAnimator.SetTrigger("PlayButtonPressed");
+        GameStateManager.Instance?.ResetAllState();
         SceneManager.LoadScene(1);
     }
 

@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        GameStateManager.Instance?.ResetAllState();
         // Load the game scene
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
     }
