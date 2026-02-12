@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29edc5f8f05bdb34c82118c47420ebb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Main Menu 3.0
+  sceneName: 00_Main Menu 3.0
   transition: {fileID: 1081744654}
 --- !u!1 &975134357
 GameObject:
@@ -1185,6 +1185,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271335693607464156, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278890879111752074, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3159115795498063126, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
