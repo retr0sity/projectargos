@@ -532,7 +532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 1
-  playerAnimator: {fileID: 6642561355861513863}
+  playerAnimator: {fileID: 3788129221983121795, guid: 2503f309a5887f94e982d6a75ff6962e, type: 3}
   transition: {fileID: 0}
 --- !u!82 &423257709763042964
 AudioSource:

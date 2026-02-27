@@ -1,10 +1,8 @@
-using System;
 using UnityEngine;
-using Core.Managers;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class RigPlayerController : MonoBehaviour
+public class RigPlayerController : BasePlayerController
 {
     [Header("Movement Settings")]
     [SerializeField] private float walkSpeed = 4f;
@@ -15,88 +13,42 @@ public class RigPlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private bool canRun = false; // Locked by default
 
-    private Rigidbody2D _rb;
-    private Animator _animator;
-    private Vector2 _moveInput;
-    private bool _jumpRequested;
     private bool _facingRight = false;
     private bool _isGrounded;
-    private bool _controlsLocked = false;
-    private bool _isWalking;
-    private float _inputX; // store raw horizontal input
+    private bool _jumpRequested;
+    private float _inputX;
 
-    private void Awake()
+    protected override void OnEnable()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        base.OnEnable();
+        _jumpRequested = false;
+        _inputX = 0f;
+    }
+
+    protected override void OnDisable()
+    {
+        _jumpRequested = false;
+        base.OnDisable();
     }
 
     private void Update()
     {
-        // Always check if grounded
+        if (groundCheck == null || _animator == null || _rb == null) return;
+
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (_isGrounded)
         {
             _animator.SetBool("IsJumping", false);
         }
-        else
+        else if (_rb.linearVelocity.y > 0.1f)
         {
-            if (_rb.linearVelocity.y > 0.1f)
-            {
-                _animator.SetBool("IsJumping", true);
-            }
-            else if (_rb.linearVelocity.y < -0.1f)
-            {
-                _animator.SetBool("IsJumping", false);
-            }
+            _animator.SetBool("IsJumping", true);
         }
-        
-        // Walk by default, run if Shift is held
-        _isWalking = !Input.GetKey(KeyCode.LeftShift) || !canRun;
-
-        // Update animator speed even if input hasn't changed
-        float currentSpeed = _isWalking ? walkSpeed : runSpeed;
-        _animator.SetFloat("Speed", Mathf.Abs(_inputX) * (currentSpeed / runSpeed));
-    }
-
-    private void OnEnable()
-    {
-        var input = InputManager.Instance;
-        if (input == null)
+        else if (_rb.linearVelocity.y < -0.1f)
         {
-            Debug.LogError("PlayerController could not find InputManager in the scene. Please ensure an InputManager is present before this component.");
-            enabled = false;
-            return;
+            _animator.SetBool("IsJumping", false);
         }
-
-        input.MoveEvent += HandleMove;
-        input.JumpEvent += HandleJump;
-        input.ControlLockChanged += OnControlLockChanged;
-        
-        // FIX: Reset ALL movement state when enabled
-        _moveInput = Vector2.zero;
-        _inputX = 0f; // ← CRITICAL FIX: Clear input state
-        _controlsLocked = false;
-    }
-
-    private void OnDisable()
-    {
-        var input = InputManager.Instance;
-        if (input != null)
-        {
-            input.MoveEvent -= HandleMove;
-            input.JumpEvent -= HandleJump;
-            input.ControlLockChanged -= OnControlLockChanged;
-        }
-        
-        // Stop all movement when disabled
-        StopMovement();
-    }
-    
-    private void HandleWalk(bool isWalking)
-    {
-        _isWalking = isWalking;
     }
 
     public void UnlockRun()
@@ -107,86 +59,45 @@ public class RigPlayerController : MonoBehaviour
     public void LockRun()
     {
         canRun = false;
+        _isRunningInput = false;
     }
 
-
-    
-    private void OnControlLockChanged(bool isLocked)
+    protected override void HandleMovement(Vector2 input)
     {
-        _controlsLocked = isLocked;
+        if (_rb == null || _animator == null) return;
 
-        // When controls are locked, stop movement immediately
-        if (isLocked)
-        {
-            StopMovement();
-        }
-    }
-    
-    private void StopMovement()
-    {
-        _moveInput = Vector2.zero;
-        _inputX = 0f; // FIX: Clear input state
-        
-        if (_rb != null)
-        {
-            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
-        }
-        if (_animator != null)
-        {
-            _animator.SetFloat("Speed", 0f);
-        }
-    }
+        _inputX = input.x;
+        bool isRunning = canRun && _isRunningInput;
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
 
-    private void HandleMove(Vector2 movement)
-    {
-        if (_controlsLocked) return;
+        _rb.linearVelocity = new Vector2(_inputX * currentSpeed, _rb.linearVelocity.y);
 
-        _inputX = movement.x;
+        float normalizedRunSpeed = runSpeed > 0.01f ? currentSpeed / runSpeed : 1f;
+        _animator.SetFloat("Speed", Mathf.Abs(_inputX) * normalizedRunSpeed);
 
-        // Flip sprite if input direction changes
         if (_inputX > 0.01f && !_facingRight) Flip();
         else if (_inputX < -0.01f && _facingRight) Flip();
 
-        // Set animator speed relative to movement speed
-        float currentSpeed = _isWalking ? walkSpeed : runSpeed;
-        _animator.SetFloat("Speed", Mathf.Abs(_inputX) * (currentSpeed / runSpeed));
+        if (_jumpRequested)
+        {
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+            _jumpRequested = false;
+        }
     }
 
-    private void HandleJump()
+    protected override void HandleJump()
     {
-        // Don't process jump if controls are locked
-        if (_controlsLocked) return;
-        
         if (!_isGrounded || SceneManager.GetActiveScene().name == "death") return;
-
         _jumpRequested = true;
     }
 
-    private void FixedUpdate()
+    protected override void StopMovement()
     {
-        if (_controlsLocked)
-        {
-            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
-            return;
-        }
-
-        // Walk by default, run if Shift is pressed
-        float currentSpeed = _isWalking ? walkSpeed : runSpeed;
-
-        Vector2 velocity = new Vector2(_inputX * currentSpeed, _rb.linearVelocity.y);
-
-        if (_jumpRequested)
-        {
-            velocity.y = jumpForce;
-            _jumpRequested = false;
-        }
-
-        _rb.linearVelocity = velocity;
+        base.StopMovement();
+        _jumpRequested = false;
+        _inputX = 0f;
     }
 
-    /// <summary>
-    /// Flips the player's sprite horizontally
-    /// </summary>
     private void Flip()
     {
         _facingRight = !_facingRight;

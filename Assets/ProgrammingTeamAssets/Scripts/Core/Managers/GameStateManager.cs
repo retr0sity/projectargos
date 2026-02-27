@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance { get; private set; }
+
+    private const string MainMenuSceneName = "00_Main Menu 3.0";
     
     [Header("Game State - Debug View")]
     public int feathersCollected = 0;
@@ -30,6 +32,25 @@ public class GameStateManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneLoaded -= OnReturnSceneLoaded;
+            Instance = null;
+        }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == MainMenuSceneName)
+        {
+            ResetAllState();
+        }
     }
     
     public void CollectFeather()
@@ -121,5 +142,25 @@ public class GameStateManager : MonoBehaviour
     {
         usedPortals.Remove(portalID);
         Debug.Log($"Portal '{portalID}' reset");
+    }
+
+    public void ResetAllState()
+    {
+        feathersCollected = 0;
+        refusedFeathers = false;
+        hasVisitedOtherScene = false;
+        endingChosen = 0;
+        fogActive = true;
+        hasReturnedToAlphaStartOnce = false;
+
+        usedPortals.Clear();
+
+        returnSceneName = "";
+        returnPosition = Vector3.zero;
+
+        // Ensure no stale return callback can fire after reset.
+        SceneManager.sceneLoaded -= OnReturnSceneLoaded;
+
+        Debug.Log("GameStateManager: Global state reset for main menu.");
     }
 }

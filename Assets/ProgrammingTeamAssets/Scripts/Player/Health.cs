@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using Core.Managers;
 
 public class Health : MonoBehaviour
 {
@@ -12,42 +13,61 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Animator transition;
     private AudioSource mainCameraAudioSource;
-    private PlayerController playerController;
+    private BasePlayerController playerController;
+    private bool isDead;
+    private const string DeathSceneName = "02_death";
 
     void Start()
     {
         currentHealth = maxHealth; // initialize health
+        if (playerAnimator == null)
+            playerAnimator = GetComponent<Animator>();
+
+        if (transition == null)
+            TryResolveTransitionAnimator();
+
         spriteRenderer = GetComponent<SpriteRenderer>(); // get sprite renderer
-        mainCameraAudioSource = Camera.main.GetComponent<AudioSource>(); // get main camera audio source
-        playerController = GetComponent<PlayerController>(); // get player controller
+        mainCameraAudioSource = Camera.main != null ? Camera.main.GetComponent<AudioSource>() : null; // get main camera audio source
+        playerController = GetComponent<BasePlayerController>(); // get player controller
     }
 
     public void TakeDamage(int amount)
     {
+        if (isDead) return;
+
         currentHealth -= amount;
 
         if (currentHealth <= 0)
         {
+            isDead = true;
+
             // Lock controls
-            if (playerController != null)
-            {
-                playerController.LockPlayer();
-            }
+            if (InputManager.Instance != null)
+                InputManager.Instance.SetControlLock(true);
+
+            playerController?.ForceStop();
 
             if (mainCameraAudioSource != null)
             {
                 mainCameraAudioSource.Stop(); // stop background music
             }
-            FindObjectOfType<AudioManager>().Play("death_sfx"); // play death sound effect
-            playerAnimator.enabled = false; // kokkaloma paixth
+            AudioManager audioManager = FindObjectOfType<AudioManager>();
+            audioManager?.Play("death_sfx"); // play death sound effect
+
+            if (playerAnimator != null)
+                playerAnimator.enabled = false; // kokkaloma paixth
+
             Time.timeScale = 0; // kokkaloma pistas
-            transition.updateMode = AnimatorUpdateMode.UnscaledTime; // allows transition to run even when game is frozen
+            if (transition != null)
+                transition.updateMode = AnimatorUpdateMode.UnscaledTime; // allows transition to run even when game is frozen
+
             StartCoroutine(DeathEffectCoroutine());
         }
     }
 
     private IEnumerator DeathEffectCoroutine()
     {
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
         int steps = 3; // 3 seconds to lose human rights
         float stepDuration = 1.0f; // obvious
 
@@ -55,21 +75,29 @@ public class Health : MonoBehaviour
         {
             if (i != 0)
             {
-                FindObjectOfType<AudioManager>().Play("dying_sfx"); // play the death first, dying hits later mothafakasssss
+                audioManager?.Play("dying_sfx"); // play the death first, dying hits later mothafakasssss
             }
             float grayAmount = (float)(i + 1) / steps; // maurisma
             SetSceneGrayscale(grayAmount); // gradually apply grayscale effect
             yield return new WaitForSecondsRealtime(stepDuration); // wait without being affected by time scale
         }
 
-        FindObjectOfType<AudioManager>().Play("dying_sfx"); // final death sfx before transition
-        transition.SetTrigger("Start"); // trigger transition animation
-        yield return new WaitForSecondsRealtime(1); // dramatic efe
+        audioManager?.Play("dying_sfx"); // final death sfx before transition
+        if (transition != null)
+        {
+            transition.SetTrigger("Start"); // trigger transition animation
+            yield return new WaitForSecondsRealtime(1); // dramatic efe
+            transition.updateMode = AnimatorUpdateMode.Normal; // reset transition mode
+        }
 
-        SceneManager.LoadScene("02_death"); // psofos
-        playerAnimator.enabled = true; // restore player animation state
+        if (playerAnimator != null)
+            playerAnimator.enabled = true; // restore player animation state
+
         Time.timeScale = 1; // restore normal game speed
-        transition.updateMode = AnimatorUpdateMode.Normal; // reset transition mode
+        if (InputManager.Instance != null)
+            InputManager.Instance.SetControlLock(false);
+
+        SceneManager.LoadScene(DeathSceneName); // psofos
     }
 
     private void SetSceneGrayscale(float amount)
@@ -104,6 +132,24 @@ public class Health : MonoBehaviour
             TakeDamage(1);  // Deal 1 damage when touching an enemy or damaging object
         }
     }
+
+    private void TryResolveTransitionAnimator()
+    {
+        SceneLoader loader = FindObjectOfType<SceneLoader>();
+        if (loader != null && loader.transition != null)
+        {
+            transition = loader.transition;
+            return;
+        }
+
+        SceneLoader[] loaders = FindObjectsOfType<SceneLoader>();
+        foreach (SceneLoader candidate in loaders)
+        {
+            if (candidate != null && candidate.transition != null)
+            {
+                transition = candidate.transition;
+                return;
+            }
+        }
+    }
 }
-
-

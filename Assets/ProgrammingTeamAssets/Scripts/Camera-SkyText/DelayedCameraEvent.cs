@@ -7,21 +7,41 @@ public class DelayedCameraEvent : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private CameraZoomTrigger cameraZoomTrigger;
     [SerializeField] private float cameraDelay = 0.5f;
+    [SerializeField] private bool resetCameraAfterText = false;
+    [SerializeField] private float resetDelay = 1.5f;
     
     [Header("Sky Text (Optional)")]
     [SerializeField] private TextMeshPro skyText;   // <--- direct TMP reference
     [SerializeField] private string textMessage;
     [SerializeField] private float textDelay = 1.5f;
+    private Coroutine sequenceRoutine;
     
     public void TriggerSequence()
     {
-        StartCoroutine(CameraTextSequence());
+        StartSequence();
     }
 
     public void TriggerSequence(string customMessage)
     {
         textMessage = customMessage;
-        StartCoroutine(CameraTextSequence());
+        StartSequence();
+    }
+
+    private void OnDisable()
+    {
+        if (sequenceRoutine != null)
+        {
+            StopCoroutine(sequenceRoutine);
+            sequenceRoutine = null;
+        }
+    }
+
+    private void StartSequence()
+    {
+        if (sequenceRoutine != null)
+            StopCoroutine(sequenceRoutine);
+
+        sequenceRoutine = StartCoroutine(CameraTextSequence());
     }
 
     private IEnumerator CameraTextSequence()
@@ -35,5 +55,13 @@ public class DelayedCameraEvent : MonoBehaviour
 
         if (skyText != null && !string.IsNullOrEmpty(textMessage))
             skyText.text = textMessage;   // directly set TMP text
+
+        if (resetCameraAfterText && cameraZoomTrigger != null)
+        {
+            yield return new WaitForSeconds(resetDelay);
+            cameraZoomTrigger.ResetCameraSettings();
+        }
+
+        sequenceRoutine = null;
     }
 }
