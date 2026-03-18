@@ -123,7 +123,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.017747104, y: 0.00799787}
+  m_Offset: {x: -0.0129651725, y: 0.00799787}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0828184, y: 1.0159957}
+  m_Size: {x: 1.0793664, y: 1.0159957}
   m_EdgeRadius: 0
 --- !u!114 &8728975077112716677
 MonoBehaviour:
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e4c1c592b7feb4b8c9758efe15a07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  product:
-    productName: Product
-    basePrice: 1
-    dailyPrice: 1
+  products:
+  - productName: Milk
+    basePrice: 6
+    dailyPrice: 0
   priceVariance: 0.2
