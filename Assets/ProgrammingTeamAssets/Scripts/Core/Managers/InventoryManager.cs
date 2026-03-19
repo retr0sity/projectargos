@@ -39,7 +39,11 @@ public class InventoryManager : MonoBehaviour
         if (CartManager.Instance == null) return;
 
         foreach (var cartItem in CartManager.Instance.items)
+        {
+            Debug.Log($"[Inventory] {cartItem.productName} — paid ${cartItem.price:F2}");
             items.Add(new InventoryItem(cartItem.productName, cartItem.price));
+        }
+            
 
         Debug.Log($"[Inventory] Now holds {items.Count} item(s).");
         CartManager.Instance.Clear();
