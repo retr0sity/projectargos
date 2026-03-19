@@ -1,8 +1,8 @@
 using UnityEngine;
 
 /// <summary>
-/// Attach to each shelf GameObject, tag it "Interactable".
-/// InteractionDetector will call OnInteract() automatically.
+/// Dialogue-driven shelf interaction.
+/// Each shelf offers one product at a time using the shared dialogue choice UI.
 /// </summary>
 public class ShelfInteractable : MonoBehaviour
 {
@@ -12,6 +12,11 @@ public class ShelfInteractable : MonoBehaviour
     [Header("Daily price variance (0 = fixed price)")]
     [Range(0f, 0.5f)]
     public float priceVariance = 0.2f;
+
+    [Header("Dialogue")]
+    [SerializeField] private string purchasePromptFormat = "Do you want to buy {0} for ${1:F2}?";
+
+    private bool isPromptActive;
 
     void Start()
     {
@@ -29,13 +34,65 @@ public class ShelfInteractable : MonoBehaviour
 
     public void OnInteract()
     {
-        Debug.Log($"[Shelf] OnInteract called on {gameObject.name}");
-        if (ShelfUI.Instance == null)
+        if (isPromptActive)
+            return;
+
+        if (DialogueManager.Instance == null)
         {
-            Debug.LogError("ShelfUI not found in scene!");
+            Debug.LogError("DialogueManager not found in scene!");
             return;
         }
 
-        ShelfUI.Instance.Open(products);
+        if (CartManager.Instance == null)
+        {
+            Debug.LogError("CartManager not found!");
+            return;
+        }
+
+        ProductData product = GetOfferedProduct();
+        if (product == null)
+        {
+            Debug.LogWarning($"[Shelf] No product configured on {gameObject.name}");
+            return;
+        }
+
+        isPromptActive = true;
+
+        string prompt = string.Format(
+            purchasePromptFormat,
+            product.productName,
+            product.dailyPrice);
+
+        DialogueManager.Instance.ShowChoices(
+            new[] { "Yes", "No" },
+            choice => OnPurchaseChoice(product, choice),
+            prompt);
+    }
+
+    ProductData GetOfferedProduct()
+    {
+        if (products == null || products.Length == 0)
+            return null;
+
+        if (products.Length > 1)
+            Debug.LogWarning($"[Shelf] {gameObject.name} has multiple products; using the first configured product.");
+
+        return products[0];
+    }
+
+    void OnPurchaseChoice(ProductData product, int choiceIndex)
+    {
+        isPromptActive = false;
+
+        if (choiceIndex != 0)
+            return;
+
+        if (CartManager.Instance == null)
+        {
+            Debug.LogError("CartManager not found!");
+            return;
+        }
+
+        CartManager.Instance.AddItem(product);
     }
 }

@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Choice UI")]
     [SerializeField] private GameObject choicePanel;
     [SerializeField] private Button[] choiceButtons;
+    [SerializeField] private TextMeshProUGUI choicePromptText;
 
     [Header("Image UI")]
     [SerializeField] private GameObject imagePanel;
@@ -61,6 +62,8 @@ public class DialogueManager : MonoBehaviour
     
     private Coroutine currentImage;
     private bool imageWaitingForDismiss = false;
+    private bool capturedDefaultChoicePrompt = false;
+    private string defaultChoicePrompt = "Make Your Choice";
     
     // Player reference
     private BasePlayerController playerController;
@@ -78,6 +81,7 @@ public class DialogueManager : MonoBehaviour
         }
         Instance = this;
 
+        CacheChoicePromptReferenceIfNeeded();
         HideAllPanels();
     }
 
@@ -194,6 +198,7 @@ public class DialogueManager : MonoBehaviour
     void HideAllPanels()
     {
         if (dialoguePanel) dialoguePanel.SetActive(false);
+        if (speakerNamePanel) speakerNamePanel.SetActive(false);
         if (monologuePanel) monologuePanel.SetActive(false);
         if (choicePanel) choicePanel.SetActive(false);
         if (imagePanel) imagePanel.SetActive(false);
@@ -484,9 +489,17 @@ public class DialogueManager : MonoBehaviour
     // CHOICE SYSTEM
     // ============================================
 
-    public void ShowChoices(string[] choices, Action<int> onChoiceSelected)
+    public void ShowChoices(string[] choices, Action<int> onChoiceSelected, string promptText = null)
     {
+        CacheChoicePromptReferenceIfNeeded();
+
         if (choicePanel) choicePanel.SetActive(true);
+        if (choicePromptText != null)
+        {
+            choicePromptText.text = string.IsNullOrWhiteSpace(promptText)
+                ? defaultChoicePrompt
+                : promptText;
+        }
 
         LockPlayerControls();
 
@@ -514,6 +527,9 @@ public class DialogueManager : MonoBehaviour
     void OnChoiceMade(int choiceIndex, Action<int> callback)
     {
         if (choicePanel) choicePanel.SetActive(false);
+        if (choicePromptText != null)
+            choicePromptText.text = defaultChoicePrompt;
+
         UnlockPlayerControls();
         callback?.Invoke(choiceIndex);
     }
@@ -698,6 +714,33 @@ public class DialogueManager : MonoBehaviour
     public void ShowInteractionPrompt(bool show)
     {
         if (interactionPrompt) interactionPrompt.SetActive(show);
+    }
+
+    void CacheChoicePromptReferenceIfNeeded()
+    {
+        if (choicePromptText == null && choicePanel != null)
+        {
+            TextMeshProUGUI[] promptCandidates = choicePanel.GetComponentsInChildren<TextMeshProUGUI>(true);
+            foreach (TextMeshProUGUI candidate in promptCandidates)
+            {
+                if (candidate == null)
+                    continue;
+
+                if (candidate.transform.parent == choicePanel.transform)
+                {
+                    choicePromptText = candidate;
+                    break;
+                }
+            }
+        }
+
+        if (!capturedDefaultChoicePrompt &&
+            choicePromptText != null &&
+            !string.IsNullOrWhiteSpace(choicePromptText.text))
+        {
+            defaultChoicePrompt = choicePromptText.text;
+            capturedDefaultChoicePrompt = true;
+        }
     }
 
     public bool IsDialogueActive()
