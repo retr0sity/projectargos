@@ -4,7 +4,6 @@ using Core.Managers;
 /// <summary>
 /// Detects nearby interactable objects and triggers their interaction when player presses interact.
 /// Attach to Player GameObject. Objects must be tagged "Interactable" and have OnInteract() method.
-/// FIXED: Better handling of interaction events to prevent conflicts with DialogueManager
 /// </summary>
 public class InteractionDetector : MonoBehaviour
 {
@@ -135,6 +134,7 @@ public class InteractionDetector : MonoBehaviour
     /// </summary>
     void OnInteractPressed()
     {
+        Debug.Log($"[Interaction] UI Active: {DialogueManager.Instance.IsAnyUIActive()}, Current interactable: {currentInteractable?.name}");
         // FIX: Don't start new interactions if ANY UI is active
         // DialogueManager handles its own advancement through its own subscription
         if (DialogueManager.Instance != null && DialogueManager.Instance.IsAnyUIActive())

@@ -42,6 +42,7 @@ public class ScenePortal : MonoBehaviour
     
     public void OnInteract()
     {
+        Debug.Log($"[Portal] OnInteract called, target: {targetSceneName}");
         if (oneTimeUse && GameStateManager.Instance.HasPortalBeenUsed(portalID)) 
             return;
         
