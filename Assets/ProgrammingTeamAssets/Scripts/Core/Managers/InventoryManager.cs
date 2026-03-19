@@ -43,7 +43,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log($"[Inventory] {cartItem.productName} — paid ${cartItem.price:F2}");
             items.Add(new InventoryItem(cartItem.productName, cartItem.price));
         }
-            
+    
 
         Debug.Log($"[Inventory] Now holds {items.Count} item(s).");
         CartManager.Instance.Clear();
