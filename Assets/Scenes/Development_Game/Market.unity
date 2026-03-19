@@ -1857,7 +1857,7 @@ GameObject:
   - component: {fileID: 1077765839}
   - component: {fileID: 1077765838}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MoodText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
