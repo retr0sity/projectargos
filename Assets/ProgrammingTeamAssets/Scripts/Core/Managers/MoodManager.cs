@@ -26,15 +26,36 @@ public class MoodManager : MonoBehaviour
 
     public void IncreaseMood()
     {
-        mood = Mathf.Clamp(mood + moodChangeAmount, minMood, maxMood);
-        Debug.Log($"[Mood] Increased to {mood}");
-        MoodFloatingText.ShowIfPresent("Mood went up!");
+        AdjustMood(moodChangeAmount, "Mood went up!");
     }
 
     public void DecreaseMood()
     {
-        mood = Mathf.Clamp(mood - moodChangeAmount, minMood, maxMood);
-        Debug.Log($"[Mood] Decreased to {mood}");
-        MoodFloatingText.ShowIfPresent("Mood went down!");
+        AdjustMood(-moodChangeAmount, "Mood went down!");
+    }
+
+    public void AdjustMood(float delta, string floatingMessage = null)
+    {
+        mood = Mathf.Clamp(mood + delta, minMood, maxMood);
+
+        if (delta > 0f)
+            Debug.Log($"[Mood] Increased to {mood}");
+        else if (delta < 0f)
+            Debug.Log($"[Mood] Decreased to {mood}");
+        else
+            Debug.Log($"[Mood] Unchanged at {mood}");
+
+        if (!string.IsNullOrWhiteSpace(floatingMessage))
+        {
+            MoodFloatingText.ShowIfPresent(floatingMessage);
+        }
+        else if (delta > 0f)
+        {
+            MoodFloatingText.ShowIfPresent("Mood went up!");
+        }
+        else if (delta < 0f)
+        {
+            MoodFloatingText.ShowIfPresent("Mood went down!");
+        }
     }
 }

@@ -64,6 +64,7 @@ public class DialogueManager : MonoBehaviour
     private bool imageWaitingForDismiss = false;
     private bool capturedDefaultChoicePrompt = false;
     private string defaultChoicePrompt = "Make Your Choice";
+    private int externalUIRequests = 0;
     
     // Player reference
     private BasePlayerController playerController;
@@ -716,6 +717,46 @@ public class DialogueManager : MonoBehaviour
         if (interactionPrompt) interactionPrompt.SetActive(show);
     }
 
+    public void BeginExternalUI()
+    {
+        externalUIRequests++;
+        ShowInteractionPrompt(false);
+        LockPlayerControls();
+    }
+
+    public void EndExternalUI()
+    {
+        externalUIRequests = Mathf.Max(0, externalUIRequests - 1);
+
+        if (externalUIRequests > 0)
+            return;
+
+        if (dialoguePanel != null && dialoguePanel.activeSelf)
+            return;
+
+        if (choicePanel != null && choicePanel.activeSelf)
+            return;
+
+        if (monologuePanel != null && monologuePanel.activeSelf)
+            return;
+
+        if (imagePanel != null && imagePanel.activeSelf)
+            return;
+
+        UnlockPlayerControls();
+    }
+
+    public Transform GetUIRootTransform()
+    {
+        if (choicePanel != null && choicePanel.transform.parent != null)
+            return choicePanel.transform.parent;
+
+        if (dialoguePanel != null && dialoguePanel.transform.parent != null)
+            return dialoguePanel.transform.parent;
+
+        return null;
+    }
+
     void CacheChoicePromptReferenceIfNeeded()
     {
         if (choicePromptText == null && choicePanel != null)
@@ -751,7 +792,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsAnyUIActive()
     {
-        return IsDialogueActive() ||
+        return externalUIRequests > 0 ||
+               IsDialogueActive() ||
                (monologuePanel != null && monologuePanel.activeSelf) ||
                (imagePanel != null && imagePanel.activeSelf);
     }
