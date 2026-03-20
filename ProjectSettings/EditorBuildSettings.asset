@@ -59,6 +59,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Development_Game/Market.unity
     guid: 2ad439828032d1500ac0119cec19d7d5
+  - enabled: 1
+    path: Assets/Scenes/Development_Game/Home.unity
+    guid: d31022f8d8d8e6c4f82965bd165e2679
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ee04d4b4b94aa364ea15ab4e3eaee9b7, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 06d65be184014fd418cb64948ea882b9, type: 2}
