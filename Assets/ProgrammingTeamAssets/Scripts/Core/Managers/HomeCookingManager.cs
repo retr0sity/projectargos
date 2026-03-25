@@ -169,9 +169,10 @@ public class HomeCookingManager : MonoBehaviour
         FridgeManager.PendingMealData pendingMeal = FridgeManager.Instance.PendingMeal;
         if (pendingMeal == null)
         {
-            dialogueManager.StartDialogue(
-                new[] { "Choose a recipe from the fridge first." },
-                string.Empty);
+            if (!dialogueManager.IsDialogueActive())
+                dialogueManager.StartDialogue(
+                    new[] { "Choose a recipe from the fridge first." },
+                    string.Empty);
             return;
         }
 
