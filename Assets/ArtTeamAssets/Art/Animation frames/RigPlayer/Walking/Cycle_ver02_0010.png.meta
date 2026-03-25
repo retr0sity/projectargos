@@ -103,10 +103,10 @@ TextureImporter:
       name: Cycle_ver02_0010_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2560
-        height: 1440
+        x: 1161
+        y: 211
+        width: 300
+        height: 1057
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
