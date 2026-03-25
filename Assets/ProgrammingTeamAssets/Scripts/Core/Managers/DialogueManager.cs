@@ -74,17 +74,20 @@ public class DialogueManager : MonoBehaviour
     private InputManager subscribedInputManager;
 
     void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+{
+    Debug.Log("DialogueManager Awake: " + gameObject.name);
 
-        CacheChoicePromptReferenceIfNeeded();
-        HideAllPanels();
+    if (Instance != null && Instance != this)
+    {
+        Debug.Log("Destroying duplicate DialogueManager: " + gameObject.name);
+        Destroy(gameObject);
+        return;
     }
+    Instance = this;
+
+    CacheChoicePromptReferenceIfNeeded();
+    HideAllPanels();
+}
 
     void Start()
     {

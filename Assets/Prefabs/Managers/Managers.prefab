@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6733504465255102412}
   - component: {fileID: 5817305057216364169}
   - component: {fileID: 107249267490465367}
-  - component: {fileID: 8269729494432727374}
   - component: {fileID: 7033099745491326606}
   - component: {fileID: 8255428967502623301}
   - component: {fileID: 1256131603379723084}
@@ -129,36 +128,6 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
---- !u!114 &8269729494432727374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770425731245952142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f94143f2ef09ca3a63812b6fe0f726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 4802225391283985104, guid: 97f9583d3d237b04497c47f5b6b52795, type: 3}
-  speakerNamePanel: {fileID: 3861104775655640628, guid: 3c1b4b53265ce9c48a126af64ff93bd2, type: 3}
-  dialogueText: {fileID: 7770686992766407389, guid: a65abb70469e20a4b91517db93a397e1, type: 3}
-  speakerNameText: {fileID: 4928415008649466268, guid: 9a1fd0e59ff65714fbad83326b70019c, type: 3}
-  monologuePanel: {fileID: 4802225391283985104, guid: 97f9583d3d237b04497c47f5b6b52795, type: 3}
-  monologueText: {fileID: 7770686992766407389, guid: a65abb70469e20a4b91517db93a397e1, type: 3}
-  timeWhaitMonologue: 2
-  choicePanel: {fileID: 2809727162250798496, guid: 138abd82c63d74c458af5609269d2572, type: 3}
-  choiceButtons:
-  - {fileID: 1696544380005529781, guid: 371ece3b8d4b7b54eb7daa999c5f4fef, type: 3}
-  - {fileID: 3464667308090340895, guid: 6d0f63b84fc75b143a47b914403c2b1b, type: 3}
-  - {fileID: 8317041443935234561, guid: 63321b9ea47ad80478869c4e431c80ae, type: 3}
-  - {fileID: 424339692522130243, guid: 051ae37e065d57b44b1066d6d405ad3b, type: 3}
-  choicePromptText: {fileID: 1422644205606101545, guid: 336128d03370f8c488c0a7de873266f4, type: 3}
-  imagePanel: {fileID: 5440209488139015415, guid: ff176b83e3b1b1b489822ef4da02e02a, type: 3}
-  displayImage: {fileID: 5627601803931521777, guid: 328bff5bb13b2a44489bf64fec9d3012, type: 3}
-  interactionPrompt: {fileID: 1926820593620184222, guid: 7a059811455b0974e897a44b27b7aabd, type: 3}
-  textSpeed: 0.06
 --- !u!114 &7033099745491326606
 MonoBehaviour:
   m_ObjectHideFlags: 0

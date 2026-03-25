@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3415482661694830211
 RectTransform:
   m_ObjectHideFlags: 0
@@ -270,6 +270,11 @@ PrefabInstance:
     - target: {fileID: 2508945757183944540, guid: a65abb70469e20a4b91517db93a397e1, type: 3}
       propertyPath: m_Name
       value: Text (TMP)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770686992766407389, guid: a65abb70469e20a4b91517db93a397e1, type: 3}
+      propertyPath: m_text
+      value: This is a test text for the dialogue system. If you see this close your
+        eyes.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

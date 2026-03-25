@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6677615878155504281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -190,6 +190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6677615878155504281}
     m_Modifications:
+    - target: {fileID: 1422644205606101545, guid: 336128d03370f8c488c0a7de873266f4, type: 3}
+      propertyPath: m_text
+      value: Do you want to buy Flour for $2.24?
+      objectReference: {fileID: 0}
     - target: {fileID: 1424331082515654719, guid: 336128d03370f8c488c0a7de873266f4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
