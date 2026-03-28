@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30c7ff62031454e4e8ea0e12f5831f35
+guid: 10c5858802c890148925e55240abebdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4629719799222223109
-    second: Market 01 Synthesis _0
+      213: 5697789323486673722
+    second: Voula 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Market 01 Synthesis _0
+      name: Voula 3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 1714
+        x: 602
+        y: 18
+        width: 1606
+        height: 1612
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfe34c53f5eefbfb0800000000000000
-      internalID: -4629719799222223109
+      spriteID: a3bbf67933d921f40800000000000000
+      internalID: 5697789323486673722
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Market 01 Synthesis _0: -4629719799222223109
+      Voula 3_0: 5697789323486673722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 64f92da0dd48d3444a8365aae13da140
+guid: 5227ad7c0417dda418a524f1cbb4f06f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4763254012232496280
-    second: BalconyGrandma_0
+      213: 8997902659657182595
+    second: Kitchen table and chair _0
   - first:
-      213: -5437677172897874083
-    second: BalconyGrandma_1
+      213: -9089792813477800531
+    second: Kitchen table and chair _1
   - first:
-      213: 771397981990095329
-    second: BalconyGrandma_2
+      213: -4370039222967173093
+    second: Kitchen table and chair _2
   - first:
-      213: 9099682734505273705
-    second: BalconyGrandma_3
-  - first:
-      213: 5373097491427249354
-    second: BalconyGrandma_4
-  - first:
-      213: 7246646226622521479
-    second: BalconyGrandma_5
-  - first:
-      213: -4077186424924981102
-    second: BalconyGrandma_6
+      213: 7084465794301115184
+    second: Kitchen table and chair _3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -64,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +82,32 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -114,17 +131,69 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BalconyGrandma_0
+      name: Kitchen table and chair _0
       rect:
         serializedVersion: 2
-        x: 242
-        y: 87
-        width: 1073
-        height: 2231
+        x: 526
+        y: 1586
+        width: 16
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 894721e894a7a1240800000000000000
-      internalID: 4763254012232496280
+      spriteID: 38da868cbc8fedc70800000000000000
+      internalID: 8997902659657182595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BalconyGrandma_1
+      name: Kitchen table and chair _1
       rect:
         serializedVersion: 2
-        x: 1469
-        y: 1597
-        width: 8
-        height: 8
+        x: 1518
+        y: 82
+        width: 842
+        height: 1510
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5ffb2adb6d7984b0800000000000000
-      internalID: -5437677172897874083
+      spriteID: da5d1ce88919ad180800000000000000
+      internalID: -9089792813477800531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BalconyGrandma_2
+      name: Kitchen table and chair _2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 1269
-        width: 12
-        height: 15
+        x: 9
+        y: 0
+        width: 1298
+        height: 1355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e909f8a06e84ba00800000000000000
-      internalID: 771397981990095329
+      spriteID: b10848cea708a53c0800000000000000
+      internalID: -4370039222967173093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BalconyGrandma_3
+      name: Kitchen table and chair _3
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 1261
-        width: 23
-        height: 29
+        x: 2353
+        y: 997
+        width: 7
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,74 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96921fe1c31984e70800000000000000
-      internalID: 9099682734505273705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BalconyGrandma_4
-      rect:
-        serializedVersion: 2
-        x: 1360
-        y: 1124
-        width: 54
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acc401853b3119a40800000000000000
-      internalID: 5373097491427249354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BalconyGrandma_5
-      rect:
-        serializedVersion: 2
-        x: 1453
-        y: 1132
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 780a2c64952419460800000000000000
-      internalID: 7246646226622521479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BalconyGrandma_6
-      rect:
-        serializedVersion: 2
-        x: 1299
-        y: 1007
-        width: 35
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2983d436c8cea67c0800000000000000
-      internalID: -4077186424924981102
+      spriteID: 03b39b4da14115260800000000000000
+      internalID: 7084465794301115184
       vertices: []
       indices: 
       edges: []
@@ -275,7 +278,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +288,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BalconyGrandma_0: 4763254012232496280
-      BalconyGrandma_1: -5437677172897874083
-      BalconyGrandma_2: 771397981990095329
-      BalconyGrandma_3: 9099682734505273705
-      BalconyGrandma_4: 5373097491427249354
-      BalconyGrandma_5: 7246646226622521479
-      BalconyGrandma_6: -4077186424924981102
+      Kitchen table and chair _0: 8997902659657182595
+      Kitchen table and chair _1: -9089792813477800531
+      Kitchen table and chair _2: -4370039222967173093
+      Kitchen table and chair _3: 7084465794301115184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

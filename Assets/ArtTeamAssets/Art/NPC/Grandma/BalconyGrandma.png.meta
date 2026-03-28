@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: 30c7ff62031454e4e8ea0e12f5831f35
+guid: 64f92da0dd48d3444a8365aae13da140
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4629719799222223109
-    second: Market 01 Synthesis _0
+      213: 4763254012232496280
+    second: BalconyGrandma_0
+  - first:
+      213: -5437677172897874083
+    second: BalconyGrandma_1
+  - first:
+      213: 771397981990095329
+    second: BalconyGrandma_2
+  - first:
+      213: 9099682734505273705
+    second: BalconyGrandma_3
+  - first:
+      213: 5373097491427249354
+    second: BalconyGrandma_4
+  - first:
+      213: 7246646226622521479
+    second: BalconyGrandma_5
+  - first:
+      213: -4077186424924981102
+    second: BalconyGrandma_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +91,22 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,19 +129,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,13 +196,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Market 01 Synthesis _0
+      name: BalconyGrandma_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 1714
+        x: 242
+        y: 87
+        width: 1073
+        height: 2231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +211,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfe34c53f5eefbfb0800000000000000
-      internalID: -4629719799222223109
+      spriteID: 894721e894a7a1240800000000000000
+      internalID: 4763254012232496280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_1
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 1597
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ffb2adb6d7984b0800000000000000
+      internalID: -5437677172897874083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1269
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e909f8a06e84ba00800000000000000
+      internalID: 771397981990095329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_3
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1261
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96921fe1c31984e70800000000000000
+      internalID: 9099682734505273705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_4
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1124
+        width: 54
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc401853b3119a40800000000000000
+      internalID: 5373097491427249354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_5
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 1132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780a2c64952419460800000000000000
+      internalID: 7246646226622521479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconyGrandma_6
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1007
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2983d436c8cea67c0800000000000000
+      internalID: -4077186424924981102
       vertices: []
       indices: 
       edges: []
@@ -203,7 +353,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -213,7 +363,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Market 01 Synthesis _0: -4629719799222223109
+      BalconyGrandma_0: 4763254012232496280
+      BalconyGrandma_1: -5437677172897874083
+      BalconyGrandma_2: 771397981990095329
+      BalconyGrandma_3: 9099682734505273705
+      BalconyGrandma_4: 5373097491427249354
+      BalconyGrandma_5: 7246646226622521479
+      BalconyGrandma_6: -4077186424924981102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

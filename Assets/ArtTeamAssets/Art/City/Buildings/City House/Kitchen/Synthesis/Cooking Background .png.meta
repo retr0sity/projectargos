@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30c7ff62031454e4e8ea0e12f5831f35
+guid: 0082bbfbc87d4ba47b092699ed336917
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4629719799222223109
-    second: Market 01 Synthesis _0
+      213: 1675617392312601856
+    second: Cooking Background _0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Market 01 Synthesis _0
+      name: Cooking Background _0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4096
-        height: 1714
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfe34c53f5eefbfb0800000000000000
-      internalID: -4629719799222223109
+      spriteID: 00d4248f32df04710800000000000000
+      internalID: 1675617392312601856
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Market 01 Synthesis _0: -4629719799222223109
+      Cooking Background _0: 1675617392312601856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
