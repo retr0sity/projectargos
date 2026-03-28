@@ -1265,6 +1265,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5018880940883094500, guid: 86b018725055bd84e9fe09ee9ebc15a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018880940883094500, guid: 86b018725055bd84e9fe09ee9ebc15a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 70.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8831395270200351946, guid: 86b018725055bd84e9fe09ee9ebc15a5, type: 3}
       propertyPath: m_Name
       value: CityHouse
