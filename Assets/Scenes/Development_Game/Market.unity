@@ -8319,7 +8319,7 @@ GameObject:
   - component: {fileID: 2061957843}
   - component: {fileID: 2061957842}
   m_Layer: 0
-  m_Name: Monologue
+  m_Name: Full_Cart_Monologue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8338,7 +8338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monologueLines:
-  - This is the monologue so Maria doesn't hit us again.
+  - 'I will leave my cart here. . .
+
+'
   oneTimeOnly: 1
   onMonologueShown:
     m_PersistentCalls:
@@ -8388,7 +8390,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0.40392157}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.8}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8453,7 +8455,7 @@ Transform:
   m_GameObject: {fileID: 2061957841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.31, y: 0.8, z: 0.2063661}
+  m_LocalPosition: {x: 112.8, y: 43.4, z: 0.2063661}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
