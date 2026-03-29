@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Dialogue-driven cashier checkout flow.
+/// After the "can't afford" line, shows the Market_Cart_Contents panel so the
+/// player can choose which items to put back. Closing the panel re-runs the
+/// checkout prompt so the player can retry.
 /// </summary>
 public class CashierInteractable : MonoBehaviour
 {
@@ -10,7 +15,16 @@ public class CashierInteractable : MonoBehaviour
     [SerializeField] private string checkoutPromptFormat = "Are you done shopping and want to pay ${0:F2}?";
     [SerializeField] private string thankYouLine = "Thank you.";
     [SerializeField] private string insufficientFundsLine = "Sorry, not enough money.";
-    [SerializeField] private string removeLastItemPromptFormat = "Do you want to put back {0} for ${1:F2}?";
+
+    [Header("Cart Contents Panel")]
+    [Tooltip("The Market_Cart_Contents panel in the Market scene.")]
+    [SerializeField] private GameObject cartContentsPanel;
+    [Tooltip("The 'Content' transform inside the panel's Scroll View.")]
+    [SerializeField] private Transform cartContentsParent;
+    [Tooltip("The row prefab (the 'Panel' child inside Content).")]
+    [SerializeField] private GameObject cartRowPrefab;
+    [Tooltip("Optional — a Done/Continue button on the panel. If unassigned, each removal auto-closes and re-runs the checkout prompt.")]
+    [SerializeField] private Button cartDoneButton;
 
     private bool isInteractionInProgress;
 
@@ -95,7 +109,7 @@ public class CashierInteractable : MonoBehaviour
         DialogueManager.Instance.StartDialogue(
             new[] { insufficientFundsLine },
             speakerName,
-            ShowRemoveLastItemPrompt);
+            ShowCartContentsPanel);
     }
 
     void CompleteCheckout()

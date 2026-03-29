@@ -198,6 +198,15 @@ public class SimpleNPCDialogue : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Starts the dialogue immediately, bypassing trigger/interact mode checks.
+    /// Use this when another script needs to fire the dialogue by code (e.g. ReturnPortal).
+    /// </summary>
+    public void TriggerNow()
+    {
+        StartDialogue();
+    }
+
     public void ResetDialogue()
     {
         hasBeenTalkedTo = false;
