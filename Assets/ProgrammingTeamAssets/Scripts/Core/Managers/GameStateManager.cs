@@ -79,15 +79,6 @@ public class GameStateManager : MonoBehaviour
         returnPosition = position; // <-- This position is now always used
         hasVisitedOtherScene = true;
         
-        // --- UPDATED SECTION ---
-        // This 'if' block, which caused the override, has been removed/commented out.
-        /* // Override return position for Alpha_StartScene ONLY the first time
-        if (sceneName == "Alpha_StartScene" && !hasReturnedToAlphaStartOnce)
-        {
-            returnPosition = new Vector3(-251.82f, -1.72f, 0f);
-        }
-        */
-        // --- END OF UPDATE ---
     }
     
     public void ReturnToSavedPosition()
@@ -158,8 +149,9 @@ public class GameStateManager : MonoBehaviour
         returnSceneName = "";
         returnPosition = Vector3.zero;
 
-        // Ensure no stale return callback can fire after reset.
+        // ensure no stale return callback can fire after reset.
         SceneManager.sceneLoaded -= OnReturnSceneLoaded;
+        HungerManager.Instance?.ResetHunger();
 
         Debug.Log("GameStateManager: Global state reset for main menu.");
     }

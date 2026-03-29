@@ -44,13 +44,21 @@ public class MoodHUD : MonoBehaviour
     // ─────────────────────────────────────────────────────────────────
     void BuildPlaceholderUI()
     {
-        // Root canvas (Screen Space - Overlay, persists across scenes via the manager GO)
-        _canvas = gameObject.AddComponent<Canvas>();
-        _canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        _canvas.sortingOrder = 10;
-        gameObject.AddComponent<CanvasScaler>().uiScaleMode =
-            CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        gameObject.AddComponent<GraphicRaycaster>();
+       // Replace the three AddComponent lines at the top of BuildPlaceholderUI with:
+        _canvas = gameObject.GetComponent<Canvas>();
+        if (_canvas == null)
+        {
+            _canvas = gameObject.AddComponent<Canvas>();
+            _canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            _canvas.sortingOrder = 10;
+        }
+
+        if (gameObject.GetComponent<CanvasScaler>() == null)
+            gameObject.AddComponent<CanvasScaler>().uiScaleMode =
+                CanvasScaler.ScaleMode.ScaleWithScreenSize;
+
+        if (gameObject.GetComponent<GraphicRaycaster>() == null)
+            gameObject.AddComponent<GraphicRaycaster>();
 
         // Container panel — top-left
         GameObject panel = new GameObject("MoodPanel", typeof(RectTransform));
