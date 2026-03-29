@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject speakerNamePanel;
+    [SerializeField] private GameObject speakerNameBackground;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerNameText;
 
@@ -216,6 +217,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialoguePanel) dialoguePanel.SetActive(false);
         if (speakerNamePanel) speakerNamePanel.SetActive(false);
+        if (speakerNameBackground) speakerNameBackground.SetActive(false);
         if (monologuePanel) monologuePanel.SetActive(false);
         if (choicePanel) choicePanel.SetActive(false);
         if (imagePanel) imagePanel.SetActive(false);
@@ -264,7 +266,9 @@ public class DialogueManager : MonoBehaviour
             dialogueQueue.Enqueue(line);
 
         if (dialoguePanel) dialoguePanel.SetActive(true);
-        if (speakerNamePanel) speakerNamePanel.SetActive(!string.IsNullOrEmpty(speaker));
+        bool showName = !string.IsNullOrEmpty(speaker);
+        if (speakerNamePanel) speakerNamePanel.SetActive(showName);
+        if (speakerNameBackground) speakerNameBackground.SetActive(showName);
         if (speakerNameText != null) speakerNameText.text = speaker;
 
         // Lock movement
@@ -331,7 +335,9 @@ public class DialogueManager : MonoBehaviour
         if (speakerQueue.Count > 0)
         {
             string lineSpeaker = speakerQueue.Dequeue();
-            if (speakerNamePanel) speakerNamePanel.SetActive(!string.IsNullOrEmpty(lineSpeaker));
+            bool showLineName = !string.IsNullOrEmpty(lineSpeaker);
+            if (speakerNamePanel) speakerNamePanel.SetActive(showLineName);
+            if (speakerNameBackground) speakerNameBackground.SetActive(showLineName);
             if (speakerNameText != null) speakerNameText.text = lineSpeaker ?? "";
         }
 
@@ -385,6 +391,7 @@ public class DialogueManager : MonoBehaviour
             
             if (dialoguePanel) dialoguePanel.SetActive(false);
             if (speakerNamePanel) speakerNamePanel.SetActive(false);
+            if (speakerNameBackground) speakerNameBackground.SetActive(false);
             
             waitingForInput = false;
             
