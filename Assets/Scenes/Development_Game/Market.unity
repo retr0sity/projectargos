@@ -9485,6 +9485,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2749886577538176388, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
+      propertyPath: monologueText
+      value: 
+      objectReference: {fileID: 4611244149756766564}
+    - target: {fileID: 2749886577538176388, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
+      propertyPath: monologuePanel
+      value: 
+      objectReference: {fileID: 4611244149756766565}
     - target: {fileID: 5253211302301835837, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
       propertyPath: m_Name
       value: DialogueSystem
@@ -9494,6 +9502,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
+--- !u!114 &4611244149756766564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2084235606435384783, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
+  m_PrefabInstance: {fileID: 4611244149756766563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4611244149756766565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7009804772373175025, guid: 41213cfe4d7f39a418c22c7e9d47f920, type: 3}
+  m_PrefabInstance: {fileID: 4611244149756766563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
