@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ee55158351f455788396190c5e79d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTriggerMode: 0
+  useTriggerMode: 1
   speakerName: Big man Demetra
   dialogueLines: []
   oneTimeOnly: 1
