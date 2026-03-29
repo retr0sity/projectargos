@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,18 @@ public class SimpleNPCDialogue : MonoBehaviour
     [TextArea(3, 5)]
     [SerializeField] private string[] dialogueLines;
     [SerializeField] private bool oneTimeOnly = true;
+
+    [Header("Conversation (multi-speaker)")]
+    [Tooltip("Enable to use per-line speakers. Overrides Dialogue lines above.")]
+    [SerializeField] private bool useConversationMode = false;
+    [SerializeField] private DialogueLine[] conversationLines;
+
+    [Header("Animation")]
+    [Tooltip("Animator on the NPC sprite. Assign if you want the animation to freeze on interact.")]
+    [SerializeField] private Animator npcAnimator;
+    [SerializeField] private bool freezeAnimationOnInteract = false;
+    [Tooltip("Which frame to freeze on (0 = first frame, 1 = last frame).")]
+    [SerializeField] [Range(0f, 1f)] private float idleNormalizedTime = 0f;
     
     [Header("Enemy Freeze")]
     [SerializeField] private bool freezeEnemies = true;
@@ -27,6 +40,7 @@ public class SimpleNPCDialogue : MonoBehaviour
     private bool hasBeenTalkedTo = false;
     private bool isCurrentlyInDialogue = false;
     private Fascist[] frozenEnemies;
+    private Coroutine freezeAnimCoroutine;
     
     void Awake()
     {
@@ -87,9 +101,11 @@ public class SimpleNPCDialogue : MonoBehaviour
             return;
         }
         
-        if (dialogueLines == null || dialogueLines.Length == 0)
+        bool hasLines = (dialogueLines != null && dialogueLines.Length > 0);
+        bool hasConversation = (useConversationMode && conversationLines != null && conversationLines.Length > 0);
+        if (!hasLines && !hasConversation)
         {
-            Debug.LogWarning($"No dialogue lines set for {gameObject.name}");
+            Debug.LogWarning($"No dialogue or conversation lines set for {gameObject.name}");
             return;
         }
         
@@ -114,14 +130,44 @@ public class SimpleNPCDialogue : MonoBehaviour
         }
         
         Debug.Log($"{gameObject.name}: Starting dialogue");
-        
-        DialogueManager.Instance.StartDialogue(dialogueLines, speakerName, OnDialogueFinished);
+
+        if (freezeAnimationOnInteract && npcAnimator != null)
+        {
+            if (freezeAnimCoroutine != null) StopCoroutine(freezeAnimCoroutine);
+            freezeAnimCoroutine = StartCoroutine(FreezeAnimationAfterLoop());
+        }
+
+        if (useConversationMode && conversationLines != null && conversationLines.Length > 0)
+            DialogueManager.Instance.StartConversation(conversationLines, OnDialogueFinished);
+        else
+            DialogueManager.Instance.StartDialogue(dialogueLines, speakerName, OnDialogueFinished);
     }
     
+    IEnumerator FreezeAnimationAfterLoop()
+    {
+        // Wait until the current loop finishes (normalizedTime crosses the next integer)
+        float targetTime = Mathf.Floor(npcAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) + 1f;
+        while (npcAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < targetTime)
+            yield return null;
+
+        // Jump to the chosen frame, then freeze on the next frame so Unity renders it
+        AnimatorStateInfo state = npcAnimator.GetCurrentAnimatorStateInfo(0);
+        npcAnimator.Play(state.fullPathHash, 0, idleNormalizedTime);
+        yield return null;
+        npcAnimator.speed = 0f;
+        freezeAnimCoroutine = null;
+    }
+
     void OnDialogueFinished()
     {
         Debug.Log($"{gameObject.name}: Dialogue finished");
-        
+
+        if (freezeAnimationOnInteract && npcAnimator != null)
+        {
+            if (freezeAnimCoroutine != null) { StopCoroutine(freezeAnimCoroutine); freezeAnimCoroutine = null; }
+            npcAnimator.speed = 1f;
+        }
+
         isCurrentlyInDialogue = false;
         
         // Unfreeze enemies

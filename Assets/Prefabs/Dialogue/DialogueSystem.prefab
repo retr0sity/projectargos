@@ -125,6 +125,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8045827112868062135, guid: 07f19dc1f0c5afca580948db60a973d1, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.23380208
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045827112868062135, guid: 07f19dc1f0c5afca580948db60a973d1, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045827112868062135, guid: 07f19dc1f0c5afca580948db60a973d1, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.33543313
+      objectReference: {fileID: 0}
     - target: {fileID: 8897421773699802423, guid: 07f19dc1f0c5afca580948db60a973d1, type: 3}
       propertyPath: m_Name
       value: ChoiceText (TMP)
@@ -286,11 +298,11 @@ PrefabInstance:
     - target: {fileID: 4591381544031297091, guid: 8c5364d2f50436f0fb09a0112cfe9a44, type: 3}
       propertyPath: monologueText
       value: 
-      objectReference: {fileID: 7521769843613074592}
+      objectReference: {fileID: 2084235606435384783}
     - target: {fileID: 4591381544031297091, guid: 8c5364d2f50436f0fb09a0112cfe9a44, type: 3}
       propertyPath: monologuePanel
       value: 
-      objectReference: {fileID: 1570019740941079454}
+      objectReference: {fileID: 7009804772373175025}
     - target: {fileID: 4591381544031297091, guid: 8c5364d2f50436f0fb09a0112cfe9a44, type: 3}
       propertyPath: speakerNameText
       value: 
@@ -477,5 +489,21 @@ PrefabInstance:
 --- !u!224 &902129101461042850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3415482661694830211, guid: 97f9583d3d237b04497c47f5b6b52795, type: 3}
+  m_PrefabInstance: {fileID: 2585975215283748897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2084235606435384783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4544004463978778094, guid: 97f9583d3d237b04497c47f5b6b52795, type: 3}
+  m_PrefabInstance: {fileID: 2585975215283748897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7009804772373175025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4802225391283985104, guid: 97f9583d3d237b04497c47f5b6b52795, type: 3}
   m_PrefabInstance: {fileID: 2585975215283748897}
   m_PrefabAsset: {fileID: 0}

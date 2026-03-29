@@ -7,6 +7,18 @@ using TMPro;
 using Core.Managers;
 
 /// <summary>
+/// A single line in a multi-speaker conversation.
+/// Set speaker to "" (empty) to hide the name panel (e.g. for player lines).
+/// </summary>
+[System.Serializable]
+public struct DialogueLine
+{
+    public string speaker;
+    [TextArea(1, 3)]
+    public string text;
+}
+
+/// <summary>
 /// Central manager for all dialogue, monologue, choice, and image interactions.
 /// Handles UI display, text typing effects, and player control locking.
 /// FIXED: Proper cooldown system to prevent double-triggering
@@ -43,6 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     // State tracking
     private Queue<string> dialogueQueue = new Queue<string>();
+    private Queue<string> speakerQueue = new Queue<string>();
     private Coroutine currentDialogue;
     private Action onDialogueComplete;
     private bool isTyping = false;
@@ -245,7 +258,8 @@ public class DialogueManager : MonoBehaviour
 
         onDialogueComplete = onComplete;
         dialogueQueue.Clear();
-        
+        speakerQueue.Clear();
+
         foreach (string line in lines)
             dialogueQueue.Enqueue(line);
 
@@ -256,6 +270,40 @@ public class DialogueManager : MonoBehaviour
         // Lock movement
         LockPlayerMovement();
         
+        waitingForInput = false;
+        DisplayNextLine();
+    }
+
+    /// <summary>
+    /// Starts a multi-speaker conversation. Each DialogueLine has its own speaker name.
+    /// Set speaker to "" (empty) to hide the NPC name panel for that line (e.g. player lines).
+    /// </summary>
+    public void StartConversation(DialogueLine[] lines, Action onComplete = null)
+    {
+        if (startCooldownCoroutine != null)
+            StopCoroutine(startCooldownCoroutine);
+        startCooldownCoroutine = StartCoroutine(StartDialogueCooldown());
+
+        ShowInteractionPrompt(false);
+
+        isMonologueActive = false;
+        monologueWaitingForInput = false;
+        if (currentMonologue != null) { StopCoroutine(currentMonologue); currentMonologue = null; }
+        if (monologuePanel != null) monologuePanel.SetActive(false);
+        if (currentDialogue != null) { StopCoroutine(currentDialogue); currentDialogue = null; }
+
+        onDialogueComplete = onComplete;
+        dialogueQueue.Clear();
+        speakerQueue.Clear();
+
+        foreach (var line in lines)
+        {
+            dialogueQueue.Enqueue(line.text);
+            speakerQueue.Enqueue(line.speaker ?? "");
+        }
+
+        if (dialoguePanel) dialoguePanel.SetActive(true);
+        LockPlayerMovement();
         waitingForInput = false;
         DisplayNextLine();
     }
@@ -271,12 +319,20 @@ public class DialogueManager : MonoBehaviour
     void DisplayNextLine()
     {
         Debug.Log($"DisplayNextLine called! Queue count: {dialogueQueue.Count}");
-        
+
         if (dialogueQueue.Count == 0)
         {
             Debug.Log("Queue empty, calling EndDialogue()");
             EndDialogue();
             return;
+        }
+
+        // Per-line speaker update (used by StartConversation)
+        if (speakerQueue.Count > 0)
+        {
+            string lineSpeaker = speakerQueue.Dequeue();
+            if (speakerNamePanel) speakerNamePanel.SetActive(!string.IsNullOrEmpty(lineSpeaker));
+            if (speakerNameText != null) speakerNameText.text = lineSpeaker ?? "";
         }
 
         currentFullLine = dialogueQueue.Dequeue();
