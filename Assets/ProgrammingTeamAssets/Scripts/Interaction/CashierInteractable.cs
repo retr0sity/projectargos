@@ -32,6 +32,68 @@ public class CashierInteractable : MonoBehaviour
     {
         if (gameObject.tag != "Interactable")
             gameObject.tag = "Interactable";
+
+        ResolveCartPanel();
+
+        if (cartContentsPanel != null)
+            cartContentsPanel.SetActive(false);
+    }
+
+    /// <summary>
+    /// Finds Market_Cart_Contents and its Content child in the active scene at runtime.
+    /// Uses scene.GetRootGameObjects() so it works even when the panel starts inactive.
+    /// cartContentsParent is always re-derived from the panel to avoid stale Inspector values.
+    /// </summary>
+    void ResolveCartPanel()
+    {
+        Debug.Log($"[Cashier] ResolveCartPanel on '{gameObject.name}', prefab={cartRowPrefab}");
+
+        if (cartContentsPanel == null)
+        {
+            foreach (var root in gameObject.scene.GetRootGameObjects())
+            {
+                Transform found = FindDeep(root.transform, "Market_Cart_Contents");
+                if (found != null) { cartContentsPanel = found.gameObject; break; }
+            }
+        }
+
+        // Always re-derive from the panel so stale Inspector assignments are ignored
+        if (cartContentsPanel != null)
+        {
+            Transform content = cartContentsPanel.transform.Find("Scroll View/Viewport/Content");
+            if (content != null) cartContentsParent = content;
+        }
+
+        // Find prefab by name from loaded assets if still unassigned
+        if (cartRowPrefab == null)
+        {
+            foreach (var go in Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (go.name == "PrefabRemovePanel" && !go.scene.IsValid())
+                {
+                    cartRowPrefab = go;
+                    break;
+                }
+            }
+        }
+
+        if (cartContentsPanel == null)
+            Debug.LogWarning("[Cashier] Market_Cart_Contents not found in scene.");
+        if (cartContentsParent == null)
+            Debug.LogWarning("[Cashier] Content not found inside Market_Cart_Contents.");
+        if (cartRowPrefab == null)
+            Debug.LogWarning("[Cashier] PrefabRemovePanel not found — make sure the prefab exists in the project.");
+    }
+
+    static Transform FindDeep(Transform parent, string name)
+    {
+        if (parent.name == name) return parent;
+        foreach (Transform child in parent)
+        {
+            Transform result = FindDeep(child, name);
+            if (result != null) return result;
+        }
+        return null;
     }
 
     public void OnInteract()
@@ -134,53 +196,88 @@ public class CashierInteractable : MonoBehaviour
             EndInteraction);
     }
 
-    void ShowRemoveLastItemPrompt()
+    // ── Cart Contents Panel ───────────────────────────────────────
+
+    void ShowCartContentsPanel()
     {
-        if (CartManager.Instance == null || CartManager.Instance.items.Count == 0)
+        if (cartContentsPanel == null || cartContentsParent == null || cartRowPrefab == null)
         {
+            Debug.LogWarning($"[Cashier] Cart contents panel not configured on '{gameObject.name}': panel={cartContentsPanel}, parent={cartContentsParent}, prefab={cartRowPrefab}");
             EndInteraction();
             return;
         }
 
-        CartManager.CartItem lastItem = CartManager.Instance.items[CartManager.Instance.items.Count - 1];
-        string prompt = string.Format(
-            removeLastItemPromptFormat,
-            lastItem.productName,
-            lastItem.price);
+        PopulateCartContents();
+        cartContentsPanel.SetActive(true);
+        DialogueManager.Instance.BeginExternalUI();
 
-        DialogueManager.Instance.ShowChoices(
-            new[] { "Yes", "No" },
-            OnRemoveLastItemChoice,
-            prompt);
+        if (cartDoneButton != null)
+        {
+            cartDoneButton.onClick.RemoveAllListeners();
+            cartDoneButton.onClick.AddListener(OnCartDone);
+        }
     }
 
-    void OnRemoveLastItemChoice(int choiceIndex)
+    void PopulateCartContents()
     {
-        if (choiceIndex != 0)
-        {
-            EndInteraction();
-            return;
-        }
+        foreach (Transform child in cartContentsParent)
+            Destroy(child.gameObject);
 
-        if (CartManager.Instance == null || CartManager.Instance.items.Count == 0)
+        for (int i = 0; i < CartManager.Instance.items.Count; i++)
         {
-            EndInteraction();
-            return;
-        }
+            var item = CartManager.Instance.items[i];
+            int capturedIndex = i;
 
-        CartManager.Instance.RemoveItem(CartManager.Instance.items.Count - 1);
+            var row = Instantiate(cartRowPrefab, cartContentsParent);
+
+            var nameText = row.transform.Find("NameOfProductText")?.GetComponent<TextMeshProUGUI>();
+            if (nameText != null) nameText.text = item.productName;
+
+            var removeBtn = row.transform.Find("RemoveButton")?.GetComponent<Button>();
+            if (removeBtn != null)
+                removeBtn.onClick.AddListener(() => OnCartRemoveItem(capturedIndex));
+        }
+    }
+
+    void OnCartRemoveItem(int index)
+    {
+        CartManager.Instance.RemoveItem(index);
 
         if (CartManager.Instance.items.Count == 0)
         {
+            CloseCartContentsPanel();
             EndInteraction();
             return;
         }
 
+        PopulateCartContents();
+
+        // If no Done button is set, auto-close after each removal and re-run the prompt
+        if (cartDoneButton == null)
+        {
+            CloseCartContentsPanel();
+            ShowCheckoutPrompt();
+        }
+    }
+
+    void OnCartDone()
+    {
+        CloseCartContentsPanel();
         ShowCheckoutPrompt();
+    }
+
+    void CloseCartContentsPanel()
+    {
+        if (cartContentsPanel != null && cartContentsPanel.activeSelf)
+        {
+            cartContentsPanel.SetActive(false);
+            DialogueManager.Instance.EndExternalUI();
+        }
     }
 
     void EndInteraction()
     {
+        CloseCartContentsPanel();
         isInteractionInProgress = false;
     }
 }
