@@ -5,7 +5,7 @@ using UnityEngine;
 /// </summary>
 public class KitchenInteractable : MonoBehaviour
 {
-    private const float InteractCooldown = 0.5f;
+    private const float InteractCooldown = 1.5f;
     private float lastInteractTime = -999f;
 
     public void OnInteract()

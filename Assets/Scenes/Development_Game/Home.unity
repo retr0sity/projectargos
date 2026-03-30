@@ -1006,6 +1006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032468912}
   - component: {fileID: 1032468913}
+  - component: {fileID: 1032468914}
   m_Layer: 0
   m_Name: BudgetForToday
   m_TagString: Untagged
@@ -1022,7 +1023,7 @@ Transform:
   m_GameObject: {fileID: 1032468911}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 0.56, z: -0.23621082}
+  m_LocalPosition: {x: -2.3, y: 0.54, z: -0.23621082}
   m_LocalScale: {x: 0.3169, y: 0.55127496, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1083,6 +1084,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1032468914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032468911}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -1.7388232}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 4.4776464}
+  m_EdgeRadius: 0
 --- !u!1 &1033854829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,9 +1685,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1550778337}
   - component: {fileID: 1550778338}
+  - component: {fileID: 1550778339}
   m_Layer: 0
   m_Name: Kitchen
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,6 +1763,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1550778339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550778336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720c65a7e6224db88a0ef4340764c5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1701462551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1839,9 +1899,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1805139558}
   - component: {fileID: 1805139559}
+  - component: {fileID: 1805139560}
   m_Layer: 0
   m_Name: Fridge
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1855,7 +1916,7 @@ Transform:
   m_GameObject: {fileID: 1805139557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1904, y: 0.0073, z: -0.23621082}
+  m_LocalPosition: {x: -1.1904, y: -1.05, z: -0.23621082}
   m_LocalScale: {x: 0.7107334, y: 1.5646472, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1916,6 +1977,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1805139560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805139557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50867498f1e436490a1b7288f757285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877492115
 GameObject:
   m_ObjectHideFlags: 0
