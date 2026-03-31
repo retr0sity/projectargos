@@ -173,5 +173,25 @@ public class GameStateManager : MonoBehaviour
         firedTriggers.Clear();
 
         Debug.Log("[GSM] Global state reset for main menu.");
+        badEndingTimerActive = false;
+        badEndingTimeRemaining = 0f;
+    }
+    // Add with other fields
+    [Header("Bad Ending Timer")]
+    public bool badEndingTimerActive = false;
+    public float badEndingTimeRemaining = 0f;
+
+    public void StartBadEndingTimer(float seconds)
+    {
+        badEndingTimeRemaining = seconds;
+        badEndingTimerActive = true;
+        Debug.Log($"[GSM] Bad ending timer started — {seconds}s");
+    }
+
+    public void StopBadEndingTimer()
+    {
+        badEndingTimerActive = false;
+        badEndingTimeRemaining = 0f;
+        Debug.Log("[GSM] Bad ending timer stopped.");
     }
 }

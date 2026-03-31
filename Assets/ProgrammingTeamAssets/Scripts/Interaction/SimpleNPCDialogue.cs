@@ -37,6 +37,12 @@ public class SimpleNPCDialogue : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onDialogueComplete;
 
+    [Header("Bad Ending Timer")]
+    [Tooltip("Start the bad ending countdown when this dialogue completes.")]
+    [SerializeField] private bool startsBadEndingTimer = false;
+    [Tooltip("Timer duration in minutes.")]
+    [SerializeField] private float badEndingMinutes = 5f;
+
     private bool isCurrentlyInDialogue = false;
     private Fascist[] frozenEnemies;
     private Coroutine freezeAnimCoroutine;
@@ -186,6 +192,9 @@ public class SimpleNPCDialogue : MonoBehaviour
                 if (enemy != null) enemy.Resume();
             frozenEnemies = null;
         }
+
+        if (startsBadEndingTimer && GameStateManager.Instance != null)
+        GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
 
         onDialogueComplete?.Invoke();
 

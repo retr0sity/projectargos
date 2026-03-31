@@ -15,6 +15,9 @@ public class PlayerMonologueTrigger : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onMonologueShown;
+    [Header("Bad Ending Timer")]
+    [SerializeField] private bool startsBadEndingTimer = false;
+    [SerializeField] private float badEndingMinutes = 5f;
 
     private bool isCurrentlyShowing = false;
 
@@ -50,6 +53,8 @@ public class PlayerMonologueTrigger : MonoBehaviour
 
         isCurrentlyShowing = true;
         DialogueManager.Instance.StartMonologue(monologueLines);
+        if (startsBadEndingTimer && GameStateManager.Instance != null)
+            GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
         onMonologueShown?.Invoke();
         Invoke("ResetShowingState", 0.5f);
     }
