@@ -21,6 +21,8 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
+    m_path: Assets/Scenes/Development_Game/00_Main Menu 3.0.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/Base_Game_Testing.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/CloseupMarket.unity
