@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject optionsButtonsGroup;
     [SerializeField] private Animator mainMenuAnimator;
+
+    [Header("Transition")]
+    [SerializeField] private Animator transition;
+
+    private bool isLoading = false;
 
     private static readonly int HoverIndex = Animator.StringToHash("HoverIndex");
 
@@ -33,9 +39,30 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnPlayButtonPressed()
     {
+        if (isLoading) return;
         ClearImage();
         mainMenuAnimator.SetTrigger("PlayButtonPressed");
+        StartCoroutine(PlayFadeOut());
+    }
+
+    private IEnumerator PlayFadeOut()
+    {
+        isLoading = true;
+
         GameStateManager.Instance?.ResetAllState();
+
+        if (transition != null)
+        {
+            transition.updateMode = AnimatorUpdateMode.UnscaledTime;
+            transition.SetTrigger("Start");
+            yield return new WaitForSecondsRealtime(1f);
+            transition.updateMode = AnimatorUpdateMode.Normal;
+        }
+        else
+        {
+            yield return null;
+        }
+
         SceneManager.LoadScene(1);
     }
 
@@ -45,15 +72,12 @@ public class MainMenuManager : MonoBehaviour
         mainMenuAnimator.SetTrigger("ExitOptionsButtonPressed");
     }
 
-
-    // Called when hovering a button
     public void ChangeImage(int buttonIndex)
     {
         if (mainMenuAnimator != null)
             mainMenuAnimator.SetInteger(HoverIndex, buttonIndex);
     }
 
-    // Called when exiting a button
     public void ClearImage()
     {
         if (mainMenuAnimator != null)
@@ -62,15 +86,10 @@ public class MainMenuManager : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("ExitGame called"); // Just to confirm it works in Editor
-
-        // Closes the application
+        Debug.Log("ExitGame called");
         Application.Quit();
-
-        // If you're in the Unity Editor, this won't do anything.
-        // You can add this line just for testing:
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
