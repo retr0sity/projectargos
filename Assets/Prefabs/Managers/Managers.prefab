@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc693cf14b274747b523cf50f8ae001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hunger: 100
+  hunger: 60
   minHunger: 0
   maxHunger: 100
   hungerChangeAmount: 20
@@ -267,4 +267,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hungerSlider: {fileID: 0}
   hungerLabel: {fileID: 0}
-  verticalOffset: -54
+  verticalOffset: -70
