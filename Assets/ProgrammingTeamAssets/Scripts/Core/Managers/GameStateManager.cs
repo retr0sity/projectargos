@@ -16,20 +16,41 @@ public class GameStateManager : MonoBehaviour
     public bool fogActive = true;
     public bool hasReturnedToAlphaStartOnce = false;
     
-    // Portal tracking - each portal tracked individually
+    // Portal tracking
     private HashSet<string> usedPortals = new HashSet<string>();
+    // Add with the other private collections
+    private HashSet<string> firedTriggers = new HashSet<string>();
+
+    public bool HasTriggerFired(string triggerID) => firedTriggers.Contains(triggerID);
+
+    public void MarkTriggerFired(string triggerID)
+    {
+        firedTriggers.Add(triggerID);
+        Debug.Log($"[GSM] Trigger '{triggerID}' marked as fired.");
+    }
+
+    public void ResetTrigger(string triggerID)
+    {
+        firedTriggers.Remove(triggerID);
+    }
     
-    // For scene returns
-    public string returnSceneName;
-    public Vector3 returnPosition;
-    
+    // Return point stack — FILO
+    private Stack<ReturnPoint> returnStack = new Stack<ReturnPoint>();
+
+    // Keep these public fields so existing code that reads them directly doesn't break
+    public string returnSceneName => returnStack.Count > 0 ? returnStack.Peek().sceneName : "";
+    public Vector3 returnPosition => returnStack.Count > 0 ? returnStack.Peek().position : Vector3.zero;
+
+    [System.Serializable]
+    private struct ReturnPoint
+    {
+        public string sceneName;
+        public Vector3 position;
+    }
+
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -48,87 +69,87 @@ public class GameStateManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == MainMenuSceneName)
-        {
             ResetAllState();
-        }
     }
-    
+
+    // ── Feathers ───────────────────────────────────────────────────────
+
     public void CollectFeather()
     {
         feathersCollected++;
         Debug.Log($"Feathers collected: {feathersCollected}/3");
     }
-    
+
     public void RefuseFeather()
     {
         refusedFeathers = true;
         Debug.Log("Player refused to collect feathers");
-        
-        // Destroy all feather objects in the current scene so they cannot be picked up later
         FeatherPickup[] allFeathers = FindObjectsOfType<FeatherPickup>();
         foreach (var feather in allFeathers)
-        {
-            if (feather != null)
-                Destroy(feather.gameObject);
-        }
+            if (feather != null) Destroy(feather.gameObject);
     }
-    
+
+    // ── Return stack ───────────────────────────────────────────────────
+
+    /// <summary>
+    /// Push a new return point onto the stack.
+    /// Called by ScenePortal when saveReturnPoint is true.
+    /// </summary>
     public void SetReturnPoint(string sceneName, Vector3 position)
     {
-        returnSceneName = sceneName;
-        returnPosition = position; // <-- This position is now always used
+        returnStack.Push(new ReturnPoint { sceneName = sceneName, position = position });
         hasVisitedOtherScene = true;
-        
+        Debug.Log($"[GSM] Pushed return point — {sceneName} @ {position}. Stack depth: {returnStack.Count}");
     }
-    
+
+    /// <summary>
+    /// Pop the top return point and travel there.
+    /// </summary>
     public void ReturnToSavedPosition()
     {
-        if (!string.IsNullOrEmpty(returnSceneName))
+        if (returnStack.Count == 0)
         {
-            SceneManager.sceneLoaded += OnReturnSceneLoaded;
-            SceneManager.LoadScene(returnSceneName);
+            Debug.LogWarning("[GSM] ReturnToSavedPosition called but stack is empty!");
+            return;
         }
+
+        SceneManager.sceneLoaded += OnReturnSceneLoaded;
+        SceneManager.LoadScene(returnStack.Peek().sceneName);
     }
-    
+
     void OnReturnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnReturnSceneLoaded;
-        
-        // Mark that we've returned to Alpha_StartScene for the first time
+
+        if (returnStack.Count == 0) return;
+
+        ReturnPoint point = returnStack.Pop(); // consume it now that we've arrived
+
         if (scene.name == "Alpha_StartScene" && !hasReturnedToAlphaStartOnce)
-        {
             hasReturnedToAlphaStartOnce = true;
-        }
-        
-        // Position player at return point
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null && returnPosition != Vector3.zero)
-        {
-            player.transform.position = returnPosition;
-        }
-        
-        // Clear return data
-        returnSceneName = "";
-        returnPosition = Vector3.zero;
+        if (player != null && point.position != Vector3.zero)
+            player.transform.position = point.position;
+
+        Debug.Log($"[GSM] Popped return point — arrived at {scene.name}. Stack depth: {returnStack.Count}");
     }
-    
+
+    // ── Misc ───────────────────────────────────────────────────────────
+
     public void LoadCredits()
     {
         SceneManager.LoadScene("09_Credits");
     }
-    
-    // Portal tracking methods
-    public bool HasPortalBeenUsed(string portalID)
-    {
-        return usedPortals.Contains(portalID);
-    }
-    
+
+    public bool HasPortalBeenUsed(string portalID) => usedPortals.Contains(portalID);
+
     public void MarkPortalAsUsed(string portalID)
     {
         usedPortals.Add(portalID);
         Debug.Log($"Portal '{portalID}' marked as used");
     }
-    
+
     public void ResetPortal(string portalID)
     {
         usedPortals.Remove(portalID);
@@ -145,14 +166,12 @@ public class GameStateManager : MonoBehaviour
         hasReturnedToAlphaStartOnce = false;
 
         usedPortals.Clear();
+        returnStack.Clear(); // wipe the whole stack on reset
 
-        returnSceneName = "";
-        returnPosition = Vector3.zero;
-
-        // ensure no stale return callback can fire after reset.
         SceneManager.sceneLoaded -= OnReturnSceneLoaded;
         HungerManager.Instance?.ResetHunger();
+        firedTriggers.Clear();
 
-        Debug.Log("GameStateManager: Global state reset for main menu.");
+        Debug.Log("[GSM] Global state reset for main menu.");
     }
 }

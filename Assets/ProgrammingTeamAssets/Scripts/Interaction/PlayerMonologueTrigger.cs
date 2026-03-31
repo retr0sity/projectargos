@@ -1,11 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-/// <summary>
-/// Automatically triggers multi-line internal monologue when player enters trigger area.
-/// Player advances through lines by pressing interact button.
-/// FIXED: Better state management
-/// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class PlayerMonologueTrigger : MonoBehaviour
 {
@@ -13,74 +8,68 @@ public class PlayerMonologueTrigger : MonoBehaviour
     [TextArea(2, 4)]
     [SerializeField] private string[] monologueLines;
     [SerializeField] private bool oneTimeOnly = true;
-    
+
+    [Header("Persistent ID")]
+    [Tooltip("Unique ID for this trigger. Auto-generated if left empty.")]
+    [SerializeField] private string triggerID = "";
+
     [Header("Events")]
     [SerializeField] private UnityEvent onMonologueShown;
-    
-    private bool hasTriggered = false;
-    private bool isCurrentlyShowing = false; // FIX: Prevent double-trigger
-    
+
+    private bool isCurrentlyShowing = false;
+
     void Awake()
     {
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.isTrigger = true;
     }
-    
+
+    void Start()
+    {
+        if (string.IsNullOrEmpty(triggerID))
+            triggerID = $"{gameObject.scene.name}_{gameObject.name}";
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
             ShowMonologue();
-        }
     }
-    
+
     void ShowMonologue()
     {
-        // FIX: Don't trigger if already showing
         if (isCurrentlyShowing) return;
-        
-        // Check if already triggered
-        if (oneTimeOnly && hasTriggered) return;
+
+        if (oneTimeOnly && GameStateManager.Instance != null && GameStateManager.Instance.HasTriggerFired(triggerID)) return;
+
         if (DialogueManager.Instance == null) return;
         if (monologueLines.Length == 0) return;
-        
-        hasTriggered = true;
-        isCurrentlyShowing = true; // FIX: Mark as showing
-        
-        // Start the monologue sequence
+
+        if (oneTimeOnly && GameStateManager.Instance != null)
+            GameStateManager.Instance.MarkTriggerFired(triggerID);
+
+        isCurrentlyShowing = true;
         DialogueManager.Instance.StartMonologue(monologueLines);
-        
         onMonologueShown?.Invoke();
-        
-        // FIX: Reset showing state after a delay (monologue is non-blocking)
-        // This allows the monologue to play without locking the trigger forever
         Invoke("ResetShowingState", 0.5f);
     }
-    
+
     void ResetShowingState()
     {
         isCurrentlyShowing = false;
     }
-    
-    // ============================================
-    // PUBLIC METHODS
-    // ============================================
-    
-    /// <summary>
-    /// Force show the monologue, bypassing the oneTimeOnly check
-    /// </summary>
+
     public void ForceShowMonologue()
     {
-        hasTriggered = false;
+        if (GameStateManager.Instance != null)
+            GameStateManager.Instance.ResetTrigger(triggerID);
         ShowMonologue();
     }
-    
-    /// <summary>
-    /// Reset the trigger so it can be activated again
-    /// </summary>
+
     public void ResetTrigger()
     {
-        hasTriggered = false;
-        isCurrentlyShowing = false; // FIX: Also reset showing state
+        if (GameStateManager.Instance != null)
+            GameStateManager.Instance.ResetTrigger(triggerID);
+        isCurrentlyShowing = false;
     }
 }

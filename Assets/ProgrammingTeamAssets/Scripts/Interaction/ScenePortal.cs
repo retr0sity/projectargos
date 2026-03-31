@@ -2,12 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-/// <summary>
-/// Forward portal that transports player to another scene (like mini-game).
-/// Saves player's current position so they can return later.
-/// Requires "Interactable" tag and GameStateManager in scene.
-/// Each portal tracks its own usage independently.
-/// </summary>
 public class ScenePortal : MonoBehaviour
 {
     [Header("Portal Settings")]
@@ -18,6 +12,8 @@ public class ScenePortal : MonoBehaviour
     [Header("Return Position")]
     [Tooltip("Assign a Transform to specify an exact return spot. If empty, the portal's own position is used.")]
     [SerializeField] private Transform customReturnPoint;
+    [Tooltip("Should using this portal save a return point? Disable for portals that are part of a linear sequence (e.g. elevator).")]
+    [SerializeField] private bool saveReturnPoint = true; // <-- the new toggle
 
     [Header("Transition")]
     [SerializeField] private Animator transition;
@@ -42,7 +38,6 @@ public class ScenePortal : MonoBehaviour
     public void OnInteract()
     {
         Debug.Log($"[Portal] OnInteract called, target: {targetSceneName}");
-
         if (isLoading) return;
         if (oneTimeUse && GameStateManager.Instance != null && GameStateManager.Instance.HasPortalBeenUsed(portalID)) return;
 
@@ -74,8 +69,17 @@ public class ScenePortal : MonoBehaviour
         if (oneTimeUse)
             GameStateManager.Instance.MarkPortalAsUsed(portalID);
 
-        Vector3 returnPos = customReturnPoint != null ? customReturnPoint.position : transform.position;
-        GameStateManager.Instance.SetReturnPoint(SceneManager.GetActiveScene().name, returnPos);
+        // Only overwrite the return point if this portal is supposed to set one
+        if (saveReturnPoint)
+        {
+            Vector3 returnPos = customReturnPoint != null ? customReturnPoint.position : transform.position;
+            GameStateManager.Instance.SetReturnPoint(SceneManager.GetActiveScene().name, returnPos);
+            Debug.Log($"[Portal] Return point saved at {returnPos}");
+        }
+        else
+        {
+            Debug.Log($"[Portal] saveReturnPoint is off — existing return point preserved.");
+        }
 
         if (transition != null)
         {

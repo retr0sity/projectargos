@@ -3839,6 +3839,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+--- !u!95 &1201384028 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7209504281005749326, guid: 5d20081f1a4d94b48bc7453fc154f1b6, type: 3}
+  m_PrefabInstance: {fileID: 1201384027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1214956510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,7 +9256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0002297885}
+  m_AnchoredPosition: {x: 0, y: 0.00020528235}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1852803483693965270
@@ -9298,7 +9303,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8458469016236075573}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9842786
+  m_Size: 0.9958765
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9331,6 +9336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1695480829899142998, guid: 3b5852c0772d80242aeafc252f8833bf, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1201384028}
     - target: {fileID: 5693521257356041158, guid: 3b5852c0772d80242aeafc252f8833bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -118.53

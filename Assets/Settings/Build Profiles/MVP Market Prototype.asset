@@ -34,6 +34,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Development_Game/Floor.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/ElevatorToCity.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Development_Game/ElevatorToFloor.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []

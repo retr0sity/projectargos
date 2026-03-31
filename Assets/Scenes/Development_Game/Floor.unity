@@ -140,6 +140,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2062649018}
     - target: {fileID: 2892893964828577931, guid: 7a2bfe1be45ce877091ca716c4287699, type: 3}
+      propertyPath: saveReturnPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892893964828577931, guid: 7a2bfe1be45ce877091ca716c4287699, type: 3}
       propertyPath: targetSceneName
       value: ElevatorToCity
       objectReference: {fileID: 0}
@@ -421,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255977751412881562, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -49.4
+      value: -18.59
       objectReference: {fileID: 0}
     - target: {fileID: 5255977751412881562, guid: f2d0af3aeff7adb44b84fbd8ea4ee74f, type: 3}
       propertyPath: m_LocalPosition.z
