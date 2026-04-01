@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd060c9fef537643283a1f96f15d1c6d
+guid: a7f99b4adec937fcb84d51a2ee269cb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2690559317252564799
-    second: Dark Floor _0
+      213: -2478738912622523475
+    second: Press Space _0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dark Floor _0
+      name: Press Space _0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c81b006e8639aad0800000000000000
-      internalID: -2690559317252564799
+      spriteID: dab42368710c99dd0800000000000000
+      internalID: -2478738912622523475
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dark Floor _0: -2690559317252564799
+      Press Space _0: -2478738912622523475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

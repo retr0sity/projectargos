@@ -36,8 +36,11 @@ public class FeatherGameManager : MonoBehaviour
     [SerializeField] private float greyFeatherForce = 2.5f;
 
     [Header("Intro")]
-    [SerializeField] private float darkenDuration = 1.5f;
-    [SerializeField] private float introPauseDuration = 1f;
+    [SerializeField] private Animator backgroundAnimator;
+    [Tooltip("Name of the trigger parameter on the background animator.")]
+    [SerializeField] private string introAnimationTrigger = "Play";
+    [SerializeField] private float introAnimationDuration = 3f;
+    [SerializeField] private Sprite instructionSprite;
     [SerializeField] private AudioClip introSound;
 
     // Add these fields to FeatherGameManager
@@ -63,6 +66,9 @@ public class FeatherGameManager : MonoBehaviour
         {
             _featherRb = playerFeather.GetComponent<Rigidbody2D>();
             _featherRenderer = playerFeather.GetComponent<SpriteRenderer>();
+
+            if (_featherRenderer != null)
+            _featherRenderer.enabled = false;
 
             if (_featherRb != null)
             {
@@ -120,42 +126,129 @@ public class FeatherGameManager : MonoBehaviour
     }
 
     private IEnumerator IntroSequence()
+{
+    // Lock input
+    if (InputManager.Instance != null)
+        InputManager.Instance.SetControlLock(true);
+
+    // Hide all persistent UI
+    if (BadEndingTimerUI.Instance != null)
+        BadEndingTimerUI.Instance.gameObject.SetActive(false);
+    if (QuestUI.Instance != null)
+        QuestUI.Instance.gameObject.SetActive(false);
+
+    // Play background animation
+    if (backgroundAnimator != null)
     {
-        // Lock input
+        backgroundAnimator.SetTrigger(introAnimationTrigger);
+        yield return new WaitForSeconds(introAnimationDuration);
+    }
+
+    // Play intro sound
+    if (introSound != null && _audioSource != null)
+        _audioSource.PlayOneShot(introSound);
+
+    // Show instruction sprite and wait for E press
+    if (instructionSprite != null)
+    {
+        if (backgroundAnimator != null)
+        {
+            backgroundAnimator.speed = 0f;
+            // Force it to the last frame
+            backgroundAnimator.Play("dark_floor", 0, 1f);
+        }
+        GameObject instructionPanel = BuildInstructionPanel(instructionSprite);
+        
+        // Wait for player to press E
+        bool dismissed = false;
+        System.Action onInteract = () => dismissed = true;
+        
         if (InputManager.Instance != null)
-            InputManager.Instance.SetControlLock(true);
+            InputManager.Instance.InteractEvent += onInteract;
 
-                // Hide all persistent UI
-        if (BadEndingTimerUI.Instance != null)
-            BadEndingTimerUI.Instance.gameObject.SetActive(false);
-
-        if (QuestUI.Instance != null)
-            QuestUI.Instance.gameObject.SetActive(false);
-
-        // Darken screen
-        yield return StartCoroutine(DarkenScreen(darkenDuration));
-
-        // Play intro sound
-        if (introSound != null && _audioSource != null)
-            _audioSource.PlayOneShot(introSound);
-
-        yield return new WaitForSeconds(introPauseDuration);
-
-        // Brighten back
-        yield return StartCoroutine(BrightenScreen(darkenDuration));
-
-        // Unlock and start game
+        // Re-enable interact only
         if (InputManager.Instance != null)
             InputManager.Instance.SetControlLock(false);
 
-        if (_featherRb != null)
+        yield return new WaitUntil(() => dismissed);
+
+        if (InputManager.Instance != null)
+            InputManager.Instance.InteractEvent -= onInteract;
+
+        Destroy(instructionPanel);
+
+        // Lock again briefly before starting
+        if (InputManager.Instance != null)
+            InputManager.Instance.SetControlLock(true);
+    }
+
+    yield return new WaitForSeconds(0.5f);
+
+    // Unlock and start game
+    if (InputManager.Instance != null)
+        InputManager.Instance.SetControlLock(false);
+
+    if (_featherRb != null)
+    {
+        _featherRb.constraints  = RigidbodyConstraints2D.FreezeRotation;
+        _featherRb.gravityScale = gravityScale;
+    }
+
+    if (_featherRenderer != null)
+    _featherRenderer.enabled = true;
+    
+    _gameActive = true;
+    StartCoroutine(SpawnFeathers());
+}
+
+    private GameObject BuildInstructionPanel(Sprite sprite)
+    {
+        Canvas canvas = FindObjectOfType<Canvas>();
+        if (canvas == null)
         {
-            _featherRb.constraints  = RigidbodyConstraints2D.FreezeRotation;
-            _featherRb.gravityScale = gravityScale;
+            GameObject cgo = new GameObject("InstructionCanvas");
+            Canvas c = cgo.AddComponent<Canvas>();
+            c.renderMode   = RenderMode.ScreenSpaceOverlay;
+            c.sortingOrder = 99;
+            cgo.AddComponent<UnityEngine.UI.CanvasScaler>();
+            cgo.AddComponent<UnityEngine.UI.GraphicRaycaster>();
+            canvas = c;
         }
 
-        _gameActive = true;
-        StartCoroutine(SpawnFeathers());
+        GameObject panel = new GameObject("InstructionPanel", typeof(RectTransform));
+        panel.transform.SetParent(canvas.transform, false);
+
+        RectTransform rt = panel.GetComponent<RectTransform>();
+        rt.anchorMin        = new Vector2(0f, 0.5f);
+        rt.anchorMax        = new Vector2(1f, 0.5f);
+        rt.pivot            = new Vector2(0.5f, 0.5f);
+        rt.offsetMin        = new Vector2(0f, 0f);
+        rt.offsetMax        = new Vector2(0f, 0f);
+        rt.sizeDelta        = new Vector2(0f, 400f); // adjust height to taste
+
+        // Sprite display
+        UnityEngine.UI.Image img = panel.AddComponent<UnityEngine.UI.Image>();
+        img.sprite         = sprite;
+        img.preserveAspect = false; // <-- change to false
+
+        // Press E hint at bottom
+        GameObject hintGO = new GameObject("Hint", typeof(RectTransform));
+        hintGO.transform.SetParent(panel.transform, false);
+
+        RectTransform hintRT = hintGO.GetComponent<RectTransform>();
+        hintRT.anchorMin        = new Vector2(0f, 0f);
+        hintRT.anchorMax        = new Vector2(1f, 0f);
+        hintRT.pivot            = new Vector2(0.5f, 0f);
+        hintRT.anchoredPosition = new Vector2(0f, 10f);
+        hintRT.sizeDelta        = new Vector2(0f, 30f);
+
+        TMPro.TextMeshProUGUI hint = hintGO.AddComponent<TMPro.TextMeshProUGUI>();
+        hint.text      = "[E] Got it!";
+        hint.fontSize  = 16f;
+        hint.color     = Color.white;
+        hint.alignment = TMPro.TextAlignmentOptions.Center;
+
+        return panel;
     }
 
     private IEnumerator SpawnFeathers()
