@@ -219,6 +219,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4770425731245952142, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1582975703}
+    - targetCorrespondingSourceObject: {fileID: 4770425731245952142, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1582975719}
+    - targetCorrespondingSourceObject: {fileID: 4770425731245952142, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1582975718}
   m_SourcePrefab: {fileID: 100100000, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
 --- !u!1001 &199386026
 PrefabInstance:
@@ -1889,7 +1895,7 @@ MonoBehaviour:
   monologueLines:
   - We dead?
   - Ya we dead...
-  transition: {fileID: 418125488}
+  transitionObjectName: Crossfade
   badEndingSceneName: 
 --- !u!114 &1582975703
 MonoBehaviour:
@@ -1906,6 +1912,30 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   urgentColor: {r: 1, g: 0.25, b: 0.25, a: 1}
   urgentThreshold: 60
+--- !u!114 &1582975718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582975687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f7582c3be9229c09bd5baa63bf14ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1582975719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582975687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251471bdfa31b22509580bd3c2b9b560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1701462551
 PrefabInstance:
   m_ObjectHideFlags: 0

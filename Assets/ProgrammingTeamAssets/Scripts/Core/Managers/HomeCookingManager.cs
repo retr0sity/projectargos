@@ -689,6 +689,15 @@ public class HomeCookingManager : MonoBehaviour
             completedMeal.recipeName,
             completedMeal.qualityTier);
 
+        // Complete quest only if it's the cake, stored in inventory, and timer is still running
+        if (completedMeal.recipeName == "Cake Recipe" &&
+            GameStateManager.Instance != null &&
+            GameStateManager.Instance.badEndingTimerActive &&
+            QuestManager.Instance?.currentStage == 2)
+        {
+            QuestManager.Instance.CompleteQuest();
+        }
+
         FridgeManager.Instance.ClearPendingMeal();
         completedMeal = default;
     }

@@ -17,7 +17,7 @@ MonoBehaviour:
   requiredIngredients:
   - ingredientName: Olive Oil
     quantity: 1
-  - ingredientName: Egg
+  - ingredientName: Eggs
     quantity: 1
   - ingredientName: Yogurt
     quantity: 1
@@ -27,3 +27,4 @@ MonoBehaviour:
     quantity: 1
   - ingredientName: Flour
     quantity: 1
+  learnedByDefault: 0

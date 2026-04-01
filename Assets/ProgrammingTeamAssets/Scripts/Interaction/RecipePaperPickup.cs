@@ -100,6 +100,7 @@ private void ClosePanel()
             DialogueManager.Instance.StartMonologue(new[] { $"I learned how to make {recipeName.Replace(" Recipe", "")}!" });
 
         gameObject.SetActive(false);
+        QuestManager.Instance?.AdvanceToStage2();
     }
 
     private GameObject BuildPanel()
