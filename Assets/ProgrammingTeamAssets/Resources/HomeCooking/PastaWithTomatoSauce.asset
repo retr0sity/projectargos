@@ -21,3 +21,4 @@ MonoBehaviour:
     quantity: 1
   - ingredientName: Olive Oil
     quantity: 1
+  learnedByDefault: 1

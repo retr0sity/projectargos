@@ -438,6 +438,16 @@ public class HomeCookingManager : MonoBehaviour
         if (fridgePanel == null)
             return;
 
+        // Auto-learn default recipes every refresh — safe since LearnRecipe uses a HashSet
+        if (recipeLibrary != null && GameStateManager.Instance != null)
+        {
+            foreach (RecipeDefinition recipe in recipeLibrary.recipes)
+            {
+                if (recipe.learnedByDefault)
+                    GameStateManager.Instance.LearnRecipe(recipe.recipeName);
+            }
+        }
+
         fridgeContentsText.text = FridgeManager.Instance.BuildContentsSummary();
 
         bool hasIngredientsToStore = InventoryManager.Instance != null && InventoryManager.Instance.HasAnyIngredients();
@@ -458,40 +468,38 @@ public class HomeCookingManager : MonoBehaviour
     }
 
     private void RebuildRecipeButtons()
+{
+    if (recipeListContent == null)
+        return;
+
+    // Clear existing buttons first
+    for (int i = recipeListContent.childCount - 1; i >= 0; i--)
+        DestroyImmediate(recipeListContent.GetChild(i).gameObject);
+
+    if (recipeLibrary == null || recipeLibrary.recipes.Count == 0)
     {
-        if (recipeLibrary == null || recipeLibrary.recipes.Count == 0)
-        {
-            CreateText(recipeListContent, "NoRecipesText", "No recipes configured.",
-                Vector2.zero, Vector2.one, Vector2.zero, new Vector2(0f, 100f), 24f, TextAlignmentOptions.Center);
-            return;
-        }
-
-        bool anyLearned = false;
-        foreach (RecipeDefinition recipe in recipeLibrary.recipes)
-        {
-            if (!GameStateManager.Instance.IsRecipeLearned(recipe.recipeName))
-                continue;
-            anyLearned = true;
-            Button recipeButton = CreateRecipeButton(recipe);
-            recipeButton.transform.SetParent(recipeListContent, false);
-        }
-
-        if (!anyLearned)
-        {
-            CreateText(recipeListContent, "NoRecipesText", "No recipes learned yet.\nFind recipes out in the world.",
-                Vector2.zero, Vector2.one, Vector2.zero, new Vector2(0f, 100f), 22f, TextAlignmentOptions.Center);
-        }
-
-        foreach (RecipeDefinition recipe in recipeLibrary.recipes)
-        {
-            // Only show recipes the player has learned
-            if (!GameStateManager.Instance.IsRecipeLearned(recipe.recipeName))
-                continue;
-
-            Button recipeButton = CreateRecipeButton(recipe);
-            recipeButton.transform.SetParent(recipeListContent, false);
-        }
+        CreateText(recipeListContent, "NoRecipesText", "No recipes configured.",
+            Vector2.zero, Vector2.one, Vector2.zero, new Vector2(0f, 100f), 24f, TextAlignmentOptions.Center);
+        return;
     }
+
+    bool anyLearned = false;
+    foreach (RecipeDefinition recipe in recipeLibrary.recipes)
+    {
+        if (!GameStateManager.Instance.IsRecipeLearned(recipe.recipeName))
+            continue;
+
+        anyLearned = true;
+        Button recipeButton = CreateRecipeButton(recipe);
+        recipeButton.transform.SetParent(recipeListContent, false);
+    }
+
+    if (!anyLearned)
+    {
+        CreateText(recipeListContent, "NoRecipesText", "No recipes learned yet.\nFind recipes out in the world.",
+            Vector2.zero, Vector2.one, Vector2.zero, new Vector2(0f, 100f), 22f, TextAlignmentOptions.Center);
+    }
+}
 
     private Button CreateRecipeButton(RecipeDefinition recipe)
     {
