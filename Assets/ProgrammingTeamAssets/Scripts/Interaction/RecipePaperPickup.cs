@@ -38,6 +38,8 @@ public class RecipePaperPickup : MonoBehaviour
 
         gameObject.tag = "Interactable";
 
+        QuestManager.Instance?.StartQuest1(); // <-- add this
+
         // Hide if already picked up — checked two ways for safety
         if (GameStateManager.Instance != null && 
             (GameStateManager.Instance.HasTriggerFired(pickupID) || 
@@ -100,7 +102,7 @@ private void ClosePanel()
             DialogueManager.Instance.StartMonologue(new[] { $"I learned how to make {recipeName.Replace(" Recipe", "")}!" });
 
         gameObject.SetActive(false);
-        QuestManager.Instance?.AdvanceToStage2();
+        QuestManager.Instance?.AdvanceQuest1();
     }
 
     private GameObject BuildPanel()

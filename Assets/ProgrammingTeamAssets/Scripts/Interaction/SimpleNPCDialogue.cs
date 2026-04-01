@@ -196,7 +196,7 @@ public class SimpleNPCDialogue : MonoBehaviour
         if (startsBadEndingTimer && GameStateManager.Instance != null)
         {
             GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
-            QuestManager.Instance?.StartQuest(); // <-- add this
+            QuestManager.Instance?.StartQuest1();
         }
 
         onDialogueComplete?.Invoke();

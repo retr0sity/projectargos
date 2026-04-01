@@ -19,6 +19,14 @@ public class BadEndingTimerUI : MonoBehaviour
     private TextMeshProUGUI _timerText;
     private GameObject _panelRoot;
 
+    public static BadEndingTimerUI Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
+
     void Start()
     {
         BuildUI();

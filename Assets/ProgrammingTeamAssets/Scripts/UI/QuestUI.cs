@@ -23,6 +23,14 @@ public class QuestUI : MonoBehaviour
     private readonly Color _tabActiveColor   = new Color(0.2f, 0.2f, 0.38f, 1f);
     private readonly Color _tabInactiveColor = new Color(0.1f, 0.1f, 0.18f, 1f);
 
+    public static QuestUI Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
+
     void Start()
     {
         BuildUI();
