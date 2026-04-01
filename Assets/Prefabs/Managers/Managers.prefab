@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5243653171711151138}
   - component: {fileID: 6733504465255102412}
   - component: {fileID: 5817305057216364169}
-  - component: {fileID: 107249267490465367}
   - component: {fileID: 7033099745491326606}
   - component: {fileID: 8255428967502623301}
   - component: {fileID: 1256131603379723084}
@@ -99,39 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balance: 20
---- !u!114 &107249267490465367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770425731245952142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf11b10c31d3ecc4497321517e7a863f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: player_jump
-    clip: {fileID: 8300000, guid: 65872a253e76d4a4285414f7dab70f56, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-  - name: death_sfx
-    clip: {fileID: 8300000, guid: 0da3d58598822ee4d934f04d4a228407, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-  - name: dying_sfx
-    clip: {fileID: 8300000, guid: b435ef544cc639343bbd252fd5bc6ff8, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-  - name: bedsheet_spread
-    clip: {fileID: 8300000, guid: e1018c3bb0cab154d984944e7aaef9f7, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
 --- !u!114 &7033099745491326606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,8 +162,8 @@ MonoBehaviour:
   endingChosen: 0
   fogActive: 1
   hasReturnedToAlphaStartOnce: 0
-  returnSceneName: 
-  returnPosition: {x: 0, y: 0, z: 0}
+  badEndingTimerActive: 0
+  badEndingTimeRemaining: 0
 --- !u!114 &946812392475185683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec3d7732e37cfb489c1e3899370f8ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moodSlider: {fileID: 0}
-  moodLabel: {fileID: 0}
+  moodAnimator: {fileID: 0}
+  animationStateName: MoodAnimation
 --- !u!114 &3583152126212299812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8187e8d8412aa409895ec57bbf37fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSlider: {fileID: 0}
+  hungerAnimator: {fileID: 0}
+  animationStateName: HungerAnimation
   hungerLabel: {fileID: 0}
   verticalOffset: -70
