@@ -616,6 +616,8 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []
+  startsBadEndingTimer: 1
+  badEndingMinutes: 1
 --- !u!61 &859675214
 BoxCollider2D:
   m_ObjectHideFlags: 0

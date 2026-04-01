@@ -17,7 +17,8 @@ public class BadEndingManager : MonoBehaviour
     [SerializeField] private string[] monologueLines;
 
     [Header("Transition")]
-    [SerializeField] private Animator transition;
+    [Tooltip("The name of the Animator component in each scene that handles the crossfade.")]
+    [SerializeField] private string transitionObjectName = "Crossfade";
 
     [Header("Bad Ending Scene (optional)")]
     [Tooltip("If set, loads this scene after the monologue. Leave empty to stay in current scene.")]
@@ -53,11 +54,17 @@ public class BadEndingManager : MonoBehaviour
     {
         Debug.Log("[BadEnding] Timer hit zero — triggering bad ending.");
 
-        // Lock movement, keep interact available so player can advance monologue
         if (InputManager.Instance != null)
             InputManager.Instance.SetMovementLock(true);
 
-        // Play crossfade
+        // Find the crossfade animator in the CURRENT scene by name
+        Animator transition = null;
+        GameObject transitionGO = GameObject.Find(transitionObjectName);
+        if (transitionGO != null)
+            transition = transitionGO.GetComponentInChildren<Animator>();
+        else
+            Debug.LogWarning($"[BadEnding] Could not find '{transitionObjectName}' in current scene.");
+
         if (transition != null)
         {
             transition.updateMode = AnimatorUpdateMode.UnscaledTime;
@@ -70,19 +77,15 @@ public class BadEndingManager : MonoBehaviour
             yield return null;
         }
 
-        // Play monologue and wait for it to finish
         if (DialogueManager.Instance != null && monologueLines != null && monologueLines.Length > 0)
         {
             DialogueManager.Instance.StartMonologue(monologueLines);
-
-            // Wait until DialogueManager reports the monologue panel is no longer active
             yield return new WaitUntil(() =>
                 DialogueManager.Instance == null ||
                 !DialogueManager.Instance.IsAnyUIActive()
             );
         }
 
-        // Load bad ending scene if set
         if (!string.IsNullOrEmpty(badEndingSceneName))
             SceneManager.LoadScene(badEndingSceneName);
     }
