@@ -93,13 +93,13 @@ public class InventoryWalletPanel : MonoBehaviour
             // Meal row: taller to fit the Eat button
             le.minHeight       = 30f;
             le.preferredHeight = 30f;
+            le.flexibleHeight  = 0f;  // <-- add this to prevent stretching
 
-            // Horizontal layout so label and button sit side by side
             HorizontalLayoutGroup hlg = row.AddComponent<HorizontalLayoutGroup>();
-            hlg.childAlignment        = TextAnchor.MiddleLeft;
-            hlg.childControlHeight    = true;
-            hlg.childForceExpandHeight = true;
-            hlg.spacing               = 6f;
+            hlg.childAlignment         = TextAnchor.MiddleLeft;
+            hlg.childControlHeight     = true;
+            hlg.childForceExpandHeight = false; // <-- was true
+            hlg.spacing                = 6f;
 
             // Label
             GameObject labelGO = new GameObject("Label", typeof(RectTransform));
@@ -119,6 +119,8 @@ public class InventoryWalletPanel : MonoBehaviour
             LayoutElement btnLE = btnGO.AddComponent<LayoutElement>();
             btnLE.minWidth       = 54f;
             btnLE.preferredWidth = 54f;
+            btnLE.minHeight      = 24f;      // <-- add this
+            btnLE.preferredHeight = 24f;     // <-- add this
 
             Image btnImg = btnGO.AddComponent<Image>();
             btnImg.color = new Color(0.25f, 0.6f, 0.3f, 1f);
@@ -150,6 +152,7 @@ public class InventoryWalletPanel : MonoBehaviour
             // Plain ingredient row — unchanged behaviour
             le.minHeight       = 22f;
             le.preferredHeight = 22f;
+            
 
             TextMeshProUGUI tmp = row.AddComponent<TextMeshProUGUI>();
             tmp.text               = text;
