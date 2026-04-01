@@ -690,7 +690,7 @@ public class HomeCookingManager : MonoBehaviour
             completedMeal.qualityTier);
 
         // Complete quest only if it's the cake, stored in inventory, and timer is still running
-        if (completedMeal.recipeName == "Cake Recipe" &&
+        if (completedMeal.recipeName == "Birthday Cake" &&
             GameStateManager.Instance != null &&
             GameStateManager.Instance.badEndingTimerActive &&
             QuestManager.Instance?.currentStage == 2)

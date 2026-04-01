@@ -11,7 +11,7 @@ public class RecipePaperPickup : MonoBehaviour
 {
     [Header("Recipe")]
     [Tooltip("Must match the recipeName field on your RecipeDefinition asset exactly.")]
-    [SerializeField] private string recipeName = "Cake Recipe";
+    [SerializeField] private string recipeName = "Birthday Cake";
 
     [Header("Panel Content")]
     [SerializeField] private string paperTitle = "Handwritten Recipe";
