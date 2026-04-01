@@ -269,27 +269,27 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
-      propertyPath: fadeDuration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
       propertyPath: sounds.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
       propertyPath: sounds.Array.data[4].clip
       value: 
+      objectReference: {fileID: 8300000, guid: fc6229f560fab1e43a06d7c0599ffe8e, type: 3}
+    - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
       objectReference: {fileID: 8300000, guid: dfacff65a11300645b9a1605d112ba6d, type: 3}
     - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: MainTheme
+      propertyPath: sounds.Array.data[5].name
+      value: BossTheme
       objectReference: {fileID: 0}
     - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
-      propertyPath: sounds.Array.data[4].pitch
+      propertyPath: sounds.Array.data[5].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6757867749655647858, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
-      propertyPath: sounds.Array.data[4].volume
+      propertyPath: sounds.Array.data[5].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844142996221340041, guid: c870d0c427cd9ad48b96ac45fa5d326b, type: 3}
