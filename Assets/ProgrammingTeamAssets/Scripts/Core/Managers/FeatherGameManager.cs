@@ -68,13 +68,20 @@ public class FeatherGameManager : MonoBehaviour
             _featherRenderer = playerFeather.GetComponent<SpriteRenderer>();
 
             if (_featherRenderer != null)
-            _featherRenderer.enabled = false;
+                _featherRenderer.enabled = false;
 
             if (_featherRb != null)
             {
                 _featherRb.gravityScale = 0f; // off during intro
                 _featherRb.constraints  = RigidbodyConstraints2D.FreezeAll;
             }
+        }
+
+        // Play boss theme via AudioManager
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.Stop("MainTheme"); // stop any previous music
+            AudioManager.Instance.Play("BossTheme"); // play boss theme
         }
 
         _audioSource = gameObject.AddComponent<AudioSource>();
