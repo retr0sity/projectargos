@@ -54,9 +54,6 @@ public class QuestCompletionHandler : MonoBehaviour
     {
         yield return null;
 
-        // Stop the bad ending timer
-        if (GameStateManager.Instance != null)
-            GameStateManager.Instance.StopBadEndingTimer();
 
         // Show the yes/no choice
         if (DialogueManager.Instance != null)

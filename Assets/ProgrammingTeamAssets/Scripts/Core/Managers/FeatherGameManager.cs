@@ -40,6 +40,10 @@ public class FeatherGameManager : MonoBehaviour
     [SerializeField] private float introPauseDuration = 1f;
     [SerializeField] private AudioClip introSound;
 
+    // Add these fields to FeatherGameManager
+    private float _pushRecoveryTimer = 0f;
+    private const float PushRecoveryTime = 0.3f;
+
     private Rigidbody2D _featherRb;
     private AudioSource _audioSource;
     private int _feathersSpawned = 0;
@@ -71,21 +75,23 @@ public class FeatherGameManager : MonoBehaviour
         StartCoroutine(IntroSequence());
     }
 
-    void Update()
+        void Update()
     {
         if (!_gameActive || _isDead) return;
 
-        // Flap on space or interact
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
             Flap();
 
-        // Auto drift right
-        if (_featherRb != null)
+        // Only override x velocity when not recently pushed
+        if (_featherRb != null && _pushRecoveryTimer <= 0f)
         {
             Vector2 vel = _featherRb.linearVelocity;
             vel.x = autoMoveSpeed;
             _featherRb.linearVelocity = vel;
         }
+
+        if (_pushRecoveryTimer > 0f)
+            _pushRecoveryTimer -= Time.deltaTime;
 
         // Ground check
         if (groundCheck != null && playerFeather != null)
@@ -100,6 +106,11 @@ public class FeatherGameManager : MonoBehaviour
             if (playerFeather.transform.position.x >= doorTrigger.position.x)
                 StartCoroutine(ReachDoor());
         }
+    }
+
+    public void NotifyFeatherHit()
+    {
+        _pushRecoveryTimer = PushRecoveryTime;
     }
 
     private void Flap()
@@ -159,6 +170,7 @@ public class FeatherGameManager : MonoBehaviour
 
     private void SpawnObstacleFeather()
     {
+        Debug.Log($"[Feathers] Spawned: {_feathersSpawned}, white force active: {_feathersSpawned >= 45}, grey active: {_feathersSpawned >= 75}");
         float spawnY = Random.Range(spawnYMin, spawnYMax);
         Vector3 spawnPos = new Vector3(
             playerFeather.transform.position.x + spawnX,
@@ -181,9 +193,7 @@ public class FeatherGameManager : MonoBehaviour
             ObstacleFeather wof = white.GetComponent<ObstacleFeather>();
             if (wof != null)
             {
-                Vector2 force = _feathersSpawned >= 45
-                    ? Vector2.left * whiteFeatherForce
-                    : Vector2.left * 0.5f; // gentle drift before threshold
+                Vector2 force = Vector2.left * whiteFeatherForce;
                 wof.Init(force);
             }
         }
@@ -252,26 +262,29 @@ public class FeatherGameManager : MonoBehaviour
         float t = 0f;
         while (t < duration)
         {
+            if (cg == null) yield break; // <-- add this
             cg.alpha = Mathf.Lerp(0f, 1f, t / duration);
             t += Time.deltaTime;
             yield return null;
         }
-        cg.alpha = 1f;
+        if (cg != null) cg.alpha = 1f; // <-- and this
     }
 
     private IEnumerator BrightenScreen(float duration)
     {
         if (_overlay == null) yield break;
         CanvasGroup cg = _overlay.GetComponent<CanvasGroup>();
+        if (cg == null) yield break; // <-- add this
         float t = 0f;
         while (t < duration)
         {
+            if (cg == null) yield break; // <-- and this
             cg.alpha = Mathf.Lerp(1f, 0f, t / duration);
             t += Time.deltaTime;
             yield return null;
         }
-        cg.alpha = 0f;
-        Destroy(_overlay);
+        if (cg != null) cg.alpha = 0f;
+        if (_overlay != null) Destroy(_overlay); // <-- guard this too
     }
 
     private GameObject CreateOverlay()

@@ -13,14 +13,7 @@ public class ObstacleFeather : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float lifetime  = 10f;
 
-    void Awake()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-        _rb.gravityScale = 0f;
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null) col.isTrigger = true;
-        Destroy(gameObject, lifetime);
-    }
+    
 
     public void Init(Vector2 pushForce)
     {
@@ -29,21 +22,52 @@ public class ObstacleFeather : MonoBehaviour
         _rb.linearVelocity = Vector2.left * moveSpeed;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Awake()
+{
+    _rb = GetComponent<Rigidbody2D>();
+    _rb.gravityScale = 0f;
+    _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+    Collider2D col = GetComponent<Collider2D>();
+    if (col != null) col.isTrigger = true;
+    Destroy(gameObject, lifetime);
+}
+
+    void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
         Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
         if (playerRb != null)
-            playerRb.AddForce(_pushForce, ForceMode2D.Impulse);
+            playerRb.AddForce(_pushForce, ForceMode2D.Force);
 
-        Destroy(gameObject);
+        if (FeatherGameManager.Instance != null)
+            FeatherGameManager.Instance.NotifyFeatherHit();
     }
 
     void Update()
     {
-        // Destroy if too far left (off screen)
-        if (transform.position.x < -20f)
+        if (FeatherGameManager.Instance == null) return;
+
+        // Continuously push any player in range
+        Collider2D hit = Physics2D.OverlapBox(transform.position, GetComponent<Collider2D>().bounds.size, 0f);
+        if (hit != null && hit.CompareTag("Player"))
+        {
+            Rigidbody2D playerRb = hit.GetComponent<Rigidbody2D>();
+            if (playerRb != null)
+            {
+                playerRb.AddForce(_pushForce * Time.deltaTime * 50f, ForceMode2D.Force);
+                FeatherGameManager.Instance.NotifyFeatherHit();
+            }
+        }
+
+        // Destroy when far behind player
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null && transform.position.x < player.transform.position.x - 20f)
             Destroy(gameObject);
+    }
+    
+    void OnDestroy()
+    {
+        Debug.Log($"[ObstacleFeather] Destroyed at position {transform.position}, time alive: {Time.time}");
     }
 }
