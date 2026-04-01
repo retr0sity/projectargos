@@ -11,9 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4db7850a8fe4e0f8a3e0f6f749aa438, type: 3}
   m_Name: RecipeLibrary
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   recipes:
   - {fileID: 11400000, guid: bb9ebca4cbe74e64bb71171e0750e8ec, type: 2}
-  - {fileID: 11400000, guid: 217bcde2251e489c98e35e5ab390abed, type: 2}
-  - {fileID: 11400000, guid: b83e6a7ce37140a8b20b275f19e28a07, type: 2}
-  - {fileID: 11400000, guid: 4dede8226d1549f6ae9fae3f2002cac5, type: 2}
+  - {fileID: 11400000, guid: faff8eb08cbf9940db92de2bd3fe7bce, type: 2}

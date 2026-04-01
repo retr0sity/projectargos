@@ -194,4 +194,15 @@ public class GameStateManager : MonoBehaviour
         badEndingTimeRemaining = 0f;
         Debug.Log("[GSM] Bad ending timer stopped.");
     }
+
+    // Add with other collections
+    private HashSet<string> learnedRecipes = new HashSet<string>();
+
+    public bool IsRecipeLearned(string recipeName) => learnedRecipes.Contains(recipeName);
+
+    public void LearnRecipe(string recipeName)
+    {
+        learnedRecipes.Add(recipeName);
+        Debug.Log($"[GSM] Recipe learned: {recipeName}");
+    }
 }
