@@ -38,6 +38,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Development_Game/ElevatorToFloor.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/FinalBoss.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Development_Game/09_Credits.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
