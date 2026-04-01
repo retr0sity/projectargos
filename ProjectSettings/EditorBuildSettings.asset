@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo_Game/08_cave_afterminigame.unity
     guid: 7d752fbaf9f6dc041a67a07f62394d9c
   - enabled: 1
-    path: Assets/Scenes/Development_Game/09_Credits.unity
+    path: Assets/Scenes/Development_Game/Credits.unity
     guid: 103a7f64e458c2c44a2fd9c14cfae46f
   - enabled: 0
     path: Assets/Scenes/Personal Scenes/Maria/Level_1_City/1.0.Test Level 1.unity

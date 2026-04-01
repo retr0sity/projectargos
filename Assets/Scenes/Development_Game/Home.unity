@@ -2087,7 +2087,7 @@ MonoBehaviour:
   - We dead?
   - Ya we dead...
   transitionObjectName: Crossfade
-  badEndingSceneName: 
+  badEndingSceneName: Credits
 --- !u!114 &1582975703
 MonoBehaviour:
   m_ObjectHideFlags: 0
