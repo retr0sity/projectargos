@@ -12,16 +12,60 @@ public class QuestManager : MonoBehaviour
         public string description;
     }
 
-    [Header("Quest Settings")]
-    [SerializeField] private string questName = "A Taste of Home";
-    [SerializeField] public QuestStage[] stages = new QuestStage[]
+    [System.Serializable]
+    public class QuestData
     {
-        new QuestStage { title = "A Taste of Home", description = "Find a recipe somewhere in the world." },
-        new QuestStage { title = "A Taste of Home", description = "Cook the cake using the recipe you found." }
-    };
-    [SerializeField] private string completionText = "Quest Complete!";
+        public string questName;
+        public QuestStage[] stages;
+        public string completionText = "Quest Complete!";
+        [HideInInspector] public int currentStage = 0;
 
-    public int currentStage { get; private set; } = 0;
+        public bool IsStarted() => currentStage > 0;
+        public bool IsComplete() => currentStage > stages.Length;
+        public bool IsActive() => IsStarted() && !IsComplete();
+
+        public string GetTitle() => currentStage > 0 && currentStage <= stages.Length
+            ? stages[currentStage - 1].title
+            : questName;
+
+        public string GetDescription()
+        {
+            if (IsComplete()) return completionText;
+            if (currentStage > 0 && currentStage <= stages.Length)
+                return stages[currentStage - 1].description;
+            return "";
+        }
+
+        public void Advance()
+        {
+            currentStage++;
+            Debug.Log($"[Quest: {questName}] Stage {currentStage}: {GetDescription()}");
+        }
+
+        public void Reset() => currentStage = 0;
+    }
+
+    [Header("Quests")]
+    public QuestData quest1 = new QuestData
+    {
+        questName = "A Taste of Home",
+        completionText = "Quest Complete!",
+        stages = new QuestStage[]
+        {
+            new QuestStage { title = "A Taste of Home", description = "Find a recipe somewhere in the world." },
+            new QuestStage { title = "A Taste of Home", description = "Cook the birthday cake using the recipe you found." }
+        }
+    };
+
+    public QuestData quest2 = new QuestData
+    {
+        questName = "Hungry?",
+        completionText = "Quest Complete!",
+        stages = new QuestStage[]
+        {
+            new QuestStage { title = "Hungry?", description = "Eat a cooked meal." }
+        }
+    };
 
     void Awake()
     {
@@ -30,46 +74,47 @@ public class QuestManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public string GetTitle() => currentStage > 0 && currentStage <= stages.Length
-        ? stages[currentStage - 1].title
-        : questName;
-
-    public string GetDescription()
+    // ── Quest 1 ────────────────────────────────────────────────────────
+    public void StartQuest1()
     {
-        if (IsComplete()) return completionText;
-        if (currentStage > 0 && currentStage <= stages.Length)
-            return stages[currentStage - 1].description;
-        return "";
+        if (quest1.IsStarted()) return;
+        quest1.Advance();
     }
 
-    public bool IsActive() => currentStage > 0 && !IsComplete();
-    public bool IsComplete() => currentStage > stages.Length;
-
-    public void StartQuest()
+    public void AdvanceQuest1()
     {
-        if (currentStage != 0) return;
-        SetStage(1);
+        if (!quest1.IsActive()) return;
+        quest1.Advance();
     }
 
-    public void AdvanceToStage2()
+    public void CompleteQuest1()
     {
-        if (currentStage != 1) return;
-        SetStage(2);
+        if (quest1.IsComplete()) return;
+        while (!quest1.IsComplete()) quest1.Advance();
     }
 
-    public void CompleteQuest()
+    public bool IsQuest1Complete() => quest1.IsComplete();
+
+    // ── Quest 2 ────────────────────────────────────────────────────────
+    public void StartQuest2()
     {
-        SetStage(stages.Length + 1);
+        if (quest2.IsStarted()) return;
+        quest2.Advance();
+        Debug.Log("[Quest2] Started — eat a cooked meal.");
     }
 
-    private void SetStage(int stage)
+    public void CompleteQuest2()
     {
-        currentStage = stage;
-        Debug.Log($"[Quest] Stage {stage}: {GetDescription()}");
+        if (quest2.IsComplete()) return;
+        while (!quest2.IsComplete()) quest2.Advance();
     }
 
+    public bool IsQuest2Complete() => quest2.IsComplete();
+
+    // ── Reset ──────────────────────────────────────────────────────────
     public void ResetQuest()
     {
-        currentStage = 0;
+        quest1.Reset();
+        quest2.Reset();
     }
 }

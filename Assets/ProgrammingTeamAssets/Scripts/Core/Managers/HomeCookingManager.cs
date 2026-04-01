@@ -693,9 +693,9 @@ public class HomeCookingManager : MonoBehaviour
         if (completedMeal.recipeName == "Birthday Cake" &&
             GameStateManager.Instance != null &&
             GameStateManager.Instance.badEndingTimerActive &&
-            QuestManager.Instance?.currentStage == 2)
+            QuestManager.Instance?.quest1.currentStage == 2)
         {
-            QuestManager.Instance.CompleteQuest();
+            QuestManager.Instance.CompleteQuest1();
         }
 
         FridgeManager.Instance.ClearPendingMeal();

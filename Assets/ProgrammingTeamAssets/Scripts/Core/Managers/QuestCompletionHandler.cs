@@ -40,12 +40,12 @@ public class QuestCompletionHandler : MonoBehaviour
         if (hasTriggered) return;
         if (QuestManager.Instance == null) return;
 
-        // Watch for quest completion
-        if (!QuestManager.Instance.IsComplete()) return;
-        if (QuestManager.Instance.currentStage == lastCheckedStage) return;
+        // Wait for BOTH quests to be complete
+        if (!QuestManager.Instance.IsQuest1Complete()) return;
+        if (!QuestManager.Instance.IsQuest2Complete()) return;
 
         hasTriggered = true;
-        lastCheckedStage = QuestManager.Instance.currentStage;
+        lastCheckedStage = QuestManager.Instance.quest1.currentStage;
         StartCoroutine(ShowChoiceAfterFrame());
     }
 
