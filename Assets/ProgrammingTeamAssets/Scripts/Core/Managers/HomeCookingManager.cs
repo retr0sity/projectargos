@@ -670,6 +670,8 @@ public class HomeCookingManager : MonoBehaviour
             MoodManager.Instance.AdjustMood(bonus, $"{completedMeal.resultMealName} lifted your mood!");
         }
 
+        QuestManager.Instance?.CompleteQuest2(); // <-- add this
+
         FridgeManager.Instance.ClearPendingMeal();
         completedMeal = default;
     }

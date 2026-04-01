@@ -129,21 +129,22 @@ public class InventoryManager : MonoBehaviour
 
     // Add this method to InventoryManager
 public void EatMeal(InventoryItem meal)
-{
-    if (meal == null || meal.itemKind != InventoryItemKind.CookedMeal) return;
-
-    float moodBonus = meal.qualityTier switch
     {
-        MealQualityTier.Simple    => 5f,
-        MealQualityTier.Tasty     => 10f,
-        MealQualityTier.Excellent => 15f,
-        _                         => 5f
-    };
+        if (meal == null || meal.itemKind != InventoryItemKind.CookedMeal) return;
 
-    HungerManager.Instance?.Eat();
-    MoodManager.Instance?.AdjustMood(moodBonus, $"{meal.mealName} was delicious!");
-    items.Remove(meal);
+        float moodBonus = meal.qualityTier switch
+        {
+            MealQualityTier.Simple    => 5f,
+            MealQualityTier.Tasty     => 10f,
+            MealQualityTier.Excellent => 15f,
+            _                         => 5f
+        };
 
-    Debug.Log($"[Inventory] Ate '{meal.mealName}' ({meal.qualityTier}). Mood +{moodBonus}.");
-}
+        HungerManager.Instance?.Eat();
+        MoodManager.Instance?.AdjustMood(moodBonus, $"{meal.mealName} was delicious!");
+        QuestManager.Instance?.CompleteQuest2(); // <-- add this
+        items.Remove(meal);
+
+        Debug.Log($"[Inventory] Ate '{meal.mealName}' ({meal.qualityTier}). Mood +{moodBonus}.");
+    }
 }

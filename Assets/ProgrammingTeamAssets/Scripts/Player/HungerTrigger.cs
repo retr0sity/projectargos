@@ -25,7 +25,6 @@ public class HungerTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-
         if (triggerOnce && GameStateManager.Instance != null && GameStateManager.Instance.HasTriggerFired(triggerID))
             return;
 
@@ -36,5 +35,7 @@ public class HungerTrigger : MonoBehaviour
             HungerManager.Instance.DecreaseHunger();
         else
             HungerManager.Instance.DecreaseHunger(amount);
+
+        QuestManager.Instance?.StartQuest2(); // <-- add this
     }
 }

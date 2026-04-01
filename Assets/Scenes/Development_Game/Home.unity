@@ -171,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817305057216364169, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
       propertyPath: balance
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8355824785896125047, guid: a5a45d46087bacb4da1208e643aed806, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1943,13 +1943,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251471bdfa31b22509580bd3c2b9b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questName: A Taste of Home
-  stages:
-  - title: A Taste of Home
-    description: Find a recipe somewhere in the world.
-  - title: A Taste of Home
-    description: Cook the cake using the recipe you found.
-  completionText: Quest Complete!
+  quest1:
+    questName: A Taste of Home
+    stages:
+    - title: A Taste of Home
+      description: Find a recipe somewhere in the world.
+    - title: A Taste of Home
+      description: Cook the birthday cake using the recipe you found.
+    completionText: Quest Complete!
+    currentStage: 0
+  quest2:
+    questName: Hungry?
+    stages:
+    - title: Hungry?
+      description: Eat a cooked meal.
+    completionText: Quest Complete!
+    currentStage: 0
 --- !u!114 &1582975734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,10 +1972,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choicePrompt: Do you want to go to Demetra's party?
-  yesSceneName: scene1
+  yesSceneName: FinalBoss
   yesMonologue:
   - Okay, let's get going then.
-  noSceneName: scene2
+  noSceneName: Credits
   noMonologue:
   - It's a bit sad I decided not to go.
   - Maybe next time...
