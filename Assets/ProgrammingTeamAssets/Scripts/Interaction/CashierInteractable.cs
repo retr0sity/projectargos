@@ -223,25 +223,26 @@ public class CashierInteractable : MonoBehaviour
         foreach (Transform child in cartContentsParent)
             Destroy(child.gameObject);
 
-        for (int i = 0; i < CartManager.Instance.items.Count; i++)
+        foreach (CartManager.CartItem item in CartManager.Instance.items)
         {
-            var item = CartManager.Instance.items[i];
-            int capturedIndex = i;
-
             var row = Instantiate(cartRowPrefab, cartContentsParent);
 
             var nameText = row.transform.Find("NameOfProductText")?.GetComponent<TextMeshProUGUI>();
-            if (nameText != null) nameText.text = item.productName;
+            if (nameText != null)
+                nameText.text = item.productName;
 
             var removeBtn = row.transform.Find("RemoveButton")?.GetComponent<Button>();
             if (removeBtn != null)
-                removeBtn.onClick.AddListener(() => OnCartRemoveItem(capturedIndex));
+            {
+                removeBtn.onClick.RemoveAllListeners();
+                removeBtn.onClick.AddListener(() => OnCartRemoveItem(item));
+            }
         }
     }
 
-    void OnCartRemoveItem(int index)
+    void OnCartRemoveItem(CartManager.CartItem item)
     {
-        CartManager.Instance.RemoveItem(index);
+        CartManager.Instance.items.Remove(item);
 
         if (CartManager.Instance.items.Count == 0)
         {
@@ -252,7 +253,6 @@ public class CashierInteractable : MonoBehaviour
 
         PopulateCartContents();
 
-        // If no Done button is set, auto-close after each removal and re-run the prompt
         if (cartDoneButton == null)
         {
             CloseCartContentsPanel();
