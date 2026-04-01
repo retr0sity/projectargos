@@ -9,6 +9,10 @@ public class InteractionDetector : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float interactionRange = 2f;
+    [Header("Highlight")]
+    [SerializeField] private Color highlightColor = new Color(1f, 1f, 0.5f, 1f);
+    [SerializeField] private float highlightIntensity = 0.3f;
+    private Color _previousColor = Color.white;
     
     private GameObject currentInteractable;
     private bool inputSubscribed = false;
@@ -106,6 +110,30 @@ public class InteractionDetector : MonoBehaviour
         if (closest != currentInteractable)
         {
             currentInteractable = closest;
+            UpdateInteractionPrompt();
+        }
+        if (closest != currentInteractable)
+        {
+            // Remove highlight from previous
+            if (currentInteractable != null)
+            {
+                SpriteRenderer sr = currentInteractable.GetComponent<SpriteRenderer>();
+                if (sr != null) sr.color = _previousColor;
+            }
+
+            currentInteractable = closest;
+
+            // Highlight new
+            if (currentInteractable != null)
+            {
+                SpriteRenderer sr = currentInteractable.GetComponent<SpriteRenderer>();
+                if (sr != null)
+                {
+                    _previousColor = sr.color;
+                    sr.color = Color.Lerp(_previousColor, highlightColor, highlightIntensity);
+                }
+            }
+
             UpdateInteractionPrompt();
         }
     }
