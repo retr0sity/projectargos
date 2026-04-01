@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: 15f5a6696923949fb895d78d083e811a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8283245333198436793
+    second: You did it_0
+  - first:
+      213: -1077144689337326744
+    second: You did it_1
+  - first:
+      213: -6251746739014778058
+    second: You did it_2
+  - first:
+      213: -6357271774263095137
+    second: You did it_3
+  - first:
+      213: 4028263464100037684
+    second: You did it_4
+  - first:
+      213: -2930198439957743768
+    second: You did it_5
+  - first:
+      213: 656849073960371520
+    second: You did it_6
+  - first:
+      213: -798719384520271342
+    second: You did it_7
+  - first:
+      213: -1163540220505528553
+    second: You did it_8
+  - first:
+      213: -1685606737940562455
+    second: You did it_9
+  - first:
+      213: -1257495893341497415
+    second: You did it_10
+  - first:
+      213: 8893772362954638239
+    second: You did it_11
+  - first:
+      213: 7575912221374707744
+    second: You did it_12
+  - first:
+      213: 1097255863359097762
+    second: You did it_13
+  - first:
+      213: 601276059266300125
+    second: You did it_14
+  - first:
+      213: 6834971286193881676
+    second: You did it_15
+  - first:
+      213: -5554467748502171806
+    second: You did it_16
+  - first:
+      213: 3429599424690350444
+    second: You did it_17
+  - first:
+      213: 6141260543087037351
+    second: You did it_18
+  - first:
+      213: 2276612551702064960
+    second: You did it_19
+  - first:
+      213: -5069905292715137128
+    second: You did it_20
+  - first:
+      213: -2810305288287839965
+    second: You did it_21
+  - first:
+      213: 1399611104960199032
+    second: You did it_22
+  - first:
+      213: 2579402106216319824
+    second: You did it_23
+  - first:
+      213: 864670308368239857
+    second: You did it_24
+  - first:
+      213: 2003654389234503841
+    second: You did it_25
+  - first:
+      213: -815227091957544034
+    second: You did it_26
+  - first:
+      213: 9211269666202750318
+    second: You did it_27
+  - first:
+      213: -8179342670178937200
+    second: You did it_28
+  - first:
+      213: 490131147909359174
+    second: You did it_29
+  - first:
+      213: -6977231218985482561
+    second: You did it_30
+  - first:
+      213: -8366178086732951679
+    second: You did it_31
+  - first:
+      213: -6612861476772776855
+    second: You did it_32
+  - first:
+      213: -793793945111331641
+    second: You did it_33
+  - first:
+      213: -6543048882159748591
+    second: You did it_34
+  - first:
+      213: 6587064296989436205
+    second: You did it_35
+  - first:
+      213: -2763451705777117043
+    second: You did it_36
+  - first:
+      213: 7631612555243079206
+    second: You did it_37
+  - first:
+      213: -3304536754154334279
+    second: You did it_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: You did it_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 1640
+        height: 1950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7468b4781400c0d80800000000000000
+      internalID: -8283245333198436793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1868
+        width: 158
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863a95cac963d01f0800000000000000
+      internalID: -1077144689337326744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_2
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 2139
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633415bc6755d39a0800000000000000
+      internalID: -6251746739014778058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2148
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f905e6ae00f66c7a0800000000000000
+      internalID: -6357271774263095137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_4
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 2141
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4340e57274447e730800000000000000
+      internalID: 4028263464100037684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 2140
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8673ae03b08d557d0800000000000000
+      internalID: -2930198439957743768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_6
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 2133
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045c37ca0c89d1900800000000000000
+      internalID: 656849073960371520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_7
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 2131
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a537a93f06ae4f0800000000000000
+      internalID: -798719384520271342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_8
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2131
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71763ea85564adfe0800000000000000
+      internalID: -1163540220505528553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2135
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed3c024a958b98e0800000000000000
+      internalID: -1685606737940562455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_10
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 2128
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b71ed2c52a7c8ee0800000000000000
+      internalID: -1257495893341497415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_11
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 2128
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f930917c7d60d6b70800000000000000
+      internalID: 8893772362954638239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_12
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2133
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0287494c60c032960800000000000000
+      internalID: 7575912221374707744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_13
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1123
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abcb3be46c3a3f00800000000000000
+      internalID: 1097255863359097762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_14
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1060
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8b384e369285800800000000000000
+      internalID: 601276059266300125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_15
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 964
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c49beb22bade50800000000000000
+      internalID: 6834971286193881676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_16
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 958
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f0a26f2019ae2b0800000000000000
+      internalID: -5554467748502171806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_17
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 879
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c696d868182689f20800000000000000
+      internalID: 3429599424690350444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_18
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 826
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab43d71de32a3550800000000000000
+      internalID: 6141260543087037351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_19
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 351
+        width: 56
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fa563cd07289f10800000000000000
+      internalID: 2276612551702064960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_20
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 538
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89767de6ff314a9b0800000000000000
+      internalID: -5069905292715137128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_21
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 498
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329933dda3acff8d0800000000000000
+      internalID: -2810305288287839965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_22
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 508
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87938de62ea6c6310800000000000000
+      internalID: 1399611104960199032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_23
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 504
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b0be1ac80ebc320800000000000000
+      internalID: 2579402106216319824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_24
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 502
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fccd12701deffb00800000000000000
+      internalID: 864670308368239857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_25
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 481
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a099fa1d096ecb10800000000000000
+      internalID: 2003654389234503841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_26
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 464
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b8894774bbfa4f0800000000000000
+      internalID: -815227091957544034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_27
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 452
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d885045f005df70800000000000000
+      internalID: 9211269666202750318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_28
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 440
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0961acf6d232d7e80800000000000000
+      internalID: -8179342670178937200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_29
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 434
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646ed74aeab4dc600800000000000000
+      internalID: 490131147909359174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_30
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 421
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6ca9c5c25eb2f90800000000000000
+      internalID: -6977231218985482561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_31
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f00a42b5d55eb80800000000000000
+      internalID: -8366178086732951679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_32
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 434
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964f718f5856a34a0800000000000000
+      internalID: -6612861476772776855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_33
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 190
+        width: 186
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc78c4dc90ebf4f0800000000000000
+      internalID: -793793945111331641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_34
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 146
+        width: 106
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11af9de45bb6235a0800000000000000
+      internalID: -6543048882159748591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_35
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 254
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29a6be0414f96b50800000000000000
+      internalID: 6587064296989436205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_36
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 163
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d882533a05f36a9d0800000000000000
+      internalID: -2763451705777117043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626ccaa5f2fe8e960800000000000000
+      internalID: 7631612555243079206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You did it_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 158
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7986d845de322d0800000000000000
+      internalID: -3304536754154334279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      You did it_0: -8283245333198436793
+      You did it_1: -1077144689337326744
+      You did it_10: -1257495893341497415
+      You did it_11: 8893772362954638239
+      You did it_12: 7575912221374707744
+      You did it_13: 1097255863359097762
+      You did it_14: 601276059266300125
+      You did it_15: 6834971286193881676
+      You did it_16: -5554467748502171806
+      You did it_17: 3429599424690350444
+      You did it_18: 6141260543087037351
+      You did it_19: 2276612551702064960
+      You did it_2: -6251746739014778058
+      You did it_20: -5069905292715137128
+      You did it_21: -2810305288287839965
+      You did it_22: 1399611104960199032
+      You did it_23: 2579402106216319824
+      You did it_24: 864670308368239857
+      You did it_25: 2003654389234503841
+      You did it_26: -815227091957544034
+      You did it_27: 9211269666202750318
+      You did it_28: -8179342670178937200
+      You did it_29: 490131147909359174
+      You did it_3: -6357271774263095137
+      You did it_30: -6977231218985482561
+      You did it_31: -8366178086732951679
+      You did it_32: -6612861476772776855
+      You did it_33: -793793945111331641
+      You did it_34: -6543048882159748591
+      You did it_35: 6587064296989436205
+      You did it_36: -2763451705777117043
+      You did it_37: 7631612555243079206
+      You did it_38: -3304536754154334279
+      You did it_4: 4028263464100037684
+      You did it_5: -2930198439957743768
+      You did it_6: 656849073960371520
+      You did it_7: -798719384520271342
+      You did it_8: -1163540220505528553
+      You did it_9: -1685606737940562455
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -515,7 +515,7 @@ MonoBehaviour:
   playerFeather: {fileID: 852137636}
   groundCheck: {fileID: 1499701031}
   doorTrigger: {fileID: 608633596}
-  creditsSceneName: Credits
+  creditsSceneName: GoodEnding
   transitionObjectName: Crossfade
   flapForce: 5
   autoMoveSpeed: 1.2

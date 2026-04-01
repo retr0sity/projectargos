@@ -2084,10 +2084,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monologueLines:
-  - We dead?
-  - Ya we dead...
+  - Maybe another time...
   transitionObjectName: Crossfade
-  badEndingSceneName: Credits
+  badEndingSceneName: BadEnding
 --- !u!114 &1582975703
 MonoBehaviour:
   m_ObjectHideFlags: 0
