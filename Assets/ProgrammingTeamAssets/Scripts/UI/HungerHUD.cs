@@ -3,26 +3,41 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// Always-visible hunger bar. Mirrors MoodHUD exactly — sits just below it in the top-left.
-/// Attach to the same persistent GameObject as MoodHUD (or any DontDestroyOnLoad object).
-/// Builds its own UI at runtime — no prefab needed.
+/// Hunger HUD that drives a frame-by-frame animation based on hunger percentage.
+/// Assign an Animator with a single animation clip containing all hunger frames.
+/// The script scrubs to the correct frame based on current hunger value.
 /// </summary>
 public class HungerHUD : MonoBehaviour
 {
+    [Header("Animation")]
+    [Tooltip("Animator on the hunger UI image GameObject.")]
+    [SerializeField] private Animator hungerAnimator;
+    [Tooltip("Exact name of the animation state in the Animator.")]
+    [SerializeField] private string animationStateName = "HungerAnimation";
+
     [Header("UI References (optional — auto-created if null)")]
-    public Slider hungerSlider;
     public TextMeshProUGUI hungerLabel;
 
-    // How far below the mood bar to sit (pixels). Increase if bars overlap.
     [Header("Layout")]
     [SerializeField] private float verticalOffset = -54f;
 
     private Canvas _canvas;
+    private bool _animatorReady = false;
 
-    void Awake()
+    void Start()
     {
-        if (hungerSlider == null)
+        if (hungerLabel == null)
             BuildPlaceholderUI();
+
+        if (hungerAnimator != null)
+        {
+            hungerAnimator.speed = 0f;
+            _animatorReady = true;
+        }
+        else
+        {
+            Debug.LogWarning("[HungerHUD] No Animator assigned — animation won't play.");
+        }
     }
 
     void Update()
@@ -32,16 +47,19 @@ public class HungerHUD : MonoBehaviour
         float normalized = (HungerManager.Instance.hunger - HungerManager.Instance.minHunger)
                          / (HungerManager.Instance.maxHunger - HungerManager.Instance.minHunger);
 
-        if (hungerSlider != null)
-            hungerSlider.value = normalized;
+        // Scrub animator to correct frame based on hunger
+        if (_animatorReady && hungerAnimator != null)
+        {
+            // Invert: full hunger = first frame, empty = last frame
+            float animPosition = normalized;
+            hungerAnimator.Play(animationStateName, 0, animPosition);
+        }
 
-        if (hungerLabel != null)
-            hungerLabel.text = $"Hunger: {HungerManager.Instance.hunger:F0}";
     }
 
     void BuildPlaceholderUI()
     {
-        // Reuse existing Canvas on this GO if MoodHUD already added one
+        // Reuse MoodHUD's canvas — don't create a new one
         _canvas = gameObject.GetComponent<Canvas>();
         if (_canvas == null)
         {
@@ -53,69 +71,16 @@ public class HungerHUD : MonoBehaviour
             gameObject.AddComponent<GraphicRaycaster>();
         }
 
-        // Container panel — top-left, below mood bar
+        // Panel sits directly below MoodHUD panel (-16 offset - 50 height = -66)
         GameObject panel = new GameObject("HungerPanel", typeof(RectTransform));
         panel.transform.SetParent(transform, false);
         RectTransform pt = panel.GetComponent<RectTransform>();
         pt.anchorMin        = new Vector2(0f, 1f);
         pt.anchorMax        = new Vector2(0f, 1f);
         pt.pivot            = new Vector2(0f, 1f);
-        pt.anchoredPosition = new Vector2(16f, verticalOffset);
+        pt.anchoredPosition = new Vector2(16f, -66f);
         pt.sizeDelta        = new Vector2(220f, 50f);
 
-        panel.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0.55f);
-
-        // Label
-        GameObject labelGO = new GameObject("HungerLabel", typeof(RectTransform));
-        labelGO.transform.SetParent(panel.transform, false);
-        RectTransform lt = labelGO.GetComponent<RectTransform>();
-        lt.anchorMin        = lt.anchorMax = new Vector2(0f, 1f);
-        lt.pivot            = new Vector2(0f, 1f);
-        lt.anchoredPosition = new Vector2(8f, -4f);
-        lt.sizeDelta        = new Vector2(200f, 20f);
-
-        hungerLabel = labelGO.AddComponent<TextMeshProUGUI>();
-        hungerLabel.fontSize = 13f;
-        hungerLabel.color    = Color.white;
-        hungerLabel.text     = "Hunger: --";
-
-        // Slider background track
-        GameObject sliderGO = new GameObject("HungerSlider", typeof(RectTransform));
-        sliderGO.transform.SetParent(panel.transform, false);
-        RectTransform st = sliderGO.GetComponent<RectTransform>();
-        st.anchorMin        = st.anchorMax = new Vector2(0f, 0f);
-        st.pivot            = new Vector2(0f, 0f);
-        st.anchoredPosition = new Vector2(8f, 6f);
-        st.sizeDelta        = new Vector2(204f, 14f);
-
-        hungerSlider             = sliderGO.AddComponent<Slider>();
-        hungerSlider.minValue    = 0f;
-        hungerSlider.maxValue    = 1f;
-        hungerSlider.interactable = false;
-
-        Image trackImg = sliderGO.AddComponent<Image>();
-        trackImg.color = new Color(0.2f, 0.2f, 0.2f, 1f);
-
-        // Fill area
-        GameObject fillArea = new GameObject("Fill Area", typeof(RectTransform));
-        fillArea.transform.SetParent(sliderGO.transform, false);
-        RectTransform fa = fillArea.GetComponent<RectTransform>();
-        fa.anchorMin = Vector2.zero;
-        fa.anchorMax = Vector2.one;
-        fa.offsetMin = fa.offsetMax = Vector2.zero;
-
-        // Fill
-        GameObject fill = new GameObject("Fill", typeof(RectTransform));
-        fill.transform.SetParent(fillArea.transform, false);
-        RectTransform fr = fill.GetComponent<RectTransform>();
-        fr.anchorMin = Vector2.zero;
-        fr.anchorMax = Vector2.one;
-        fr.offsetMin = fr.offsetMax = Vector2.zero;
-
-        Image fillImg = fill.AddComponent<Image>();
-        fillImg.color = new Color(0.9f, 0.65f, 0.2f, 1f);  // amber — distinct from mood's green
-
-        hungerSlider.fillRect      = fr;
-        hungerSlider.targetGraphic = trackImg;
+        panel.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
     }
 }
