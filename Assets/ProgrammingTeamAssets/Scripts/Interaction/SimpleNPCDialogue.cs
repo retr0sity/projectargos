@@ -42,6 +42,10 @@ public class SimpleNPCDialogue : MonoBehaviour
     [SerializeField] private bool startsBadEndingTimer = false;
     [Tooltip("Timer duration in minutes.")]
     [SerializeField] private float badEndingMinutes = 5f;
+    [Header("Choices (Optional)")]
+    [SerializeField] private bool hasChoices = false;
+    [SerializeField] private string[] choiceOptions;
+    [SerializeField] private UnityEvent<int> onChoiceSelected; // UnityEvent with int to handle choice index
 
     private bool isCurrentlyInDialogue = false;
     private Fascist[] frozenEnemies;
@@ -175,40 +179,69 @@ public class SimpleNPCDialogue : MonoBehaviour
     }
 
     void OnDialogueFinished()
+{
+    Debug.Log($"{gameObject.name}: Dialogue finished");
+
+    if (hasChoices && choiceOptions != null && choiceOptions.Length > 0)
     {
-        Debug.Log($"{gameObject.name}: Dialogue finished");
-
-        if (freezeAnimationOnInteract && npcAnimator != null)
+        DialogueManager.Instance.ShowChoices(choiceOptions, (choiceIndex) =>
         {
-            if (freezeAnimCoroutine != null) { StopCoroutine(freezeAnimCoroutine); freezeAnimCoroutine = null; }
-            npcAnimator.speed = 1f;
-        }
+            Debug.Log($"{gameObject.name}: Choice selected {choiceIndex}");
+            onChoiceSelected?.Invoke(choiceIndex);
 
-        isCurrentlyInDialogue = false;
+            // Continue with post-choice behavior if needed
+            // Example: start new dialogue based on choice
+            if (choiceIndex == 0)
+                DialogueManager.Instance.StartDialogue(new string[] { "You chose option 1!" }, speakerName);
+            else if (choiceIndex == 1)
+                DialogueManager.Instance.StartDialogue(new string[] { "You chose option 2!" }, speakerName);
 
-        if (freezeEnemies && frozenEnemies != null)
-        {
-            foreach (Fascist enemy in frozenEnemies)
-                if (enemy != null) enemy.Resume();
-            frozenEnemies = null;
-        }
+            // Unfreeze enemies and animation here if needed
+            if (freezeAnimationOnInteract && npcAnimator != null)
+                npcAnimator.speed = 1f;
 
-        if (startsBadEndingTimer && GameStateManager.Instance != null)
-        {
-            GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
-            QuestManager.Instance?.StartQuest1();
-        }
+            if (freezeEnemies && frozenEnemies != null)
+            {
+                foreach (var enemy in frozenEnemies)
+                    if (enemy != null) enemy.Resume();
+                frozenEnemies = null;
+            }
 
-        onDialogueComplete?.Invoke();
+            isCurrentlyInDialogue = false;
+        });
 
-        if (oneTimeOnly)
-        {
-            if (useTriggerMode)
-                gameObject.SetActive(false);
-            else
-                gameObject.tag = "Untagged";
-        }
+        return; // Wait for the player to make a choice
     }
+
+    // No choices: original cleanup
+    if (freezeAnimationOnInteract && npcAnimator != null)
+        npcAnimator.speed = 1f;
+
+    isCurrentlyInDialogue = false;
+
+    if (freezeEnemies && frozenEnemies != null)
+    {
+        foreach (Fascist enemy in frozenEnemies)
+            if (enemy != null) enemy.Resume();
+        frozenEnemies = null;
+    }
+
+    if (startsBadEndingTimer && GameStateManager.Instance != null)
+    {
+        GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
+        QuestManager.Instance?.StartQuest1();
+    }
+
+    onDialogueComplete?.Invoke();
+
+    if (oneTimeOnly)
+    {
+        if (useTriggerMode)
+            gameObject.SetActive(false);
+        else
+            gameObject.tag = "Untagged";
+    }
+}
 
     public void TriggerNow()
     {
@@ -236,6 +269,48 @@ public class SimpleNPCDialogue : MonoBehaviour
         {
             col.isTrigger = useTriggerMode;
             gameObject.tag = useTriggerMode ? "Untagged" : "Interactable";
+        }
+    }
+
+    private void ContinueAfterChoice(int choiceIndex)
+    {
+        // Example: trigger different dialogue lines based on choice
+        if (choiceIndex == 0)
+        {
+            DialogueManager.Instance.StartDialogue(new string[] { "You chose option 1!" }, speakerName);
+        }
+        else if (choiceIndex == 1)
+        {
+            DialogueManager.Instance.StartDialogue(new string[] { "You chose option 2!" }, speakerName);
+        }
+
+        // Cleanup (unfreeze NPC/enemies, reset state)
+        if (freezeAnimationOnInteract && npcAnimator != null)
+            npcAnimator.speed = 1f;
+
+        isCurrentlyInDialogue = false;
+
+        if (freezeEnemies && frozenEnemies != null)
+        {
+            foreach (Fascist enemy in frozenEnemies)
+                if (enemy != null) enemy.Resume();
+            frozenEnemies = null;
+        }
+
+        if (startsBadEndingTimer && GameStateManager.Instance != null)
+        {
+            GameStateManager.Instance.StartBadEndingTimer(badEndingMinutes * 60f);
+            QuestManager.Instance?.StartQuest1();
+        }
+
+        onDialogueComplete?.Invoke();
+
+        if (oneTimeOnly)
+        {
+            if (useTriggerMode)
+                gameObject.SetActive(false);
+            else
+                gameObject.tag = "Untagged";
         }
     }
 }
