@@ -146,7 +146,7 @@ public class QuestUI : MonoBehaviour
         _titleText.text       = QuestManager.Instance.GetTitle();
         _stageText.text       = QuestManager.Instance.IsComplete()
             ? "✓ Complete"
-            : $"Stage {QuestManager.Instance.currentStage} of 2";
+            : $"Stage {QuestManager.Instance.currentStage} of {QuestManager.Instance.stages.Length}";
         _descriptionText.text = QuestManager.Instance.GetDescription();
     }
 

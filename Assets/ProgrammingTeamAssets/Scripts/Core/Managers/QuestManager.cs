@@ -1,30 +1,27 @@
 using UnityEngine;
 
-/// <summary>
-/// Tracks the single demo quest across all scenes.
-/// Stage 0 = not started, Stage 1 = find the recipe, Stage 2 = cook the cake, Stage 3 = complete.
-/// </summary>
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
 
+    [System.Serializable]
+    public class QuestStage
+    {
+        public string title;
+        [TextArea(2, 4)]
+        public string description;
+    }
+
+    [Header("Quest Settings")]
+    [SerializeField] private string questName = "A Taste of Home";
+    [SerializeField] public QuestStage[] stages = new QuestStage[]
+    {
+        new QuestStage { title = "A Taste of Home", description = "Find a recipe somewhere in the world." },
+        new QuestStage { title = "A Taste of Home", description = "Cook the cake using the recipe you found." }
+    };
+    [SerializeField] private string completionText = "Quest Complete!";
+
     public int currentStage { get; private set; } = 0;
-
-    private static readonly string[] stageTitles = new string[]
-    {
-        "",
-        "A Taste of Home",
-        "A Taste of Home",
-        "A Taste of Home"
-    };
-
-    private static readonly string[] stageDescriptions = new string[]
-    {
-        "",
-        "Find a recipe somewhere in the world.",
-        "Cook the cake using the recipe you found.",
-        "Quest Complete!"
-    };
 
     void Awake()
     {
@@ -33,10 +30,20 @@ public class QuestManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public string GetTitle() => currentStage > 0 ? stageTitles[currentStage] : "";
-    public string GetDescription() => currentStage > 0 ? stageDescriptions[currentStage] : "";
-    public bool IsActive() => currentStage > 0 && currentStage < 3;
-    public bool IsComplete() => currentStage >= 3;
+    public string GetTitle() => currentStage > 0 && currentStage <= stages.Length
+        ? stages[currentStage - 1].title
+        : questName;
+
+    public string GetDescription()
+    {
+        if (IsComplete()) return completionText;
+        if (currentStage > 0 && currentStage <= stages.Length)
+            return stages[currentStage - 1].description;
+        return "";
+    }
+
+    public bool IsActive() => currentStage > 0 && !IsComplete();
+    public bool IsComplete() => currentStage > stages.Length;
 
     public void StartQuest()
     {
@@ -52,14 +59,13 @@ public class QuestManager : MonoBehaviour
 
     public void CompleteQuest()
     {
-        if (currentStage != 2) return;
-        SetStage(3);
+        SetStage(stages.Length + 1);
     }
 
     private void SetStage(int stage)
     {
         currentStage = stage;
-        Debug.Log($"[Quest] Advanced to stage {stage}: {GetDescription()}");
+        Debug.Log($"[Quest] Stage {stage}: {GetDescription()}");
     }
 
     public void ResetQuest()
