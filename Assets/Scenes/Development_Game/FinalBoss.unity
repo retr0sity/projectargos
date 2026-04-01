@@ -615,8 +615,8 @@ MonoBehaviour:
   spawnX: 10.6
   spawnYMin: -28
   spawnYMax: -10
-  whiteFeatherForce: 10
-  greyFeatherForce: 20
+  whiteFeatherForce: 5
+  greyFeatherForce: 10
   darkenDuration: 1.5
   introPauseDuration: 1
   introSound: {fileID: 0}
