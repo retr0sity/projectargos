@@ -23,11 +23,11 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/00_Main Menu 3.0.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Development_Game/Home.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/Base_Game_Testing.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/CloseupMarket.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/Development_Game/Home.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Development_Game/Market.unity
   - m_enabled: 1
