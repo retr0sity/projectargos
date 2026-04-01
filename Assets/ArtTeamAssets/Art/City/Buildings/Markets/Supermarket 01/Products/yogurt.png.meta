@@ -1,0 +1,2951 @@
+fileFormatVersion: 2
+guid: 0c6a025dc68d1b942b39333ef3e10f00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6410465096218271185
+    second: yogurt_0
+  - first:
+      213: 4721069024180714213
+    second: yogurt_1
+  - first:
+      213: 4109419724350899073
+    second: yogurt_2
+  - first:
+      213: -8721286099843030213
+    second: yogurt_3
+  - first:
+      213: -1999755919953757771
+    second: yogurt_4
+  - first:
+      213: -1650466043684089224
+    second: yogurt_5
+  - first:
+      213: -4673799434444595958
+    second: yogurt_6
+  - first:
+      213: -7229190984749161961
+    second: yogurt_7
+  - first:
+      213: 3495785875147570252
+    second: yogurt_8
+  - first:
+      213: -4714928771395871752
+    second: yogurt_9
+  - first:
+      213: 7090281597990706151
+    second: yogurt_10
+  - first:
+      213: -8412448404282334943
+    second: yogurt_11
+  - first:
+      213: 4218349627083140064
+    second: yogurt_12
+  - first:
+      213: 930215185526208737
+    second: yogurt_13
+  - first:
+      213: 862346128560452059
+    second: yogurt_14
+  - first:
+      213: -8172260144361647686
+    second: yogurt_15
+  - first:
+      213: -4874555995967856094
+    second: yogurt_16
+  - first:
+      213: 1158771940637213613
+    second: yogurt_17
+  - first:
+      213: -1022467736587509764
+    second: yogurt_18
+  - first:
+      213: 4479973300190232123
+    second: yogurt_19
+  - first:
+      213: 7950882050883314565
+    second: yogurt_20
+  - first:
+      213: -546971936609158384
+    second: yogurt_21
+  - first:
+      213: 612925706612055657
+    second: yogurt_22
+  - first:
+      213: 7205359939432588013
+    second: yogurt_23
+  - first:
+      213: -1903248077144700567
+    second: yogurt_24
+  - first:
+      213: 1247651827036081789
+    second: yogurt_25
+  - first:
+      213: 7804489571984900587
+    second: yogurt_26
+  - first:
+      213: 3636949913912514523
+    second: yogurt_27
+  - first:
+      213: 3498008689460433817
+    second: yogurt_28
+  - first:
+      213: -3024384418704668642
+    second: yogurt_29
+  - first:
+      213: 8287689939090740106
+    second: yogurt_30
+  - first:
+      213: 188242349626059351
+    second: yogurt_31
+  - first:
+      213: -2670402679753506657
+    second: yogurt_32
+  - first:
+      213: 1355936453430816780
+    second: yogurt_33
+  - first:
+      213: -1986728671023130650
+    second: yogurt_34
+  - first:
+      213: 4088436774236340582
+    second: yogurt_35
+  - first:
+      213: -7191311134543649218
+    second: yogurt_36
+  - first:
+      213: 5689865259549672542
+    second: yogurt_37
+  - first:
+      213: 6946780195731972774
+    second: yogurt_38
+  - first:
+      213: 4087560705433628084
+    second: yogurt_39
+  - first:
+      213: -514898494163397325
+    second: yogurt_40
+  - first:
+      213: 2611540012122780851
+    second: yogurt_41
+  - first:
+      213: -7311684607735402274
+    second: yogurt_42
+  - first:
+      213: -6163991220179493330
+    second: yogurt_43
+  - first:
+      213: -3004610143316182249
+    second: yogurt_44
+  - first:
+      213: 1687664247642211697
+    second: yogurt_45
+  - first:
+      213: 5731257189990564017
+    second: yogurt_46
+  - first:
+      213: -7737436248805349451
+    second: yogurt_47
+  - first:
+      213: 2222711871551584415
+    second: yogurt_48
+  - first:
+      213: 379628413256850912
+    second: yogurt_49
+  - first:
+      213: 7128285234904274650
+    second: yogurt_50
+  - first:
+      213: 6516292291632712598
+    second: yogurt_51
+  - first:
+      213: 2978565689038873611
+    second: yogurt_52
+  - first:
+      213: 1627657356287844844
+    second: yogurt_53
+  - first:
+      213: -5810067454852956138
+    second: yogurt_54
+  - first:
+      213: 7553974981276441609
+    second: yogurt_55
+  - first:
+      213: -3570238046595321687
+    second: yogurt_56
+  - first:
+      213: 2705147645596102996
+    second: yogurt_57
+  - first:
+      213: 7276834177317095029
+    second: yogurt_58
+  - first:
+      213: -5615789882637661147
+    second: yogurt_59
+  - first:
+      213: -6453885112916981776
+    second: yogurt_60
+  - first:
+      213: -1480857879768488067
+    second: yogurt_61
+  - first:
+      213: 8265889995570890410
+    second: yogurt_62
+  - first:
+      213: -5495577977719549097
+    second: yogurt_63
+  - first:
+      213: 1711560956670797006
+    second: yogurt_64
+  - first:
+      213: -404890292088603900
+    second: yogurt_65
+  - first:
+      213: -4412410845225919315
+    second: yogurt_66
+  - first:
+      213: -7357502415869341574
+    second: yogurt_67
+  - first:
+      213: -8186516214964204360
+    second: yogurt_68
+  - first:
+      213: -2534372473233116836
+    second: yogurt_69
+  - first:
+      213: 4117361880182363850
+    second: yogurt_70
+  - first:
+      213: -3629825029277216814
+    second: yogurt_71
+  - first:
+      213: 4380133368699096612
+    second: yogurt_72
+  - first:
+      213: -8715464221599939418
+    second: yogurt_73
+  - first:
+      213: -7129981288699397299
+    second: yogurt_74
+  - first:
+      213: -481189475819670881
+    second: yogurt_75
+  - first:
+      213: -3994593327486059118
+    second: yogurt_76
+  - first:
+      213: -8358965398753691387
+    second: yogurt_77
+  - first:
+      213: 16911322798405358
+    second: yogurt_78
+  - first:
+      213: -7127050819462497082
+    second: yogurt_79
+  - first:
+      213: 354449176736763631
+    second: yogurt_80
+  - first:
+      213: -2070087044131582379
+    second: yogurt_81
+  - first:
+      213: -8220130653506622568
+    second: yogurt_82
+  - first:
+      213: 8983511460037222256
+    second: yogurt_83
+  - first:
+      213: 8571024156923668671
+    second: yogurt_84
+  - first:
+      213: 4508721816062316045
+    second: yogurt_85
+  - first:
+      213: -43136219770950856
+    second: yogurt_86
+  - first:
+      213: 869345793534812276
+    second: yogurt_87
+  - first:
+      213: -3141997839122758586
+    second: yogurt_88
+  - first:
+      213: 4220035721792308896
+    second: yogurt_89
+  - first:
+      213: 3131388635653956749
+    second: yogurt_90
+  - first:
+      213: -6381494633252974817
+    second: yogurt_91
+  - first:
+      213: -4261256934236490046
+    second: yogurt_92
+  - first:
+      213: -3250025414430033722
+    second: yogurt_93
+  - first:
+      213: 7440135202174257673
+    second: yogurt_94
+  - first:
+      213: -2130971702920453159
+    second: yogurt_95
+  - first:
+      213: 8714823128397116312
+    second: yogurt_96
+  - first:
+      213: -5603270665622284248
+    second: yogurt_97
+  - first:
+      213: 8881750069377714067
+    second: yogurt_98
+  - first:
+      213: -7087014873701116297
+    second: yogurt_99
+  - first:
+      213: -683056855026309905
+    second: yogurt_100
+  - first:
+      213: 3367334717571775518
+    second: yogurt_101
+  - first:
+      213: 747360256248178613
+    second: yogurt_102
+  - first:
+      213: 5801900417096335701
+    second: yogurt_103
+  - first:
+      213: 4484160875524271791
+    second: yogurt_104
+  - first:
+      213: -662846571755536985
+    second: yogurt_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yogurt_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 100
+        width: 1110
+        height: 936
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd51297a0c86f850800000000000000
+      internalID: 6410465096218271185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1037
+        width: 67
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea3462a34b948140800000000000000
+      internalID: 4721069024180714213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_2
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1035
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1834be67777970930800000000000000
+      internalID: 4109419724350899073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_3
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1051
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33ed42ef74c7f680800000000000000
+      internalID: -8721286099843030213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_4
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1027
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9fba106907f34e0800000000000000
+      internalID: -1999755919953757771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_5
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1021
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8729d58b0ed5819e0800000000000000
+      internalID: -1650466043684089224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_6
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1014
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d128e5d24532fb0800000000000000
+      internalID: -4673799434444595958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_7
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1028
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712e19ce911ccab90800000000000000
+      internalID: -7229190984749161961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_8
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1040
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cbff26bb6838030800000000000000
+      internalID: 3495785875147570252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_9
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1013
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb1eaf5345319eb0800000000000000
+      internalID: -4714928771395871752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_10
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 1011
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb99b52c8db56260800000000000000
+      internalID: 7090281597990706151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_11
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1014
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12123735fbaf04b80800000000000000
+      internalID: -8412448404282334943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_12
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1013
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb21b4d2a69a8a30800000000000000
+      internalID: 4218349627083140064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_13
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1016
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8b6f168c9c8ec00800000000000000
+      internalID: 930215185526208737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_14
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1000
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1774a2c3ba7fb00800000000000000
+      internalID: 862346128560452059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_15
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1003
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1dd3b72bc469e80800000000000000
+      internalID: -8172260144361647686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_16
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 997
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222e59ee5291a5cb0800000000000000
+      internalID: -4874555995967856094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_17
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 995
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da30f59c0f8c41010800000000000000
+      internalID: 1158771940637213613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_18
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 990
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff5766c2077fc1f0800000000000000
+      internalID: -1022467736587509764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_19
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 974
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3eb2190bff0c2e30800000000000000
+      internalID: 4479973300190232123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_20
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 983
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583ede58915375e60800000000000000
+      internalID: 7950882050883314565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_21
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 974
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bbd40fbe3c868f0800000000000000
+      internalID: -546971936609158384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_22
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 972
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e1158ceac818800800000000000000
+      internalID: 612925706612055657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_23
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 963
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2a5b470b49ef360800000000000000
+      internalID: 7205359939432588013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_24
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 960
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969485a25fd4695e0800000000000000
+      internalID: -1903248077144700567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_25
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 964
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e4ad1f9bc805110800000000000000
+      internalID: 1247651827036081789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_26
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 958
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1866f6aed1f4c60800000000000000
+      internalID: 7804489571984900587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_27
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 963
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd794a46daa097230800000000000000
+      internalID: 3636949913912514523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_28
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 954
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993d48cae5c6b8030800000000000000
+      internalID: 3498008689460433817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_29
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 955
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18c1e2256a3706d0800000000000000
+      internalID: -3024384418704668642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_30
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 950
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83151ce61ac30370800000000000000
+      internalID: 8287689939090740106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_31
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 949
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a652d6b65cc9200800000000000000
+      internalID: 188242349626059351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_32
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 952
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f908a0249e2d0fad0800000000000000
+      internalID: -2670402679753506657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_33
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 940
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c003fb4350141d210800000000000000
+      internalID: 1355936453430816780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_34
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 946
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e71592ccc8bd64e0800000000000000
+      internalID: -1986728671023130650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_35
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 939
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661400fa59b0db830800000000000000
+      internalID: 4088436774236340582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_36
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 932
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36e634df94533c90800000000000000
+      internalID: -7191311134543649218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_37
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 936
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e544b4fae4676fe40800000000000000
+      internalID: 5689865259549672542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_38
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 935
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2a25b48cbe76060800000000000000
+      internalID: 6946780195731972774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_39
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 900
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd67350ecee9b830800000000000000
+      internalID: 4087560705433628084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_40
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 870
+        width: 123
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335d1003c86bad8f0800000000000000
+      internalID: -514898494163397325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_41
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 842
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b43c43fdcd0e3420800000000000000
+      internalID: 2611540012122780851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_42
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 838
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed07d36969da78a90800000000000000
+      internalID: -7311684607735402274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_43
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 832
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e139ab4aa157aa0800000000000000
+      internalID: -6163991220179493330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_44
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 809
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b7a176efa7d46d0800000000000000
+      internalID: -3004610143316182249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_45
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 811
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17547dc01b9cb6710800000000000000
+      internalID: 1687664247642211697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_46
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 774
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b08acd7c04898f40800000000000000
+      internalID: 5731257189990564017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_47
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 797
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7e9b5f9ba1f9490800000000000000
+      internalID: -7737436248805349451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_48
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 735
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9830e5bba8a8de10800000000000000
+      internalID: 2222711871551584415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_49
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 685
+        width: 11
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edd1dec706b44500800000000000000
+      internalID: 379628413256850912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_50
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 718
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6912467a1cce260800000000000000
+      internalID: 7128285234904274650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_51
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 704
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b426f70558e6a50800000000000000
+      internalID: 6516292291632712598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_52
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 677
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04245b86bdf55920800000000000000
+      internalID: 2978565689038873611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_53
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 667
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1a699edb9969610800000000000000
+      internalID: 1627657356287844844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_54
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 658
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6108e60de6e7e5fa0800000000000000
+      internalID: -5810067454852956138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_55
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 629
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c9b29093c15d860800000000000000
+      internalID: 7553974981276441609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_56
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 627
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0f91d9967f37ec0800000000000000
+      internalID: -3570238046595321687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_57
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 625
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4517db0837d9a8520800000000000000
+      internalID: 2705147645596102996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_58
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 632
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576486441228cf460800000000000000
+      internalID: 7276834177317095029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_59
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 615
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c46200bd4b012b0800000000000000
+      internalID: -5615789882637661147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_60
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 620
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7c6671fa13f66a0800000000000000
+      internalID: -6453885112916981776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_61
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 605
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77af81ba9fe27be0800000000000000
+      internalID: -1480857879768488067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_62
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 606
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6457a082756b270800000000000000
+      internalID: 8265889995570890410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_63
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 599
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753119232f8cbb3b0800000000000000
+      internalID: -5495577977719549097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_64
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 588
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec46ac13f9fa0c710800000000000000
+      internalID: 1711560956670797006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_65
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 579
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bfd0fac6a816af0800000000000000
+      internalID: -404890292088603900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_66
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 593
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac5a37d6b7f3c2c0800000000000000
+      internalID: -4412410845225919315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_67
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 556
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a709704d886e4e990800000000000000
+      internalID: -7357502415869341574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_68
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 565
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc451360e6a36e80800000000000000
+      internalID: -8186516214964204360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_69
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 573
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51796cc9a914dcd0800000000000000
+      internalID: -2534372473233116836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_70
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 574
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac61108b0dec32930800000000000000
+      internalID: 4117361880182363850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_71
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 568
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df0c151e5540adc0800000000000000
+      internalID: -3629825029277216814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_72
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 528
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e0526871c59cc30800000000000000
+      internalID: 4380133368699096612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_73
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 560
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4c8ea87737c0780800000000000000
+      internalID: -8715464221599939418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_74
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 549
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bf3ef4bc73d0d90800000000000000
+      internalID: -7129981288699397299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_75
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 559
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92bc10a8b87259f0800000000000000
+      internalID: -481189475819670881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_76
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 546
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d3c0d688a5098c0800000000000000
+      internalID: -3994593327486059118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_77
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 550
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509318de14dfefb80800000000000000
+      internalID: -8358965398753691387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_78
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 536
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6b41c22c41c3000800000000000000
+      internalID: 16911322798405358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_79
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 544
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccf7c95a01a71d90800000000000000
+      internalID: -7127050819462497082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_80
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 538
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee0356f5a14be400800000000000000
+      internalID: 354449176736763631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_81
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 527
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e06681dc29543e0800000000000000
+      internalID: -2070087044131582379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_82
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 520
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b207609ba3ced80800000000000000
+      internalID: -8220130653506622568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_83
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 476
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f5b238318dbac70800000000000000
+      internalID: 8983511460037222256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_84
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 487
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb82aba3f0562f670800000000000000
+      internalID: 8571024156923668671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_85
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 500
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ec27d7a92329e30800000000000000
+      internalID: 4508721816062316045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_86
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 481
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b699f26dfb66ff0800000000000000
+      internalID: -43136219770950856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_87
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 473
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4706f9aa469801c00800000000000000
+      internalID: 869345793534812276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_88
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 469
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6440b02cc916564d0800000000000000
+      internalID: -3141997839122758586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_89
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 475
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6c3e85124909a30800000000000000
+      internalID: 4220035721792308896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_90
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 446
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8469d19f5de47b20800000000000000
+      internalID: 3131388635653956749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_91
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 453
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f05e011706077a0800000000000000
+      internalID: -6381494633252974817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_92
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 452
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6f92a3569fcd4c0800000000000000
+      internalID: -4261256934236490046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_93
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 443
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8f7edda1795e2d0800000000000000
+      internalID: -3250025414430033722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_94
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 458
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac97efb8ba04760800000000000000
+      internalID: 7440135202174257673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_95
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 431
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3640dc6844d62e0800000000000000
+      internalID: -2130971702920453159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_96
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 422
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893f770567541f870800000000000000
+      internalID: 8714823128397116312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_97
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 371
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828973b540f2d32b0800000000000000
+      internalID: -5603270665622284248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_98
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 400
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3974f0d61a0524b70800000000000000
+      internalID: 8881750069377714067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_99
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 400
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776922f558dd5ad90800000000000000
+      internalID: -7087014873701116297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_100
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 395
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4e2cac86b4586f0800000000000000
+      internalID: -683056855026309905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_101
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 374
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1cb4b0b51d2bbe20800000000000000
+      internalID: 3367334717571775518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_102
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 294
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7eae081382f5a00800000000000000
+      internalID: 747360256248178613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_103
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 262
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551c73780bd748050800000000000000
+      internalID: 5801900417096335701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_104
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 255
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae2455ee80fa3e30800000000000000
+      internalID: 4484160875524271791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yogurt_105
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 98
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7adfced0e881dc6f0800000000000000
+      internalID: -662846571755536985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      yogurt_0: 6410465096218271185
+      yogurt_1: 4721069024180714213
+      yogurt_10: 7090281597990706151
+      yogurt_100: -683056855026309905
+      yogurt_101: 3367334717571775518
+      yogurt_102: 747360256248178613
+      yogurt_103: 5801900417096335701
+      yogurt_104: 4484160875524271791
+      yogurt_105: -662846571755536985
+      yogurt_11: -8412448404282334943
+      yogurt_12: 4218349627083140064
+      yogurt_13: 930215185526208737
+      yogurt_14: 862346128560452059
+      yogurt_15: -8172260144361647686
+      yogurt_16: -4874555995967856094
+      yogurt_17: 1158771940637213613
+      yogurt_18: -1022467736587509764
+      yogurt_19: 4479973300190232123
+      yogurt_2: 4109419724350899073
+      yogurt_20: 7950882050883314565
+      yogurt_21: -546971936609158384
+      yogurt_22: 612925706612055657
+      yogurt_23: 7205359939432588013
+      yogurt_24: -1903248077144700567
+      yogurt_25: 1247651827036081789
+      yogurt_26: 7804489571984900587
+      yogurt_27: 3636949913912514523
+      yogurt_28: 3498008689460433817
+      yogurt_29: -3024384418704668642
+      yogurt_3: -8721286099843030213
+      yogurt_30: 8287689939090740106
+      yogurt_31: 188242349626059351
+      yogurt_32: -2670402679753506657
+      yogurt_33: 1355936453430816780
+      yogurt_34: -1986728671023130650
+      yogurt_35: 4088436774236340582
+      yogurt_36: -7191311134543649218
+      yogurt_37: 5689865259549672542
+      yogurt_38: 6946780195731972774
+      yogurt_39: 4087560705433628084
+      yogurt_4: -1999755919953757771
+      yogurt_40: -514898494163397325
+      yogurt_41: 2611540012122780851
+      yogurt_42: -7311684607735402274
+      yogurt_43: -6163991220179493330
+      yogurt_44: -3004610143316182249
+      yogurt_45: 1687664247642211697
+      yogurt_46: 5731257189990564017
+      yogurt_47: -7737436248805349451
+      yogurt_48: 2222711871551584415
+      yogurt_49: 379628413256850912
+      yogurt_5: -1650466043684089224
+      yogurt_50: 7128285234904274650
+      yogurt_51: 6516292291632712598
+      yogurt_52: 2978565689038873611
+      yogurt_53: 1627657356287844844
+      yogurt_54: -5810067454852956138
+      yogurt_55: 7553974981276441609
+      yogurt_56: -3570238046595321687
+      yogurt_57: 2705147645596102996
+      yogurt_58: 7276834177317095029
+      yogurt_59: -5615789882637661147
+      yogurt_6: -4673799434444595958
+      yogurt_60: -6453885112916981776
+      yogurt_61: -1480857879768488067
+      yogurt_62: 8265889995570890410
+      yogurt_63: -5495577977719549097
+      yogurt_64: 1711560956670797006
+      yogurt_65: -404890292088603900
+      yogurt_66: -4412410845225919315
+      yogurt_67: -7357502415869341574
+      yogurt_68: -8186516214964204360
+      yogurt_69: -2534372473233116836
+      yogurt_7: -7229190984749161961
+      yogurt_70: 4117361880182363850
+      yogurt_71: -3629825029277216814
+      yogurt_72: 4380133368699096612
+      yogurt_73: -8715464221599939418
+      yogurt_74: -7129981288699397299
+      yogurt_75: -481189475819670881
+      yogurt_76: -3994593327486059118
+      yogurt_77: -8358965398753691387
+      yogurt_78: 16911322798405358
+      yogurt_79: -7127050819462497082
+      yogurt_8: 3495785875147570252
+      yogurt_80: 354449176736763631
+      yogurt_81: -2070087044131582379
+      yogurt_82: -8220130653506622568
+      yogurt_83: 8983511460037222256
+      yogurt_84: 8571024156923668671
+      yogurt_85: 4508721816062316045
+      yogurt_86: -43136219770950856
+      yogurt_87: 869345793534812276
+      yogurt_88: -3141997839122758586
+      yogurt_89: 4220035721792308896
+      yogurt_9: -4714928771395871752
+      yogurt_90: 3131388635653956749
+      yogurt_91: -6381494633252974817
+      yogurt_92: -4261256934236490046
+      yogurt_93: -3250025414430033722
+      yogurt_94: 7440135202174257673
+      yogurt_95: -2130971702920453159
+      yogurt_96: 8714823128397116312
+      yogurt_97: -5603270665622284248
+      yogurt_98: 8881750069377714067
+      yogurt_99: -7087014873701116297
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

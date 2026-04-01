@@ -1,0 +1,1989 @@
+fileFormatVersion: 2
+guid: f56be5203432dd844bd6a05443444819
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1694861289246640485
+    second: tomato3_0
+  - first:
+      213: 4266389142942223436
+    second: tomato3_1
+  - first:
+      213: 7011284957359528794
+    second: tomato3_2
+  - first:
+      213: -1426467768563259012
+    second: tomato3_3
+  - first:
+      213: -6103067016369164926
+    second: tomato3_4
+  - first:
+      213: 1980583234914027410
+    second: tomato3_5
+  - first:
+      213: 6063129088174706830
+    second: tomato3_6
+  - first:
+      213: 5380735397154658118
+    second: tomato3_7
+  - first:
+      213: 4151255181126964797
+    second: tomato3_8
+  - first:
+      213: 5861691671961082770
+    second: tomato3_9
+  - first:
+      213: -1585362773618740115
+    second: tomato3_10
+  - first:
+      213: 4842350932089283412
+    second: tomato3_11
+  - first:
+      213: -244760314059970766
+    second: tomato3_12
+  - first:
+      213: -7384898215628800880
+    second: tomato3_13
+  - first:
+      213: -467009505995998866
+    second: tomato3_14
+  - first:
+      213: 2641448466510879118
+    second: tomato3_15
+  - first:
+      213: 8839815290508731634
+    second: tomato3_16
+  - first:
+      213: 6012242672872657563
+    second: tomato3_17
+  - first:
+      213: -1364450884913083513
+    second: tomato3_18
+  - first:
+      213: 4088238841277740282
+    second: tomato3_19
+  - first:
+      213: 4916000149799904343
+    second: tomato3_20
+  - first:
+      213: 6821577440552312756
+    second: tomato3_21
+  - first:
+      213: 1129803056860740123
+    second: tomato3_22
+  - first:
+      213: -9190772844101322149
+    second: tomato3_23
+  - first:
+      213: -4348305828822329897
+    second: tomato3_24
+  - first:
+      213: -5676805437545232769
+    second: tomato3_25
+  - first:
+      213: -8887809019891564958
+    second: tomato3_26
+  - first:
+      213: 8616844567131777341
+    second: tomato3_27
+  - first:
+      213: -147662067600939769
+    second: tomato3_28
+  - first:
+      213: -6340170476890109119
+    second: tomato3_29
+  - first:
+      213: 5582919320869307191
+    second: tomato3_30
+  - first:
+      213: -1853384313398314379
+    second: tomato3_31
+  - first:
+      213: 5611992833266287459
+    second: tomato3_32
+  - first:
+      213: -5028503628824124828
+    second: tomato3_33
+  - first:
+      213: 2574958610383672619
+    second: tomato3_34
+  - first:
+      213: 2826012441784870531
+    second: tomato3_35
+  - first:
+      213: 256309216477822572
+    second: tomato3_36
+  - first:
+      213: -58543744045111811
+    second: tomato3_37
+  - first:
+      213: 1198011311556448402
+    second: tomato3_38
+  - first:
+      213: -5298788827287331179
+    second: tomato3_39
+  - first:
+      213: 746631291215927153
+    second: tomato3_40
+  - first:
+      213: 817703297026899825
+    second: tomato3_41
+  - first:
+      213: 3035833166978117472
+    second: tomato3_42
+  - first:
+      213: 2611310893677568362
+    second: tomato3_43
+  - first:
+      213: -2979249403312269655
+    second: tomato3_44
+  - first:
+      213: -7731910213779989910
+    second: tomato3_45
+  - first:
+      213: -4227522524381133032
+    second: tomato3_46
+  - first:
+      213: 7140685854421515722
+    second: tomato3_47
+  - first:
+      213: 1494570939700885285
+    second: tomato3_48
+  - first:
+      213: 7536308733665377878
+    second: tomato3_49
+  - first:
+      213: 6704412483939148276
+    second: tomato3_50
+  - first:
+      213: 4205424091296475336
+    second: tomato3_51
+  - first:
+      213: -1379786608389696496
+    second: tomato3_52
+  - first:
+      213: -6727006964851882878
+    second: tomato3_53
+  - first:
+      213: -3850944602416348509
+    second: tomato3_54
+  - first:
+      213: -4311691786539588817
+    second: tomato3_55
+  - first:
+      213: -1511342303187631457
+    second: tomato3_56
+  - first:
+      213: 8745030092492727248
+    second: tomato3_57
+  - first:
+      213: -6117676502597663687
+    second: tomato3_58
+  - first:
+      213: 5641682917845232906
+    second: tomato3_59
+  - first:
+      213: 2411084925481330036
+    second: tomato3_60
+  - first:
+      213: 7687522095550842946
+    second: tomato3_61
+  - first:
+      213: 5740340888242751484
+    second: tomato3_62
+  - first:
+      213: 5047731235208624411
+    second: tomato3_63
+  - first:
+      213: 4750049771766795669
+    second: tomato3_64
+  - first:
+      213: 7733120441948915613
+    second: tomato3_65
+  - first:
+      213: 7316476728261549537
+    second: tomato3_66
+  - first:
+      213: -1521531596201745911
+    second: tomato3_67
+  - first:
+      213: -6366535546857225746
+    second: tomato3_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tomato3_0
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1557
+        width: 85
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96b4ee13a4aa78e0800000000000000
+      internalID: -1694861289246640485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_1
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1578
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c87aa3252453b30800000000000000
+      internalID: 4266389142942223436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1525
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b547675861d4160800000000000000
+      internalID: 7011284957359528794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_3
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1578
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c792e3b4f1b243ce0800000000000000
+      internalID: -1426467768563259012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_4
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1586
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28da9e052ec8d4ba0800000000000000
+      internalID: -6103067016369164926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_5
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1574
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297052565f17c7b10800000000000000
+      internalID: 1980583234914027410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_6
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1527
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80ddf728cf842450800000000000000
+      internalID: 6063129088174706830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1554
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64716c9d5563caa40800000000000000
+      internalID: 5380735397154658118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_8
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1562
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36921bc7983c9930800000000000000
+      internalID: 4151255181126964797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_9
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1554
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b1b12e489e85150800000000000000
+      internalID: 5861691671961082770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_10
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1520
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64b35ef4f8aff9e0800000000000000
+      internalID: -1585362773618740115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_11
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1538
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453a6f0548c733340800000000000000
+      internalID: 4842350932089283412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_12
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1538
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237a7598acf6a9cf0800000000000000
+      internalID: -244760314059970766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1538
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c77032332938990800000000000000
+      internalID: -7384898215628800880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_14
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1519
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69b0602459d489f0800000000000000
+      internalID: -467009505995998866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1530
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8991e2a26f48a420800000000000000
+      internalID: 2641448466510879118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_16
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1503
+        width: 51
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4e6dedb255daa70800000000000000
+      internalID: 8839815290508731634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_17
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1494
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9215045bd6cf6350800000000000000
+      internalID: 6012242672872657563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_18
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1490
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bc94b362f701de0800000000000000
+      internalID: -1364450884913083513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_19
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1
+        width: 884
+        height: 1497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af47053d0975cb830800000000000000
+      internalID: 4088238841277740282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_20
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1490
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75427941714293440800000000000000
+      internalID: 4916000149799904343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_21
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1472
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf50f73a8c1bae50800000000000000
+      internalID: 6821577440552312756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_22
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1471
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ab55ee4edddaf00800000000000000
+      internalID: 1129803056860740123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1462
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ab8080bc0d37080800000000000000
+      internalID: -9190772844101322149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_24
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1440
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5d84213e6b7a3c0800000000000000
+      internalID: -4348305828822329897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_25
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1450
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f764c14188fe731b0800000000000000
+      internalID: -5676805437545232769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_26
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 1439
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26eb9d939c828a480800000000000000
+      internalID: -8887809019891564958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_27
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1394
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39e4a4da7e259770800000000000000
+      internalID: 8616844567131777341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_28
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1402
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705a8d1c12663fdf0800000000000000
+      internalID: -147662067600939769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_29
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 1398
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bcb8dfa803308a0800000000000000
+      internalID: -6340170476890109119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_30
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1368
+        width: 66
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7338412fa838a7d40800000000000000
+      internalID: 5582919320869307191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_31
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1362
+        width: 10
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57abc9f59c47746e0800000000000000
+      internalID: -1853384313398314379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_32
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1386
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36300ec8fbdc1ed40800000000000000
+      internalID: 5611992833266287459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_33
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1362
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462ec2c779a273ab0800000000000000
+      internalID: -5028503628824124828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_34
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1338
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b259043a6371cb320800000000000000
+      internalID: 2574958610383672619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_35
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1350
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386eb6bc753083720800000000000000
+      internalID: 2826012441784870531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_36
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1336
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6eb1d8dfd79e8300800000000000000
+      internalID: 256309216477822572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_37
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1320
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5ae5466c2003ff0800000000000000
+      internalID: -58543744045111811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_38
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1218
+        width: 38
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290d836c0f030a010800000000000000
+      internalID: 1198011311556448402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_39
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1294
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59edab1c2abe676b0800000000000000
+      internalID: -5298788827287331179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_40
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1310
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177dd1b14319c5a00800000000000000
+      internalID: 746631291215927153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_41
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1290
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f34f6f0d0195b00800000000000000
+      internalID: 817703297026899825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_42
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1274
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f641b4e22712a20800000000000000
+      internalID: 3035833166978117472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_43
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1240
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6162c72c6d3d3420800000000000000
+      internalID: 2611310893677568362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1226
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a61742d37497a6d0800000000000000
+      internalID: -2979249403312269655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_45
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1234
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6add6040acb2b490800000000000000
+      internalID: -7731910213779989910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_46
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817cc4699a2d455c0800000000000000
+      internalID: -4227522524381133032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_47
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1226
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd737d93ffc81360800000000000000
+      internalID: 7140685854421515722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_48
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1178
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5273e70e958cdb410800000000000000
+      internalID: 1494570939700885285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_49
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1151
+        width: 50
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e7ccb3dd8569860800000000000000
+      internalID: 7536308733665377878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_50
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1143
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f123e4f1abda0d50800000000000000
+      internalID: 6704412483939148276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_51
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1096
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8a8930eeaac5a30800000000000000
+      internalID: 4205424091296475336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_52
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1082
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014571dd3630adce0800000000000000
+      internalID: -1379786608389696496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_53
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1023
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284cc628eced4a2a0800000000000000
+      internalID: -6727006964851882878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_54
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1026
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2044b8942be8ac0800000000000000
+      internalID: -3850944602416348509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_55
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 998
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23a65a1a2bc924c0800000000000000
+      internalID: -4311691786539588817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_56
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 1002
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f920b74ce22a60be0800000000000000
+      internalID: -1511342303187631457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_57
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 994
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3612539869c5970800000000000000
+      internalID: 8745030092492727248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_58
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 991
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93489eb32a5a91ba0800000000000000
+      internalID: -6117676502597663687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_59
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 442
+        width: 47
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ded8d09b84b4e40800000000000000
+      internalID: 5641682917845232906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_60
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 359
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4752d9a17f4e57120800000000000000
+      internalID: 2411084925481330036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_61
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 250
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248464c9d909faa60800000000000000
+      internalID: 7687522095550842946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_62
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 167
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf70c5dcf99c9af40800000000000000
+      internalID: 5740340888242751484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_63
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 94
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19f04c70d42d0640800000000000000
+      internalID: 5047731235208624411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_64
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 111
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59dc59fb9119be140800000000000000
+      internalID: 4750049771766795669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 87
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d974da3f110915b60800000000000000
+      internalID: 7733120441948915613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 34
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed117be1d8598560800000000000000
+      internalID: 7316476728261549537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_67
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902acdd131f62eae0800000000000000
+      internalID: -1521531596201745911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomato3_68
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 10
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee18da7c6a585a7a0800000000000000
+      internalID: -6366535546857225746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tomato3_0: -1694861289246640485
+      tomato3_1: 4266389142942223436
+      tomato3_10: -1585362773618740115
+      tomato3_11: 4842350932089283412
+      tomato3_12: -244760314059970766
+      tomato3_13: -7384898215628800880
+      tomato3_14: -467009505995998866
+      tomato3_15: 2641448466510879118
+      tomato3_16: 8839815290508731634
+      tomato3_17: 6012242672872657563
+      tomato3_18: -1364450884913083513
+      tomato3_19: 4088238841277740282
+      tomato3_2: 7011284957359528794
+      tomato3_20: 4916000149799904343
+      tomato3_21: 6821577440552312756
+      tomato3_22: 1129803056860740123
+      tomato3_23: -9190772844101322149
+      tomato3_24: -4348305828822329897
+      tomato3_25: -5676805437545232769
+      tomato3_26: -8887809019891564958
+      tomato3_27: 8616844567131777341
+      tomato3_28: -147662067600939769
+      tomato3_29: -6340170476890109119
+      tomato3_3: -1426467768563259012
+      tomato3_30: 5582919320869307191
+      tomato3_31: -1853384313398314379
+      tomato3_32: 5611992833266287459
+      tomato3_33: -5028503628824124828
+      tomato3_34: 2574958610383672619
+      tomato3_35: 2826012441784870531
+      tomato3_36: 256309216477822572
+      tomato3_37: -58543744045111811
+      tomato3_38: 1198011311556448402
+      tomato3_39: -5298788827287331179
+      tomato3_4: -6103067016369164926
+      tomato3_40: 746631291215927153
+      tomato3_41: 817703297026899825
+      tomato3_42: 3035833166978117472
+      tomato3_43: 2611310893677568362
+      tomato3_44: -2979249403312269655
+      tomato3_45: -7731910213779989910
+      tomato3_46: -4227522524381133032
+      tomato3_47: 7140685854421515722
+      tomato3_48: 1494570939700885285
+      tomato3_49: 7536308733665377878
+      tomato3_5: 1980583234914027410
+      tomato3_50: 6704412483939148276
+      tomato3_51: 4205424091296475336
+      tomato3_52: -1379786608389696496
+      tomato3_53: -6727006964851882878
+      tomato3_54: -3850944602416348509
+      tomato3_55: -4311691786539588817
+      tomato3_56: -1511342303187631457
+      tomato3_57: 8745030092492727248
+      tomato3_58: -6117676502597663687
+      tomato3_59: 5641682917845232906
+      tomato3_6: 6063129088174706830
+      tomato3_60: 2411084925481330036
+      tomato3_61: 7687522095550842946
+      tomato3_62: 5740340888242751484
+      tomato3_63: 5047731235208624411
+      tomato3_64: 4750049771766795669
+      tomato3_65: 7733120441948915613
+      tomato3_66: 7316476728261549537
+      tomato3_67: -1521531596201745911
+      tomato3_68: -6366535546857225746
+      tomato3_7: 5380735397154658118
+      tomato3_8: 4151255181126964797
+      tomato3_9: 5861691671961082770
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
