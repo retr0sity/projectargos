@@ -5,8 +5,16 @@ using UnityEngine;
 /// </summary>
 public class KitchenInteractable : MonoBehaviour
 {
+    private const float InteractCooldown = 1.5f;
+    private float lastInteractTime = -999f;
+
     public void OnInteract()
     {
+        if (Time.time - lastInteractTime < InteractCooldown)
+            return;
+
+        lastInteractTime = Time.time;
+
         if (HomeCookingManager.Instance == null)
         {
             Debug.LogError("HomeCookingManager not available for kitchen interaction.");

@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Pitch Dark
+    uniqueID: 2169806529
+    locked: 0
   - name: Cave of pit
     uniqueID: 494097533
     locked: 0

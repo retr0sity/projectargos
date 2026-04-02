@@ -65,3 +65,10 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: dfacff65a11300645b9a1605d112ba6d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  defaultMusic: MainTheme
+  fadeDuration: 0

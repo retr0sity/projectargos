@@ -1,0 +1,1209 @@
+fileFormatVersion: 2
+guid: b6f422b7c551b36408799cd9df368ee0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7671596720138525359
+    second: sugar2_0
+  - first:
+      213: -2606598463129701317
+    second: sugar2_1
+  - first:
+      213: -2325286128610312705
+    second: sugar2_2
+  - first:
+      213: -322869442858521995
+    second: sugar2_3
+  - first:
+      213: -401582861495840668
+    second: sugar2_4
+  - first:
+      213: -1324782948130660679
+    second: sugar2_5
+  - first:
+      213: 4375944759347165600
+    second: sugar2_6
+  - first:
+      213: -5356526632594798319
+    second: sugar2_7
+  - first:
+      213: -1968806280502420951
+    second: sugar2_8
+  - first:
+      213: 8267306133463299064
+    second: sugar2_9
+  - first:
+      213: -408946015371788131
+    second: sugar2_10
+  - first:
+      213: 1247580693735272604
+    second: sugar2_11
+  - first:
+      213: -8407725560761637775
+    second: sugar2_12
+  - first:
+      213: -3412898865320953692
+    second: sugar2_13
+  - first:
+      213: -8926219934517425488
+    second: sugar2_14
+  - first:
+      213: -110214274824167026
+    second: sugar2_15
+  - first:
+      213: 7096264852765841254
+    second: sugar2_16
+  - first:
+      213: -4938588236484589929
+    second: sugar2_17
+  - first:
+      213: -297235179238462672
+    second: sugar2_18
+  - first:
+      213: 2011920709822063586
+    second: sugar2_19
+  - first:
+      213: 5777517912560957492
+    second: sugar2_20
+  - first:
+      213: -8315812548230288068
+    second: sugar2_21
+  - first:
+      213: 4875856626293333299
+    second: sugar2_22
+  - first:
+      213: -1040404336944565144
+    second: sugar2_23
+  - first:
+      213: -4036148225569097840
+    second: sugar2_24
+  - first:
+      213: 8923880488492886817
+    second: sugar2_25
+  - first:
+      213: 7247406522366876453
+    second: sugar2_26
+  - first:
+      213: -216111912056695226
+    second: sugar2_27
+  - first:
+      213: -364495394201915525
+    second: sugar2_28
+  - first:
+      213: 3773169719769970539
+    second: sugar2_29
+  - first:
+      213: -3714109909323720370
+    second: sugar2_30
+  - first:
+      213: -5406765267985240884
+    second: sugar2_31
+  - first:
+      213: 5465708525665234388
+    second: sugar2_32
+  - first:
+      213: -2152520078313696009
+    second: sugar2_33
+  - first:
+      213: 6451992087710193815
+    second: sugar2_34
+  - first:
+      213: 3743902652539297229
+    second: sugar2_35
+  - first:
+      213: 1908878173917464911
+    second: sugar2_36
+  - first:
+      213: 8139003851474042574
+    second: sugar2_37
+  - first:
+      213: 4144918074386141152
+    second: sugar2_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sugar2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155671ccd63098590800000000000000
+      internalID: -7671596720138525359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 104
+        width: 949
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b343315128083dbd0800000000000000
+      internalID: -2606598463129701317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 763
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdf90ff59ceabfd0800000000000000
+      internalID: -2325286128610312705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ae69dc3ffe48bf0800000000000000
+      internalID: -322869442858521995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 747
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460d7a0e38a4d6af0800000000000000
+      internalID: -401582861495840668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 732
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be5d2c7dec6d9de0800000000000000
+      internalID: -1324782948130660679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 733
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9be99e29a7abc30800000000000000
+      internalID: 4375944759347165600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_7
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 738
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1198442686bc9a5b0800000000000000
+      internalID: -5356526632594798319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 723
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a581b7e156da4e0800000000000000
+      internalID: -1968806280502420951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 724
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3fc76502f5bb270800000000000000
+      internalID: 8267306133463299064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_10
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90047504c1235af0800000000000000
+      internalID: -408946015371788131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_11
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 456
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90f9bee70c405110800000000000000
+      internalID: 1247580693735272604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_12
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 464
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174a4d50622c15b80800000000000000
+      internalID: -8407725560761637775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_13
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 450
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8f5367092f2a0d0800000000000000
+      internalID: -3412898865320953692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_14
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 440
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba04104342bf1480800000000000000
+      internalID: -8926219934517425488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_15
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 451
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81ade373b0787ef0800000000000000
+      internalID: -110214274824167026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_16
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 439
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6679235394ffa7260800000000000000
+      internalID: 7096264852765841254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_17
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 431
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796c9682a2c967bb0800000000000000
+      internalID: -4938588236484589929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_18
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 425
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bedb6ed2200ebf0800000000000000
+      internalID: -297235179238462672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_19
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 408
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e32239d937cbeb10800000000000000
+      internalID: 2011920709822063586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_20
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 411
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438f6ad4eeddd2050800000000000000
+      internalID: 5777517912560957492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_21
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 417
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d6ff3eb8c489c80800000000000000
+      internalID: -8315812548230288068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_22
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 416
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dd2f9a4c58aa340800000000000000
+      internalID: 4875856626293333299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_23
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 405
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864b4a194cdbf81f0800000000000000
+      internalID: -1040404336944565144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_24
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 374
+        width: 6
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0977122c298bcf7c0800000000000000
+      internalID: -4036148225569097840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_25
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 395
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b68a6060ef7db70800000000000000
+      internalID: 8923880488492886817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_26
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 374
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bd68c65d5f39460800000000000000
+      internalID: 7247406522366876453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_27
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 377
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646512a6c57300df0800000000000000
+      internalID: -216111912056695226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_28
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 362
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f2452ce5d01faf0800000000000000
+      internalID: -364495394201915525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_29
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 347
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6736287eddfc5430800000000000000
+      internalID: 3773169719769970539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_30
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 323
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49500637b4d47cc0800000000000000
+      internalID: -3714109909323720370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_31
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 350
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccce1d192af47f4b0800000000000000
+      internalID: -5406765267985240884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_32
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 302
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dda91e02f81adb40800000000000000
+      internalID: 5465708525665234388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_33
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 331
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f45730b466b022e0800000000000000
+      internalID: -2152520078313696009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_34
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 297
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798d891ae941a8950800000000000000
+      internalID: 6451992087710193815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_35
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 300
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd5f3e50a305f330800000000000000
+      internalID: 3743902652539297229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_36
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 289
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49c8d3e592bd7a10800000000000000
+      internalID: 1908878173917464911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_37
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 52
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece75a071ec83f070800000000000000
+      internalID: 8139003851474042574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sugar2_38
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 44
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efc1e62705b58930800000000000000
+      internalID: 4144918074386141152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sugar2_0: -7671596720138525359
+      sugar2_1: -2606598463129701317
+      sugar2_10: -408946015371788131
+      sugar2_11: 1247580693735272604
+      sugar2_12: -8407725560761637775
+      sugar2_13: -3412898865320953692
+      sugar2_14: -8926219934517425488
+      sugar2_15: -110214274824167026
+      sugar2_16: 7096264852765841254
+      sugar2_17: -4938588236484589929
+      sugar2_18: -297235179238462672
+      sugar2_19: 2011920709822063586
+      sugar2_2: -2325286128610312705
+      sugar2_20: 5777517912560957492
+      sugar2_21: -8315812548230288068
+      sugar2_22: 4875856626293333299
+      sugar2_23: -1040404336944565144
+      sugar2_24: -4036148225569097840
+      sugar2_25: 8923880488492886817
+      sugar2_26: 7247406522366876453
+      sugar2_27: -216111912056695226
+      sugar2_28: -364495394201915525
+      sugar2_29: 3773169719769970539
+      sugar2_3: -322869442858521995
+      sugar2_30: -3714109909323720370
+      sugar2_31: -5406765267985240884
+      sugar2_32: 5465708525665234388
+      sugar2_33: -2152520078313696009
+      sugar2_34: 6451992087710193815
+      sugar2_35: 3743902652539297229
+      sugar2_36: 1908878173917464911
+      sugar2_37: 8139003851474042574
+      sugar2_38: 4144918074386141152
+      sugar2_4: -401582861495840668
+      sugar2_5: -1324782948130660679
+      sugar2_6: 4375944759347165600
+      sugar2_7: -5356526632594798319
+      sugar2_8: -1968806280502420951
+      sugar2_9: 8267306133463299064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

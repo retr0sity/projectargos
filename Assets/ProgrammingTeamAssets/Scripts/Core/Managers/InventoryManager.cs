@@ -126,4 +126,25 @@ public class InventoryManager : MonoBehaviour
         foreach (var item in items)
             Debug.Log($"[Inventory] {item.productName} ({item.itemKind}) — paid ${item.pricePaid:F2}");
     }
+
+    // Add this method to InventoryManager
+public void EatMeal(InventoryItem meal)
+    {
+        if (meal == null || meal.itemKind != InventoryItemKind.CookedMeal) return;
+
+        float moodBonus = meal.qualityTier switch
+        {
+            MealQualityTier.Simple    => 5f,
+            MealQualityTier.Tasty     => 10f,
+            MealQualityTier.Excellent => 15f,
+            _                         => 5f
+        };
+
+        HungerManager.Instance?.Eat();
+        MoodManager.Instance?.AdjustMood(moodBonus, $"{meal.mealName} was delicious!");
+        QuestManager.Instance?.CompleteQuest2(); // <-- add this
+        items.Remove(meal);
+
+        Debug.Log($"[Inventory] Ate '{meal.mealName}' ({meal.qualityTier}). Mood +{moodBonus}.");
+    }
 }

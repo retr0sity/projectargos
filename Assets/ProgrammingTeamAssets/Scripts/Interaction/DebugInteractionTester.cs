@@ -43,17 +43,11 @@ public class DebugInteractionTester : MonoBehaviour
     
     void ResetGameState()
     {
-        if (GameStateManager.Instance != null)
-        {
-            var state = GameStateManager.Instance;
-            state.feathersCollected = 0;
-            state.refusedFeathers = false;
-            state.hasVisitedOtherScene = false;
-            state.endingChosen = 0;
-            state.returnSceneName = "";
-            state.returnPosition = Vector3.zero;
-            Debug.Log("Game State Reset!");
-        }
+    if (GameStateManager.Instance != null)
+    {
+        GameStateManager.Instance.ResetAllState();
+        Debug.Log("Game State Reset!");
+    }
     }
     
     void OnGUI()

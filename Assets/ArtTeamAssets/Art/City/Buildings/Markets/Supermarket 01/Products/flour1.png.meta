@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 7f5ac41e0bcb01c4186783afff26feaf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5345038882408103102
+    second: flour1_0
+  - first:
+      213: 2280040744284093815
+    second: flour1_1
+  - first:
+      213: -5209423206588777269
+    second: flour1_2
+  - first:
+      213: -3366671151467530477
+    second: flour1_3
+  - first:
+      213: -8456164174409732263
+    second: flour1_4
+  - first:
+      213: -4147866365098123835
+    second: flour1_5
+  - first:
+      213: -5194046302268753435
+    second: flour1_6
+  - first:
+      213: 7091534052866044750
+    second: flour1_7
+  - first:
+      213: -505848557417530531
+    second: flour1_8
+  - first:
+      213: 7371378801443549335
+    second: flour1_9
+  - first:
+      213: -4026428588774483716
+    second: flour1_10
+  - first:
+      213: 2218844415214132316
+    second: flour1_11
+  - first:
+      213: -549665419577785265
+    second: flour1_12
+  - first:
+      213: -3804703432614182424
+    second: flour1_13
+  - first:
+      213: -8212649956321382068
+    second: flour1_14
+  - first:
+      213: 3749462362720078928
+    second: flour1_15
+  - first:
+      213: -8432727784699127313
+    second: flour1_16
+  - first:
+      213: -1930743085148476279
+    second: flour1_17
+  - first:
+      213: -6819283342822798579
+    second: flour1_18
+  - first:
+      213: 7324103071286495813
+    second: flour1_19
+  - first:
+      213: 7338275030399241007
+    second: flour1_20
+  - first:
+      213: -5053395000814480147
+    second: flour1_21
+  - first:
+      213: 8126541422077490017
+    second: flour1_22
+  - first:
+      213: -6534924949698959861
+    second: flour1_23
+  - first:
+      213: 7068733010931284184
+    second: flour1_24
+  - first:
+      213: 7091422728219291278
+    second: flour1_25
+  - first:
+      213: 920143982475233890
+    second: flour1_26
+  - first:
+      213: -7284252880568135367
+    second: flour1_27
+  - first:
+      213: 7172522764035183837
+    second: flour1_28
+  - first:
+      213: 1470734109693609074
+    second: flour1_29
+  - first:
+      213: -2425960538156407591
+    second: flour1_30
+  - first:
+      213: 7870505624469586330
+    second: flour1_31
+  - first:
+      213: -5768613438108434737
+    second: flour1_32
+  - first:
+      213: -7804138131581049598
+    second: flour1_33
+  - first:
+      213: -1101667072259123092
+    second: flour1_34
+  - first:
+      213: 1696369717224074465
+    second: flour1_35
+  - first:
+      213: -3617146191634007856
+    second: flour1_36
+  - first:
+      213: -1074006539487033681
+    second: flour1_37
+  - first:
+      213: 7323692183527716014
+    second: flour1_38
+  - first:
+      213: -3871232187864745855
+    second: flour1_39
+  - first:
+      213: 3336585507990781734
+    second: flour1_40
+  - first:
+      213: -8468582295741741641
+    second: flour1_41
+  - first:
+      213: 9009347879829527548
+    second: flour1_42
+  - first:
+      213: -8682870652796171533
+    second: flour1_43
+  - first:
+      213: -3462618153223069290
+    second: flour1_44
+  - first:
+      213: -4963770948419075188
+    second: flour1_45
+  - first:
+      213: -1621881749051448397
+    second: flour1_46
+  - first:
+      213: -8582259075560796475
+    second: flour1_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flour1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 704
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2430a67a47b92d5b0800000000000000
+      internalID: -5345038882408103102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 947
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d787c0af454af10800000000000000
+      internalID: 2280040744284093815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_2
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 947
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc799eb13964b7b0800000000000000
+      internalID: -5209423206588777269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 843
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317f835dc6e2741d0800000000000000
+      internalID: -3366671151467530477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 852
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f6ced6c7ba5aa80800000000000000
+      internalID: -8456164174409732263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 822
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd198c6481df66c0800000000000000
+      internalID: -4147866365098123835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 809
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9f656486a0be7b0800000000000000
+      internalID: -5194046302268753435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 818
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43baa506a03a6260800000000000000
+      internalID: 7091534052866044750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_8
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 815
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bfbf8ca6ddaf8f0800000000000000
+      internalID: -505848557417530531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_9
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 816
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79033e4f6f56c4660800000000000000
+      internalID: 7371378801443549335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_10
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 804
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf89e9c08804f18c0800000000000000
+      internalID: -4026428588774483716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_11
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 808
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c92bc5d3beace10800000000000000
+      internalID: 2218844415214132316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_12
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 800
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4400c096323f58f0800000000000000
+      internalID: -549665419577785265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 771
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1825fd26af23bc0800000000000000
+      internalID: -3804703432614182424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 792
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4136d0906ec60e80800000000000000
+      internalID: -8212649956321382068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 789
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c80a44724c80430800000000000000
+      internalID: 3749462362720078928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_16
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 772
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9117122cee8fa80800000000000000
+      internalID: -8432727784699127313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 735
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cee21c46f9435e0800000000000000
+      internalID: -1930743085148476279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b0f480ee90d51a0800000000000000
+      internalID: -6819283342822798579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 711
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a016640f074a560800000000000000
+      internalID: 7324103071286495813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 736
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2bc013a24ac6d560800000000000000
+      internalID: 7338275030399241007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 725
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4d7b2550cbed9b0800000000000000
+      internalID: -5053395000814480147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 733
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1633d6bfd5647c070800000000000000
+      internalID: 8126541422077490017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_23
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 733
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b062b5bb1684f45a0800000000000000
+      internalID: -6534924949698959861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_24
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 726
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8f2a0c83f291260800000000000000
+      internalID: 7068733010931284184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 671
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e64ab366bc96260800000000000000
+      internalID: 7091422728219291278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_26
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 692
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a46a1b31205cc00800000000000000
+      internalID: 920143982475233890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 659
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931de97499229ea90800000000000000
+      internalID: -7284252880568135367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_28
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 658
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd458b5c37be98360800000000000000
+      internalID: 7172522764035183837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_29
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 651
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274865761e8196410800000000000000
+      internalID: 1470734109693609074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 615
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4621c6eb1455ed0800000000000000
+      internalID: -2425960538156407591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_31
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 622
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91493d6a27a93d60800000000000000
+      internalID: 7870505624469586330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 625
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce700734a4c1ffa0800000000000000
+      internalID: -5768613438108434737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_33
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 616
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205e709a7b122b390800000000000000
+      internalID: -7804138131581049598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68104972a716b0f0800000000000000
+      internalID: -1101667072259123092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_35
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 609
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eceed22547ba8710800000000000000
+      internalID: 1696369717224074465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 563
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d87ff204b05dcdc0800000000000000
+      internalID: -3617146191634007856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 569
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6cd6f1ebc5811f0800000000000000
+      internalID: -1074006539487033681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_38
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 555
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea479730d3bf2a560800000000000000
+      internalID: 7323692183527716014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1887347f5de964ac0800000000000000
+      internalID: -3871232187864745855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_40
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 542
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fb18e67deed4e20800000000000000
+      internalID: 3336585507990781734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_41
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 532
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5c62f354d897a80800000000000000
+      internalID: -8468582295741741641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_42
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb5823c922a70d70800000000000000
+      internalID: 9009347879829527548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_43
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 56
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa8b65252f308780800000000000000
+      internalID: -8682870652796171533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_44
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 9
+        width: 8
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691e158a22f42ffc0800000000000000
+      internalID: -3462618153223069290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_45
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 60
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83c3112f942d1bb0800000000000000
+      internalID: -4963770948419075188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 55
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b36910742bed79e0800000000000000
+      internalID: -1621881749051448397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flour1_47
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 45
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce83de67d0b5e880800000000000000
+      internalID: -8582259075560796475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      flour1_0: -5345038882408103102
+      flour1_1: 2280040744284093815
+      flour1_10: -4026428588774483716
+      flour1_11: 2218844415214132316
+      flour1_12: -549665419577785265
+      flour1_13: -3804703432614182424
+      flour1_14: -8212649956321382068
+      flour1_15: 3749462362720078928
+      flour1_16: -8432727784699127313
+      flour1_17: -1930743085148476279
+      flour1_18: -6819283342822798579
+      flour1_19: 7324103071286495813
+      flour1_2: -5209423206588777269
+      flour1_20: 7338275030399241007
+      flour1_21: -5053395000814480147
+      flour1_22: 8126541422077490017
+      flour1_23: -6534924949698959861
+      flour1_24: 7068733010931284184
+      flour1_25: 7091422728219291278
+      flour1_26: 920143982475233890
+      flour1_27: -7284252880568135367
+      flour1_28: 7172522764035183837
+      flour1_29: 1470734109693609074
+      flour1_3: -3366671151467530477
+      flour1_30: -2425960538156407591
+      flour1_31: 7870505624469586330
+      flour1_32: -5768613438108434737
+      flour1_33: -7804138131581049598
+      flour1_34: -1101667072259123092
+      flour1_35: 1696369717224074465
+      flour1_36: -3617146191634007856
+      flour1_37: -1074006539487033681
+      flour1_38: 7323692183527716014
+      flour1_39: -3871232187864745855
+      flour1_4: -8456164174409732263
+      flour1_40: 3336585507990781734
+      flour1_41: -8468582295741741641
+      flour1_42: 9009347879829527548
+      flour1_43: -8682870652796171533
+      flour1_44: -3462618153223069290
+      flour1_45: -4963770948419075188
+      flour1_46: -1621881749051448397
+      flour1_47: -8582259075560796475
+      flour1_5: -4147866365098123835
+      flour1_6: -5194046302268753435
+      flour1_7: 7091534052866044750
+      flour1_8: -505848557417530531
+      flour1_9: 7371378801443549335
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1361,15 +1361,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Project Manager\n\nMaria Karra\nPanagiotis Ilias Tsompanoglou\n\n\n\nGame
-    Designer \n\nMaria Karra\n\n\n\nLevel Designer\n\nMaria Karra\nPanagiotis Ilias
-    Tsompanoglou\nRania Kalaitzaki\n\n\n\n\nGame Development\n\nIoannis Karkalas\nEleftherios
-    Pitopoulos\nPanagiotis Ilias Tsompanoglou\n\n\n\n\nGame Programming\n\nIoannis
-    Karkalas \nEleftherios Pitopoulos\nPanagiotis Ilias Tsompanoglou\n\n\n\n\n\nArt
-    Director\n\nMaria Karra\n\n\n\nGame Art\n\nMaria Karra\nRania Kalaitzaki\n\n\n\nConcept
-    Art\nRania Kalaitzaki\n\n\n\n\nMusic Producer\n\nChristoforos Alamanis\n\n\n\nVocalist\n\nMaria
-    Karra\n\n\n\nSound Designer\n\nIoannis Karkalas\n\n\n\n\nTranslator\n\nNefeli
-    Psykou\n\n\n\n\nSpecial thanks to our playtesters !!!\n\n\n\nAdditional special
+  m_text: "\n\n\nGame Designer\n\nMaria Karra\n\n\nProject Manager\n\nIoannis Karkalas\n\n\nGame
+    Programmer\n\nIoannis Karkalas\nPanagiotis Ilias Tsompanoglou\nEleftherios Pitopoulos\n\n\nGame
+    Art\n\nMaria Karra\nMaggie Makri\nRania Kalaitzaki\n\n\nNarrative Design\n\nNefeli
+    Psykou\nMaria Karra\n\nGame Animator\n\nJairo Jos\xE9 Caldera\n\n\nMusic Producer\n\nChristoforos
+    Alamanis\n\n\n\n\n\nSpecial thanks to our playtesters !!!\n\n\nAdditional special
     thanks to Panagiotis Kotridis"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb7ba28d5e2012f408e9d4a2818d8fb7, type: 2}
@@ -1568,6 +1564,22 @@ PrefabInstance:
     - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_Size.y
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1362025479012091506, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_Origin.x
@@ -3820,6 +3832,10 @@ PrefabInstance:
     - target: {fileID: 4453205308130357121, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628756540442811109, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5805662791839014829, guid: 164dae77cead8d34494ed73f49bbfe53, type: 3}
       propertyPath: m_LocalPosition.x
