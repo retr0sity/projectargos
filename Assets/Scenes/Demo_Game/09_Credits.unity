@@ -1362,11 +1362,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\n\n\nGame Designer\n\nMaria Karra\n\n\nProject Manager\n\nIoannis Karkalas\n\n\nGame
-    Programmer\n\nIoannis Karkalas\nPanagiotis Ilias Tsompanoglou\nEleftherios Pitopoulos\n\n\nGame
-    Art\n\nMaria Karra\nMaggie Makri\nRania Kalaitzaki\n\n\nNarrative Design\n\nNefeli
-    Psykou\nMaria Karra\n\nGame Animator\n\nJairo Jos\xE9 Caldera\n\n\nMusic Producer\n\nChristoforos
-    Alamanis\n\n\n\n\n\nSpecial thanks to our playtesters !!!\n\n\nAdditional special
-    thanks to Panagiotis Kotridis"
+    Programmer\n\nIoannis Karkalas\nPanagiotis Ilias Tsompanoglou\nTalha Ahmed\nEleftherios
+    Pitopoulos\n\n\nGame Art\n\nMaria Karra\nMaggie Makri\nRania Kalaitzaki\n\n\nNarrative
+    Design\n\nNefeli Psykou\nMaria Karra\n\nGame Animator\n\nJairo Jos\xE9 Caldera\n\n\nMusic
+    Producer\n\nChristoforos Alamanis\n\n\n\n\n\nSpecial thanks to our playtesters
+    !!!\n\n\nAdditional special thanks to Panagiotis Kotridis and Theano Papodopoulou!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb7ba28d5e2012f408e9d4a2818d8fb7, type: 2}
   m_sharedMaterial: {fileID: -4073393308896797546, guid: bb7ba28d5e2012f408e9d4a2818d8fb7, type: 2}
