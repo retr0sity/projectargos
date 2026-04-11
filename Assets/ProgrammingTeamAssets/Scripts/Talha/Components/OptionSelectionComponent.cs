@@ -26,7 +26,8 @@ namespace Game.Components
             }
         }
 
-        private int CurrentIndex;
+        //Also made that protected :)
+        protected int CurrentIndex;
         public List<StringData> Options;
         public GameObject Container;
         public Action<string> ActionOptionChanged;
@@ -59,7 +60,8 @@ namespace Game.Components
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
         }
 
-        private void OptionSelected(InputAction.CallbackContext context)
+        //This I needed to implement differently
+        protected virtual void OptionSelected(InputAction.CallbackContext context)
         {
             InputManager.InputButtonLeft.performed -= OnLeftPressed;
             InputManager.InputButtonRight.performed -= OnRightPressed;
