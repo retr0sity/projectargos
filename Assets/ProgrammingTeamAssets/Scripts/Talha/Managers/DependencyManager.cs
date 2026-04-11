@@ -1,5 +1,6 @@
 using UnityEngine;
 using Game.Components;
+using Game.Controllers;
 
 namespace Game.Managers
 {
@@ -60,6 +61,23 @@ namespace Game.Managers
                 return mTimerComponent;
             }
         }
+        #endregion
+
+        #region Controllers
+
+        private InterfaceController mInterfaceController;
+        public InterfaceController InterfaceController
+        {
+            get
+            {
+                if (mInterfaceController == null)
+                {
+                    mInterfaceController = FindObjectOfType<InterfaceController>(true);
+                }
+                return mInterfaceController;
+            }
+        }
+
         #endregion
 
     }

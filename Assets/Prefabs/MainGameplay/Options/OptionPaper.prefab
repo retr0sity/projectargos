@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: Option
       value: 
       objectReference: {fileID: 11400000, guid: 7cf75ef09921a4a4fb6fbcb9582245a0, type: 2}
+    - target: {fileID: 4166144760982476169, guid: 5c352a3839c61c848803daf424956fb8, type: 3}
+      propertyPath: m_text
+      value: Paper
+      objectReference: {fileID: 0}
     - target: {fileID: 4863476726331490526, guid: 5c352a3839c61c848803daf424956fb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7857240187545824534, guid: 5c352a3839c61c848803daf424956fb8, type: 3}
+      propertyPath: Option
+      value: 
+      objectReference: {fileID: 11400000, guid: 7cf75ef09921a4a4fb6fbcb9582245a0, type: 2}
     - target: {fileID: 8454791588827383854, guid: 5c352a3839c61c848803daf424956fb8, type: 3}
       propertyPath: m_text
       value: Paper

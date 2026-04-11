@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471db7615b4d8147bc0b82c149c1cc2, type: 3}
   m_Name: OptionScissor
   m_EditorClassIdentifier: 
-  ID: Scissor
+  ID: Scissors

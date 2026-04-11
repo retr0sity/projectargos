@@ -27,7 +27,7 @@ namespace Game.Components
             MainGameplay.ActionOptionChanged += OnOptionChanged;
         }
 
-        private void OnOptionChanged(string ID)
+        public virtual void OnOptionChanged(string ID)
         {
             var TargetScale = ID == this.Option.ID ? Vector3.one * 1.2f : Vector3.one;
             transform.DOScale(TargetScale, 0.2f).SetEase(Ease.OutBack);

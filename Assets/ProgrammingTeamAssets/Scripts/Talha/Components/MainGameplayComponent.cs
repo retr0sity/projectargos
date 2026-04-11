@@ -7,6 +7,7 @@ namespace Game.Components
     {
         public Action ActionTimerEnded;
         public Action<string,string> ActionOptionSelected;
+        public Action<string> ActionStartMinigame;
 
         public MainGameStartTimer MainGameStartTimer;
         public OptionSelectionComponent OptionSelection;
