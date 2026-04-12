@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionStickyNote
   m_EditorClassIdentifier: 
   ID: StickyNote
-  Description: 
+  Description: 'Sticky Note: PAY RENT !!!'
   IsConsole: 0

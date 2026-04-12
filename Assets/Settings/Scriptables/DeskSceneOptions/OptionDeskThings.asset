@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: OptionDeskThings
   m_EditorClassIdentifier: 
   ID: DeskThings
-  Description: 
+  Description: "Writing Material --and thing-ies you didn\u2019t say goodbye to when
+    you should have had"
   IsConsole: 0

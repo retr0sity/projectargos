@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionBookTowelPhone
   m_EditorClassIdentifier: 
   ID: BookTowelPhone
-  Description: 
+  Description: Personal Items
   IsConsole: 0

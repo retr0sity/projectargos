@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionBooks
   m_EditorClassIdentifier: 
   ID: Books
-  Description: 
+  Description: Art History Books
   IsConsole: 0

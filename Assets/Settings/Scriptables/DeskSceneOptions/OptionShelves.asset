@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bed3c6cf6455543a002f2084b37ae4, type: 3}
   m_Name: OptionShelves
   m_EditorClassIdentifier: 
-  ID: 
-  Description: 
+  ID: Shelves
+  Description: Shelves, Handmade from Grandpa
   IsConsole: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionFinancialPlan
   m_EditorClassIdentifier: 
   ID: FinancialPlan
-  Description: 
+  Description: 'Financial Plan: Daily Budget = Black-eye Beans/ Day'
   IsConsole: 0

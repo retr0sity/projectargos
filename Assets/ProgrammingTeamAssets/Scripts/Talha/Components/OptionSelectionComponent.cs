@@ -11,7 +11,7 @@ namespace Game.Components
 {
     public class OptionSelectionComponent : MonoBehaviour
     {
-        private InputManager InputManager => DependencyManager.Instance.InputManager;
+        protected InputManager InputManager => DependencyManager.Instance.InputManager;
 
         private MainGameplayComponent mMainGameplayComponent;
         private MainGameplayComponent MainGameplayComponent
@@ -42,7 +42,7 @@ namespace Game.Components
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
         }
 
-        private void OnLeftPressed(InputAction.CallbackContext context)
+        protected virtual void OnLeftPressed(InputAction.CallbackContext context)
         {
             if (CurrentIndex == 0)
                 return;
@@ -51,7 +51,7 @@ namespace Game.Components
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
         }
 
-        private void OnRightPressed(InputAction.CallbackContext context)
+        protected virtual void OnRightPressed(InputAction.CallbackContext context)
         {
             if (CurrentIndex == Options.Count - 1)
                 return;

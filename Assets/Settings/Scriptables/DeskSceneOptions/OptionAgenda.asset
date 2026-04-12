@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionAgenda
   m_EditorClassIdentifier: 
   ID: Agenda
-  Description: 
+  Description: 'Agenda: Your days seem ... empty'
   IsConsole: 0

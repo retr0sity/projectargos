@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OptionWallthingyWall
   m_EditorClassIdentifier: 
   ID: WallthingyWall
-  Description: 
+  Description: Notice Board
   IsConsole: 0

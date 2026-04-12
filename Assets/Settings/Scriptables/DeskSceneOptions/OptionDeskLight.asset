@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: OptionDeskLight
   m_EditorClassIdentifier: 
   ID: DeskLight
-  Description: 
+  Description: Art Nouveau(?) Desk lamp acquired by accident  -found near a trash
+    can 3 years ago. Felt like the neighbourhood gave you a heartwarming gift to
+    say ~Welcome~
   IsConsole: 0
