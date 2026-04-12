@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Game.Utilities;
 using Game.Managers;
+using System.Collections;
 
 public class DeskSelectionComponent : OptionSelectionComponent
 {
@@ -29,6 +30,8 @@ public class DeskSelectionComponent : OptionSelectionComponent
         ActionOptionChanged?.Invoke(DeskItems[CurrentIndex].ID);
     }
 
+    
+
     protected override void OnLeftPressed(InputAction.CallbackContext context)
     {
         if (CurrentIndex == 0)
@@ -49,11 +52,15 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
     protected override void OptionSelected(InputAction.CallbackContext context)
     {
+        Debug.Log("OptionSelected fired, isPaperOpen: " + isPaperOpen);
         if (DeskItems[CurrentIndex].IsConsole)
         {
             SceneManager.LoadScene("MainGame 1");
             return;
         }
+
+        // Unsubscribe immediately to prevent repeated triggers
+        InputManager.InputButtonEnter.performed -= OptionSelected;
 
         if (!isPaperOpen)
         {
@@ -67,5 +74,14 @@ public class DeskSelectionComponent : OptionSelectionComponent
             PaperAnimator.SetTrigger("Close");
             isPaperOpen = false;
         }
+
+        // Resubscribe after a short delay
+        StartCoroutine(ResubscribeEnter());
+    }
+
+    private IEnumerator ResubscribeEnter()
+    {
+        yield return new WaitForSeconds(0.5f);
+        InputManager.InputButtonEnter.performed += OptionSelected;
     }
 }

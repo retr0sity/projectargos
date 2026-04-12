@@ -1718,6 +1718,7 @@ GameObject:
   - component: {fileID: 915697145}
   - component: {fileID: 915697144}
   - component: {fileID: 915697143}
+  - component: {fileID: 915697146}
   m_Layer: 5
   m_Name: DescriptionPanel
   m_TagString: Untagged
@@ -1805,6 +1806,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915697141}
   m_CullTransparentMesh: 1
+--- !u!114 &915697146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915697141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8d1f604d536e349befacfde347ee59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DescriptionText: {fileID: 136396624}
+  DescriptionPanel: {fileID: 915697141}
 --- !u!1 &917570446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1982,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 48d23f0c048679e42a6ff33435ec5515, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2321,7 +2336,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 92bc31a99c9298545969b3fe9ef4ff35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
