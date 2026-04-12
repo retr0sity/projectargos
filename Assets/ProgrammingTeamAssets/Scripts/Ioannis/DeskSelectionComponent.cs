@@ -1,7 +1,9 @@
+using UnityEngine;
 using Game.Components;
 using Game.Scriptables;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DeskSelectionComponent : OptionSelectionComponent
 {
@@ -15,6 +17,6 @@ public class DeskSelectionComponent : OptionSelectionComponent
             return;
 
         // Otherwise run the normal behavior
-        base.OptionSelected(context);
+        SceneManager.LoadScene("MainGame 1");
     }
 }
