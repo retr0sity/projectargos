@@ -21,6 +21,19 @@ namespace Game.Components
             }
         }
 
+        private MainGameplayComponent mMainGameplayComponent;
+        private MainGameplayComponent MainGameplayComponent
+        {
+            get
+            {
+                if (mMainGameplayComponent == null)
+                {
+                    mMainGameplayComponent = GetComponentInParent<MainGameplayComponent>();
+                }
+                return mMainGameplayComponent;
+            }
+        }
+
         public StringData GameID;
         public Action ActionKeyCollected;
         public DoorComponent DoorComponent;
@@ -36,6 +49,7 @@ namespace Game.Components
                 return mRequiredKeys;
             }
         }
+        public GameObject Container;
 
         private void Awake()
         {
@@ -44,6 +58,7 @@ namespace Game.Components
 
         public void StartGame()
         {
+            Container.SetActive(true);
             Debug.Log("Door game started for : "+GameID);
         }
 
@@ -53,6 +68,12 @@ namespace Game.Components
             if (RequiredKeys.All(x=> x.IsCollected))
             {
                 Debug.Log("Minigame Ended");
+            }
+            else
+            {
+                Container.SetActive(false);
+                MinigameComponent.Container.SetActive(false);
+                MainGameplayComponent.OptionSelection.StartGameplay();
             }
         }
 

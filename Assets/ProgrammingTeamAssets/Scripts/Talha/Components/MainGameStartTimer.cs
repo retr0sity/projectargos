@@ -44,7 +44,7 @@ namespace Game.Components
 
         public void Tick(float tickTime)
         {
-            Debug.Log("Tick : "+TimeToDisplayText.ToString()+" : "+TimeLeft);
+            //Debug.Log("Tick : "+TimeToDisplayText.ToString()+" : "+TimeLeft);
             if (TimeToDisplayText == 1f)
             {
                 TextTimer.transform.DOKill();

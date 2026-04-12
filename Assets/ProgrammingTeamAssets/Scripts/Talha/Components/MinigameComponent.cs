@@ -22,6 +22,7 @@ namespace Game.Components
 
         public Action<int> ActionUpdateKeys;
         public List<DoorGameplayComponent> DoorGames;
+        public GameObject Container;
 
         private void Start()
         {
@@ -30,6 +31,7 @@ namespace Game.Components
 
         private void StartMiniGame(string GameID)
         {
+            Container.gameObject.SetActive(true);
             DoorGames.FirstOrDefault(x => x.GameID.ID == GameID).StartGame();
         }
 
