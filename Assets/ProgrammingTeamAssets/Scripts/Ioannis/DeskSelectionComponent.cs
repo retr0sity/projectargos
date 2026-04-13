@@ -40,6 +40,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
         CurrentIndex--;
         ActionOptionChanged?.Invoke(DeskItems[CurrentIndex].ID);
+        AudioManager.Instance.Play("SelectionMove"); // add this
     }
 
     protected override void OnRightPressed(InputAction.CallbackContext context)
@@ -49,6 +50,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
         CurrentIndex++;
         ActionOptionChanged?.Invoke(DeskItems[CurrentIndex].ID);
+        AudioManager.Instance.Play("SelectionMove"); // add this
     }
 
     protected override void OptionSelected(InputAction.CallbackContext context)
@@ -64,6 +66,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
         if (!isPaperOpen)
         {
+            AudioManager.Instance.Play("PaperOpen");
             DescriptionPanel.SetActive(true);
             DescriptionText.SetupText(DeskItems[CurrentIndex].Description);
             PaperAnimator.SetTrigger("Open");
@@ -71,6 +74,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
         }
         else
         {
+            AudioManager.Instance.Play("PaperOpen");
             PaperAnimator.SetTrigger("Close");
             isPaperOpen = false;
         }
