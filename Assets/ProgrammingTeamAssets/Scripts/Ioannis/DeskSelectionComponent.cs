@@ -53,10 +53,26 @@ public class DeskSelectionComponent : OptionSelectionComponent
         AudioManager.Instance.Play("SelectionMove"); // add this
     }
 
+    private void DisableDeskInput()
+    {
+        InputManager.InputButtonLeft.performed -= OnLeftPressed;
+        InputManager.InputButtonRight.performed -= OnRightPressed;
+        InputManager.InputButtonEnter.performed -= OptionSelected;
+    }
+
+    private void EnableDeskInput()
+    {
+        InputManager.InputButtonLeft.performed += OnLeftPressed;
+        InputManager.InputButtonRight.performed += OnRightPressed;
+        InputManager.InputButtonEnter.performed += OptionSelected;
+    }
+
     protected override void OptionSelected(InputAction.CallbackContext context)
     {
+
         if (DeskItems[CurrentIndex].IsConsole)
         {
+            DisableDeskInput(); // IMPORTANT
             ConsoleMenu.OpenMenu();
             return;
         }

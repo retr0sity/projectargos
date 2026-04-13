@@ -21,16 +21,17 @@ public class ConsoleMenuComponent : MonoBehaviour
 
     public void OpenMenu()
     {
+        Debug.Log("OpenMenu called");
         gameObject.SetActive(true);
-        // No trigger needed, ConsoleMenuOpen plays automatically on enable
     }
 
-    // Call this via Animation Event on last frame of ConsoleMenuOpen
     public void OnMenuOpened()
     {
+        Debug.Log("OnMenuOpened called");
+        ConsoleAnimator.SetTrigger("Open");
         YesOption.SetActive(true);
+        NoOption.SetActive(true);
 
-        // Start on Yes selected
         YesHighlight.SetActive(true);
         YesNormal.SetActive(false);
 
