@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Components
@@ -10,6 +11,8 @@ namespace Game.Components
         public Action<string,string> ActionOptionSelected;
         public Action<string> ActionStartMinigame;
         public Action<string> ActionStartParagraphGame;
+        public Action<List<string>> ActionStartHangmanGame;
+        public Action ActionStartMainGameplay;
 
         public MainGameStartTimer MainGameStartTimer;
         public OptionSelectionComponent OptionSelection;
@@ -24,6 +27,12 @@ namespace Game.Components
         {
             ActionOptionSelected += OnOptionSelected;
             ActionTimerEnded += ShowAnimation;
+            ActionStartMainGameplay += StartMainGameplay;
+            StartMainGameplay();
+        }
+
+        private void StartMainGameplay()
+        {
             OptionSelection.StartGameplay();
         }
 

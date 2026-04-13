@@ -26,9 +26,9 @@ namespace Game.UI.Components
 
         }
 
-        private void UpdateKeyVisual(int KeyCount)
+        private void UpdateKeyVisual(int KeyCount, int TotalKeys)
         {
-            TextKeyCount.SetupText(KeyCount.ToString());
+            TextKeyCount.SetupText(KeyCount.ToString()+"/"+TotalKeys.ToString());
         }
     }
 }

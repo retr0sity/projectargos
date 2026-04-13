@@ -42,25 +42,25 @@ namespace Game.Components
             AIOptionText.SetupText(MainGameplayComponent.AIOption);
             PlayerOptionText.SetupText(MainGameplayComponent.PlayerOption);
 
-            if (PlayerOption == AIOption)
-            {
-                ResultText.SetupText("It's a Draw");
-                this.RunAfter(3f, () =>
-                {
-                    MainGameplayComponent.OptionSelection.StartGameplay();
-                    Container.SetActive(false);
-                });
-            }
-            else if(CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
-            {
-                ResultText.SetupText("You won");
-                this.RunAfter(3f, () =>
-                {
-                    MainGameplayComponent.ActionStartParagraphGame?.Invoke(PlayerOption);
-                    Container.SetActive(false);
-                });
-            }
-            else
+            //if (PlayerOption == AIOption)
+            //{
+            //    ResultText.SetupText("It's a Draw");
+            //    this.RunAfter(3f, () =>
+            //    {
+            //        MainGameplayComponent.OptionSelection.StartGameplay();
+            //        Container.SetActive(false);
+            //    });
+            //}
+            //else if(CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
+            //{
+            //    ResultText.SetupText("You won");
+            //    this.RunAfter(3f, () =>
+            //    {
+            //        MainGameplayComponent.ActionStartParagraphGame?.Invoke(PlayerOption);
+            //        Container.SetActive(false);
+            //    });
+            //}
+            //else
             {
                 ResultText.SetupText("Opponent Won");
                 this.RunAfter(3f, () =>

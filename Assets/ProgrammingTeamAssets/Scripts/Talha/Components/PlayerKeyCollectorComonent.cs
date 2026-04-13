@@ -33,7 +33,7 @@ namespace Game.Components
 
         public void StartGame()
         {
-
+            transform.position = Vector3.zero;
         }
 
         void FixedUpdate()
@@ -78,6 +78,10 @@ namespace Game.Components
             {
                 Debug.Log("Key Collected");
                 collision.GetComponent<KeyComponent>().CollectKey();
+            }
+            else if (collision.CompareTag("OutCast"))
+            {
+                collision.GetComponentInParent<OutcastComponent>().ShowDialogue();
             }
         }
 

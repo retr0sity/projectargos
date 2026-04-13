@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Key
   - Door
+  - OutCast
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using Game.Scriptables;
+using Game.Controllers;
+using Game.Managers;
 
 namespace Game.Components
 {
@@ -50,6 +52,7 @@ namespace Game.Components
             }
         }
         public GameObject Container;
+        public List<string> Words;
 
         private void Awake()
         {
@@ -60,20 +63,22 @@ namespace Game.Components
         {
             Container.SetActive(true);
             Debug.Log("Door game started for : "+GameID);
+            MinigameComponent.ActionUpdateKeys?.Invoke(RequiredKeys.Count(x => x.IsCollected),RequiredKeys.Count());
         }
 
         public void OnKeyCollected()
         {
-            MinigameComponent.ActionUpdateKeys?.Invoke(RequiredKeys.Count(x => x.IsCollected));
+            MinigameComponent.ActionUpdateKeys?.Invoke(RequiredKeys.Count(x => x.IsCollected),RequiredKeys.Count());
             if (RequiredKeys.All(x=> x.IsCollected))
             {
                 Debug.Log("Minigame Ended");
+                MinigameComponent.EndMiniGame();
+                MainGameplayComponent.ActionStartHangmanGame?.Invoke(Words);
             }
             else
             {
-                Container.SetActive(false);
-                MinigameComponent.Container.SetActive(false);
-                MainGameplayComponent.OptionSelection.StartGameplay();
+                //MinigameComponent.EndMiniGame();
+                //MainGameplayComponent.OptionSelection.StartGameplay();
             }
         }
 
