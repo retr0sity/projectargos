@@ -720,7 +720,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66a01de6ac7023844962238de5ab5930, type: 2}
   - {fileID: 11400000, guid: fa6dc70f2b896ca4691d29a40da049e1, type: 2}
   - {fileID: 11400000, guid: 9334b47175d18cb41aca578d601ec709, type: 2}
-  - {fileID: 11400000, guid: f2dadc36a0bf81b45a507df47458e953, type: 2}
   - {fileID: 11400000, guid: 80cc6e1bac786ce4784744e405f3f6ed, type: 2}
   - {fileID: 11400000, guid: 258a82b71acf11a46a4f6b497d1ffeb4, type: 2}
   - {fileID: 11400000, guid: 1e34d89b16679fb41b6e4287849b193f, type: 2}
@@ -729,6 +728,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ea3dab4411a9e149ae38b74811e63d5, type: 2}
   - {fileID: 11400000, guid: b7f06475eaab31b4fa9107c88e29e6a5, type: 2}
   - {fileID: 11400000, guid: fd8f31dc4c3767448a97077fcff454fc, type: 2}
+  - {fileID: 11400000, guid: f2dadc36a0bf81b45a507df47458e953, type: 2}
   PaperAnimator: {fileID: 915697143}
   DescriptionText: {fileID: 136396624}
   DescriptionPanel: {fileID: 915697141}
@@ -3024,7 +3024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1530088854
 Transform:
   m_ObjectHideFlags: 0
