@@ -14,6 +14,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
     public TextComponent DescriptionText;
     public GameObject DescriptionPanel;
     private bool isPaperOpen = false;
+    public ConsoleMenuComponent ConsoleMenu;
 
     private void Start()
     {
@@ -52,10 +53,9 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
     protected override void OptionSelected(InputAction.CallbackContext context)
     {
-        Debug.Log("OptionSelected fired, isPaperOpen: " + isPaperOpen);
         if (DeskItems[CurrentIndex].IsConsole)
         {
-            SceneManager.LoadScene("MainGame 1");
+            ConsoleMenu.OpenMenu();
             return;
         }
 
