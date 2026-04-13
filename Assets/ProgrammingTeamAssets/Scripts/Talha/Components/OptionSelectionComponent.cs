@@ -47,6 +47,7 @@ namespace Game.Components
             if (CurrentIndex == 0)
                 return;
 
+            AudioManager.Instance.Play("con_choice");
             CurrentIndex--;
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
         }
@@ -56,6 +57,7 @@ namespace Game.Components
             if (CurrentIndex == Options.Count - 1)
                 return;
 
+            AudioManager.Instance.Play("con_choice");
             CurrentIndex++;
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
         }
@@ -67,6 +69,7 @@ namespace Game.Components
             InputManager.InputButtonRight.performed -= OnRightPressed;
             InputManager.InputButtonEnter.performed -= OptionSelected;
 
+            AudioManager.Instance.Play("Console");
             Container.gameObject.SetActive(false);
             MainGameplayComponent.ActionOptionSelected?.Invoke(Options[CurrentIndex].ID,Options.GetRandom().ID);
         }

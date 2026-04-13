@@ -77,6 +77,7 @@ namespace Game.Components
             if (collision.CompareTag("Key"))
             {
                 Debug.Log("Key Collected");
+                AudioManager.Instance.Play("pickup_key");
                 collision.GetComponent<KeyComponent>().CollectKey();
             }
             else if (collision.CompareTag("OutCast"))
