@@ -40,7 +40,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
 
         CurrentIndex--;
         ActionOptionChanged?.Invoke(DeskItems[CurrentIndex].ID);
-        AudioManager.Instance.Play("SelectionMove"); // add this
+        AudioManager.Instance.Play("SelectionMove");
     }
 
     protected override void OnRightPressed(InputAction.CallbackContext context)
@@ -60,18 +60,13 @@ public class DeskSelectionComponent : OptionSelectionComponent
         InputManager.InputButtonEnter.performed -= OptionSelected;
     }
 
-    private void EnableDeskInput()
-    {
-        InputManager.InputButtonLeft.performed += OnLeftPressed;
-        InputManager.InputButtonRight.performed += OnRightPressed;
-        InputManager.InputButtonEnter.performed += OptionSelected;
-    }
 
     protected override void OptionSelected(InputAction.CallbackContext context)
     {
 
         if (DeskItems[CurrentIndex].IsConsole)
         {
+            AudioManager.Instance.Play("Console");
             DisableDeskInput(); // IMPORTANT
             ConsoleMenu.OpenMenu();
             return;

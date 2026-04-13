@@ -57,11 +57,7 @@ public class AudioManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Start()
-    {
-        // Play default music at game start
-        PlayMusic(defaultMusic);
-    }
+    
 
     void OnDestroy()
     {
@@ -82,14 +78,11 @@ public class AudioManager : MonoBehaviour
             default:
                 PlayMusic(defaultMusic);
                 break;
-            case "MainGame 1":
-                PlayMusic("irlTheme");
-                break;
             case "MainMenu":
                 PlayMusic("irlTheme");
                 break;
             case "DeskScene":
-                PlayMusic("irlTheme");
+                PlayMusic("MainTheme");
                 break;
         
             

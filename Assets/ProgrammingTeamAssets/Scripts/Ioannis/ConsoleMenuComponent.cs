@@ -46,6 +46,7 @@ public class ConsoleMenuComponent : MonoBehaviour
         if (!isYesSelected) return;
 
         // Move to No (just show normal yes sprite)
+        AudioManager.Instance.Play("SelectionMove");
         isYesSelected = false;
         YesHighlight.SetActive(false);
         YesNormal.SetActive(true);
@@ -57,6 +58,7 @@ public class ConsoleMenuComponent : MonoBehaviour
         if (isYesSelected) return;
 
         // Move to Yes
+        AudioManager.Instance.Play("SelectionMove");
         isYesSelected = true;
         YesHighlight.SetActive(true);
         YesNormal.SetActive(false);
@@ -70,6 +72,7 @@ public class ConsoleMenuComponent : MonoBehaviour
         if (!isYesSelected) return;
 
         // Confirm Yes
+        AudioManager.Instance.Play("Confirm");
         isConfirming = true;
         InputManager.InputButtonLeft.performed -= OnLeftPressed;
         InputManager.InputButtonRight.performed -= OnRightPressed;
