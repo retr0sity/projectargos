@@ -83,7 +83,7 @@ public class AudioManager : MonoBehaviour
                 PlayMusic(defaultMusic);
                 break;
             case "MainGame 1":
-                PlayMusic("GameTheme");
+                PlayMusic("irlTheme");
                 break;
             case "MainMenu":
                 PlayMusic("irlTheme");
