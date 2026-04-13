@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: d0506505d3286674eba7e3c67b66e528
+guid: 300018342bdb3b74ab3f8daa62ba8406
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -266838411695072950
-    second: Console Game Foreground  _0
+      213: -1924276561143112335
+    second: Pencil route boundaries _0
+  - first:
+      213: 3902690816175123656
+    second: Pencil route boundaries _1
+  - first:
+      213: 2651265966899585446
+    second: Pencil route boundaries _2
+  - first:
+      213: 2677041367245579093
+    second: Pencil route boundaries _3
+  - first:
+      213: 3547218307615149486
+    second: Pencil route boundaries _4
+  - first:
+      213: 5811804156049786189
+    second: Pencil route boundaries _5
+  - first:
+      213: 2200509751495319567
+    second: Pencil route boundaries _6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,32 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -124,6 +116,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,13 +196,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Console Game Foreground  _0
+      name: Pencil route boundaries _0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2360
-        height: 1640
+        y: 338
+        width: 386
+        height: 742
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +211,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a495c7ad0effb4cf0800000000000000
-      internalID: -266838411695072950
+      spriteID: 17d5473b9a89b45e0800000000000000
+      internalID: -1924276561143112335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 76
+        width: 942
+        height: 965
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc2c46be94292630800000000000000
+      internalID: 3902690816175123656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 685
+        width: 687
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1e12299503bc420800000000000000
+      internalID: 2651265966899585446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _3
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 0
+        width: 1126
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553e2bf90f2c62520800000000000000
+      internalID: 2677041367245579093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _4
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 415
+        width: 919
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadc92eb1404a3130800000000000000
+      internalID: 3547218307615149486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _5
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 962
+        width: 109
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d458c71761da7a050800000000000000
+      internalID: 5811804156049786189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pencil route boundaries _6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1704
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0069aec5f7c98e10800000000000000
+      internalID: 2200509751495319567
       vertices: []
       indices: 
       edges: []
@@ -213,7 +363,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Console Game Foreground  _0: -266838411695072950
+      Pencil route boundaries _0: -1924276561143112335
+      Pencil route boundaries _1: 3902690816175123656
+      Pencil route boundaries _2: 2651265966899585446
+      Pencil route boundaries _3: 2677041367245579093
+      Pencil route boundaries _4: 3547218307615149486
+      Pencil route boundaries _5: 5811804156049786189
+      Pencil route boundaries _6: 2200509751495319567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
