@@ -99,7 +99,8 @@ namespace Game.Components
                     {
                         //this.RunAfter(3f, () =>
                         //{
-                            MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
+                            //MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
+                            MainGameplayComponent.ActionStartMinigame?.Invoke("Pencil");
                             Container.SetActive(false);
                         //});
                     });
