@@ -66,18 +66,25 @@ namespace Game.Components
 
         protected override void OptionSelected(InputAction.CallbackContext context)
         {
-            InterfaceController.ActionSwitchInterface?.Invoke("");
-            InputButtonLeft.performed -= OnLeftPressed;
-            InputButtonRight.performed -= OnRightPressed;
-            InputManager.InputButtonEnter.performed -= OptionSelected;
-            Container.gameObject.SetActive(false);
-            AudioManager.Instance.Play("Console");
-
-            PopupOkay.Show(SpriteBasicControls, () =>
+            if (CurrentIndex == 0)
             {
-                FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
-                ;
-            });
+                InterfaceController.ActionSwitchInterface?.Invoke("");
+                InputButtonLeft.performed -= OnLeftPressed;
+                InputButtonRight.performed -= OnRightPressed;
+                InputManager.InputButtonEnter.performed -= OptionSelected;
+                Container.gameObject.SetActive(false);
+                AudioManager.Instance.Play("Console");
+
+                PopupOkay.Show(SpriteBasicControls, () =>
+                {
+                    FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
+                    ;
+                });
+            }
+            else
+            {
+                Application.Quit();
+            }
         }
     }
 }

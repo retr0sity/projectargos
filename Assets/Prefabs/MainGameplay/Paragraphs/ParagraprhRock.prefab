@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 807dbf35d9e7226419dee9495ed952bd, type: 2}
     - target: {fileID: 4789387168763164438, guid: dbb20f112af23d84f867527a715a0754, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6108457202920865876, guid: dbb20f112af23d84f867527a715a0754, type: 3}
       propertyPath: m_Sprite
@@ -788,6 +788,14 @@ PrefabInstance:
     - target: {fileID: 7930383685110846036, guid: 2c5b88e2e543eed499f6e6255abe10d8, type: 3}
       propertyPath: m_Name
       value: PuzzleTextClass
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930383685110846036, guid: 2c5b88e2e543eed499f6e6255abe10d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939187388878027196, guid: 2c5b88e2e543eed499f6e6255abe10d8, type: 3}
+      propertyPath: ID
+      value: CLASS
       objectReference: {fileID: 0}
     - target: {fileID: 7939187388878027196, guid: 2c5b88e2e543eed499f6e6255abe10d8, type: 3}
       propertyPath: Holder

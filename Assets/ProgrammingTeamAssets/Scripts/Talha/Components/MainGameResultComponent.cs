@@ -64,19 +64,19 @@ namespace Game.Components
             AIOptionText.SetupText(MainGameplayComponent.AIOption);
             PlayerOptionText.SetupText(MainGameplayComponent.PlayerOption);
 
-            //if (PlayerOption == AIOption)
-            //{
-            //    ResultText.SetupText("It's a Draw");
-            //    PopupOkay.Show(SpriteDraw, () =>
-            //    {
-            //        //this.RunAfter(3f, () =>
-            //        //{
-            //        MainGameplayComponent.OptionSelection.StartGameplay();
-            //        Container.SetActive(false);
-            //        //});
-            //    });
-            //}
-            //else if (CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
+            if (PlayerOption == AIOption)
+            {
+                ResultText.SetupText("It's a Draw");
+                PopupOkay.Show(SpriteDraw, () =>
+                {
+                    //this.RunAfter(3f, () =>
+                    //{
+                    MainGameplayComponent.OptionSelection.StartGameplay();
+                    Container.SetActive(false);
+                    //});
+                });
+            }
+            else if (CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
             {
                 ResultText.SetupText("You won");
                 PopupOkay.Show(SpritesWon[NumberOfWins], () =>
@@ -90,21 +90,28 @@ namespace Game.Components
                 if (NumberOfWins < SpritesWon.Count - 1)
                     NumberOfWins++;
             }
-            //else
-            //{
-            //    ResultText.SetupText("Opponent Won");
-            //    PopupOkay.Show(SpriteLost1, () =>
-            //    {
-            //        PopupOkay.Show(SpriteLost2, () =>
-            //        {
-            //            //this.RunAfter(3f, () =>
-            //            //{
-            //            MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
-            //            Container.SetActive(false);
-            //            //});
-            //        });
-            //    });
-            //}
+            else
+            {
+                ResultText.SetupText("Opponent Won");
+                PopupOkay.Show(SpriteLost1, () =>
+                {
+                    PopupOkay.Show(SpriteLost2, () =>
+                    {
+                        //this.RunAfter(3f, () =>
+                        //{
+                        var DoorGame = MainGameplayComponent.MinigameComponent.DoorGames.FirstOrDefault(x => x.GameID.ID == AIOption);
+                        if (DoorGame.IsCompleted)
+                        {
+                            MainGameplayComponent.OptionSelection.StartGameplay();
+                            Container.SetActive(false);
+                            return;
+                        }
+                        MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
+                        Container.SetActive(false);
+                        //});
+                    });
+                });
+            }
         }
     }
 }

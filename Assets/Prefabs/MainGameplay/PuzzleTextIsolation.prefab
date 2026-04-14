@@ -16,6 +16,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleTextIsolation
       objectReference: {fileID: 0}
+    - target: {fileID: 4414002667114030655, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414002667114030655, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414002667114030655, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770956486813322606, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770956486813322606, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770956486813322606, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 8172593687018823303, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

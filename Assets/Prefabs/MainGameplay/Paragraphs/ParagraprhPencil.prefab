@@ -367,6 +367,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleTextReligion
       objectReference: {fileID: 0}
+    - target: {fileID: 7930383685110846036, guid: 265bc20bd7c707f46a077a07712222cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939187388878027196, guid: 265bc20bd7c707f46a077a07712222cf, type: 3}
+      propertyPath: ID
+      value: RELIGION
+      objectReference: {fileID: 0}
     - target: {fileID: 7939187388878027196, guid: 265bc20bd7c707f46a077a07712222cf, type: 3}
       propertyPath: Holder
       value: 

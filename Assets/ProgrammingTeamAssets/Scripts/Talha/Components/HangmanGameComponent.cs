@@ -19,6 +19,20 @@ public class HangmanGameComponent : MonoBehaviour
         }
     }
 
+    private ParagraphGameComponent mParagraphGameComponent;
+    private ParagraphGameComponent ParagraphGameComponent
+    {
+        get
+        {
+            if (mParagraphGameComponent == null)
+            {
+                mParagraphGameComponent = FindObjectOfType<ParagraphGameComponent>();
+            }
+            return mParagraphGameComponent;
+        }
+    }
+
+
     public string targetWord = "CAT";
     public int maxLetters = 3;
 
@@ -172,6 +186,7 @@ public class HangmanGameComponent : MonoBehaviour
 
         if (Correct)
         {
+            ParagraphGameComponent.WordCompleted(TargetWords[CurrentWord]);
             currentIndex++;
             StartWord();
         }

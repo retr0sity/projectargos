@@ -143,6 +143,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleTextBlood
       objectReference: {fileID: 0}
+    - target: {fileID: 7930383685110846036, guid: 38cf6ade2b4bae147bf0af3c09ef8f2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939187388878027196, guid: 38cf6ade2b4bae147bf0af3c09ef8f2c, type: 3}
+      propertyPath: ID
+      value: BLOOD
+      objectReference: {fileID: 0}
     - target: {fileID: 7939187388878027196, guid: 38cf6ade2b4bae147bf0af3c09ef8f2c, type: 3}
       propertyPath: Holder
       value: 
@@ -208,6 +216,14 @@ PrefabInstance:
     - target: {fileID: 7930383685110846036, guid: 189615384ac021f40b1c736b7e3c1e6b, type: 3}
       propertyPath: m_Name
       value: PuzzleTextRace
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930383685110846036, guid: 189615384ac021f40b1c736b7e3c1e6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939187388878027196, guid: 189615384ac021f40b1c736b7e3c1e6b, type: 3}
+      propertyPath: ID
+      value: RACE
       objectReference: {fileID: 0}
     - target: {fileID: 7939187388878027196, guid: 189615384ac021f40b1c736b7e3c1e6b, type: 3}
       propertyPath: Holder

@@ -706,6 +706,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleTextConsumerism
       objectReference: {fileID: 0}
+    - target: {fileID: 7930383685110846036, guid: 8821fc416d719dd41b1f276f8883cb75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939187388878027196, guid: 8821fc416d719dd41b1f276f8883cb75, type: 3}
+      propertyPath: ID
+      value: CONSUMERISM
+      objectReference: {fileID: 0}
     - target: {fileID: 7939187388878027196, guid: 8821fc416d719dd41b1f276f8883cb75, type: 3}
       propertyPath: Holder
       value: 

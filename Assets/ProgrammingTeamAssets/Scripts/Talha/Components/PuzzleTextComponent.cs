@@ -11,7 +11,9 @@ namespace Game.Components
         public GameObject Wings;
 
         public Range<Vector2> Boundary;
+        public string ID;
 
+        public bool IsCompleted;
         private void Start()
         {
             StartMoving();
@@ -37,10 +39,12 @@ namespace Game.Components
             transform.DOKill(true);
             Wings.SetActive(false);
             MainRenderer.DOFade(0,2);
+            IsCompleted = true;
             CompletedRenderer.DOFade(1, 2).OnComplete(() =>
             {
                 FindObjectOfType<ParagraphGameComponent>().Container.SetActive(false);
                 FindObjectOfType<MainGameplayComponent>().OptionSelection.StartGameplay();
+                
             });
         }
 

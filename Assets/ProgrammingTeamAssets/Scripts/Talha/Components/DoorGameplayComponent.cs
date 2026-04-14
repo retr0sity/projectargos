@@ -53,6 +53,7 @@ namespace Game.Components
         }
         public GameObject Container;
         public List<string> Words;
+        public bool IsCompleted;
 
         private void Awake()
         {
@@ -72,6 +73,7 @@ namespace Game.Components
             if (RequiredKeys.All(x=> x.IsCollected))
             {
                 Debug.Log("Minigame Ended");
+                IsCompleted = true;
                 MinigameComponent.EndMiniGame();
                 MainGameplayComponent.ActionStartHangmanGame?.Invoke(Words);
             }
