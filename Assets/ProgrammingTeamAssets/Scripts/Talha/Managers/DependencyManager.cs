@@ -33,6 +33,32 @@ namespace Game.Managers
             }
         }
 
+        private PopupManager mPopupManager;
+        public PopupManager PopupManager
+        {
+            get
+            {
+                if (mPopupManager == null)
+                {
+                    mPopupManager = FindObjectOfType<PopupManager>(true);
+                }
+                return mPopupManager;
+            }
+        }
+
+        private ScreenManager mScreenManager;
+        public ScreenManager ScreenManager
+        {
+            get
+            {
+                if (mScreenManager == null)
+                {
+                    mScreenManager = FindObjectOfType<ScreenManager>(true);
+                }
+                return mScreenManager;
+            }
+        }
+
         #endregion
 
         #region Components

@@ -28,7 +28,7 @@ namespace Game.Components
             ActionOptionSelected += OnOptionSelected;
             ActionTimerEnded += ShowAnimation;
             ActionStartMainGameplay += StartMainGameplay;
-            StartMainGameplay();
+            //StartMainGameplay();
         }
 
         private void StartMainGameplay()

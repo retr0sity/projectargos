@@ -22,7 +22,7 @@ namespace Game.Components
 
         public StringData Option;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             MainGameplay.ActionOptionChanged += OnOptionChanged;
         }

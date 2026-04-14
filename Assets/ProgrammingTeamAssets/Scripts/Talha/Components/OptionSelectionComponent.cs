@@ -14,7 +14,7 @@ namespace Game.Components
         protected InputManager InputManager => DependencyManager.Instance.InputManager;
 
         private MainGameplayComponent mMainGameplayComponent;
-        private MainGameplayComponent MainGameplayComponent
+        protected MainGameplayComponent MainGameplayComponent
         {
             get
             {
@@ -32,11 +32,26 @@ namespace Game.Components
         public GameObject Container;
         public Action<string> ActionOptionChanged;
 
+        protected virtual InputAction InputButtonLeft
+        {
+            get
+            {
+                return InputManager.InputButtonLeft;
+            }
+        }
+        protected virtual InputAction InputButtonRight
+        {
+            get
+            {
+                return InputManager.InputButtonRight;
+            }
+        }
+
         public void StartGameplay()
         {
             Container.gameObject.SetActive(true);
-            InputManager.InputButtonLeft.performed += OnLeftPressed;
-            InputManager.InputButtonRight.performed += OnRightPressed;
+            InputButtonLeft.performed += OnLeftPressed;
+            InputButtonRight.performed += OnRightPressed;
             InputManager.InputButtonEnter.performed += OptionSelected;
             CurrentIndex = 0;
             ActionOptionChanged?.Invoke(Options[CurrentIndex].ID);
@@ -65,8 +80,8 @@ namespace Game.Components
         //This I needed to implement differently
         protected virtual void OptionSelected(InputAction.CallbackContext context)
         {
-            InputManager.InputButtonLeft.performed -= OnLeftPressed;
-            InputManager.InputButtonRight.performed -= OnRightPressed;
+            InputButtonLeft.performed -= OnLeftPressed;
+            InputButtonRight.performed -= OnRightPressed;
             InputManager.InputButtonEnter.performed -= OptionSelected;
 
             AudioManager.Instance.Play("Console");
