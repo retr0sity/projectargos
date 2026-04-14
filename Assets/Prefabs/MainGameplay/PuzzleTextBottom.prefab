@@ -11,10 +11,10 @@ PrefabInstance:
     - target: {fileID: 861084953668922074, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cb938db37cfb84245ab3796271e3a36d, type: 3}
+      objectReference: {fileID: 21300000, guid: 616a0e1df1541724fa94fe48d17d7957, type: 3}
     - target: {fileID: 2094687941640068602, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
       propertyPath: m_Name
-      value: PuzzleTextReligion
+      value: PuzzleTextBottom
       objectReference: {fileID: 0}
     - target: {fileID: 4414002667114030655, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 8226688016021966432, guid: 3a99670eff9e0974ab8a4e516a3de6e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 09bf123360a1d1f40816f620445915ae, type: 3}
+      objectReference: {fileID: 21300000, guid: 4f60448f5a48ef144934d4b30ad0eb53, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

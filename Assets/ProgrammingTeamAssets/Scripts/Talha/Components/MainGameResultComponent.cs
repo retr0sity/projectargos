@@ -56,7 +56,7 @@ namespace Game.Components
             MainGameplayComponent.ActionShowResult += ShowResult;
         }
 
-        private void ShowResult(string PlayerOption,string AIOption)
+        private void ShowResult(string PlayerOption, string AIOption)
         {
             var CurrentRule = RuleSets.FirstOrDefault(x => x.RuleID.ID == PlayerOption);
 
@@ -64,49 +64,47 @@ namespace Game.Components
             AIOptionText.SetupText(MainGameplayComponent.AIOption);
             PlayerOptionText.SetupText(MainGameplayComponent.PlayerOption);
 
-            if (PlayerOption == AIOption)
-            {
-                ResultText.SetupText("It's a Draw");
-                PopupOkay.Show(SpriteDraw, () =>
-                {
-                    //this.RunAfter(3f, () =>
-                    //{
-                        MainGameplayComponent.OptionSelection.StartGameplay();
-                        Container.SetActive(false);
-                    //});
-                });
-            }
-            else if (CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
+            //if (PlayerOption == AIOption)
+            //{
+            //    ResultText.SetupText("It's a Draw");
+            //    PopupOkay.Show(SpriteDraw, () =>
+            //    {
+            //        //this.RunAfter(3f, () =>
+            //        //{
+            //        MainGameplayComponent.OptionSelection.StartGameplay();
+            //        Container.SetActive(false);
+            //        //});
+            //    });
+            //}
+            //else if (CurrentRule.WinAgainst.Any(x => x.ID == AIOption))
             {
                 ResultText.SetupText("You won");
                 PopupOkay.Show(SpritesWon[NumberOfWins], () =>
                 {
                     //this.RunAfter(3f, () =>
                     //{
-                        MainGameplayComponent.ActionStartParagraphGame?.Invoke(PlayerOption);
-                        Container.SetActive(false);
+                    MainGameplayComponent.ActionStartParagraphGame?.Invoke(PlayerOption);
+                    Container.SetActive(false);
                     //});
                 });
                 if (NumberOfWins < SpritesWon.Count - 1)
                     NumberOfWins++;
             }
-            else
-            {
-                ResultText.SetupText("Opponent Won");
-                PopupOkay.Show(SpriteLost1, () =>
-                {
-                    PopupOkay.Show(SpriteLost2, () =>
-                    {
-                        //this.RunAfter(3f, () =>
-                        //{
-                            //MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
-                            MainGameplayComponent.ActionStartMinigame?.Invoke("Pencil");
-                            Container.SetActive(false);
-                        //});
-                    });
-                });
-            }
+            //else
+            //{
+            //    ResultText.SetupText("Opponent Won");
+            //    PopupOkay.Show(SpriteLost1, () =>
+            //    {
+            //        PopupOkay.Show(SpriteLost2, () =>
+            //        {
+            //            //this.RunAfter(3f, () =>
+            //            //{
+            //            MainGameplayComponent.ActionStartMinigame?.Invoke(AIOption);
+            //            Container.SetActive(false);
+            //            //});
+            //        });
+            //    });
+            //}
         }
-
     }
 }

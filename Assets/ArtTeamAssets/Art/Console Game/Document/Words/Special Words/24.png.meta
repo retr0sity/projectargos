@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: b1e422f8d79af9a409b24d1b5a205495
+guid: f9e167bd23c165c419f31ef8b6f9461a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4346244404228752641
-    second: Arrow_0
+      213: 8102358098348255977
+    second: 24_0
+  - first:
+      213: 2958841276277619583
+    second: 24_1
+  - first:
+      213: 497394726710016543
+    second: 24_2
+  - first:
+      213: 3618711567237372757
+    second: 24_3
+  - first:
+      213: 2363407503568027078
+    second: 24_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arrow_0
+      name: 24_0
       rect:
         serializedVersion: 2
-        x: 109
-        y: 0
-        width: 294
-        height: 512
+        x: 107
+        y: 401
+        width: 224
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffa7ae2edb90fa3c0800000000000000
-      internalID: -4346244404228752641
+      spriteID: 9eaae0723cb517070800000000000000
+      internalID: 8102358098348255977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24_1
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 401
+        width: 180
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b7a43d67aef0920800000000000000
+      internalID: 2958841276277619583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 401
+        width: 225
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1af3be5ed917e600800000000000000
+      internalID: 497394726710016543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24_3
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 401
+        width: 225
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55bd7c56ffe383230800000000000000
+      internalID: 3618711567237372757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24_4
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 401
+        width: 225
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd3aa54a928cc020800000000000000
+      internalID: 2363407503568027078
       vertices: []
       indices: 
       edges: []
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Arrow_0: -4346244404228752641
+      24_0: 8102358098348255977
+      24_1: 2958841276277619583
+      24_2: 497394726710016543
+      24_3: 3618711567237372757
+      24_4: 2363407503568027078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
