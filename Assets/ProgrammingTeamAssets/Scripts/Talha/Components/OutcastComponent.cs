@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Game.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class OutcastComponent : MonoBehaviour
     public float MoveSpeed = 1f;
 
     private Sequence Sequence;
+    public string DialogueText;
     public Transform MainObject;
     public Transform DialogueObject;
 
@@ -39,6 +41,7 @@ public class OutcastComponent : MonoBehaviour
             return;
         DialogueObject.DOKill();
         DialogueObject.transform.localScale = Vector3.zero;
+        DialogueObject.GetComponentInChildren<TextComponent>(true).SetupText(DialogueText);
         DialogueObject.DOScale(Vector3.one, 0.5f).OnComplete(() =>
         {
             DialogueObject.DOScale(Vector3.zero, 0.5f).SetDelay(3f);

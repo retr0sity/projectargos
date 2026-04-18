@@ -19,7 +19,8 @@ public class CameraFollowComponent : MonoBehaviour
 
         TargetPosition = Player.transform.position;
         TargetPosition.z = StartPosition.z;
-        transform.position = Vector3.Lerp(transform.position,TargetPosition,FollowSpeed * Time.deltaTime);
+        transform.position = TargetPosition;
+        //transform.position = Vector3.Lerp(transform.position,TargetPosition,FollowSpeed * Time.deltaTime);
     }
 
     public void SetFollowStatus(bool Status)

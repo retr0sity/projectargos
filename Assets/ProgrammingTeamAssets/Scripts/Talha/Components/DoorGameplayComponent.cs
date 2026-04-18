@@ -5,6 +5,7 @@ using System.Linq;
 using Game.Scriptables;
 using Game.Controllers;
 using Game.Managers;
+using UnityEngine.Rendering.Universal;
 
 namespace Game.Components
 {
@@ -54,7 +55,7 @@ namespace Game.Components
         public GameObject Container;
         public List<string> Words;
         public bool IsCompleted;
-
+        public Vector3 StartPosition;
         private void Awake()
         {
             ActionKeyCollected += OnKeyCollected;

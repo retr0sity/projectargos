@@ -48,10 +48,13 @@ namespace Game.Components
             MainGameplayComponent.ActionStartMinigame += StartMiniGame;
         }
 
+        private DoorGameplayComponent CurrentDoor;
         private void StartMiniGame(string GameID)
         {
+            CurrentDoor = DoorGames.FirstOrDefault(x => x.GameID.ID == GameID);
+            FindObjectOfType<PlayerKeyCollectorComonent>(true).transform.localPosition = CurrentDoor.StartPosition;
             Container.gameObject.SetActive(true);
-            DoorGames.FirstOrDefault(x => x.GameID.ID == GameID).StartGame();
+            CurrentDoor.StartGame();
             InterfaceController.ActionSwitchInterface(MinigameInterface.ID);
             CameraFollowComponent.SetFollowStatus(true);
         }
@@ -59,6 +62,7 @@ namespace Game.Components
         public void EndMiniGame()
         {
             Container.SetActive(false);
+            CurrentDoor.StartPosition = FindObjectOfType<PlayerKeyCollectorComonent>(true).transform.localPosition;
             DoorGames.ForEach(Item => Item.Container.SetActive(false));
             InterfaceController.ActionSwitchInterface("");
             CameraFollowComponent.SetFollowStatus(false);

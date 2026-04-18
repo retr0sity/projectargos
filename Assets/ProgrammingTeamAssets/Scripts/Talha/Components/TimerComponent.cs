@@ -6,20 +6,14 @@ using System.Collections.Generic;
 
 namespace Game.Components
 {
-    public class TimerComponent : MonoBehaviour,IUpdateSubscriber
+    public class TimerComponent : MonoBehaviour
     {
         public float TickTime = 0.01f;
         private float TimeElapsed;
         public Action<float> ActionTick;
-        public bool IsUpdateRunning { get; set; }
-        public IUpdateSubscriber UpdateSubscriber => this;
 
-        private void Start()
-        {
-            UpdateSubscriber.Subscribe();
-        }
 
-        public void OnUpdate()
+        public void FixedUpdate()
         {
             TimeElapsed += Time.deltaTime;
             if (TimeElapsed >= TickTime)
@@ -27,11 +21,6 @@ namespace Game.Components
                 ActionTick?.Invoke(TickTime);
                 TimeElapsed = 0;
             }
-        }
-
-        public void OnDestroy()
-        {
-            UpdateSubscriber.UnSubscribe();
         }
     }
 }

@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 2017663790725057503}
   - component: {fileID: 6246150067605573607}
   - component: {fileID: 288510043898762807}
+  - component: {fileID: 7568652957267445189}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -367,6 +368,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6246150067605573607}
   m_maskType: 0
+--- !u!114 &7568652957267445189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066324967300848915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014abb5ffe8784f46ae7f5470fbb69fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Utilities.TextComponent
 --- !u!1 &4953992576939713766
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +391,7 @@ GameObject:
   - component: {fileID: 4733460040431522324}
   - component: {fileID: 2925476666471939750}
   m_Layer: 0
-  m_Name: Outcast
+  m_Name: Outcast Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,6 +431,7 @@ MonoBehaviour:
   - {fileID: 1612063742757966356}
   - {fileID: 8522037129598076912}
   MoveSpeed: 5
+  DialogueText: Dialogue text here
   MainObject: {fileID: 2215670147861073149}
   DialogueObject: {fileID: 1627099245491482541}
 --- !u!1 &5678837192635966272
@@ -636,7 +650,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

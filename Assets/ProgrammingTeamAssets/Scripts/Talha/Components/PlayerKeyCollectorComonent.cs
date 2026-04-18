@@ -93,6 +93,10 @@ namespace Game.Components
                 Debug.Log("Door Reached");
                 collision.gameObject.GetComponent<DoorComponent>().CheckDoorOpening();
             }
+            else if (collision.gameObject.CompareTag("OutCast"))
+            {
+                collision.gameObject.GetComponentInParent<OutcastComponent>().ShowDialogue();
+            }
         }
     }
 }

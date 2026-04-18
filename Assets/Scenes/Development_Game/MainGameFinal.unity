@@ -1161,6 +1161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorGameRock
       objectReference: {fileID: 0}
+    - target: {fileID: 4522341027873335311, guid: 90c0809e72291e74ab7a98e1726deebc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4748399886520262855, guid: 90c0809e72291e74ab7a98e1726deebc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.46822
@@ -1644,13 +1648,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2883414905037980840, guid: 8f996c68dd0a0cc4c91ee29e2f156193, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1210406045966204801, guid: 8f996c68dd0a0cc4c91ee29e2f156193, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f996c68dd0a0cc4c91ee29e2f156193, type: 3}
 --- !u!4 &474860008 stripped
 Transform:
