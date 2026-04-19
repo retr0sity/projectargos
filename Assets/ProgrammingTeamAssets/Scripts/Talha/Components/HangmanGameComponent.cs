@@ -58,11 +58,12 @@ public class HangmanGameComponent : MonoBehaviour
     }
     private void StartWord()
     {
-        Debug.Log(currentIndex.ToString()+" : "+ TargetWords.Count);
-        if (currentIndex < TargetWords.Count)
+        Debug.Log(CurrentWord.ToString()+" : "+ TargetWords.Count);
+        currentIndex = 0;
+        if (CurrentWord < TargetWords.Count)
         {
-            targetWord = TargetWords[currentIndex].ToUpper();
-            maxLetters = TargetWords[currentIndex].Length;
+            targetWord = TargetWords[CurrentWord].ToUpper();
+            maxLetters = targetWord.Length;
             letters = new char[maxLetters];
 
             for (int i = 0; i < letters.Length; i++)
@@ -187,7 +188,7 @@ public class HangmanGameComponent : MonoBehaviour
         if (Correct)
         {
             ParagraphGameComponent.WordCompleted(TargetWords[CurrentWord]);
-            currentIndex++;
+            CurrentWord++;
             StartWord();
         }
     }
