@@ -176,6 +176,8 @@ MonoBehaviour:
   DoorComponent: {fileID: 1435128044228317403}
   Container: {fileID: 8085368554866805482}
   Words: []
+  IsCompleted: 0
+  StartPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &8085368554866805482
 GameObject:
   m_ObjectHideFlags: 0

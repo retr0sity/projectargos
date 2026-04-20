@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2925476666471939750, guid: 907c93cc78f7ae54cb72fdffa79ed947, type: 3}
+      propertyPath: DialogueText
+      value: "I\u2019m just so tired of everything costing money! Even just going
+        outside to see your friends\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 4733460040431522324, guid: 907c93cc78f7ae54cb72fdffa79ed947, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +55,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4953992576939713766, guid: 907c93cc78f7ae54cb72fdffa79ed947, type: 3}
       propertyPath: m_Name
-      value: Outcast 1
+      value: Outcast Paper 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
