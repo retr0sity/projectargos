@@ -425,7 +425,7 @@ MonoBehaviour:
   - {fileID: 1612063742757966356}
   - {fileID: 8522037129598076912}
   MoveSpeed: 5
-  DialogueText: "SquareCity isn\u2019t an open BaR!"
+  DialogueText: "The City isn\u2019t an open BaR!"
   MainObject: {fileID: 2215670147861073149}
   DialogueObject: {fileID: 1627099245491482541}
 --- !u!1 &5678837192635966272
