@@ -68,18 +68,18 @@ namespace Game.Components
         {
             if (CurrentIndex == 0)
             {
-                InterfaceController.ActionSwitchInterface?.Invoke("");
+                InterfaceController.ActionSwitchInterface?.Invoke("Desk");
                 InputButtonLeft.performed -= OnLeftPressed;
                 InputButtonRight.performed -= OnRightPressed;
                 InputManager.InputButtonEnter.performed -= OptionSelected;
                 Container.gameObject.SetActive(false);
                 AudioManager.Instance.Play("Console");
 
-                PopupOkay.Show(SpriteBasicControls, () =>
-                {
-                    FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
-                    ;
-                });
+                //PopupOkay.Show(SpriteBasicControls, () =>
+                //{
+                //    FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
+                //    ;
+                //});
             }
             else
             {

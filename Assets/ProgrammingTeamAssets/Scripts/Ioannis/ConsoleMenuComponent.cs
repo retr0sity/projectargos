@@ -2,10 +2,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Game.Managers;
+using Game.Popups;
+using Game.Controllers;
+using Game.Components;
 
 public class ConsoleMenuComponent : MonoBehaviour
 {
     private InputManager InputManager => DependencyManager.Instance.InputManager;
+    private InterfaceController InterfaceController => DependencyManager.Instance.InterfaceController;
 
     public Animator ConsoleAnimator;
 
@@ -19,6 +23,19 @@ public class ConsoleMenuComponent : MonoBehaviour
     public GameObject YesOption;
     public GameObject NoOption;
 
+    private PopupOkay mPopupOkay;
+    private PopupOkay PopupOkay
+    {
+        get
+        {
+            if (mPopupOkay == null)
+            {
+                mPopupOkay = DependencyManager.Instance.PopupManager.GetPopup<PopupOkay>();
+            }
+            return mPopupOkay;
+        }
+    }
+    public Sprite SpriteBasicControls;
     public void OpenMenu()
     {
         Debug.Log("OpenMenu called");
@@ -87,6 +104,12 @@ public class ConsoleMenuComponent : MonoBehaviour
     // Call this via Animation Event on last frame of ConsoleMenuConfirmed
     public void OnConfirmFinished()
     {
-        SceneManager.LoadScene("MainGame 1");
+        InterfaceController.ActionSwitchInterface?.Invoke("");
+        PopupOkay.Show(SpriteBasicControls, () =>
+        {
+            FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
+            ;
+        });
+        //SceneManager.LoadScene("MainGame 1");
     }
 }
