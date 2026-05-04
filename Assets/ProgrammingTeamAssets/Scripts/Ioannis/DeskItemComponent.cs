@@ -9,7 +9,7 @@ public class DeskItemComponent : MonoBehaviour
         get
         {
             if (mOptionSelection == null)
-                mOptionSelection = FindObjectOfType<OptionSelectionComponent>(true);
+                mOptionSelection = GetComponentInParent<OptionSelectionComponent>(true);
             return mOptionSelection;
         }
     }

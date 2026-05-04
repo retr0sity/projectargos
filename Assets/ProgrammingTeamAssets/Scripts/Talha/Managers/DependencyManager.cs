@@ -104,6 +104,19 @@ namespace Game.Managers
             }
         }
 
+        private ScreenFadeController mScreenFadeController;
+        public ScreenFadeController ScreenFadeController
+        {
+            get
+            {
+                if (mScreenFadeController == null)
+                {
+                    mScreenFadeController = FindObjectOfType<ScreenFadeController>(true);
+                }
+                return mScreenFadeController;
+            }
+        }
+
         #endregion
 
     }

@@ -10,6 +10,7 @@ public class ConsoleMenuComponent : MonoBehaviour
 {
     private InputManager InputManager => DependencyManager.Instance.InputManager;
     private InterfaceController InterfaceController => DependencyManager.Instance.InterfaceController;
+    private ScreenFadeController ScreenFadeController => DependencyManager.Instance.ScreenFadeController;
 
     public Animator ConsoleAnimator;
 
@@ -104,12 +105,16 @@ public class ConsoleMenuComponent : MonoBehaviour
     // Call this via Animation Event on last frame of ConsoleMenuConfirmed
     public void OnConfirmFinished()
     {
-        InterfaceController.ActionSwitchInterface?.Invoke("");
-        PopupOkay.Show(SpriteBasicControls, () =>
+        ScreenFadeController.FadeInAndOut(() =>
         {
-            FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
-            ;
+            InterfaceController.ActionSwitchInterface?.Invoke("");
+            PopupOkay.Show(SpriteBasicControls, () =>
+            {
+                FindObjectOfType<MainGameplayComponent>().ActionStartMainGameplay?.Invoke()
+                ;
+            });
         });
+        
         //SceneManager.LoadScene("MainGame 1");
     }
 }

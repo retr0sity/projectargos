@@ -16,7 +16,7 @@ public class DeskSelectionComponent : OptionSelectionComponent
     private bool isPaperOpen = false;
     public ConsoleMenuComponent ConsoleMenu;
 
-    private void Start()
+    private void OnEnable()
     {
         StartGameplay();
     }
