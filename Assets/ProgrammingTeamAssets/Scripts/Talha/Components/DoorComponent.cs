@@ -19,6 +19,8 @@ public class DoorComponent : MonoBehaviour
     }
 
     public Transform DoorDialogue;
+    public SpriteRenderer SpriteRenderer;
+    public Sprite OpenedDoor;
 
     public void CheckDoorOpening()
     {
@@ -28,6 +30,7 @@ public class DoorComponent : MonoBehaviour
         {
             if(DoorDialogueCoroutine == null)
             {
+                SpriteRenderer.sprite = OpenedDoor;
                 DoorDialogueCoroutine = StartCoroutine(DialogueRoutine());
             }
         }

@@ -1304,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1435128044228317403, guid: 8d2417bb46794dc4c94c5803a79ad145, type: 3}
+      propertyPath: OpenedDoor
+      value: 
+      objectReference: {fileID: 2820698900571641690, guid: cc6e7cf743a17724081b90057aa73b1d, type: 3}
     - target: {fileID: 1765173262582853655, guid: 8d2417bb46794dc4c94c5803a79ad145, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorComponent
   DoorDialogue: {fileID: 6572586919834182118}
+  SpriteRenderer: {fileID: 3671629443296309108}
+  OpenedDoor: {fileID: 5387561913992699735, guid: 0109d82d231759a43b3927eb5d129765, type: 3}
 --- !u!61 &5861958878654997572
 BoxCollider2D:
   m_ObjectHideFlags: 0
